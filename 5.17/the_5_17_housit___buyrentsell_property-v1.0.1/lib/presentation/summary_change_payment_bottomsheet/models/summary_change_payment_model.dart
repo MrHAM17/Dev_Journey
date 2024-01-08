@@ -1,0 +1,3 @@
+import '../../../core/app_export.dart';import 'layout1_item_model.dart';class SummaryChangePaymentModel {List<Layout1ItemModel> layout1ItemList = [Layout1ItemModel(checkmark:ImageConstant.imgCheckmark,text: "•••••••• 1222",balance: "Balance",price: " 54,200",balance1:ImageConstant.imgSettings),Layout1ItemModel(checkmark:ImageConstant.imgCheckmark,text: "•••••••• 1222",balance: "Balance",price: " 31,250",balance1:ImageConstant.imgUser),Layout1ItemModel(checkmark:ImageConstant.imgCheckmarkWhiteA700,text: "••••••an@\nemail.com",balance: "Balance",price: " 12,290",balance1:ImageConstant.imgTelevisionWhiteA70020x20)];
+
+ }

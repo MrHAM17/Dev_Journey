@@ -1,0 +1,3 @@
+import '../../../core/app_export.dart';import 'datalist1_item_model.dart';class TopAgentsModel {List<Datalist1ItemModel> datalist1ItemList = [Datalist1ItemModel(amanda:ImageConstant.imgShape100x100,amanda1: "Amanda",text: "5.0",text1: "112",sold: "Sold"),Datalist1ItemModel(amanda:ImageConstant.imgShape12,amanda1: "Anderson"),Datalist1ItemModel(amanda:ImageConstant.imgShape13,amanda1: "Samantha"),Datalist1ItemModel(amanda:ImageConstant.imgShape14,amanda1: "Andrew"),Datalist1ItemModel(amanda:ImageConstant.imgShape15,amanda1: "Michael"),Datalist1ItemModel(amanda:ImageConstant.imgShape16,amanda1: "Tobi")];
+
+ }

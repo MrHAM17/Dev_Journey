@@ -1,0 +1,3 @@
+import '../../../core/app_export.dart';import 'explore_item_model.dart';class ExploreModel {List<ExploreItemModel> exploreItemList = [ExploreItemModel(categories: "Charts",charts:ImageConstant.imgImage91x81),ExploreItemModel(categories: "Podcasts",charts:ImageConstant.imgImage37),ExploreItemModel(categories: "New Releases",charts:ImageConstant.imgImage38),ExploreItemModel(categories: "Only You",charts:ImageConstant.imgImage37),ExploreItemModel(categories: "Pop",charts:ImageConstant.imgImage39),ExploreItemModel(categories: "K-Pop",charts:ImageConstant.imgImage40),ExploreItemModel(categories: "Rock",charts:ImageConstant.imgImage46),ExploreItemModel(categories: "Hip-Hop",charts:ImageConstant.imgImage47)];
+
+ }

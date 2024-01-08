@@ -1,0 +1,3 @@
+import '../../../core/app_export.dart';import 'searchtypekeyword_item_model.dart';class SearchTypeKeywordModel {List<SearchtypekeywordItemModel> searchtypekeywordItemList = [SearchtypekeywordItemModel(arianaGrande: "Ariana Grande"),SearchtypekeywordItemModel(arianaGrande: "Morgan Wallen"),SearchtypekeywordItemModel(arianaGrande: "Justin Bieber"),SearchtypekeywordItemModel(arianaGrande: "Drake"),SearchtypekeywordItemModel(arianaGrande: "Olivia Rodrigo"),SearchtypekeywordItemModel(arianaGrande: "The Weeknd"),SearchtypekeywordItemModel(arianaGrande: "Taylor Swift"),SearchtypekeywordItemModel(arianaGrande: "Juice Wrld")];
+
+ }

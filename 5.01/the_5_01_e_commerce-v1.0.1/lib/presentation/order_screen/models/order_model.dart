@@ -1,0 +1,3 @@
+import '../../../core/app_export.dart';import 'orders_item_model.dart';class OrderModel {List<OrdersItemModel> ordersItemList = [OrdersItemModel(price: "SDG1345KJD",month: "Order at E-com : August 1, 2017",orderStatus: "Order Status",shipping: "Shipping",items: "Items",purchasedCount: "1 Items purchased",price1: "Price",price2: "299,43"),OrdersItemModel(price: "SDG1345KJD",month: "Order at E-com : August 1, 2017",orderStatus: "Order Status",shipping: "Shipping",items: "Items",purchasedCount: "1 Items purchased",price1: "Price",price2: "299,43"),OrdersItemModel(price: "SDG1345KJD",month: "Order at E-com : August 1, 2017",orderStatus: "Order Status",shipping: "Shipping",items: "Items",purchasedCount: "1 Items purchased",price1: "Price",price2: "299,43")];
+
+ }

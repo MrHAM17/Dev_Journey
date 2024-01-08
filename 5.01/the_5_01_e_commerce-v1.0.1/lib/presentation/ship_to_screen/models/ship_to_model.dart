@@ -1,0 +1,3 @@
+import '../../../core/app_export.dart';import 'shipto_item_model.dart';class ShipToModel {List<ShiptoItemModel> shiptoItemList = [ShiptoItemModel(priscekila: "Priscekila",address: "3711 Spring Hill Rd undefined Tallahassee, Nevada 52874 United States",mobileNo: "+99 1234567890",edit: "Edit",delete: "Delete"),ShiptoItemModel(priscekila: "Priscekila",address: "3711 Spring Hill Rd undefined Tallahassee, Nevada 52874 United States",mobileNo: "+99 1234567890",edit: "Edit",delete: "Delete"),ShiptoItemModel(priscekila: "Priscekila",address: "3711 Spring Hill Rd undefined Tallahassee, Nevada 52874 United States",mobileNo: "+99 1234567890",edit: "Edit",delete: "Delete")];
+
+ }

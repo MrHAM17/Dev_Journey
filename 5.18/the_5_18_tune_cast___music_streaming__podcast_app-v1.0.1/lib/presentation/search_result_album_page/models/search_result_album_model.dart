@@ -1,0 +1,3 @@
+import '../../../core/app_export.dart';import 'searchresultalbum_item_model.dart';class SearchResultAlbumModel {List<SearchresultalbumItemModel> searchresultalbumItemList = [SearchresultalbumItemModel(sweetener:ImageConstant.imgImage70,positions: "Sweetener",arianaGrande: "Ariana Grande",zipcode: "2018"),SearchresultalbumItemModel(sweetener:ImageConstant.imgImage184x184,positions: "Dangerous Woman",arianaGrande: "Ariana Grande",zipcode: "2016"),SearchresultalbumItemModel(sweetener:ImageConstant.imgImage71,positions: "Yours Truly",arianaGrande: "Ariana Grande",zipcode: "2013"),SearchresultalbumItemModel(sweetener:ImageConstant.imgImage72,positions: "My Everything",arianaGrande: "Ariana Grande",zipcode: "2014")];
+
+ }

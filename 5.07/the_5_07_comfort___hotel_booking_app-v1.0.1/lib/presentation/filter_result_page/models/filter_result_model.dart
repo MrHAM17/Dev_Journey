@@ -1,0 +1,3 @@
+import '../../../core/app_export.dart';import 'filterresult_item_model.dart';class FilterResultModel {List<FilterresultItemModel> filterresultItemList = [FilterresultItemModel(presidentHotel:ImageConstant.imgRectangle,presidentHotel1: "President Hotel",parisFrance: "Paris, France",fortyEight: "4.8",reviews: "(4,378 reviews)",price: "35",night: "/ night"),FilterresultItemModel(presidentHotel:ImageConstant.imgRectangle4100x100,presidentHotel1: "Palms Casino",parisFrance: "Paris, France",price: "29",night: "/ night"),FilterresultItemModel(presidentHotel:ImageConstant.imgRectangle41,presidentHotel1: "Palazzo Versace",parisFrance: "Paris, France",fortyEight: "4.8",reviews: "(4,378 reviews)",price: "36",night: "/ night")];
+
+ }

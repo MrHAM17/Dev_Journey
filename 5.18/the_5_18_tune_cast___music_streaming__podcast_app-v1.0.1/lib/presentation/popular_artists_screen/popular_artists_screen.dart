@@ -1,0 +1,13 @@
+import '../popular_artists_screen/widgets/popularartists_item_widget.dart';import 'models/popular_artists_model.dart';import 'models/popularartists_item_model.dart';import 'package:flutter/material.dart';import 'package:the_5_18_tune_cast___music_streaming__podcast_app/core/app_export.dart';import 'package:the_5_18_tune_cast___music_streaming__podcast_app/widgets/app_bar/appbar_leading_image.dart';import 'package:the_5_18_tune_cast___music_streaming__podcast_app/widgets/app_bar/appbar_title.dart';import 'package:the_5_18_tune_cast___music_streaming__podcast_app/widgets/app_bar/appbar_trailing_image.dart';import 'package:the_5_18_tune_cast___music_streaming__podcast_app/widgets/app_bar/custom_app_bar.dart';import 'provider/popular_artists_provider.dart';class PopularArtistsScreen extends StatefulWidget {const PopularArtistsScreen({Key? key}) : super(key: key);
+
+@override PopularArtistsScreenState createState() =>  PopularArtistsScreenState();
+
+static Widget builder(BuildContext context) { return ChangeNotifierProvider(create: (context) => PopularArtistsProvider(), child: PopularArtistsScreen()); } 
+ }
+class PopularArtistsScreenState extends State<PopularArtistsScreen> {@override void initState() { super.initState(); } 
+@override Widget build(BuildContext context) { return SafeArea(child: Scaffold(appBar: _buildAppBar(context), body: SizedBox(width: SizeUtils.width, child: SingleChildScrollView(padding: EdgeInsets.only(top: 27.v), child: _buildPopularArtists(context))))); } 
+/// Section Widget
+PreferredSizeWidget _buildAppBar(BuildContext context) { return CustomAppBar(height: 52.v, leadingWidth: 52.h, leading: AppbarLeadingImage(imagePath: ImageConstant.imgArrowDown, margin: EdgeInsets.only(left: 24.h, top: 11.v, bottom: 13.v)), title: AppbarTitle(text: "lbl_popular_artists".tr, margin: EdgeInsets.only(left: 16.h)), actions: [AppbarTrailingImage(imagePath: ImageConstant.imgRewind, margin: EdgeInsets.fromLTRB(24.h, 11.v, 24.h, 13.v))]); } 
+/// Section Widget
+Widget _buildPopularArtists(BuildContext context) { return Padding(padding: EdgeInsets.symmetric(horizontal: 24.h), child: Consumer<PopularArtistsProvider>(builder: (context, provider, child) {return GridView.builder(shrinkWrap: true, gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(mainAxisExtent: 220.v, crossAxisCount: 2, mainAxisSpacing: 12.h, crossAxisSpacing: 12.h), physics: NeverScrollableScrollPhysics(), itemCount: provider.popularArtistsModelObj.popularartistsItemList.length, itemBuilder: (context, index) {PopularartistsItemModel model = provider.popularArtistsModelObj.popularartistsItemList[index]; return PopularartistsItemWidget(model);});})); } 
+ }

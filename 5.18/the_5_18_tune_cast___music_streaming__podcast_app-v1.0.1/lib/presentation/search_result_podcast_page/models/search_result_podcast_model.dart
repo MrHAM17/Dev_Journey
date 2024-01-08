@@ -1,0 +1,5 @@
+import '../../../core/app_export.dart';import 'frame1_item_model.dart';import 'fiftynine_item_model.dart';class SearchResultPodcastModel {List<Frame1ItemModel> frame1ItemList = [Frame1ItemModel(theJordanHarb:ImageConstant.imgImage31,billSullivan: "The Jordan Harb..."),Frame1ItemModel(theJordanHarb:ImageConstant.imgImage32,billSullivan: "Apple Talk"),Frame1ItemModel(theJordanHarb:ImageConstant.imgImage33,billSullivan: "Dr. Death")];
+
+List<FiftynineItemModel> fiftynineItemList = [FiftynineItemModel(image:ImageConstant.imgImage80x80,podcastTitle: "837: Tristan Harris | Reclaiming Our Future with ...",author: "Apple Talk",text: "|",time: "48:26 mins",image1:ImageConstant.imgFavorite,appleTalk:ImageConstant.imgIconlyLightOutlineArrowGray9000120x20),FiftynineItemModel(image:ImageConstant.imgImage73,podcastTitle: "593: Dallas Taylor | The Psychology of Sound Design",author: "What a Day",text: "|",time: "56:42 mins",image1:ImageConstant.imgFavoriteOnprimarycontainer,appleTalk:ImageConstant.imgIconlyLightOutlineArrowGray90001)];
+
+ }

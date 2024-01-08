@@ -1,0 +1,3 @@
+import '../../../core/app_export.dart';import 'layout26_item_model.dart';class ReviewsModel {List<Layout26ItemModel> layout26ItemList = [Layout26ItemModel(kurtMullins:ImageConstant.imgShape56,kurtMullins1: "Kurt Mullins",description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",time: "10 mins ago"),Layout26ItemModel(kurtMullins:ImageConstant.imgShape28),Layout26ItemModel(kurtMullins:ImageConstant.imgShape57,kurtMullins1: "Kay Swanson",description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperia.",time: "10 mins ago")];
+
+ }

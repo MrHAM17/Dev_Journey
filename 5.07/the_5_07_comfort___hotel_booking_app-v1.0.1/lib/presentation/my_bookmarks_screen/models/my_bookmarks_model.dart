@@ -1,0 +1,3 @@
+import '../../../core/app_export.dart';import 'mybookmarks_item_model.dart';class MyBookmarksModel {List<MybookmarksItemModel> mybookmarksItemList = [MybookmarksItemModel(image:ImageConstant.imgRectangle4100x100,presidentMilaDe: "De Paris Monte-Carlo Hotel",fortyEight: "4.6",parisFrance: "Paris, France",price: "29",night: "/ night"),MybookmarksItemModel(image:ImageConstant.imgRectangle41,presidentMilaDe: "Faena Hotel Miami Beach",fortyEight: "4.9",parisFrance: "Paris, France",price: "38",night: "/ night"),MybookmarksItemModel(image:ImageConstant.imgRectangle42,presidentMilaDe: "Palazzo Versace\nPico Hotel",fortyEight: "4.7",parisFrance: "Paris, France",price: "36",night: "/ night")];
+
+ }

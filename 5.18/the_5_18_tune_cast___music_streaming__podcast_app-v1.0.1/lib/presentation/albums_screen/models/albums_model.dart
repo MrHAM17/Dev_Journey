@@ -1,0 +1,3 @@
+import '../../../core/app_export.dart';import 'albums_item_model.dart';class AlbumsModel {List<AlbumsItemModel> albumsItemList = [AlbumsItemModel(image:ImageConstant.imgImage86,threeDimensions: "Three Dimensions Deep",details: "Amber Mark",text: "|",zipcode: "2022",image1:ImageConstant.imgCategoriesMore),AlbumsItemModel(image:ImageConstant.imgImage88,threeDimensions: "We Are The Apocalypse",details: "Amber Mark",text: "|",zipcode: "2022",image1:ImageConstant.imgCategoriesMore),AlbumsItemModel(image:ImageConstant.imgImage89,threeDimensions: "Otherness",details: "Amber Mark",text: "|",zipcode: "2022",image1:ImageConstant.imgCategoriesMore),AlbumsItemModel(image1:ImageConstant.imgVectorGray90001)];
+
+ }

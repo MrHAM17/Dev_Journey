@@ -1,0 +1,3 @@
+import '../../../core/app_export.dart';import 'listings_item_model.dart';class ListingsModel {List<ListingsItemModel> listingsItemList = [ListingsItemModel(fairviewApartment:ImageConstant.imgShape35,price: " 220",day: "/day",fairviewApartment1: "Fairview Apartment",text: "4.2",jakartaIndonesia: "Jakarta, Indonesia"),ListingsItemModel(fairviewApartment:ImageConstant.imgShape36,price: " 220",day: "/day",fairviewApartment1: "Shoolview House",text: "4.2",jakartaIndonesia: "Jakarta, Indonesia"),ListingsItemModel(fairviewApartment:ImageConstant.imgShape35,price: " 220",day: "/day",fairviewApartment1: "Fairview Apartment"),ListingsItemModel(fairviewApartment:ImageConstant.imgShape36,price: " 220",day: "/day",fairviewApartment1: "Shoolview House")];
+
+ }

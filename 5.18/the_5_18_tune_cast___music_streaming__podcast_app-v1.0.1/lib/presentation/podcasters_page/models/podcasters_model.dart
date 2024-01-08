@@ -1,0 +1,3 @@
+import '../../../core/app_export.dart';import 'podcasters_item_model.dart';class PodcastersModel {List<PodcastersItemModel> podcastersItemList = [PodcastersItemModel(image:ImageConstant.imgImage80x80,artistName: "The Jordan Harbinger Show",episodesCounter: "692 Episodes"),PodcastersItemModel(image:ImageConstant.imgImage80x80,artistName: "Invest Like The Best",episodesCounter: "493 Episodes"),PodcastersItemModel(image:ImageConstant.imgImage95,artistName: "The Breakfast Club",episodesCounter: "682 Episodes"),PodcastersItemModel(image:ImageConstant.imgImage80x80,artistName: "What a Day",episodesCounter: "934 Episodes"),PodcastersItemModel(image:ImageConstant.imgImage97,artistName: "SaaS & Scotch",episodesCounter: "837 Episodes")];
+
+ }

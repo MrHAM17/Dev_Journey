@@ -1,0 +1,3 @@
+import '../../../core/app_export.dart';import 'layout_item_model.dart';class ReviewFillModel {List<LayoutItemModel> layoutItemList = [LayoutItemModel(checkmark:ImageConstant.imgCheckmark,text: "•••••••• 1222",balance: "Balance",price: " 54,200",balance1:ImageConstant.imgSettings),LayoutItemModel(checkmark:ImageConstant.imgCheckmark,text: "•••••••• 1222",balance: "Balance",price: " 31,250",balance1:ImageConstant.imgUser),LayoutItemModel(checkmark:ImageConstant.imgCheckmarkWhiteA700,text: "••••••an@\nemail.com",balance: "Balance",price: " 12,290",balance1:ImageConstant.imgTelevisionWhiteA70020x20)];
+
+ }

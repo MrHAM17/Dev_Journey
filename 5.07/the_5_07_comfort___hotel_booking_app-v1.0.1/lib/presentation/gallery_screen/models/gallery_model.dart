@@ -1,0 +1,3 @@
+import '../../../core/app_export.dart';import 'gallery_item_model.dart';class GalleryModel {List<GalleryItemModel> galleryItemList = [GalleryItemModel(rectangle:ImageConstant.imgRectangle10),GalleryItemModel(rectangle:ImageConstant.imgRectangle11140x182),GalleryItemModel(rectangle:ImageConstant.imgRectangle12140x182),GalleryItemModel(rectangle:ImageConstant.imgRectangle13),GalleryItemModel(rectangle:ImageConstant.imgRectangle14),GalleryItemModel(rectangle:ImageConstant.imgRectangle15),GalleryItemModel(rectangle:ImageConstant.imgRectangle16),GalleryItemModel(rectangle:ImageConstant.imgRectangle10),GalleryItemModel(rectangle:ImageConstant.imgRectangle18),GalleryItemModel(rectangle:ImageConstant.imgRectangle19)];
+
+ }

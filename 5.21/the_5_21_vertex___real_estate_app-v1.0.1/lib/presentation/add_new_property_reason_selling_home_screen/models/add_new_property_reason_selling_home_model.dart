@@ -1,0 +1,3 @@
+import '../../../core/app_export.dart';import 'addnewpropertyreasonsellinghom_item_model.dart';class AddNewPropertyReasonSellingHomeModel {List<AddnewpropertyreasonsellinghomItemModel> addnewpropertyreasonsellinghomItemList = [AddnewpropertyreasonsellinghomItemModel(upgradingMyHome: "Upgrading my home"),AddnewpropertyreasonsellinghomItemModel(upgradingMyHome: "Selling secondary home"),AddnewpropertyreasonsellinghomItemModel(upgradingMyHome: "Relocating"),AddnewpropertyreasonsellinghomItemModel(upgradingMyHome: "Downsizing my home"),AddnewpropertyreasonsellinghomItemModel(upgradingMyHome: "Retiring")];
+
+ }

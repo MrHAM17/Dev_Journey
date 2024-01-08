@@ -1,0 +1,3 @@
+import '../../../core/app_export.dart';import 'confirmrequestbottomsheet_item_model.dart';class ConfirmRequestBottomSheetModel {List<ConfirmrequestbottomsheetItemModel> confirmrequestbottomsheetItemList = [ConfirmrequestbottomsheetItemModel(home:ImageConstant.imgHomePrimary,homeClosed: "Home Closed",twentyFive: "25"),ConfirmrequestbottomsheetItemModel(home:ImageConstant.imgMenu,homeClosed: "Experience",twentyFive: "5+ years"),ConfirmrequestbottomsheetItemModel(home:ImageConstant.imgUserPrimary,homeClosed: "Condos",twentyFive: "12+"),ConfirmrequestbottomsheetItemModel(home:ImageConstant.imgGridPrimary,homeClosed: "Apartment",twentyFive: "10+")];
+
+ }

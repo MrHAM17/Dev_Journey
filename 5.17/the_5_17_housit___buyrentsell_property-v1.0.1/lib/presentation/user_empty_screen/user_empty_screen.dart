@@ -1,0 +1,34 @@
+import 'models/user_empty_model.dart';import 'package:flutter/material.dart';import 'package:the_5_17_housit___buyrentsell_property/core/app_export.dart';import 'package:the_5_17_housit___buyrentsell_property/core/utils/validation_functions.dart';import 'package:the_5_17_housit___buyrentsell_property/widgets/app_bar/appbar_leading_iconbutton.dart';import 'package:the_5_17_housit___buyrentsell_property/widgets/app_bar/appbar_trailing_button.dart';import 'package:the_5_17_housit___buyrentsell_property/widgets/app_bar/custom_app_bar.dart';import 'package:the_5_17_housit___buyrentsell_property/widgets/custom_elevated_button.dart';import 'package:the_5_17_housit___buyrentsell_property/widgets/custom_icon_button.dart';import 'package:the_5_17_housit___buyrentsell_property/widgets/custom_text_form_field.dart';import 'provider/user_empty_provider.dart';import 'package:the_5_17_housit___buyrentsell_property/presentation/user_success_bottomsheet/user_success_bottomsheet.dart';class UserEmptyScreen extends StatefulWidget {const UserEmptyScreen({Key? key}) : super(key: key);
+
+@override UserEmptyScreenState createState() =>  UserEmptyScreenState();
+
+static Widget builder(BuildContext context) { return ChangeNotifierProvider(create: (context) => UserEmptyProvider(), child: UserEmptyScreen()); } 
+ }
+
+// ignore_for_file: must_be_immutable
+class UserEmptyScreenState extends State<UserEmptyScreen> {GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+@override void initState() { super.initState(); } 
+@override Widget build(BuildContext context) { return SafeArea(child: Scaffold(resizeToAvoidBottomInset: false, appBar: _buildAppBar(context), body: SizedBox(width: SizeUtils.width, child: SingleChildScrollView(padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom), child: Form(key: _formKey, child: Container(width: double.maxFinite, padding: EdgeInsets.symmetric(horizontal: 24.h, vertical: 11.v), child: Column(children: [SizedBox(height: 39.v), Align(alignment: Alignment.centerLeft, child: SizedBox(width: 225.h, child: Text("msg_fill_your_information".tr, maxLines: 2, overflow: TextOverflow.ellipsis, style: theme.textTheme.headlineSmall!.copyWith(height: 1.50)))), SizedBox(height: 24.v), Align(alignment: Alignment.centerLeft, child: Text("msg_you_can_edit_this".tr, style: theme.textTheme.bodyMedium)), SizedBox(height: 54.v), Container(width: 100.h, margin: EdgeInsets.symmetric(horizontal: 113.h), decoration: AppDecoration.fillGray.copyWith(borderRadius: BorderRadiusStyle.circleBorder50), child: Column(mainAxisSize: MainAxisSize.min, mainAxisAlignment: MainAxisAlignment.end, children: [SizedBox(height: 27.v), CustomImageView(imagePath: ImageConstant.imgLockOnprimarycontainer, height: 42.v, width: 40.h), CustomIconButton(height: 30.adaptSize, width: 30.adaptSize, padding: EdgeInsets.all(9.h), decoration: IconButtonStyleHelper.fillBlueGrayTL15, alignment: Alignment.centerRight, child: CustomImageView(imagePath: ImageConstant.imgEdit))])), SizedBox(height: 30.v), _buildLock(context), SizedBox(height: 15.v), _buildMobileNumber(context), SizedBox(height: 15.v), _buildEmail(context), SizedBox(height: 42.v), CustomImageView(imagePath: ImageConstant.imgProgressBarGradient, height: 1.v, width: 100.h)]))))), bottomNavigationBar: _buildFinish(context))); } 
+/// Section Widget
+PreferredSizeWidget _buildAppBar(BuildContext context) { return CustomAppBar(leadingWidth: 74.h, leading: AppbarLeadingIconbutton(imagePath: ImageConstant.imgArrowLeft, margin: EdgeInsets.only(left: 24.h, top: 3.v, bottom: 3.v), onTap: () {onTapArrowLeft(context);}), actions: [AppbarTrailingButton(margin: EdgeInsets.fromLTRB(24.h, 10.v, 24.h, 8.v))]); } 
+/// Section Widget
+Widget _buildLock(BuildContext context) { return Selector<UserEmptyProvider, TextEditingController?>(selector: (context, provider) => provider.lockController, builder: (context, lockController, child) {return CustomTextFormField(controller: lockController, hintText: "msg_jonathan_anderson".tr, suffix: Container(margin: EdgeInsets.fromLTRB(30.h, 25.v, 16.h, 25.v), decoration: BoxDecoration(borderRadius: BorderRadius.vertical(bottom: Radius.circular(50.h))), child: CustomImageView(imagePath: ImageConstant.imgLockBlueGray80001, height: 20.adaptSize, width: 20.adaptSize)), suffixConstraints: BoxConstraints(maxHeight: 70.v));}); } 
+/// Section Widget
+Widget _buildMobileNumber(BuildContext context) { return Selector<UserEmptyProvider, TextEditingController?>(selector: (context, provider) => provider.mobileNumberController, builder: (context, mobileNumberController, child) {return CustomTextFormField(controller: mobileNumberController, hintText: "lbl_mobile_number".tr, hintStyle: CustomTextStyles.bodyMediumOnPrimaryContainer, textInputType: TextInputType.phone, prefix: Container(margin: EdgeInsets.fromLTRB(16.h, 25.v, 10.h, 24.v), child: CustomImageView(imagePath: ImageConstant.imgSettingsBlueGray80001, height: 20.adaptSize, width: 20.adaptSize)), prefixConstraints: BoxConstraints(maxHeight: 70.v), validator: (value) {if (!isValidPhone(value)) {return "err_msg_please_enter_valid_phone_number".tr;} return null;}, contentPadding: EdgeInsets.only(top: 26.v, right: 30.h, bottom: 26.v));}); } 
+/// Section Widget
+Widget _buildEmail(BuildContext context) { return Selector<UserEmptyProvider, TextEditingController?>(selector: (context, provider) => provider.emailController, builder: (context, emailController, child) {return CustomTextFormField(controller: emailController, hintText: "lbl_user_email_com".tr, hintStyle: CustomTextStyles.titleSmallBluegray50, textInputAction: TextInputAction.done, textInputType: TextInputType.emailAddress, suffix: Container(margin: EdgeInsets.fromLTRB(30.h, 25.v, 16.h, 25.v), child: CustomImageView(imagePath: ImageConstant.imgArrowdownBlueGray50, height: 20.adaptSize, width: 20.adaptSize)), suffixConstraints: BoxConstraints(maxHeight: 70.v), validator: (value) {if (value == null || (!isValidEmail(value, isRequired: true))) {return "err_msg_please_enter_valid_email".tr;} return null;}, borderDecoration: TextFormFieldStyleHelper.fillBlueGrayTL12, fillColor: appTheme.blueGray600);}); } 
+/// Section Widget
+Widget _buildFinish(BuildContext context) { return CustomElevatedButton(text: "lbl_finish".tr, margin: EdgeInsets.only(left: 24.h, right: 24.h, bottom: 24.v), onPressed: () {onTapFinish(context);}); } 
+
+/// Navigates to the previous screen.
+onTapArrowLeft(BuildContext context) { NavigatorService.goBack(); } 
+
+/// Displays a bottom sheet widget using the [showModalBottomSheet] method 
+/// of the [Scaffold] class with [isScrollControlled] set to true.
+///
+/// The bottom sheet is built using the [UserSuccessBottomsheet]
+/// class and the [builder] method of the bottom sheet is passed the
+/// [BuildContext] object.
+onTapFinish(BuildContext context) { showModalBottomSheet(context: context, builder: (_)=>UserSuccessBottomsheet.builder(context),isScrollControlled: true); } 
+ }

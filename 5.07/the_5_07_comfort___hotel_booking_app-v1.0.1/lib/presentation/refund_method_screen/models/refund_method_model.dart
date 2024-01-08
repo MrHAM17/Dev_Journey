@@ -1,0 +1,3 @@
+import '../../../core/app_export.dart';import 'refundmethod_item_model.dart';class RefundMethodModel {List<RefundmethodItemModel> refundmethodItemList = [RefundmethodItemModel(paypal:ImageConstant.imgFrameLightBlue600,paypal1: "Paypal",paypal2:ImageConstant.imgContrastPrimary20x20),RefundmethodItemModel(paypal:ImageConstant.imgFrame,paypal1: "Google Pay",paypal2:ImageConstant.imgContrastPrimary20x20),RefundmethodItemModel(paypal:ImageConstant.imgFrameWhiteA70032x32,paypal1: "Apple Pay",paypal2:ImageConstant.imgContrastPrimary20x20),RefundmethodItemModel(paypal:ImageConstant.imgImage27x44,paypal1: "•••• •••• •••• •••• 4679")];
+
+ }
