@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearCardNotification"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_10pxh"
+        android:paddingVertical="@dimen/_10pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}cornerRadius">
+        <FrameLayout android:id="@+id/framePhotosUser"
+            android:layout_height="@dimen/_50pxv" android:layout_width="@dimen/_50pxh">
+            <ImageView android:id="@+id/imageSamuelElla2"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_50pxh"
+                android:layout_width="@dimen/_50pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_shape_26}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_shape_26"/>
+            <FrameLayout android:id="@+id/frameComponentFiftyNine"
+                android:layout_gravity="bottom|end"
+                android:layout_height="@dimen/_18pxv"
+                android:layout_width="@dimen/_18pxh"
+                android:paddingBottom="@dimen/_3pxv"
+                android:paddingEnd="@dimen/_5pxh"
+                android:paddingStart="@dimen/_5pxh"
+                android:paddingTop="@dimen/_3pxv" style="@style/groupStylenameblue_gray_700_2">
+                <ImageView android:id="@+id/imageSamuelElla3"
+                    android:layout_gravity="top|center"
+                    android:layout_height="@dimen/_10pxh"
+                    android:layout_width="@dimen/_8pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_close"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_close"/>
+            </FrameLayout>
+        </FrameLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearLayout"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSamuelElla"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_samuel_ella"
+                style="@style/txtRalewaysemibold14_1" tools:text="@string/lbl_samuel_ella"/>
+            <TextView
+                android:id="@+id/txtJustbuyyourlistingSchoolviewHo"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/msg_just_buy_your_listing"
+                style="@style/txtRalewaymedium12_1" tools:text="@string/msg_just_buy_your_listing"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtTime"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_40_mins_ago"
+                style="@style/txtRalewaymedium10" tools:text="@string/lbl_40_mins_ago"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/imageSamuelElla"
+            android:layout_height="@dimen/_50pxh"
+            android:layout_width="@dimen/_60pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_14pxh}"
+            imageRes="@{@drawable/img_shape_25}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_shape_25"/>
+    </LinearLayout>
+</layout>

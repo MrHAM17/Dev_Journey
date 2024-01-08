@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <androidx.core.widget.NestedScrollView android:clipToPadding="false"
+        android:fillViewport="true"
+        android:id="@+id/scrollViewScrollView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStyle{&quot;name&quot;:&quot;black_900&quot;}">
+        <LinearLayout android:id="@+id/linearGenre"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearGenre1"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout android:id="@+id/linearFrame"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearFrame1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtGenre"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_genre"
+                            style="@style/txtPoppinsmedium10" tools:text="@string/lbl_genre"/>
+                        <TextView android:id="@+id/txtAdventureComedy"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="@string/msg_adventure_comedy2"
+                            style="@style/txtPoppinssemibold12" tools:text="@string/msg_adventure_comedy2"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearFrame2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtLanguageText"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@string/lbl_language_text"
+                            style="@style/txtPoppinsmedium10" tools:text="@string/lbl_language_text"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtEnglish"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@string/lbl_english"
+                            style="@style/txtPoppinssemibold12" tools:text="@string/lbl_english"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearFrame3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearFrame4"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtYear"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@string/lbl_year"
+                            style="@style/txtPoppinsmedium10" tools:text="@string/lbl_year"/>
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/txtZipcode"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@string/lbl_2019"
+                            style="@style/txtPoppinssemibold12" tools:text="@string/lbl_2019"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearFrame5"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtCountry"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@string/lbl_country"
+                            style="@style/txtPoppinsmedium10" tools:text="@string/lbl_country"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtUnitedStates"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@string/lbl_united_states"
+                            style="@style/txtPoppinssemibold12" tools:text="@string/lbl_united_states"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtActors"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_actors"
+                    style="@style/txtPoppinsmedium10" tools:text="@string/lbl_actors"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerAbout"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_16pxh}" tools:itemCount="4" tools:listitem="@layout/row_about"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

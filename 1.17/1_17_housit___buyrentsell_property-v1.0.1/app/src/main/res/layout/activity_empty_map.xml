@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data/>
+    <fragment android:id="@+id/mapEmptymap"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:name="com.google.android.gms.maps.SupportMapFragment"/>
+</layout>

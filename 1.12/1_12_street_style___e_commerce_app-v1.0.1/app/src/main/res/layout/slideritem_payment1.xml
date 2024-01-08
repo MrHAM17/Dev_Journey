@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <FrameLayout android:id="@+id/frameCard"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:paddingEnd="@dimen/_26pxh"
+        android:paddingStart="@dimen/_26pxh" style="@style/groupStyle{&quot;name&quot;:&quot;black_900&quot;}cornerRadius">
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtOneHundredTwelve"
+            android:layout_gravity="bottom|start"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_11pxh"
+            android:singleLine="true" android:text="@string/lbl_0112"
+            style="@style/txtPlayfairDisplayplayfairdisplaymedium32" tools:text="@string/lbl_0112"/>
+        <LinearLayout android:id="@+id/linearSixteen"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <ImageView android:id="@+id/imageTelevision"
+                android:layout_height="@dimen/_16pxh"
+                android:layout_width="@dimen/_91pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_television"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_television"/>
+            <FrameLayout android:id="@+id/frameThirtyThree"
+                android:layout_gravity="end"
+                android:layout_height="@dimen/_32pxv" android:layout_width="@dimen/_51pxh">
+                <View
+                    android:background="@drawable/rectangle_bg_name_yellow_800_radius_16"
+                    android:id="@+id/viewOval"
+                    android:layout_gravity="end"
+                    android:layout_height="@dimen/_32pxh" android:layout_width="@dimen/_32pxh"/>
+                <View
+                    android:background="@drawable/rectangle_bg_name_deep_orange_a400_radius_16"
+                    android:id="@+id/viewOvalCopyTwo"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_32pxh" android:layout_width="@dimen/_32pxh"/>
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

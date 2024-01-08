@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearNotification"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:contentInsetStart="0dp" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_white_a700_border_name_gray_300_radius_20"
+                android:id="@+id/btnArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_left_primarycontainer" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtNotification"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@string/lbl_notification"
+                style="@style/txtManropeextrabold18" tools:text="@string/lbl_notification"/>
+        </androidx.appcompat.widget.Toolbar>
+        <FrameLayout android:gravity="center_horizontal"
+            android:id="@+id/frameToday"
+            android:layout_height="wrap_content" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearToday"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtToday"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/lbl_today"
+                    style="@style/txtManropebold16" tools:text="@string/lbl_today"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerSeventyFour"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_14pxh}" tools:itemCount="2" tools:listitem="@layout/row_seventyfour"/>
+            <LinearLayout android:id="@+id/linearThisWeek"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtThisWeek"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/lbl_this_week"
+                    style="@style/txtManropebold16" tools:text="@string/lbl_this_week"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerChartLine"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_14pxh}" tools:itemCount="3" tools:listitem="@layout/row_chartline"/>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

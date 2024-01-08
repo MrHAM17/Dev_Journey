@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearTypeCardThemeDark"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_20pxv"
+        android:paddingEnd="@dimen/_18pxh"
+        android:paddingStart="@dimen/_18pxh"
+        android:paddingTop="@dimen/_20pxv" style="@style/groupStylenameblue_gray_5">
+        <ImageView android:id="@+id/imageImage2"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_120pxh"
+            android:layout_width="@dimen/_140pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_16pxh}"
+            imageRes="@{@drawable/img_rectangle_4_100x100}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle_4_100x100"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearAutoLayoutVertical"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <TextView android:id="@+id/txtPresidentMilaDe"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/msg_de_paris_monte_carlo"
+                style="@style/txtUrbanistromanbold18" tools:text="@string/msg_de_paris_monte_carlo"/>
+            <LinearLayout android:id="@+id/linearAutoLayoutHorizontal1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageImage3"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_12pxh"
+                    android:layout_width="@dimen/_12pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_signal_yellow_a700"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_signal_yellow_a700"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFortyEight"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_4_6"
+                    style="@style/txtUrbanistsemibold14_1" tools:text="@string/lbl_4_6"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:id="@+id/txtParisFrance"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/lbl_paris_france"
+                    style="@style/txtUrbanistregular12" tools:text="@string/lbl_paris_france"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearAutoLayoutHorizontal2"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrice"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_29"
+                    style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_29"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtNight"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/lbl_night"
+                    style="@style/txtUrbanistregular10" tools:text="@string/lbl_night"/>
+                <ImageView android:id="@+id/imageImage"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_bookmark_primary"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_bookmark_primary"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

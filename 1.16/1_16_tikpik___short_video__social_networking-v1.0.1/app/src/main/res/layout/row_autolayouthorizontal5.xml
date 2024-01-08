@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearTypeNotSeenStory"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:orientation="vertical">
+        <ImageView android:id="@+id/imageAubrey"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_80pxh"
+            android:layout_width="@dimen/_80pxh"
+            android:scaleType="centerCrop" circular="@{true}"
+            imageRes="@{@drawable/img_ellipse_80x80}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_80x80"/>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtName"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01" android:singleLine="true"
+            android:text="@string/lbl_aubrey"
+            style="@style/txtUrbanistsemibold14_3" tools:text="@string/lbl_aubrey"/>
+    </LinearLayout>
+</layout>

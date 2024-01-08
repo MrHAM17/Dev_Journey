@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearFilter"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/linearApplyFilter"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_25pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh"
+            android:paddingTop="@dimen/_25pxv" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700_01&quot;}cornerRadius">
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearClose"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageClose"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_component_1_primary"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_component_1_primary"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFilter"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.0"
+                    android:lineSpacingExtra="@dimen/_5pxh"
+                    android:singleLine="true"
+                    android:text="@string/lbl_filter"
+                    style="@style/txtPlusJakartaSanssemibold18" tools:text="@string/lbl_filter"/>
+                <FrameLayout android:id="@+id/frameSpacer"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMediumLabelMedium"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.0"
+                    android:lineSpacingExtra="@dimen/_4pxh"
+                    android:singleLine="true"
+                    android:text="@string/lbl_reset_filters"
+                    style="@style/txtPlusJakartaSanssemibold14_3" tools:text="@string/lbl_reset_filters"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearDesignCreative"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/_1pxh" android:paddingStart="@dimen/_1pxh">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCategories"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.0"
+                    android:lineSpacingExtra="@dimen/_5pxh"
+                    android:singleLine="true"
+                    android:text="@string/lbl_categories"
+                    style="@style/txtPlusJakartaSansbold16" tools:text="@string/lbl_categories"/>
+                <FrameLayout android:id="@+id/frameFiftyFive"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content">
+                    <FrameLayout
+                        android:background="@drawable/rectangle_bg_name_deep_orange_a200_radius_22"
+                        android:id="@+id/frameCategories"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="@dimen/_14pxv"
+                        android:paddingEnd="@dimen/_16pxh" android:paddingTop="@dimen/_14pxv"/>
+                    <FrameLayout
+                        android:background="@drawable/rectangle_bg_name_onprimarycontainer_opacity_1_border_name_gray_300_radius_22"
+                        android:id="@+id/frameCategories1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="@dimen/_14pxv"
+                        android:paddingEnd="@dimen/_16pxh" android:paddingTop="@dimen/_14pxv"/>
+                    <FrameLayout
+                        android:background="@drawable/rectangle_bg_name_onprimarycontainer_opacity_1_border_name_gray_300_radius_22"
+                        android:id="@+id/frameCategories2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="@dimen/_14pxv"
+                        android:paddingEnd="@dimen/_16pxh" android:paddingTop="@dimen/_14pxv"/>
+                    <FrameLayout
+                        android:background="@drawable/rectangle_bg_name_onprimarycontainer_opacity_1_border_name_gray_300_radius_22"
+                        android:id="@+id/frameCategories3"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="@dimen/_14pxv"
+                        android:paddingEnd="@dimen/_16pxh" android:paddingTop="@dimen/_14pxv"/>
+                    <FrameLayout
+                        android:background="@drawable/rectangle_bg_name_onprimarycontainer_opacity_1_border_name_gray_300_radius_22"
+                        android:id="@+id/frameCategories4"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="@dimen/_14pxv"
+                        android:paddingEnd="@dimen/_16pxh" android:paddingTop="@dimen/_14pxv"/>
+                    <FrameLayout
+                        android:background="@drawable/rectangle_bg_name_onprimarycontainer_opacity_1_border_name_gray_300_radius_22"
+                        android:id="@+id/frameCategories5"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="@dimen/_14pxv"
+                        android:paddingEnd="@dimen/_16pxh" android:paddingTop="@dimen/_14pxv"/>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearSalaries"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <LinearLayout android:id="@+id/linearSixtyThree"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtSalaries"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.0"
+                        android:lineSpacingExtra="@dimen/_5pxh"
+                        android:singleLine="true"
+                        android:text="@string/lbl_salaries"
+                        style="@style/txtPlusJakartaSansbold16" tools:text="@string/lbl_salaries"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPrice"
+                        android:layout_gravity="top"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.0"
+                        android:lineSpacingExtra="@dimen/_4pxh"
+                        android:singleLine="true"
+                        android:text="@string/lbl_6_000_month"
+                        style="@style/txtPlusJakartaSanssemibold12_3" tools:text="@string/lbl_6_000_month"/>
+                </LinearLayout>
+                <com.google.android.material.slider.Slider
+                    android:gravity="center_horizontal"
+                    android:id="@+id/seekBarSeekBar"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:value="52" android:valueFrom="0"
+                    android:valueTo="100" app:labelBehavior="gone"
+                    app:thumbColor="@color/{&quot;name&quot;:&quot;deep_orange_A200&quot;}"
+                    app:thumbRadius="@dimen/_8pxh"
+                    app:trackColorActive="@color/{&quot;name&quot;:&quot;deep_orange_A200&quot;}" app:trackColorInactive="@color/{&quot;name&quot;:&quot;gray_100&quot;}"/>
+                <LinearLayout android:id="@+id/linearPrice"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPrice1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.0"
+                        android:lineSpacingExtra="@dimen/_4pxh"
+                        android:singleLine="true"
+                        android:text="@string/lbl_560"
+                        style="@style/txtPlusJakartaSanssemibold12_2" tools:text="@string/lbl_560"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPrice2"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.0"
+                        android:lineSpacingExtra="@dimen/_4pxh"
+                        android:singleLine="true"
+                        android:text="@string/lbl_12_000"
+                        style="@style/txtPlusJakartaSanssemibold12_2" tools:text="@string/lbl_12_000"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearJobs"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/_2pxh" android:paddingStart="@dimen/_2pxh">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtJobs"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.0"
+                    android:lineSpacingExtra="@dimen/_5pxh"
+                    android:singleLine="true"
+                    android:text="@string/lbl_jobs"
+                    style="@style/txtPlusJakartaSansbold16" tools:text="@string/lbl_jobs"/>
+                <FrameLayout android:id="@+id/frameJobs"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content">
+                    <FrameLayout
+                        android:background="@drawable/rectangle_bg_name_deep_orange_a200_radius_22"
+                        android:id="@+id/frameJobs1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="@dimen/_14pxv"
+                        android:paddingEnd="@dimen/_16pxh" android:paddingTop="@dimen/_14pxv"/>
+                    <FrameLayout
+                        android:background="@drawable/rectangle_bg_name_onprimarycontainer_opacity_1_border_name_gray_300_radius_22"
+                        android:id="@+id/frameJobs2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="@dimen/_14pxv"
+                        android:paddingEnd="@dimen/_16pxh" android:paddingTop="@dimen/_14pxv"/>
+                </FrameLayout>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_24"
+                android:ellipsize="end"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:gravity="center"
+                android:id="@+id/btnApplyFilter"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_56pxv"
+                android:layout_width="@dimen/_327pxh"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:paddingBottom="@dimen/_17pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_17pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_apply_filter"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_apply_filter"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

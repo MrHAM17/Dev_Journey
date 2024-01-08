@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearEightyNine"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}">
+        <FrameLayout android:id="@+id/fragmentContainer"
+            android:layout_height="match_parent"
+            android:layout_weight="1" android:layout_width="match_parent"/>
+        <FrameLayout android:gravity="center_horizontal"
+            android:id="@+id/frameBottomBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" style="@style/groupStyle{&quot;name&quot;:&quot;primary&quot;}">
+            <LinearLayout android:id="@+id/linearHome"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <ImageView android:id="@+id/imageHome"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_nav_home"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_nav_home"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtHome"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/lbl_home"
+                    style="@style/txtOverpassregular12_2" tools:text="@string/lbl_home"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearCard"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <ImageView android:id="@+id/imageCard"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_nav_card"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_nav_card"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtCard"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/lbl_card"
+                    style="@style/txtOverpassregular12_3" tools:text="@string/lbl_card"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearActivity"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <ImageView android:id="@+id/imageActivity"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_nav_activity"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_nav_activity"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtActivity"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/lbl_activity"
+                    style="@style/txtOverpassregular12_3" tools:text="@string/lbl_activity"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearProfile"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <ImageView android:id="@+id/imageProfile"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_nav_profile"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_nav_profile"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtProfile"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/lbl_profile"
+                    style="@style/txtOverpassregular12_3" tools:text="@string/lbl_profile"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

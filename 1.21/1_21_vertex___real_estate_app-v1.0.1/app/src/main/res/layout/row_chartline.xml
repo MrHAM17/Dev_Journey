@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearNotification"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <ImageButton
+            android:background="@drawable/rectangle_bg_name_gray_300_radius_10"
+            android:id="@+id/btnChartLine"
+            android:layout_height="@dimen/_44pxh"
+            android:layout_width="@dimen/_44pxh"
+            android:paddingHorizontal="@dimen/_10pxh"
+            android:paddingVertical="@dimen/_10pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_chart_line" tools:ignore="ContentDescription"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearText"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTheHouseWithThe"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@string/msg_the_house_with_the"
+                style="@style/txtManropebold14" tools:text="@string/msg_the_house_with_the"/>
+            <TextView android:id="@+id/txtThereAreSeveral"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.02"
+                android:text="@string/msg_there_are_several"
+                style="@style/txtManrope12" tools:text="@string/msg_there_are_several"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearTimeAndDot"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtDuration"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.02" android:singleLine="true"
+                android:text="@string/lbl_4_days"
+                style="@style/txtManrope12" tools:text="@string/lbl_4_days"/>
+            <View
+                android:background="@drawable/rectangle_bg_name_primary_radius_4"
+                android:id="@+id/viewNoti" android:layout_gravity="end"
+                android:layout_height="@dimen/_8pxh" android:layout_width="@dimen/_8pxh"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

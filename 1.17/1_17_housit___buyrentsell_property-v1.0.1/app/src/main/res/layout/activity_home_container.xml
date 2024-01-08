@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearShape"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <FrameLayout android:id="@+id/fragmentContainer"
+            android:layout_height="match_parent"
+            android:layout_weight="1" android:layout_width="match_parent"/>
+        <FrameLayout android:gravity="center_horizontal"
+            android:id="@+id/frameBottomBar"
+            android:layout_height="wrap_content" android:layout_width="match_parent">
+            <ImageView android:id="@+id/imageUser"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_34pxh"
+                android:layout_width="@dimen/_25pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_user_primary"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_user_primary"/>
+            <ImageView android:id="@+id/imageRewind"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_25pxh"
+                android:layout_width="@dimen/_25pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_rewind"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_rewind"/>
+            <ImageView android:id="@+id/imageFavorite"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_25pxh"
+                android:layout_width="@dimen/_25pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_favorite_blue_gray_800_01"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_favorite_blue_gray_800_01"/>
+            <ImageView android:id="@+id/imageLock"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_25pxh"
+                android:layout_width="@dimen/_25pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_lock"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_lock"/>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

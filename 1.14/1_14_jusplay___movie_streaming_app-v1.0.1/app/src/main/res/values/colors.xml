@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+<color name="themes">[{"name":"lightCode"}]</color>
+  <color name="colors">[{"color":"#0006031f","lightCode":"#0006031f","displayName":"onPrimary","name":"onPrimary","type":"SCHEME"},{"color":"#25233b","lightCode":"#25233b","displayName":"onPrimaryContainer","name":"onPrimaryContainer","type":"SCHEME"},{"color":"#cbc9d8","lightCode":"#cbc9d8","displayName":"primaryContainer","name":"primaryContainer","type":"SCHEME"},{"color":"#cec9ff","lightCode":"#cec9ff","displayName":"onErrorContainer","name":"onErrorContainer","type":"SCHEME"},{"color":"#de0b30","lightCode":"#de0b30","displayName":"primary","name":"primary","type":"SCHEME"},{"color":"#1f1d35","lightCode":"#1f1d35","displayName":"gray_900","name":"gray_900","type":"CONSTANT"},{"color":"#e67d15","lightCode":"#e67d15","displayName":"yellow_900","name":"yellow_900","type":"CONSTANT"},{"color":"#c4c4c4","lightCode":"#c4c4c4","displayName":"gray_400","name":"gray_400","type":"CONSTANT"},{"color":"#9592b1","lightCode":"#9592b1","displayName":"blue_gray_300","name":"blue_gray_300","type":"CONSTANT"},{"color":"#ff8c00","lightCode":"#ff8c00","displayName":"amber_800","name":"amber_800","type":"CONSTANT"},{"color":"#06041f","lightCode":"#06041f","displayName":"black_900","name":"black_900","type":"CONSTANT"},{"color":"#666666","lightCode":"#666666","displayName":"gray_700","name":"gray_700","type":"CONSTANT"},{"color":"#ff9d27","lightCode":"#ff9d27","displayName":"orange_400","name":"orange_400","type":"CONSTANT"},{"color":"#fbbf27","lightCode":"#fbbf27","displayName":"yellow_700","name":"yellow_700","type":"CONSTANT"},{"color":"#38364c","lightCode":"#38364c","displayName":"blue_gray_800","name":"blue_gray_800","type":"CONSTANT"},{"color":"#ffffff","lightCode":"#ffffff","displayName":"white_A700","name":"white_A700","type":"CONSTANT"},{"color":"#ffad09","lightCode":"#ffad09","displayName":"amber_A700","name":"amber_A700","type":"CONSTANT"},{"color":"#8ddedede","lightCode":"#8ddedede","displayName":"gray_300_8d","name":"gray_300_8d","type":"CONSTANT"}]</color>
+<color name="ic_launcher_background">#FFFFFF</color>
+</resources>

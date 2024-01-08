@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "1_10_social___social_networking"

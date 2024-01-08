@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <ImageView android:id="@+id/imageOne"
+        android:layout_height="@dimen/_130pxv"
+        android:layout_width="@dimen/_100pxh" android:scaleType="fitXY"
+        imageRes="@{@drawable/img_1}" tools:ignore="ContentDescription" tools:src="@drawable/img_1"/>
+</layout>

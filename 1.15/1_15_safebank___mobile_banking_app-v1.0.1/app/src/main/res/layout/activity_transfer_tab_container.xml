@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearArrowLeft"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@drawable/rectangle_border_name_gray_300_radius_17"
+                android:id="@+id/btnArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_left_black_900" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTransfer"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_transfer"
+                style="@style/txtPoppinssemibold18" tools:text="@string/lbl_transfer"/>
+            <ImageButton
+                android:background="@drawable/rectangle_border_name_gray_300_radius_17"
+                android:id="@+id/btnUser"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_user" tools:ignore="ContentDescription"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearTransfer"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="start"
+                android:id="@+id/recyclerTransferTabContainer"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_24pxh}" tools:itemCount="5" tools:listitem="@layout/row_transfertabcontainer"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtAlexDordan"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_alex_dordan"
+                style="@style/txtPoppinsmedium18" tools:text="@string/lbl_alex_dordan"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtWebDeveloper"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_web_developer"
+                style="@style/txtPoppinsmedium10" tools:text="@string/lbl_web_developer"/>
+            <LinearLayout android:id="@+id/linearContrast"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_49pxv"
+                android:paddingEnd="@dimen/_44pxh"
+                android:paddingStart="@dimen/_44pxh"
+                android:paddingTop="@dimen/_49pxv" style="@style/groupStyle">
+                <ImageView android:id="@+id/imageContrast"
+                    android:layout_height="@dimen/_23pxh"
+                    android:layout_width="@dimen/_36pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_contrast_white_a700"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_contrast_white_a700"/>
+                <ImageView android:id="@+id/imageOne"
+                    android:layout_height="@dimen/_4pxh"
+                    android:layout_width="@dimen/_32pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_1"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_1"/>
+                <ImageView android:id="@+id/imageTwo"
+                    android:layout_height="@dimen/_4pxh"
+                    android:layout_width="@dimen/_32pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_1"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_1"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtZipcode"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_4023"
+                    style="@style/txtPoppinsmedium10_2" tools:text="@string/lbl_4023"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtZipcode1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_5534"
+                    style="@style/txtPoppinsmedium10_2" tools:text="@string/lbl_5534"/>
+            </LinearLayout>
+            <com.google.android.material.tabs.TabLayout
+                android:gravity="center_horizontal"
+                android:id="@+id/tabLayoutTabview"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:tabBackground="@drawable/selector_bg_name_primary_radius_7"
+                app:tabIndicatorColor="@android:color/transparent"
+                app:tabIndicatorHeight="0dp" app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}" app:tabTextColor="@color/{&quot;name&quot;:&quot;black_900&quot;}"/>
+            <androidx.viewpager2.widget.ViewPager2
+                android:gravity="center_horizontal"
+                android:id="@+id/viewPagerTabBarView"
+                android:layout_height="match_parent"
+                android:layout_weight="1" android:layout_width="match_parent"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

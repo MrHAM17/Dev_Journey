@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearFormTextarea"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_21pxv"
+        android:paddingTop="@dimen/_21pxv" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                android:id="@+id/btnArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_left" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPageTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_add_review"
+                style="@style/txtRalewaybold14" tools:text="@string/lbl_add_review"/>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearAddReviewFill"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:id="@+id/txtTitle"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/msg_hi_how_was_your"
+                    style="@style/txtRalewaysemibold24" tools:text="@string/msg_hi_how_was_your"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDescription"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/msg_lorem_ipsum_dolor6"
+                    style="@style/txtRalewayregular12" tools:text="@string/msg_lorem_ipsum_dolor6"/>
+                <LinearLayout android:id="@+id/linearItemStarBig"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatRatingBar
+                        android:id="@+id/ratingBarRatingBar"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:numStars="5" android:rating="0" style="@style/Widget.AppCompat.RatingBar"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtForty"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.04"
+                        android:singleLine="true"
+                        android:text="@string/lbl_4_0"
+                        style="@style/txtMontserratextrabold25" tools:text="@string/lbl_4_0"/>
+                </LinearLayout>
+                <EditText
+                    android:background="@drawable/rectangle_bg_name_gray_100_radius_12"
+                    android:fontFamily="@font/raleway"
+                    android:hint="@string/msg_lorem_ipsum_dolor7"
+                    android:id="@+id/etFormTextarea"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_23pxv"
+                    android:paddingEnd="@dimen/_16pxh"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_23pxv"
+                    android:singleLine="true"
+                    android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_800_01&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_800_01&quot;}"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_12pxh"
+                    android:textStyle="bold" tools:ignore="Autofill"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerAddReviewFill"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2" itemSpace="@{@dimen/_9pxh}"
+                    tools:itemCount="3" tools:listitem="@layout/row_addreviewfill"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_radius_35"
+            android:ellipsize="end" android:fontFamily="@font/raleway"
+            android:gravity="center" android:id="@+id/btnSubmit"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_70pxv"
+            android:layout_width="@dimen/_327pxh"
+            android:paddingBottom="@dimen/_25pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_25pxv" android:singleLine="true"
+            android:text="@string/lbl_submit"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_submit"/>
+    </LinearLayout>
+</layout>

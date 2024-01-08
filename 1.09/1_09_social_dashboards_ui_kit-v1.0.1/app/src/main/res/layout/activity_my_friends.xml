@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearMyFriends"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:contentInsetStart="0dp" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_white_a700_border_name_blue_gray_100_radius_12"
+                android:id="@+id/btnButtonIcon"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_button_icon" tools:ignore="ContentDescription"/>
+            <androidx.appcompat.widget.SearchView
+                android:background="@drawable/rectangle_bg_name_gray_400_radius_8"
+                android:id="@+id/searchViewSearch"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:theme="@style/searchViewsearch"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="@string/msg_search_in_friends" app:searchIcon="@drawable/img_rewind_primarycontainer_16x16"/>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.recyclerview.widget.RecyclerView
+            android:gravity="center_horizontal"
+            android:id="@+id/recyclerMyFriends"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            itemSpace="@{@dimen/_8pxh}" tools:itemCount="5" tools:listitem="@layout/row_myfriends"/>
+    </LinearLayout>
+</layout>

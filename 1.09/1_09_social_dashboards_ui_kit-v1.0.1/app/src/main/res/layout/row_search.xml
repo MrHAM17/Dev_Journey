@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearEdwardFord2"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/linearEdwardFord3"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <FrameLayout android:id="@+id/frameCard01"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_229pxv" android:layout_width="@dimen/_154pxh">
+                <ImageView android:id="@+id/imageEdwardFord7"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_229pxh"
+                    android:layout_width="@dimen/_154pxh"
+                    android:scaleType="fitXY"
+                    cornerRadius="@{@dimen/_8pxh}"
+                    imageRes="@{@drawable/img_thumbnail}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_thumbnail"/>
+                <LinearLayout android:id="@+id/linearNine"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_20pxv"
+                    android:paddingEnd="@dimen/_28pxh"
+                    android:paddingStart="@dimen/_28pxh"
+                    android:paddingTop="@dimen/_20pxv" style="@style/groupStylecornerRadius_4">
+                    <ImageView android:id="@+id/imageEdwardFord8"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_40pxh"
+                        android:layout_width="@dimen/_40pxh"
+                        android:scaleType="fitXY"
+                        cornerRadius="@{@dimen/_12pxh}"
+                        imageRes="@{@drawable/img_image_5}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_image_5"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/txtUsername3"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:lineSpacingExtra="@dimen/_4pxh"
+                        android:singleLine="true"
+                        android:text="@string/lbl_edward_ford"
+                        style="@style/txtInterbold16_1" tools:text="@string/lbl_edward_ford"/>
+                </LinearLayout>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/frameCard02"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_229pxv" android:layout_width="@dimen/_154pxh">
+                <ImageView android:id="@+id/imageEdwardFord"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_229pxh"
+                    android:layout_width="@dimen/_154pxh"
+                    android:scaleType="fitXY"
+                    cornerRadius="@{@dimen/_8pxh}"
+                    imageRes="@{@drawable/img_thumbnail_229x154}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_thumbnail_229x154"/>
+                <LinearLayout android:id="@+id/linearEight"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_20pxv"
+                    android:paddingEnd="@dimen/_28pxh"
+                    android:paddingStart="@dimen/_28pxh"
+                    android:paddingTop="@dimen/_20pxv" style="@style/groupStylecornerRadius_4">
+                    <ImageView android:id="@+id/imageEdwardFord1"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_40pxh"
+                        android:layout_width="@dimen/_40pxh"
+                        android:scaleType="fitXY"
+                        cornerRadius="@{@dimen/_12pxh}"
+                        imageRes="@{@drawable/img_image_6}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_image_6"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/txtUsername4"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:lineSpacingExtra="@dimen/_4pxh"
+                        android:singleLine="true"
+                        android:text="@string/lbl_edward_ford"
+                        style="@style/txtInterbold16_1" tools:text="@string/lbl_edward_ford"/>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearEdwardFord"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <FrameLayout android:id="@+id/frameCard03"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_229pxv" android:layout_width="@dimen/_154pxh">
+                <ImageView android:id="@+id/imageEdwardFord2"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_229pxh"
+                    android:layout_width="@dimen/_154pxh"
+                    android:scaleType="fitXY"
+                    cornerRadius="@{@dimen/_8pxh}"
+                    imageRes="@{@drawable/img_thumbnail_1}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_thumbnail_1"/>
+                <LinearLayout android:id="@+id/linearSeven"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_20pxv"
+                    android:paddingEnd="@dimen/_28pxh"
+                    android:paddingStart="@dimen/_28pxh"
+                    android:paddingTop="@dimen/_20pxv" style="@style/groupStylecornerRadius_4">
+                    <ImageView android:id="@+id/imageEdwardFord3"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_40pxh"
+                        android:layout_width="@dimen/_40pxh"
+                        android:scaleType="fitXY"
+                        cornerRadius="@{@dimen/_12pxh}"
+                        imageRes="@{@drawable/img_image_7}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_image_7"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/txtUsername"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:lineSpacingExtra="@dimen/_4pxh"
+                        android:singleLine="true"
+                        android:text="@string/lbl_edward_ford"
+                        style="@style/txtInterbold16_1" tools:text="@string/lbl_edward_ford"/>
+                </LinearLayout>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/frameCard04"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_229pxv" android:layout_width="@dimen/_154pxh">
+                <ImageView android:id="@+id/imageEdwardFord4"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_229pxh"
+                    android:layout_width="@dimen/_154pxh"
+                    android:scaleType="fitXY"
+                    cornerRadius="@{@dimen/_8pxh}"
+                    imageRes="@{@drawable/img_thumbnail_2}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_thumbnail_2"/>
+                <LinearLayout android:id="@+id/linearSix"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_20pxv"
+                    android:paddingEnd="@dimen/_28pxh"
+                    android:paddingStart="@dimen/_28pxh"
+                    android:paddingTop="@dimen/_20pxv" style="@style/groupStylecornerRadius_4">
+                    <ImageView android:id="@+id/imageEdwardFord5"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_40pxh"
+                        android:layout_width="@dimen/_40pxh"
+                        android:scaleType="fitXY"
+                        cornerRadius="@{@dimen/_12pxh}"
+                        imageRes="@{@drawable/img_image_8}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_image_8"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/txtUsername1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:lineSpacingExtra="@dimen/_4pxh"
+                        android:singleLine="true"
+                        android:text="@string/lbl_edward_ford"
+                        style="@style/txtInterbold16_1" tools:text="@string/lbl_edward_ford"/>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

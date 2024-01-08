@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient android:angle="315.0"
+        android:endColor="@color/{&quot;name&quot;:&quot;amber_A100&quot;}"
+        android:startColor="@color/{&quot;name&quot;:&quot;amber_500&quot;}" android:type="linear"/>
+    <corners android:radius="@dimen/_20pxh"/>
+</shape>

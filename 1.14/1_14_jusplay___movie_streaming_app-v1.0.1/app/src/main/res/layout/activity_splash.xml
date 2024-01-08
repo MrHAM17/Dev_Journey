@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearSplash"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;primary&quot;}">
+        <FrameLayout android:id="@+id/frameLogo"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_90pxv"
+            android:layout_width="@dimen/_90pxh"
+            android:paddingHorizontal="@dimen/_19pxh"
+            android:paddingVertical="@dimen/_19pxv" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}cornerRadius">
+            <ImageView android:id="@+id/imageWarning"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_41pxh"
+                android:layout_width="@dimen/_41pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_warning"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_warning"/>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

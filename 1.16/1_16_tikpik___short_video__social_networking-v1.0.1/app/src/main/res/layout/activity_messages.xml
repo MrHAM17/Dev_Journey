@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearMessages"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onErrorContainer&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowDown"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_down"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTitleSection"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_messages"
+                style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_messages"/>
+            <LinearLayout android:id="@+id/linearGroup73"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageButton android:id="@+id/btnIconlyCurvedPlus"
+                    android:layout_gravity="top"
+                    android:layout_height="@dimen/_28pxh"
+                    android:layout_width="@dimen/_28pxh"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_iconly_curved_plus_gray_900" tools:ignore="ContentDescription"/>
+                <ImageButton android:id="@+id/btnSettings"
+                    android:layout_gravity="top"
+                    android:layout_height="@dimen/_28pxh"
+                    android:layout_width="@dimen/_28pxh"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_settings_gray_900" tools:ignore="ContentDescription"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearSearch"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_19pxv" android:paddingTop="@dimen/_19pxv">
+            <androidx.appcompat.widget.SearchView
+                android:background="@drawable/rectangle_bg_name_gray_100_radius_12"
+                android:gravity="center_horizontal"
+                android:id="@+id/searchViewSearch"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:theme="@style/searchViewsearch"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="@string/lbl_search" app:searchIcon="@drawable/img_user_20x20"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtRecently"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_recently"
+                style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_recently"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="end"
+                android:id="@+id/recyclerAutoLayoutHorizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_16pxh}" tools:itemCount="5" tools:listitem="@layout/row_autolayouthorizontal5"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtMessages"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_messages"
+                style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_messages"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerTheresaVarnes"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_24pxh}" tools:itemCount="6" tools:listitem="@layout/row_theresavarnes"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

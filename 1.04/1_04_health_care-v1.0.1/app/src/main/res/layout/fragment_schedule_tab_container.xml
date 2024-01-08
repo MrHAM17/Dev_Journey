@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearSchedule"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;primary&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSchedule"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_schedule"
+                style="@style/txtIntersemibold24" tools:text="@string/lbl_schedule"/>
+            <FrameLayout android:id="@+id/frameGroup28"
+                android:layout_height="@dimen/_29pxv" android:layout_width="match_parent">
+                <ImageView android:id="@+id/imageUser"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_20pxh"
+                    android:layout_width="@dimen/_20pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_user_onprimary_20x20"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_user_onprimary_20x20"/>
+                <ImageView android:id="@+id/imageImage"
+                    android:layout_gravity="bottom|end"
+                    android:layout_height="@dimen/_16pxh"
+                    android:layout_width="@dimen/_4pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_component_1"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_component_1"/>
+            </FrameLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearSchedule1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <com.google.android.material.tabs.TabLayout
+                android:gravity="center_horizontal"
+                android:id="@+id/tabLayoutTabview"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:tabBackground="@drawable/selector_bg_name_cyan_300_radius_8"
+                app:tabIndicatorColor="@android:color/transparent"
+                app:tabIndicatorHeight="0dp" app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                app:tabTextColor="@color/{&quot;name&quot;:&quot;onPrimary&quot;}" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50_01&quot;}cornerRadius"/>
+            <androidx.viewpager2.widget.ViewPager2
+                android:gravity="center_horizontal"
+                android:id="@+id/viewPagerTabBarView"
+                android:layout_height="match_parent"
+                android:layout_weight="1" android:layout_width="match_parent"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

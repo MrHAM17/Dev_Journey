@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="start" android:id="@+id/linearOne"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_24pxv"
+        android:paddingEnd="@dimen/_20pxh"
+        android:paddingStart="@dimen/_20pxh"
+        android:paddingTop="@dimen/_24pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}">
+        <ImageButton
+            android:background="@color/{&quot;name&quot;:&quot;red_50_01&quot;}"
+            android:id="@+id/btnFavorite"
+            android:layout_height="@dimen/_36pxh"
+            android:layout_width="@dimen/_36pxh"
+            android:paddingHorizontal="@dimen/_8pxh"
+            android:paddingVertical="@dimen/_8pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_favorite" tools:ignore="ContentDescription"/>
+        <TextView android:id="@+id/txtSendMoney"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/lbl_send_money"
+            style="@style/txtOverpassbold20" tools:text="@string/lbl_send_money"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtCard"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@string/lbl_to_acc_to_acc"
+            style="@style/txtOverpassregular16_1" tools:text="@string/lbl_to_acc_to_acc"/>
+    </LinearLayout>
+</layout>

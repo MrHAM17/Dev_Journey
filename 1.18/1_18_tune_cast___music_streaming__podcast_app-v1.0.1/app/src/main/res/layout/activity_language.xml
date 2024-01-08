@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearLanguage"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowDown"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_down"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFillYourProfile"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_language"
+                style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_language"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearEnglishUS"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_28pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_28pxv">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSuggested"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_suggested"
+                style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_suggested"/>
+            <RadioGroup android:gravity="center_horizontal"
+                android:id="@+id/rgSuggested"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <RadioButton
+                    android:drawableEnd="@drawable/img_contrast_onprimarycontainer"
+                    android:drawablePadding="@dimen/_30pxh"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/urbanist"
+                    android:id="@+id/rbEnglishUS"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/lbl_english_us"
+                    android:textColor="@color/{&quot;name&quot;:&quot;gray_900_01&quot;}"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_18pxh"
+                    android:textStyle="bold" tools:text="@string/lbl_english_us"/>
+                <RadioButton
+                    android:drawableEnd="@drawable/img_contrast_onprimarycontainer"
+                    android:drawablePadding="@dimen/_30pxh"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/urbanist"
+                    android:id="@+id/rbEnglishUK"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/lbl_english_uk"
+                    android:textColor="@color/{&quot;name&quot;:&quot;gray_900_01&quot;}"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_18pxh"
+                    android:textStyle="bold" tools:text="@string/lbl_english_uk"/>
+            </RadioGroup>
+            <View
+                android:background="@color/{&quot;name&quot;:&quot;blue_gray_100&quot;}"
+                android:id="@+id/lineLine"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_380pxh"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtOthers"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_others"
+                style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_others"/>
+            <RadioGroup android:gravity="center_horizontal"
+                android:id="@+id/rgOthers"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <RadioButton
+                    android:drawableEnd="@drawable/img_contrast_onprimarycontainer"
+                    android:drawablePadding="@dimen/_30pxh"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/urbanist"
+                    android:id="@+id/rbMandarin"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/lbl_mandarin"
+                    android:textColor="@color/{&quot;name&quot;:&quot;gray_900_01&quot;}"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_18pxh"
+                    android:textStyle="bold" tools:text="@string/lbl_mandarin"/>
+                <RadioButton
+                    android:drawableEnd="@drawable/img_contrast_onprimarycontainer"
+                    android:drawablePadding="@dimen/_30pxh"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/urbanist"
+                    android:id="@+id/rbHindi"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/lbl_hindi"
+                    android:textColor="@color/{&quot;name&quot;:&quot;gray_900_01&quot;}"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_18pxh"
+                    android:textStyle="bold" tools:text="@string/lbl_hindi"/>
+                <RadioButton
+                    android:drawableEnd="@drawable/img_contrast_onprimarycontainer"
+                    android:drawablePadding="@dimen/_30pxh"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/urbanist"
+                    android:id="@+id/rbSpanish"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/lbl_spanish"
+                    android:textColor="@color/{&quot;name&quot;:&quot;gray_900_01&quot;}"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_18pxh"
+                    android:textStyle="bold" tools:text="@string/lbl_spanish"/>
+                <RadioButton
+                    android:drawableEnd="@drawable/img_contrast_onprimarycontainer"
+                    android:drawablePadding="@dimen/_30pxh"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/urbanist"
+                    android:id="@+id/rbFrench"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/lbl_french"
+                    android:textColor="@color/{&quot;name&quot;:&quot;gray_900_01&quot;}"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_18pxh"
+                    android:textStyle="bold" tools:text="@string/lbl_french"/>
+                <RadioButton
+                    android:drawableEnd="@drawable/img_contrast_onprimarycontainer"
+                    android:drawablePadding="@dimen/_30pxh"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/urbanist"
+                    android:id="@+id/rbArabic"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/lbl_arabic"
+                    android:textColor="@color/{&quot;name&quot;:&quot;gray_900_01&quot;}"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_18pxh"
+                    android:textStyle="bold" tools:text="@string/lbl_arabic"/>
+                <RadioButton
+                    android:drawableEnd="@drawable/img_contrast_onprimarycontainer"
+                    android:drawablePadding="@dimen/_30pxh"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/urbanist"
+                    android:id="@+id/rbBengali"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/lbl_bengali"
+                    android:textColor="@color/{&quot;name&quot;:&quot;gray_900_01&quot;}"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_18pxh"
+                    android:textStyle="bold" tools:text="@string/lbl_bengali"/>
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

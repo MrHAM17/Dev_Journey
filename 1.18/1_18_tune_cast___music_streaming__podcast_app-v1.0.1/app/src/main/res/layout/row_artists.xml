@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearCard"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:orientation="vertical">
+        <ImageView android:id="@+id/imageDrDeath"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_160pxh"
+            android:layout_width="@dimen/_160pxh"
+            android:scaleType="centerCrop" circular="@{true}"
+            imageRes="@{@drawable/img_image_34}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_image_34"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtArtistsName"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.01" android:singleLine="true"
+            android:text="@string/lbl_dr_death"
+            style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_dr_death"/>
+    </LinearLayout>
+</layout>

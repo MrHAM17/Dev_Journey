@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearSkip"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_21pxv"
+        android:paddingTop="@dimen/_21pxv" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                android:id="@+id/btnArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_left" tools:ignore="ContentDescription"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_gray_100_radius_19"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway"
+                android:gravity="center" android:id="@+id/btnSkip"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_skip"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_800_01&quot;}"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="normal" tools:text="@string/lbl_skip"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearLocationFill"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_11pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_11pxv">
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/msg_add_your_location"
+                style="@style/txtRalewaysemibold24" tools:text="@string/msg_add_your_location"/>
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtDescription"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/msg_you_can_edit_this"
+                style="@style/txtRalewayregular14" tools:text="@string/msg_you_can_edit_this"/>
+            <FrameLayout android:id="@+id/frameFrame"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_300pxv"
+                android:layout_width="@dimen/_327pxh" style="@style/groupStylecornerRadius_4">
+                <fragment android:id="@+id/mapMap"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_300pxv"
+                    android:layout_width="match_parent" android:name="com.google.android.gms.maps.SupportMapFragment"/>
+                <LinearLayout android:id="@+id/linearSelectOnMap"
+                    android:layout_gravity="bottom|center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_15pxv"
+                    android:paddingEnd="@dimen/_116pxh"
+                    android:paddingStart="@dimen/_116pxh"
+                    android:paddingTop="@dimen/_15pxv" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;,&quot;opacity&quot;:0.5}">
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/txtSelectOnMap"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@string/lbl_select_on_map2"
+                        style="@style/txtRalewaymedium14" tools:text="@string/lbl_select_on_map2"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageLinkedin"
+                    android:layout_gravity="top|start"
+                    android:layout_height="@dimen/_51pxh"
+                    android:layout_width="@dimen/_34pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_linkedin_orange_300"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_linkedin_orange_300"/>
+            </FrameLayout>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearFormLocation"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_24pxv"
+                android:paddingEnd="@dimen/_16pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_24pxv" style="@style/groupStylenamegray_3">
+                <ImageView android:id="@+id/imageLinkedin1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_20pxh"
+                    android:layout_width="@dimen/_20pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_linkedin_deep_orange_a200_20x20"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_linkedin_deep_orange_a200_20x20"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtWestJakarta"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_west_jakarta"
+                    style="@style/txtRalewaysemibold14_1" tools:text="@string/lbl_west_jakarta"/>
+                <FrameLayout android:id="@+id/frameSpacer"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <ImageView android:id="@+id/imageArrowRight"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_20pxh"
+                    android:layout_width="@dimen/_20pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrow_right"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/imageProgressBarGradient"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_1pxh"
+                android:layout_width="@dimen/_100pxh"
+                android:scaleType="fitXY" tools:ignore="ContentDescription"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_radius_35"
+            android:ellipsize="end" android:fontFamily="@font/raleway"
+            android:gravity="center" android:id="@+id/btnNext"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_70pxv"
+            android:layout_width="@dimen/_327pxh"
+            android:paddingBottom="@dimen/_25pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_25pxv" android:singleLine="true"
+            android:text="@string/lbl_next" android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_next"/>
+    </LinearLayout>
+</layout>

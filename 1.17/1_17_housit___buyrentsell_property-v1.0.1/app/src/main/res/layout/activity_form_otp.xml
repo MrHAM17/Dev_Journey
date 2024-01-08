@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearOtpView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_21pxv"
+        android:paddingTop="@dimen/_21pxv" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                android:id="@+id/btnArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_left" tools:ignore="ContentDescription"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearFormOTP"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_21pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_21pxv">
+            <TextView android:id="@+id/txtTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/msg_enter_the_verification"
+                style="@style/txtRalewaysemibold24" tools:text="@string/msg_enter_the_verification"/>
+            <TextView android:id="@+id/txtDescription"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/msg_enter_thpe_4_digit"
+                style="@style/txtRalewayregular14" tools:text="@string/msg_enter_thpe_4_digit"/>
+            <com.mukesh.OtpView android:focusableInTouchMode="true"
+                android:id="@+id/otpViewOtpView"
+                android:inputType="number"
+                android:itemBackground="@color/{&quot;name&quot;:&quot;gray_100&quot;}"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" app:OtpItemCount="4"
+                app:OtpItemHeight="@dimen/_70pxv"
+                app:OtpItemSpacing="@dimen/_10pxh"
+                app:OtpItemWidth="@dimen/_74pxh"
+                app:OtpLineColor="@color/{&quot;name&quot;:&quot;primary&quot;}" app:OtpViewType="rectangle"/>
+            <FrameLayout android:id="@+id/frameSpacer"
+                android:layout_height="wrap_content" android:layout_width="match_parent"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                android:drawablePadding="@dimen/_8pxh"
+                android:drawableStart="@drawable/img_clock"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway"
+                android:gravity="center" android:id="@+id/btnTwentyOne"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_50pxv"
+                android:layout_width="@dimen/_87pxh"
+                android:paddingBottom="@dimen/_17pxv"
+                android:paddingEnd="@dimen/_15pxh"
+                android:paddingStart="@dimen/_15pxh"
+                android:paddingTop="@dimen/_17pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_00_21"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_800_01&quot;}"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_12pxh"
+                android:textStyle="normal" tools:text="@string/lbl_00_21"/>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearSeventyEight"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:id="@+id/txtRegister"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/msg_didn_t_receive_the"
+                    style="@style/txtRalewayregular14" tools:text="@string/msg_didn_t_receive_the"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtRegister1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_resend_otp"
+                    style="@style/txtRalewaybold14_1" tools:text="@string/lbl_resend_otp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_radius_35"
+            android:ellipsize="end" android:fontFamily="@font/raleway"
+            android:gravity="center" android:id="@+id/btnSubmit"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_70pxv"
+            android:layout_width="@dimen/_327pxh"
+            android:paddingBottom="@dimen/_25pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_25pxv" android:singleLine="true"
+            android:text="@string/lbl_submit"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_submit"/>
+    </LinearLayout>
+</layout>

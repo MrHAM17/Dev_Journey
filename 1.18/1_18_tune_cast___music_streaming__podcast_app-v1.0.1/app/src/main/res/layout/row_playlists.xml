@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearTypeListThemeLight"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <FrameLayout android:id="@+id/frameAutoLayoutHorizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_80pxv"
+            android:layout_width="@dimen/_80pxh"
+            android:paddingHorizontal="@dimen/_24pxh"
+            android:paddingVertical="@dimen/_24pxv" style="@style/groupStylecornerRadius_7">
+            <ImageView android:id="@+id/imageAddNewPlaylist"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_32pxh"
+                android:layout_width="@dimen/_32pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_categories_plus"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_categories_plus"/>
+        </FrameLayout>
+        <TextView android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:id="@+id/txtLoremIpsum"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@string/msg_add_new_playlist"
+            style="@style/txtUrbanistromanbold18" tools:text="@string/msg_add_new_playlist"/>
+    </LinearLayout>
+</layout>

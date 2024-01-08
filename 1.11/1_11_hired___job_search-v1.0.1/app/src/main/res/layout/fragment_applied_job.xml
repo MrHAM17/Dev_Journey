@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <ScrollView android:clipToPadding="false"
+        android:fillViewport="true"
+        android:id="@+id/scrollViewScrollView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700_01&quot;}">
+        <LinearLayout android:id="@+id/linearApplied"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:id="@+id/linearApplied1"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtJobDescription"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.0"
+                    android:lineSpacingExtra="@dimen/_5pxh"
+                    android:singleLine="true"
+                    android:text="@string/lbl_job_description"
+                    style="@style/txtPlusJakartaSansbold16" tools:text="@string/lbl_job_description"/>
+                <TextView android:gravity="center_horizontal"
+                    android:id="@+id/txtDescription"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.0"
+                    android:lineSpacingExtra="@dimen/_8pxh"
+                    android:text="@string/msg_lorem_ipsum_dolor3"
+                    style="@style/txtPlusJakartaSansmedium14" tools:text="@string/msg_lorem_ipsum_dolor3"/>
+                <LinearLayout android:id="@+id/linearFour"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_28pxv"
+                    android:paddingEnd="@dimen/_24pxh"
+                    android:paddingStart="@dimen/_24pxh"
+                    android:paddingTop="@dimen/_28pxv" style="@style/groupStyle_1">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:background="@drawable/rectangle_bg_name_gray_300_radius_24"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/plus_jakarta_sans"
+                        android:gravity="center"
+                        android:id="@+id/btnApplied"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.0"
+                        android:lineSpacingExtra="@dimen/_5pxh"
+                        android:paddingBottom="@dimen/_17pxv"
+                        android:paddingEnd="@dimen/_30pxh"
+                        android:paddingStart="@dimen/_30pxh"
+                        android:paddingTop="@dimen/_17pxv"
+                        android:singleLine="true"
+                        android:text="@string/lbl_applied"
+                        android:textAllCaps="false"
+                        android:textColor="@color/{&quot;name&quot;:&quot;gray_500_01&quot;}"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/_16pxh"
+                        android:textStyle="bold" tools:text="@string/lbl_applied"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearLayout"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_15pxv"
+        android:paddingEnd="@dimen/_25pxh"
+        android:paddingStart="@dimen/_25pxh"
+        android:paddingTop="@dimen/_15pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}cornerRadius">
+        <ImageView android:id="@+id/imageBedroom"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_20pxh"
+            android:layout_width="@dimen/_20pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_mdi_bed_empty"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_mdi_bed_empty"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtBedroomCounter"
+            android:layout_gravity="bottom"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@string/lbl_2_bedroom"
+            style="@style/txtRalewayregular12" tools:text="@string/lbl_2_bedroom"/>
+    </LinearLayout>
+</layout>

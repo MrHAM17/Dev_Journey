@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="start" android:id="@+id/linearCard"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_23pxv"
+        android:paddingEnd="@dimen/_24pxh"
+        android:paddingStart="@dimen/_24pxh"
+        android:paddingTop="@dimen/_23pxv" style="@style/groupStyle">
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtJonathanAnderson"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@string/msg_jonathan_anderson"
+            style="@style/txtOverpassbold12" tools:text="@string/msg_jonathan_anderson"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtText"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@string/msg_1222_3443_9881_1222"
+            style="@style/txtOverpassbold18" tools:text="@string/msg_1222_3443_9881_1222"/>
+        <LinearLayout android:id="@+id/linearBalance1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearBalance2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtBalance"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/lbl_balance"
+                    style="@style/txtOverpasssemibold8" tools:text="@string/lbl_balance"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrice"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/lbl_31_250"
+                    style="@style/txtOverpassbold12" tools:text="@string/lbl_31_250"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/imageBalance"
+                android:layout_height="@dimen/_20pxh"
+                android:layout_width="@dimen/_20pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_user"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_user"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

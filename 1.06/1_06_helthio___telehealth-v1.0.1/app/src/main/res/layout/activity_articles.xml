@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearIconChevronLeft"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageIconChevronLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_icon_chevron_left"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_icon_chevron_left"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtArticles"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_articles"
+                style="@style/txtRalewaysemibold18_1" tools:text="@string/lbl_articles"/>
+            <ImageView android:id="@+id/imageIconChevronLeft1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_icon_chevron_left_onprimary_24x24"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_icon_chevron_left_onprimary_24x24"/>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearArticles"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <androidx.appcompat.widget.SearchView
+                    android:background="@drawable/rectangle_bg_name_white_a700_border_name_gray_300_radius_6"
+                    android:gravity="start"
+                    android:id="@+id/searchViewSearch"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:theme="@style/searchViewsearch"
+                    app:iconifiedByDefault="false"
+                    app:queryBackground="@android:color/transparent"
+                    app:queryHint="@string/msg_search_articles" app:searchIcon="@drawable/img_rewind"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearPopularArticles"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/_4pxh" android:paddingStart="@dimen/_4pxh">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPopularArticles"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/msg_popular_articles"
+                        style="@style/txtRalewaysemibold16_1" tools:text="@string/msg_popular_articles"/>
+                    <FrameLayout android:id="@+id/frameFrameTwentyFour"
+                        android:layout_height="wrap_content" android:layout_width="match_parent">
+                        <FrameLayout
+                            android:background="@drawable/rectangle_bg_name_primary_radius_10"
+                            android:id="@+id/frameCovidNineteen"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingBottom="@dimen/_16pxv"
+                            android:paddingEnd="@dimen/_17pxh"
+                            android:paddingStart="@dimen/_17pxh" android:paddingTop="@dimen/_16pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_bg_name_primary_radius_10"
+                            android:id="@+id/frameDiet"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingBottom="@dimen/_16pxv"
+                            android:paddingEnd="@dimen/_30pxh"
+                            android:paddingStart="@dimen/_30pxh" android:paddingTop="@dimen/_16pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_bg_name_primary_radius_10"
+                            android:id="@+id/frameFitness"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingBottom="@dimen/_16pxv"
+                            android:paddingEnd="@dimen/_30pxh"
+                            android:paddingStart="@dimen/_30pxh" android:paddingTop="@dimen/_16pxv"/>
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearTrendingArticles"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <LinearLayout android:id="@+id/linearNinetyOne"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtTrendingArticles"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/msg_trending_articles"
+                            style="@style/txtRalewaysemibold16_1" tools:text="@string/msg_trending_articles"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSeeAll"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_see_all"
+                            style="@style/txtRalewaymedium12_1" tools:text="@string/lbl_see_all"/>
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerEightyNine"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        itemSpace="@{@dimen/_15pxh}" tools:itemCount="3" tools:listitem="@layout/row_eightynine"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearRelatedArticles"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <LinearLayout
+                        android:id="@+id/linearRelatedArticles1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtRelatedArticles"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/msg_related_articles"
+                            style="@style/txtRalewaysemibold16_5" tools:text="@string/msg_related_articles"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSeeAll1"
+                            android:layout_gravity="top"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_see_all"
+                            style="@style/txtRalewaymedium12_1" tools:text="@string/lbl_see_all"/>
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerSixty"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        itemSpace="@{@dimen/_10pxh}" tools:itemCount="3" tools:listitem="@layout/row_sixty"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

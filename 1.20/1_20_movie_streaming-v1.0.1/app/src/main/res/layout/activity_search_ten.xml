@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearPopularSearch"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_900&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <androidx.appcompat.widget.SearchView
+                android:background="@color/{&quot;name&quot;:&quot;secondaryContainer&quot;}"
+                android:id="@+id/searchViewSearch"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:theme="@style/searchViewsearch"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="@string/msg_search_for_movies" app:searchIcon="@drawable/img_search"/>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearSearchTen"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout android:id="@+id/linearFrameEightyOne"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageIcon"
+                        android:layout_gravity="top"
+                        android:layout_height="@dimen/_20pxh"
+                        android:layout_width="@dimen/_20pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_icon_primary_20x20"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_icon_primary_20x20"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:id="@+id/txtTrendingSearch"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@string/lbl_trending_search"
+                        style="@style/txtRobotosemibold18" tools:text="@string/lbl_trending_search"/>
+                </LinearLayout>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLoveInTrouble"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_love_in_trouble"
+                    style="@style/txtRobotoregular14_2" tools:text="@string/lbl_love_in_trouble"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtHotelDeLuna"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_hotel_de_luna"
+                    style="@style/txtRobotoregular14_2" tools:text="@string/lbl_hotel_de_luna"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTheHeirs"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_the_heirs"
+                    style="@style/txtRobotoregular14_2" tools:text="@string/lbl_the_heirs"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtWhatSWrongWith"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/msg_what_s_wrong_with"
+                    style="@style/txtRobotoregular14_2" tools:text="@string/msg_what_s_wrong_with"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearFrameEightyFour"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:drawablePadding="@dimen/_8pxh"
+                        android:drawableStart="@drawable/img_icon_primary_18x18"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/roboto"
+                        android:id="@+id/checkBoxPopularSearch"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_popular_search"
+                        android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/_18pxh"
+                        android:textStyle="bold" tools:text="@string/lbl_popular_search"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerSearchTen"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        itemSpace="@{@dimen/_16pxh}" tools:itemCount="3" tools:listitem="@layout/row_searchten"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

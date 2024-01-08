@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearSearch"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_white_a700_border_name_blue_gray_100_radius_12"
+                android:id="@+id/btnButtonIcon"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_button_icon" tools:ignore="ContentDescription"/>
+            <androidx.appcompat.widget.SearchView
+                android:background="@drawable/rectangle_bg_name_blue_gray_100_radius_8"
+                android:id="@+id/searchViewSearch"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:theme="@style/searchViewsearch"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="@string/msg_search_in_social" app:searchIcon="@drawable/img_rewind_primarycontainer"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearSearch1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtExploreStories"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:singleLine="true"
+                android:text="@string/lbl_explore_stories"
+                style="@style/txtInterbold22_1" tools:text="@string/lbl_explore_stories"/>
+            <com.google.android.material.tabs.TabLayout
+                android:gravity="end" android:id="@+id/tabLayoutTabview"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}" app:tabTextColor="@color/{&quot;name&quot;:&quot;blue_gray_100&quot;}"/>
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPagerTabBarView"
+                android:layout_height="match_parent"
+                android:layout_weight="1" android:layout_width="match_parent"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

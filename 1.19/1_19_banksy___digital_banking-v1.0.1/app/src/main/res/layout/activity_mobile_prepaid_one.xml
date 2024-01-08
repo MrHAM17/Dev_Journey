@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearNinetyEight"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                android:id="@+id/btnFavorite"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_favorite_onprimary" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtWelcomeBack"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_mobile_prepaid2"
+                style="@style/txtOverpassbold20" tools:text="@string/lbl_mobile_prepaid2"/>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearMobilePrepaidOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearInputField"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLabel"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_prepaid_to"
+                        style="@style/txtOverpassregular16_3" tools:text="@string/lbl_prepaid_to"/>
+                    <EditText
+                        android:background="@drawable/rectangle_border_name_gray_500"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/overpass"
+                        android:hint="@string/lbl_name_or_number"
+                        android:id="@+id/etName"
+                        android:inputType="text"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_20pxv"
+                        android:paddingEnd="@dimen/_24pxh"
+                        android:paddingStart="@dimen/_24pxh"
+                        android:paddingTop="@dimen/_20pxv"
+                        android:singleLine="true"
+                        android:textColor="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                        android:textColorHint="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                        android:textFontWeight="400"
+                        android:textSize="@dimen/_18pxh"
+                        android:textStyle="normal" tools:ignore="Autofill"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearRecent"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtRecent"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_recent"
+                        style="@style/txtOverpassbold24" tools:text="@string/lbl_recent"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerProfileList"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        itemSpace="@{@dimen/_20pxh}" tools:itemCount="5" tools:listitem="@layout/row_profilelist1"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearSeventyOne"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtAllContact"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_all_contact"
+                        style="@style/txtOverpassbold24" tools:text="@string/lbl_all_contact"/>
+                    <LinearLayout android:id="@+id/linearA"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/_16pxv"
+                        android:paddingEnd="@dimen/_20pxh"
+                        android:paddingStart="@dimen/_20pxh"
+                        android:paddingTop="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtA"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_a"
+                            style="@style/txtOverpasssemibold28" tools:text="@string/lbl_a"/>
+                        <View
+                            android:background="@color/{&quot;name&quot;:&quot;gray_400&quot;}"
+                            android:id="@+id/lineLineOne"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_326pxh"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:gravity="center_horizontal"
+                            android:id="@+id/recyclerFortyTwo"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:nestedScrollingEnabled="false"
+                            android:orientation="vertical"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            itemSpace="@{@dimen/_16pxh}"
+                            tools:itemCount="2" tools:listitem="@layout/row_fortytwo"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearB"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_16pxv"
+                    android:paddingEnd="@dimen/_20pxh"
+                    android:paddingStart="@dimen/_20pxh"
+                    android:paddingTop="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}">
+                    <LinearLayout android:id="@+id/linearSixtyOne"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtB"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_b"
+                            style="@style/txtOverpasssemibold28" tools:text="@string/lbl_b"/>
+                        <View
+                            android:background="@color/{&quot;name&quot;:&quot;gray_400&quot;}"
+                            android:id="@+id/lineLineOne1"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_326pxh"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:gravity="center_horizontal"
+                            android:id="@+id/recyclerThirtySeven"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:nestedScrollingEnabled="false"
+                            android:orientation="vertical"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            itemSpace="@{@dimen/_16pxh}"
+                            tools:itemCount="2" tools:listitem="@layout/row_thirtyseven"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearOval"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <ImageView android:id="@+id/imageOval"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_48pxh"
+                            android:layout_width="@dimen/_48pxh"
+                            android:scaleType="centerCrop"
+                            circular="@{true}"
+                            imageRes="@{@drawable/img_oval_3}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_oval_3"/>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearFrame"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtJenningsChamplin"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@string/lbl_baminu"
+                                style="@style/txtOverpassbold16" tools:text="@string/lbl_baminu"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtJenningsChamplin1"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@string/msg_ac_159_107_1396"
+                                style="@style/txtOverpassregular12_1" tools:text="@string/msg_ac_159_107_1396"/>
+                        </LinearLayout>
+                        <FrameLayout android:id="@+id/frameSpacer"
+                            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                        <ImageView android:id="@+id/imageCheckmark"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_24pxh"
+                            android:layout_width="@dimen/_24pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_checkmark_gray_400"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark_gray_400"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

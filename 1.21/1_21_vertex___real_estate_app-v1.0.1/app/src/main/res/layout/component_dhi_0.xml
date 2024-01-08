@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <FrameLayout
+        android:background="@drawable/rectangle_bg_name_gray_300_radius_10"
+        android:id="@+id/frameInputFields"
+        android:layout_height="wrap_content" android:layout_width="match_parent">
+        <FrameLayout android:id="@+id/frameCountrySelect"
+            android:layout_height="wrap_content" android:layout_width="wrap_content">
+            <ImageView android:id="@+id/imageUnitedStates"
+                android:layout_height="@dimen/_24pxh"
+                android:layout_width="@dimen/_24pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_united_states"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_united_states"/>
+            <ImageView android:id="@+id/imageArrowDown"
+                android:layout_height="@dimen/_16pxh"
+                android:layout_width="@dimen/_16pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_down_blue_gray_500_16x16"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down_blue_gray_500_16x16"/>
+        </FrameLayout>
+        <EditText android:background="@android:color/transparent"
+            android:ellipsize="end" android:fontFamily="@font/manrope"
+            android:hint="@string/lbl_phone_number"
+            android:id="@+id/etPhoneNumber" android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+            android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_14pxh" android:textStyle="bold" tools:ignore="Autofill"/>
+    </FrameLayout>
+</layout>

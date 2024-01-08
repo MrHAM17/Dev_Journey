@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <FrameLayout android:id="@+id/frameMask"
+        android:layout_height="wrap_content" android:layout_width="match_parent">
+        <ImageView android:id="@+id/imageImage"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_200pxh"
+            android:layout_width="@dimen/_121pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_12pxh}"
+            imageRes="@{@drawable/img_image_200x121}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_image_200x121"/>
+        <ImageButton android:background="@drawable/rectangle_radius_12"
+            android:id="@+id/btnOverflowMenu"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_32pxh"
+            android:layout_width="@dimen/_32pxh"
+            android:paddingHorizontal="@dimen/_2pxh"
+            android:paddingVertical="@dimen/_2pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_overflow_menu_onerrorcontainer" tools:ignore="ContentDescription"/>
+    </FrameLayout>
+</layout>

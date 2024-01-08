@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearLogin"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_900&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageImage"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_frame_20"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_frame_20"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearEmail"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_32pxv"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_16pxh" android:paddingTop="@dimen/_32pxv">
+            <TextView android:ellipsize="end" android:id="@+id/txtLogIn"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_log_in"
+                style="@style/txtRobotobold32" tools:text="@string/lbl_log_in"/>
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtPutYourEmailAddre"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/msg_put_your_email_address"
+                style="@style/txtRobotoregular18" tools:text="@string/msg_put_your_email_address"/>
+            <EditText
+                android:background="@drawable/rectangle_bg_name_secondarycontainer_radius_5"
+                android:drawablePadding="@dimen/_10pxh"
+                android:drawableStart="@drawable/img_icon"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto"
+                android:hint="@string/lbl_your_email"
+                android:id="@+id/etEmail" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_16pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_16pxv"
+                android:singleLine="true"
+                android:textColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;}"
+                android:textColorHint="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;}"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_12pxh"
+                android:textStyle="normal" tools:ignore="Autofill"/>
+            <EditText
+                android:background="@drawable/rectangle_bg_name_secondarycontainer_radius_5"
+                android:drawablePadding="@dimen/_10pxh"
+                android:drawableStart="@drawable/img_location"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto"
+                android:hint="@string/lbl_password"
+                android:id="@+id/etPassword" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_16pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_16pxv"
+                android:singleLine="true"
+                android:textColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;}"
+                android:textColorHint="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;}"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_12pxh"
+                android:textStyle="normal" tools:ignore="Autofill"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_5"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto"
+                android:gravity="center" android:id="@+id/btnLogin"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_16pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_16pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_login2"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="normal" tools:text="@string/lbl_login2"/>
+            <FrameLayout android:id="@+id/frameSpacer"
+                android:layout_height="wrap_content" android:layout_width="match_parent"/>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtConfirmation"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/msg_don_t_have_an_account"
+                style="@style/txtRobotoregular12_1" tools:text="@string/msg_don_t_have_an_account"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

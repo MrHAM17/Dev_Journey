@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearAsItWas1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <FrameLayout android:id="@+id/frameMask"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_80pxv" android:layout_width="@dimen/_80pxh">
+            <ImageView android:id="@+id/imageAsItWas"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_80pxh"
+                android:layout_width="@dimen/_80pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_16pxh}"
+                imageRes="@{@drawable/img_image_15}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_image_15"/>
+            <ImageButton
+                android:background="@drawable/rectangle_radius_12"
+                android:id="@+id/btnOverflowMenu"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_24pxh"
+                android:layout_width="@dimen/_24pxh"
+                android:paddingHorizontal="@dimen/_2pxh"
+                android:paddingVertical="@dimen/_2pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_overflow_menu_onerrorcontainer" tools:ignore="ContentDescription"/>
+        </FrameLayout>
+        <LinearLayout android:id="@+id/linearAsItWas2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtAsItWas"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_as_it_was"
+                style="@style/txtUrbanistromanbold18_1" tools:text="@string/lbl_as_it_was"/>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtHarryStyles"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@string/lbl_harry_styles"
+                style="@style/txtUrbanistromanmedium14_2" tools:text="@string/lbl_harry_styles"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtTime"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@string/lbl_01_00"
+                style="@style/txtUrbanistromanmedium14_2" tools:text="@string/lbl_01_00"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtDistance"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.01" android:singleLine="true"
+            android:text="@string/lbl_65_1m"
+            style="@style/txtUrbanistsemibold14_1" tools:text="@string/lbl_65_1m"/>
+        <ImageView android:id="@+id/imageM"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_24pxh"
+            android:layout_width="@dimen/_24pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_bookmark_primary_24x24"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_bookmark_primary_24x24"/>
+    </LinearLayout>
+</layout>

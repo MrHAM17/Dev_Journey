@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <ScrollView android:clipToPadding="false"
+        android:fillViewport="true"
+        android:id="@+id/scrollViewScrollView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <LinearLayout android:id="@+id/linearLock"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:id="@+id/linearLock1"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <EditText
+                    android:background="@drawable/rectangle_bg_name_gray_100_radius_12"
+                    android:drawableEnd="@drawable/drawable_img_lock_blue_gray_800_01"
+                    android:drawablePadding="@dimen/_30pxh"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/raleway"
+                    android:hint="@string/msg_jonathan_anderson"
+                    android:id="@+id/etLock" android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_26pxv"
+                    android:paddingEnd="@dimen/_16pxh"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_26pxv"
+                    android:singleLine="true"
+                    android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_800_01&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_800_01&quot;}"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold" tools:ignore="Autofill"/>
+                <LinearLayout android:id="@+id/linearFormTextFill"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/_25pxv"
+                    android:paddingEnd="@dimen/_16pxh"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_25pxv" style="@style/groupStylenamegray_3">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtText"
+                        android:layout_gravity="bottom"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/msg_1222_3443_9881_1222"
+                        style="@style/txtRalewaysemibold14_1" tools:text="@string/msg_1222_3443_9881_1222"/>
+                    <ImageView android:id="@+id/imageThumbsUp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_20pxh"
+                        android:layout_width="@dimen/_20pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_thumbs_up_blue_gray_800_01"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_thumbs_up_blue_gray_800_01"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearCvv"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <LinearLayout android:gravity="spaceAround"
+                        android:id="@+id/linearFormDateFill"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/_25pxv"
+                        android:paddingTop="@dimen/_25pxv" style="@style/groupStylenamegray_3">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtDate"
+                            android:layout_gravity="bottom"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_11_05_2023"
+                            style="@style/txtRalewaysemibold14_1" tools:text="@string/lbl_11_05_2023"/>
+                        <ImageView android:id="@+id/imageCalendar"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_20pxh"
+                            android:layout_width="@dimen/_20pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_calendar"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_calendar"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearFormDateEmpty"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/_25pxv"
+                        android:paddingEnd="@dimen/_16pxh"
+                        android:paddingStart="@dimen/_16pxh"
+                        android:paddingTop="@dimen/_25pxv" style="@style/groupStylenamegray_3">
+                        <EditText
+                            android:background="@android:color/transparent"
+                            android:drawablePadding="@dimen/_10pxh"
+                            android:drawableStart="@drawable/img_thumbs_up_blue_gray_800_01"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/raleway"
+                            android:hint="@string/lbl_cvv"
+                            android:id="@+id/etCvv"
+                            android:inputType="text"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:paddingBottom="@dimen/_1pxv"
+                            android:paddingTop="@dimen/_1pxv"
+                            android:singleLine="true"
+                            android:textColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;}"
+                            android:textColorHint="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;}"
+                            android:textFontWeight="400"
+                            android:textSize="@dimen/_14pxh"
+                            android:textStyle="normal" tools:ignore="Autofill"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageProgressBarGradient"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxh"
+                    android:layout_width="@dimen/_100pxh"
+                    android:scaleType="fitXY" tools:ignore="ContentDescription"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:background="@drawable/rectangle_bg_name_primary_radius_35"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/raleway"
+                    android:gravity="center" android:id="@+id/btnNext"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_25pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_25pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_16pxh"
+                    android:textStyle="bold" tools:text="@string/lbl_next"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearAvengersEnd"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_900&quot;}cornerRadius">
+        <FrameLayout android:id="@+id/frameFour"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_86pxv" android:layout_width="@dimen/_214pxh">
+            <ImageView android:id="@+id/imageImage"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_86pxh"
+                android:layout_width="@dimen/_214pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_10pxh}"
+                imageRes="@{@drawable/img_rectangle_6}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle_6"/>
+            <ProgressBar android:id="@+id/progressBarProgressBar"
+                android:indeterminate="false"
+                android:layout_gravity="bottom|center"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:max="100"
+                android:minHeight="@dimen/_2pxv" android:progress="24"
+                android:progressBackgroundTint="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+                android:progressTint="@color/{&quot;name&quot;:&quot;primary&quot;}" style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+        </FrameLayout>
+        <TextView android:gravity="start"
+            android:id="@+id/txtDoctorStrange"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/msg_doctor_strange"
+            style="@style/txtPoppinsregular12" tools:text="@string/msg_doctor_strange"/>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearFrame"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFifteenThousandThirtyFive"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_1_50_35"
+                style="@style/txtPoppinsmedium8" tools:text="@string/lbl_1_50_35"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtZipcode"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_2021"
+                style="@style/txtPoppinsmedium8" tools:text="@string/lbl_2021"/>
+            <ImageButton android:id="@+id/btnLightBulb"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_20pxh"
+                android:layout_width="@dimen/_20pxh"
+                android:paddingHorizontal="@dimen/_5pxh"
+                android:paddingVertical="@dimen/_5pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_rectangle_9" tools:ignore="ContentDescription"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

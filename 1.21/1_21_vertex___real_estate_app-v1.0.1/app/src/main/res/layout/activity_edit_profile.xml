@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearFullName"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:contentInsetStart="0dp" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_white_a700_border_name_gray_300_radius_20"
+                android:id="@+id/btnArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_left_primarycontainer" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtNotification"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@string/lbl_edit_profile"
+                style="@style/txtManropeextrabold18" tools:text="@string/lbl_edit_profile"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearEditProfile"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_24pxh" android:paddingVertical="@dimen/_24pxv">
+            <FrameLayout android:id="@+id/frameTelevision"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_100pxv" android:layout_width="@dimen/_100pxh">
+                <ImageView android:id="@+id/imageCircleImage"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_100pxh"
+                    android:layout_width="@dimen/_100pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_rectangle_361_100x100}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle_361_100x100"/>
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_primary_border_name_gray_50_radius_12"
+                    android:id="@+id/btnTelevision"
+                    android:layout_gravity="bottom|end"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:paddingHorizontal="@dimen/_6pxh"
+                    android:paddingVertical="@dimen/_6pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_television_gray_50" tools:ignore="ContentDescription"/>
+            </FrameLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearInput"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFullName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.02"
+                    android:singleLine="true"
+                    android:text="@string/lbl_full_name2"
+                    style="@style/txtManropemedium12_1" tools:text="@string/lbl_full_name2"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_name_gray_300_radius_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/manrope"
+                    android:hint="@string/lbl_andrew_preston"
+                    android:id="@+id/etFullName"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingHorizontal="@dimen/_14pxh"
+                    android:paddingVertical="@dimen/_14pxv"
+                    android:singleLine="true"
+                    android:textColor="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+                    android:textFontWeight="500"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearInput1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtEmail"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.02"
+                    android:singleLine="true"
+                    android:text="@string/lbl_email"
+                    style="@style/txtManropemedium12_1" tools:text="@string/lbl_email"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_name_gray_300_radius_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/manrope"
+                    android:hint="@string/lbl_test_gmail_com"
+                    android:id="@+id/etEmail" android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingHorizontal="@dimen/_14pxh"
+                    android:paddingVertical="@dimen/_14pxv"
+                    android:singleLine="true"
+                    android:textColor="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+                    android:textFontWeight="500"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearInput2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAddress"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.02"
+                    android:singleLine="true"
+                    android:text="@string/lbl_address"
+                    style="@style/txtManropemedium12_1" tools:text="@string/lbl_address"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_name_gray_300_radius_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/manrope"
+                    android:hint="@string/msg_merta_nadi_street"
+                    android:id="@+id/etAddress" android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingHorizontal="@dimen/_14pxh"
+                    android:paddingVertical="@dimen/_14pxv"
+                    android:singleLine="true"
+                    android:textColor="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+                    android:textFontWeight="500"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearInput3"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPassword"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.02"
+                    android:singleLine="true"
+                    android:text="@string/lbl_password"
+                    style="@style/txtManropemedium12_1" tools:text="@string/lbl_password"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_name_gray_300_radius_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/manrope"
+                    android:hint="@string/lbl_123456"
+                    android:id="@+id/etPassword"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingHorizontal="@dimen/_14pxh"
+                    android:paddingVertical="@dimen/_14pxv"
+                    android:singleLine="true"
+                    android:textColor="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+                    android:textFontWeight="500"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold" tools:ignore="Autofill"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearBTN"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical" style="@style/groupStyle">
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_10"
+                android:ellipsize="end"
+                android:fontFamily="@font/manrope"
+                android:gravity="center" android:id="@+id/btnSaveChange"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_17pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_17pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_save_change"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;gray_50&quot;}"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_save_change"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

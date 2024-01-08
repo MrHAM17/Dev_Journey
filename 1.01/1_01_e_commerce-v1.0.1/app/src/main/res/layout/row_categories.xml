@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearManWorkEquipment"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <ImageButton
+            android:background="@drawable/rectangle_bg_name_onprimarycontainer_opacity_1_border_name_blue_50_radius_35"
+            android:id="@+id/btnManWorkEquipment"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_70pxh"
+            android:layout_width="@dimen/_70pxh"
+            android:paddingHorizontal="@dimen/_23pxh"
+            android:paddingVertical="@dimen/_23pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_man_work_equipment" tools:ignore="ContentDescription"/>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtOfficeBag"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.03" android:singleLine="true"
+            android:text="@string/lbl_office_bag"
+            style="@style/txtPoppinsbold10_1" tools:text="@string/lbl_office_bag"/>
+    </LinearLayout>
+</layout>

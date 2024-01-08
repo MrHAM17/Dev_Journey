@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <androidx.core.widget.NestedScrollView android:clipToPadding="false"
+        android:fillViewport="true"
+        android:id="@+id/scrollViewScrollView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <LinearLayout android:id="@+id/linearAll"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:gravity="end"
+                android:id="@+id/linearFrame"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_15pxv"
+                android:paddingTop="@dimen/_15pxv" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerCategory"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_8pxh}" tools:itemCount="4" tools:listitem="@layout/row_category"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearEightySix"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtToday"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_today"
+                        style="@style/txtRalewaysemibold18" tools:text="@string/lbl_today"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerList"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        itemSpace="@{@dimen/_10pxh}" tools:itemCount="3" tools:listitem="@layout/row_list"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtOldernotifications"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/msg_older_notifications"
+                        style="@style/txtRalewaysemibold18" tools:text="@string/msg_older_notifications"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerSamuelElla"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        itemSpace="@{@dimen/_1pxh}" tools:itemCount="1" tools:listitem="@layout/row_samuelella"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

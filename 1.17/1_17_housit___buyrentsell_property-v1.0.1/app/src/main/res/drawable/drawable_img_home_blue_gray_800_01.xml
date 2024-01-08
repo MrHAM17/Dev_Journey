@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:bottomLeftRadius="@dimen/_50pxh" android:bottomRightRadius="@dimen/_50pxh"/>
+            <size android:height="@dimen/_20pxh" android:width="@dimen/_20pxh"/>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/img_home_blue_gray_800_01"
+        android:gravity="center" android:height="@dimen/_20pxh" android:width="@dimen/_20pxh"/>
+</layer-list>

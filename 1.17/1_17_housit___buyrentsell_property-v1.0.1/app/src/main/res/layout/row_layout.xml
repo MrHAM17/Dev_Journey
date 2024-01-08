@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearEstatesCardHorizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_7pxv"
+        android:paddingEnd="@dimen/_8pxh"
+        android:paddingStart="@dimen/_8pxh"
+        android:paddingTop="@dimen/_7pxv" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;,&quot;opacity&quot;:0.8}cornerRadius">
+        <FrameLayout android:id="@+id/frameShape"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_104pxv" android:layout_width="@dimen/_126pxh">
+            <ImageView android:id="@+id/imageImage1"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_104pxh"
+                android:layout_width="@dimen/_126pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_15pxh}"
+                imageRes="@{@drawable/img_shape_104x126}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_shape_104x126"/>
+            <LinearLayout android:id="@+id/linearNinety"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_white_a700_opacity_0_5_radius_12"
+                    android:id="@+id/btnFavorite"
+                    android:layout_height="@dimen/_25pxh"
+                    android:layout_width="@dimen/_25pxh"
+                    android:paddingHorizontal="@dimen/_6pxh"
+                    android:paddingVertical="@dimen/_6pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_favorite_red_a200" tools:ignore="ContentDescription"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:background="@drawable/rectangle_bg_name_blue_gray_700_af_radius_8"
+                    android:drawablePadding="@dimen/_6pxh"
+                    android:drawableStart="@drawable/drawable_img_close"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/raleway"
+                    android:gravity="center"
+                    android:id="@+id/btnApartment"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_7pxv"
+                    android:paddingEnd="@dimen/_7pxh"
+                    android:paddingStart="@dimen/_7pxh"
+                    android:paddingTop="@dimen/_7pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_apartment"
+                    android:textAllCaps="false"
+                    android:textColor="@color/{&quot;name&quot;:&quot;gray_100&quot;}"
+                    android:textFontWeight="500"
+                    android:textSize="@dimen/_8pxh"
+                    android:textStyle="bold" tools:text="@string/lbl_apartment"/>
+            </LinearLayout>
+        </FrameLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearLayout2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:id="@+id/txtSkyDandelionsApartment"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/msg_sky_dandelions_apartment"
+                style="@style/txtRalewaysemibold14_1" tools:text="@string/msg_sky_dandelions_apartment"/>
+            <LinearLayout android:id="@+id/linearLayout3"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageImage2"
+                    android:layout_gravity="top"
+                    android:layout_height="@dimen/_9pxh"
+                    android:layout_width="@dimen/_9pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_signal_orange_300"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_signal_orange_300"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtText"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_4_2"
+                    style="@style/txtRalewaybold8" tools:text="@string/lbl_4_2"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearLayout"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageJakartaIndonesia"
+                    android:layout_gravity="top"
+                    android:layout_height="@dimen/_9pxh"
+                    android:layout_width="@dimen/_9pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_linkedin"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_linkedin"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:id="@+id/txtJakartaIndonesia"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/msg_jakarta_indonesia"
+                    style="@style/txtRalewaymedium8" tools:text="@string/msg_jakarta_indonesia"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearFour"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_11pxh"
+        android:paddingVertical="@dimen/_11pxv" style="@style/groupStylecornerRadius_1">
+        <ImageView android:id="@+id/imageImage"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_62pxh"
+            android:layout_width="@dimen/_62pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_5pxh}"
+            imageRes="@{@drawable/img_rectangle_4224}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle_4224"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearDetail"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTheNewSchoolAt"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.02" android:singleLine="true"
+                android:text="@string/msg_the_new_school_at"
+                style="@style/txtManropebold12_1" tools:text="@string/msg_the_new_school_at"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPublicPrekEight"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.02" android:singleLine="true"
+                android:text="@string/msg_public_prek_8"
+                style="@style/txtManrope12_1" tools:text="@string/msg_public_prek_8"/>
+            <LinearLayout android:id="@+id/linearReview"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageReviews4"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_16pxh"
+                    android:layout_width="@dimen/_16pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_signal"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_signal"/>
+                <ImageView android:id="@+id/imageReviews5"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_16pxh"
+                    android:layout_width="@dimen/_16pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_signal"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_signal"/>
+                <ImageView android:id="@+id/imageReviews"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_16pxh"
+                    android:layout_width="@dimen/_16pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_signal"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_signal"/>
+                <ImageView android:id="@+id/imageReviews1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_16pxh"
+                    android:layout_width="@dimen/_16pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_signal"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_signal"/>
+                <ImageView android:id="@+id/imageReviews2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_16pxh"
+                    android:layout_width="@dimen/_16pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_signal_gray_300"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_signal_gray_300"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtReviewsCounter"
+                    android:layout_gravity="top"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.02"
+                    android:singleLine="true"
+                    android:text="@string/lbl_12_reviews"
+                    style="@style/txtManrope10" tools:text="@string/lbl_12_reviews"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

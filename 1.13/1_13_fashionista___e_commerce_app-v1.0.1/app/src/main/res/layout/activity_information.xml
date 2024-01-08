@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearName"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_gray_200_radius_20"
+                android:id="@+id/btnArrowDown"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_down" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLetSSignIn"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_information"
+                style="@style/txtPoppinsmedium18" tools:text="@string/lbl_information"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearInformation"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_24pxv"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_16pxh" android:paddingTop="@dimen/_24pxv">
+            <FrameLayout android:id="@+id/frameIcon"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_105pxv" android:layout_width="@dimen/_92pxh">
+                <ImageView android:id="@+id/imageCircleImage"
+                    android:layout_gravity="top|center"
+                    android:layout_height="@dimen/_91pxv"
+                    android:layout_width="match_parent"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_ellipse_5}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_5"/>
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_primary_border_name_white_a700_radius_15"
+                    android:id="@+id/btnIcon"
+                    android:layout_gravity="bottom|center"
+                    android:layout_height="@dimen/_30pxh"
+                    android:layout_width="@dimen/_30pxh"
+                    android:paddingHorizontal="@dimen/_7pxh"
+                    android:paddingVertical="@dimen/_7pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_icon_white_a700" tools:ignore="ContentDescription"/>
+            </FrameLayout>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtAnneChristion"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_anne_christion"
+                style="@style/txtPoppinsmedium20" tools:text="@string/lbl_anne_christion"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtEmail"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_xyz_gmail_com"
+                style="@style/txtPoppinsregular14_2" tools:text="@string/lbl_xyz_gmail_com"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearInputFieldWith"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLabel"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_account_name"
+                    style="@style/txtPoppinsmedium14" tools:text="@string/lbl_account_name"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_name_gray_200_radius_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/lbl_anne_christion"
+                    android:id="@+id/etName" android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_14pxv"
+                    android:paddingEnd="@dimen/_16pxh"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_14pxv"
+                    android:singleLine="true"
+                    android:textColor="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_16pxh"
+                    android:textStyle="normal" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearInputFieldWith1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLabel1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_date_of_birth"
+                    style="@style/txtPoppinsmedium14" tools:text="@string/lbl_date_of_birth"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_name_gray_200_radius_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/lbl_11_01_1997"
+                    android:id="@+id/etDateOfBirth"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_14pxv"
+                    android:paddingEnd="@dimen/_16pxh"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_14pxv"
+                    android:singleLine="true"
+                    android:textColor="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_16pxh"
+                    android:textStyle="normal" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearInputFieldWith2"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLabel2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_address"
+                    style="@style/txtPoppinsmedium14" tools:text="@string/lbl_address"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_name_gray_200_radius_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/msg_new_south_wales"
+                    android:id="@+id/etAddress" android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_14pxv"
+                    android:paddingEnd="@dimen/_16pxh"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_14pxv"
+                    android:singleLine="true"
+                    android:textColor="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_16pxh"
+                    android:textStyle="normal" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearInputFieldWith3"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLabel3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_mobile_number"
+                    style="@style/txtPoppinsmedium14" tools:text="@string/lbl_mobile_number"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_name_gray_200_radius_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/lbl_9999_999_999"
+                    android:id="@+id/etMobileNumber"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_14pxv"
+                    android:paddingEnd="@dimen/_16pxh"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_14pxv"
+                    android:singleLine="true"
+                    android:textColor="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_16pxh"
+                    android:textStyle="normal" tools:ignore="Autofill"/>
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_radius_10"
+            android:ellipsize="end" android:fontFamily="@font/poppins"
+            android:gravity="center" android:id="@+id/btnComplete"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_14pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_14pxv" android:singleLine="true"
+            android:text="@string/lbl_complete"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_complete"/>
+    </LinearLayout>
+</layout>

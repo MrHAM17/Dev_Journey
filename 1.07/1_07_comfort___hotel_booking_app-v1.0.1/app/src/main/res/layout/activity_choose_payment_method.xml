@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearContinue"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <FrameLayout android:id="@+id/frameGroup47"
+                android:layout_height="@dimen/_28pxv" android:layout_width="match_parent">
+                <ImageView android:id="@+id/imageArrowDown"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_28pxh"
+                    android:layout_width="@dimen/_28pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrow_down"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down"/>
+                <ImageView android:id="@+id/imageArrowDown1"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_28pxh"
+                    android:layout_width="@dimen/_28pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrow_down"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/frameGroup48"
+                android:layout_height="@dimen/_29pxv" android:layout_width="match_parent">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFillYourProfile"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_payment"
+                    style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_payment"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFillYourProfile1"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_payment"
+                    style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_payment"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/frameGroup49"
+                android:layout_height="@dimen/_28pxv" android:layout_width="match_parent">
+                <ImageView android:id="@+id/imageTelevision"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_28pxh"
+                    android:layout_width="@dimen/_28pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_television"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_television"/>
+                <ImageView android:id="@+id/imageTelevision1"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_28pxh"
+                    android:layout_width="@dimen/_28pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_television"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_television"/>
+            </FrameLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearChoosePaymentMethod"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_28pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_28pxv">
+            <LinearLayout android:id="@+id/linearAddNewCard"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPaymentMethods"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_payment_methods"
+                    style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_payment_methods"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAddNewCard"
+                    android:layout_gravity="top"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_add_new_card"
+                    style="@style/txtUrbanistromanbold16_1" tools:text="@string/lbl_add_new_card"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerChoosePaymentMethod"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_28pxh}" tools:itemCount="3" tools:listitem="@layout/row_choosepaymentmethod"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_radius_27"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:gravity="center" android:id="@+id/btnContinue"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_54pxv"
+            android:layout_width="@dimen/_380pxh"
+            android:paddingBottom="@dimen/_15pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_15pxv" android:singleLine="true"
+            android:text="@string/lbl_continue"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_continue"/>
+    </LinearLayout>
+</layout>

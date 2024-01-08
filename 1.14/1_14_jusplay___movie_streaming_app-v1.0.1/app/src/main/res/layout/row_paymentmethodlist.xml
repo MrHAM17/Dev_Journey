@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearFrame"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_20pxv"
+        android:paddingEnd="@dimen/_24pxh"
+        android:paddingStart="@dimen/_24pxh"
+        android:paddingTop="@dimen/_20pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_900&quot;}cornerRadius">
+        <ImageView android:id="@+id/imageGooglePay"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_24pxh"
+            android:layout_width="@dimen/_24pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_google_3"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_google_3"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtGooglePay"
+            android:layout_gravity="bottom"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@string/lbl_google_pay"
+            style="@style/txtPoppinsmedium14_1" tools:text="@string/lbl_google_pay"/>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <View
+            android:background="@drawable/rectangle_bg_name_black_900_border_name_primarycontainer_radius_10"
+            android:id="@+id/viewView"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_20pxh" android:layout_width="@dimen/_20pxh"/>
+    </LinearLayout>
+</layout>

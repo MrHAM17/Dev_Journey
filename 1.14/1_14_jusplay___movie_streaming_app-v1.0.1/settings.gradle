@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "1_14_jusplay___movie_streaming_app"

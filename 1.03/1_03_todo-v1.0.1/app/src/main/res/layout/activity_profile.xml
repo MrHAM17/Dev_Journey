@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearProfile"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_left"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_left"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtProfile"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@string/lbl_profile"
+                style="@style/txtPoppinsbold16" tools:text="@string/lbl_profile"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearProfilePicture"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_36pxv" android:paddingTop="@dimen/_36pxv">
+            <LinearLayout android:id="@+id/linearProfile1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageProfilePicture"
+                    android:layout_height="@dimen/_72pxh"
+                    android:layout_width="@dimen/_72pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_profile_picture_72x72}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_profile_picture_72x72"/>
+                <LinearLayout android:id="@+id/linearTwentyEight"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/txtName"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@string/lbl_dominic_ovo"
+                        style="@style/txtPoppinsbold14_1" tools:text="@string/lbl_dominic_ovo"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/txtUsername"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@string/lbl_dominic_ovo2"
+                        style="@style/txtPoppinsregular12" tools:text="@string/lbl_dominic_ovo2"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearProfileDetailOption"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_15pxv"
+                android:paddingEnd="@dimen/_16pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_15pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                <ImageView android:id="@+id/imageGenderIcon"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_gender_icon"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_gender_icon"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtGender"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@string/lbl_gender"
+                    style="@style/txtPoppinsbold12" tools:text="@string/lbl_gender"/>
+                <FrameLayout android:id="@+id/frameSpacer"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMale"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@string/lbl_male"
+                    style="@style/txtPoppinsregular12" tools:text="@string/lbl_male"/>
+                <ImageView android:id="@+id/imageRightIcon"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_right_icon"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_right_icon"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearProfileDetailOption1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_15pxv"
+                android:paddingEnd="@dimen/_16pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_15pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                <ImageView android:id="@+id/imageDateIcon"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_date_icon"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_date_icon"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtBirthday"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@string/lbl_birthday"
+                    style="@style/txtPoppinsbold12" tools:text="@string/lbl_birthday"/>
+                <FrameLayout android:id="@+id/frameSpacer1"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDate"
+                    android:layout_gravity="top"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@string/lbl_12_12_2000"
+                    style="@style/txtPoppinsregular12" tools:text="@string/lbl_12_12_2000"/>
+                <ImageView android:id="@+id/imageRightIcon1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_right_icon"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_right_icon"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearProfileDetailOption2"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_15pxv"
+                android:paddingEnd="@dimen/_16pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_15pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                <ImageView android:id="@+id/imageMessageIcon"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_message_icon"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_message_icon"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtEmail"
+                    android:layout_gravity="top"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@string/lbl_email"
+                    style="@style/txtPoppinsbold12" tools:text="@string/lbl_email"/>
+                <FrameLayout android:id="@+id/frameSpacer2"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtEmail1"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@string/msg_rex4dom_gmail_com"
+                    style="@style/txtPoppinsregular12" tools:text="@string/msg_rex4dom_gmail_com"/>
+                <ImageView android:id="@+id/imageRightIcon2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_right_icon"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_right_icon"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearProfileDetailOption3"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_15pxv"
+                android:paddingEnd="@dimen/_16pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_15pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                <ImageView android:id="@+id/imagePhoneIcon"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_credit_card_icon"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_credit_card_icon"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPhoneNumber"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@string/lbl_phone_number"
+                    style="@style/txtPoppinsbold12" tools:text="@string/lbl_phone_number"/>
+                <FrameLayout android:id="@+id/frameSpacer3"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMobileNumberValue"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@string/lbl_307_555_0133"
+                    style="@style/txtPoppinsregular12" tools:text="@string/lbl_307_555_0133"/>
+                <ImageView android:id="@+id/imageRightIcon3"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_right_icon"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_right_icon"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearProfileDetailOption4"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_15pxv"
+                android:paddingEnd="@dimen/_16pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_15pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                <ImageView android:id="@+id/imageTrophy"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_trophy"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_trophy"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtChangePassword"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@string/lbl_change_password"
+                    style="@style/txtPoppinsbold12" tools:text="@string/lbl_change_password"/>
+                <FrameLayout android:id="@+id/frameSpacer4"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtText"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true" android:text="@string/msg"
+                    style="@style/txtPoppinsregular12" tools:text="@string/msg"/>
+                <ImageView android:id="@+id/imageRightIcon4"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_right_icon"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_right_icon"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

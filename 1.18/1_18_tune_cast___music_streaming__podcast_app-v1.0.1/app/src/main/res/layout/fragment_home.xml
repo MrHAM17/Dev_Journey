@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearGoodMorning"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageCircleImage"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_ellipse_48x48}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_48x48"/>
+            <LinearLayout android:id="@+id/linearGroup25"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtGoodMorning"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/lbl_good_morning"
+                    style="@style/txtUrbanistregular16" tools:text="@string/lbl_good_morning"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAndrewAinsley"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_andrew_ainsley"
+                    style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_andrew_ainsley"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearGroup26"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageRewind"
+                    android:layout_gravity="top"
+                    android:layout_height="@dimen/_28pxh"
+                    android:layout_width="@dimen/_28pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_rewind"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_rewind"/>
+                <ImageView android:id="@+id/imageIcons"
+                    android:layout_gravity="top"
+                    android:layout_height="@dimen/_28pxh"
+                    android:layout_width="@dimen/_28pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_icons_gray_900_01"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_icons_gray_900_01"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <FrameLayout android:gravity="end"
+            android:id="@+id/frameTrendingNow"
+            android:layout_height="wrap_content" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearTwentySix"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTrendingNow"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_trending_now"
+                    style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_trending_now"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSeeAll"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/lbl_see_all"
+                    style="@style/txtUrbanistromanbold16" tools:text="@string/lbl_see_all"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerFrame"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_12pxh}" tools:itemCount="3" tools:listitem="@layout/row_frame"/>
+            <LinearLayout android:id="@+id/linearThirtyOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPopularArtists"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_popular_artists"
+                    style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_popular_artists"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSeeAll1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/lbl_see_all"
+                    style="@style/txtUrbanistromanbold16" tools:text="@string/lbl_see_all"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerFrame1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_12pxh}" tools:itemCount="3" tools:listitem="@layout/row_frame1"/>
+            <LinearLayout android:id="@+id/linearAutoLayoutHorizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTopCharts"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_top_charts"
+                    style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_top_charts"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSeeAll2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/lbl_see_all"
+                    style="@style/txtUrbanistromanbold16" tools:text="@string/lbl_see_all"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerTopCharts"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_1pxh}" tools:itemCount="3" tools:listitem="@layout/row_topcharts"/>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

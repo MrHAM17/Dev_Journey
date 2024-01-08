@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearJobDetails"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700_01&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageImage"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_component_1"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_component_1"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtJobDetails"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:singleLine="true"
+                android:text="@string/lbl_job_details"
+                style="@style/txtPlusJakartaSansbold18" tools:text="@string/lbl_job_details"/>
+            <ImageView android:id="@+id/imageImage1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_component_3"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_component_3"/>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <FrameLayout android:id="@+id/framePagerElement"
+                android:layout_height="@dimen/_688pxv" android:layout_width="match_parent">
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPagerTabBarView"
+                    android:layout_gravity="bottom|center"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" android:layout_width="match_parent"/>
+                <LinearLayout android:id="@+id/linearCardanoOne"
+                    android:layout_gravity="top|end"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <LinearLayout android:id="@+id/linearCardanoOne1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/_23pxv"
+                        android:paddingEnd="@dimen/_71pxh"
+                        android:paddingStart="@dimen/_71pxh"
+                        android:paddingTop="@dimen/_23pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}cornerRadius">
+                        <FrameLayout android:id="@+id/frameLogo"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="@dimen/_79pxv"
+                            android:layout_width="@dimen/_79pxh"
+                            android:paddingHorizontal="@dimen/_19pxh"
+                            android:paddingVertical="@dimen/_19pxv" style="@style/groupStylenamegray_2">
+                            <ImageView android:id="@+id/imageCardanoOne"
+                                android:layout_gravity="center"
+                                android:layout_height="@dimen/_40pxh"
+                                android:layout_width="@dimen/_40pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_cardano_1"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_cardano_1"/>
+                        </FrameLayout>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSeniorUIUXDesigner"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.0"
+                            android:lineSpacingExtra="@dimen/_4pxh"
+                            android:singleLine="true"
+                            android:text="@string/msg_senior_ui_ux_designer"
+                            style="@style/txtPlusJakartaSansbold14" tools:text="@string/msg_senior_ui_ux_designer"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSmallLabelRegular"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.0"
+                            android:lineSpacingExtra="@dimen/_4pxh"
+                            android:singleLine="true"
+                            android:text="@string/lbl_shopee_sg"
+                            style="@style/txtPlusJakartaSansmedium12" tools:text="@string/lbl_shopee_sg"/>
+                        <FrameLayout android:gravity="center_horizontal"
+                            android:id="@+id/frameFrameFive"
+                            android:layout_height="wrap_content" android:layout_width="match_parent">
+                            <FrameLayout
+                                android:background="@drawable/rectangle_bg_name_gray_100_radius_8"
+                                android:id="@+id/frameFulltime"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:paddingBottom="@dimen/_6pxv"
+                                android:paddingEnd="@dimen/_11pxh"
+                                android:paddingStart="@dimen/_11pxh" android:paddingTop="@dimen/_6pxv"/>
+                            <FrameLayout
+                                android:background="@drawable/rectangle_bg_name_gray_100_radius_8"
+                                android:id="@+id/frameTwodaysago"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:paddingBottom="@dimen/_6pxv"
+                                android:paddingEnd="@dimen/_12pxh"
+                                android:paddingStart="@dimen/_12pxh" android:paddingTop="@dimen/_6pxv"/>
+                        </FrameLayout>
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerJobDetailsTabContainer"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        itemSpace="@{@dimen/_54pxh}" tools:itemCount="3" tools:listitem="@layout/row_jobdetailstabcontainer"/>
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabLayoutTabview"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        app:tabBackground="@drawable/selector_bg_name_gray_100_radius_22"
+                        app:tabIndicatorColor="@android:color/transparent"
+                        app:tabIndicatorHeight="0dp"
+                        app:tabMode="scrollable"
+                        app:tabSelectedTextColor="@color/{&quot;name&quot;:&quot;primary&quot;}" app:tabTextColor="@color/{&quot;name&quot;:&quot;gray_500&quot;}"/>
+                </LinearLayout>
+            </FrameLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

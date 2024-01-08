@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearSendMoney"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                android:id="@+id/btnFavorite"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_favorite_onprimary" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtWelcomeBack"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_money_transfer"
+                style="@style/txtOverpassbold20" tools:text="@string/lbl_money_transfer"/>
+            <ImageButton
+                android:background="@color/{&quot;name&quot;:&quot;onPrimary&quot;}"
+                android:id="@+id/btnPlus"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_plus" tools:ignore="ContentDescription"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearFavorite"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_33pxv"
+            android:paddingEnd="@dimen/_10pxh"
+            android:paddingStart="@dimen/_10pxh" android:paddingTop="@dimen/_33pxv">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearThirtyEight"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFavorite"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_favorite"
+                    style="@style/txtOverpassbold24" tools:text="@string/lbl_favorite"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerProfileList"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_20pxh}" tools:itemCount="5" tools:listitem="@layout/row_profilelist"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearForty"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAllContact"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_all_contact"
+                    style="@style/txtOverpassbold24" tools:text="@string/lbl_all_contact"/>
+                <LinearLayout android:id="@+id/linearA"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_16pxv"
+                    android:paddingEnd="@dimen/_20pxh"
+                    android:paddingStart="@dimen/_20pxh"
+                    android:paddingTop="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtA"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_a"
+                        style="@style/txtOverpasssemibold28" tools:text="@string/lbl_a"/>
+                    <View
+                        android:background="@color/{&quot;name&quot;:&quot;gray_400&quot;}"
+                        android:id="@+id/lineLineOne"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_326pxh"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:gravity="center_horizontal"
+                        android:id="@+id/recyclerNineteen"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        itemSpace="@{@dimen/_16pxh}" tools:itemCount="2" tools:listitem="@layout/row_nineteen"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearB"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_16pxv"
+                android:paddingEnd="@dimen/_20pxh"
+                android:paddingStart="@dimen/_20pxh"
+                android:paddingTop="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}">
+                <TextView android:ellipsize="end" android:id="@+id/txtB"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_b"
+                    style="@style/txtOverpasssemibold28" tools:text="@string/lbl_b"/>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;gray_400&quot;}"
+                    android:id="@+id/lineLineOne1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_326pxh"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:gravity="center_horizontal"
+                    android:id="@+id/recyclerTwentyTwo"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_16pxh}" tools:itemCount="3" tools:listitem="@layout/row_twentytwo"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearFortyOne"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;primaryContainer&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:contentInsetStart="0dp" style="@style/groupStyle{&quot;name&quot;:&quot;primaryContainer&quot;}">
+            <ImageView android:id="@+id/imageArrowDown"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_down"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtShopsie"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_shopsie"
+                style="@style/txtPlayfairDisplayromanbold16" tools:text="@string/lbl_shopsie"/>
+        </androidx.appcompat.widget.Toolbar>
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearProductDetailPage"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <com.asksira.loopingviewpager.LoopingViewPager
+                    android:id="@+id/imageSliderProductCarousel"
+                    android:layout_height="@dimen/_289pxv"
+                    android:layout_width="match_parent"
+                    app:autoScroll="true" app:isInfinite="true" app:scrollInterval="5000"/>
+
+                <com.asksira.loopingviewpager.indicator.CustomShapePagerIndicator
+                    android:id="@+id/indicatorPagerIndicator"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    app:drawable_normal="@drawable/indicator_unselected_bg_name_gray_600_radius_8"
+                    app:drawable_selected="@drawable/indicator_selected_bg_name_primary_radius_8"
+                    app:indicator_size="@dimen/_15pxh" app:indicator_spacing="@dimen/_4pxh"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrintMaxiDress"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/msg_print_maxi_dress"
+                    style="@style/txtLatomedium24" tools:text="@string/msg_print_maxi_dress"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrice"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_99_30"
+                    style="@style/txtLatomedium22" tools:text="@string/lbl_99_30"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrice1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_product_details"
+                    style="@style/txtLatosemibold14_1" tools:text="@string/lbl_product_details"/>
+                <TextView android:gravity="center_horizontal"
+                    android:id="@+id/txtDescription"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/msg_mini_dress_with"
+                    style="@style/txtLatoregular14" tools:text="@string/msg_mini_dress_with"/>
+            </LinearLayout>
+        </ScrollView>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_radius_8"
+            android:ellipsize="end" android:fontFamily="@font/lato"
+            android:gravity="center" android:id="@+id/btnAddToCart"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_14pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_14pxv" android:singleLine="true"
+            android:text="@string/lbl_add_to_cart"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_add_to_cart"/>
+    </LinearLayout>
+</layout>

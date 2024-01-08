@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearOrderDetailsItem"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_4pxv"
+        android:paddingEnd="@dimen/_15pxh"
+        android:paddingStart="@dimen/_15pxh"
+        android:paddingTop="@dimen/_4pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}cornerRadius">
+        <TextView android:ellipsize="end" android:id="@+id/txtPrice2"
+            android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.03" android:singleLine="true"
+            android:text="@string/lbl_sdg1345kjd"
+            style="@style/txtPoppinsbold14_1" tools:text="@string/lbl_sdg1345kjd"/>
+        <TextView android:alpha="0.5" android:ellipsize="end"
+            android:gravity="start" android:id="@+id/txtMonth"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.03" android:singleLine="true"
+            android:text="@string/msg_order_at_e_com"
+            style="@style/txtPoppinsregular12_1" tools:text="@string/msg_order_at_e_com"/>
+        <LinearLayout android:id="@+id/linearOrderStatus"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:alpha="0.5" android:ellipsize="end"
+                android:id="@+id/txtOrderStatus"
+                android:layout_gravity="top"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@string/lbl_order_status"
+                style="@style/txtPoppinsregular12_1" tools:text="@string/lbl_order_status"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtShipping"
+                android:layout_gravity="bottom"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@string/lbl_shipping"
+                style="@style/txtPoppinsregular12_2" tools:text="@string/lbl_shipping"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearItemDetails"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:alpha="0.5" android:ellipsize="end"
+                android:id="@+id/txtItems" android:layout_gravity="top"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@string/lbl_items"
+                style="@style/txtPoppinsregular12_1" tools:text="@string/lbl_items"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPurchasedCount"
+                android:layout_gravity="bottom"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@string/msg_1_items_purchased"
+                style="@style/txtPoppinsregular12_2" tools:text="@string/msg_1_items_purchased"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearPriceDetails"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:alpha="0.5" android:ellipsize="end"
+                android:id="@+id/txtPrice3"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@string/lbl_price"
+                style="@style/txtPoppinsregular12_1" tools:text="@string/lbl_price"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@string/lbl_299_43"
+                style="@style/txtPoppinsbold12_1" tools:text="@string/lbl_299_43"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

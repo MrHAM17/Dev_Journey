@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearAutoLayoutHorizontal1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:id="@+id/linearAutoLayoutHorizontal2"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_deep_orange_50_radius_30"
+                android:id="@+id/btnCategoriesShare"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_60pxh"
+                android:layout_width="@dimen/_60pxh"
+                android:paddingHorizontal="@dimen/_16pxh"
+                android:paddingVertical="@dimen/_16pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_categories_share_primary" tools:ignore="ContentDescription"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearAutoLayoutVertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtInviteFriends"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/lbl_invite_friends"
+                    style="@style/txtUrbanistromanbold18_1" tools:text="@string/lbl_invite_friends"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtStayConnectedWith"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/msg_stay_connected_with"
+                    style="@style/txtUrbanistromanmedium14_2" tools:text="@string/msg_stay_connected_with"/>
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_radius_8"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:gravity="center" android:id="@+id/btnInvite"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_32pxv"
+            android:layout_width="@dimen/_68pxh"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_7pxv"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_16pxh"
+            android:paddingTop="@dimen/_7pxv" android:singleLine="true"
+            android:text="@string/lbl_invite"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;onErrorContainer&quot;}"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_14pxh" android:textStyle="bold" tools:text="@string/lbl_invite"/>
+    </LinearLayout>
+</layout>

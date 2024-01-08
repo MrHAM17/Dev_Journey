@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearConfirmRequest"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/linearOne"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_8pxv"
+            android:paddingTop="@dimen/_8pxv" style="@style/groupStylenamegray_4">
+            <View
+                android:background="@drawable/rectangle_bg_name_blue_gray_500_radius_2"
+                android:id="@+id/lineLine"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_5pxv" android:layout_width="@dimen/_56pxh"/>
+            <LinearLayout android:id="@+id/linearHeader"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_8pxv"
+                android:paddingEnd="@dimen/_24pxh"
+                android:paddingStart="@dimen/_24pxh"
+                android:paddingTop="@dimen/_8pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_white_a700_border_name_gray_300_radius_20"
+                    android:id="@+id/btnIcon"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_40pxh"
+                    android:layout_width="@dimen/_40pxh"
+                    android:paddingHorizontal="@dimen/_8pxh"
+                    android:paddingVertical="@dimen/_8pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_icon_primarycontainer" tools:ignore="ContentDescription"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtNotification"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/lbl_agent_detail"
+                    style="@style/txtManropeextrabold18" tools:text="@string/lbl_agent_detail"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearAgentName"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageBg"
+                    android:layout_height="@dimen/_60pxh"
+                    android:layout_width="@dimen/_60pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_bg_60x60}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_bg_60x60"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearLeslieAlexander"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLeslieAlexander"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@string/msg_leslie_alexander"
+                        style="@style/txtManropebold16" tools:text="@string/msg_leslie_alexander"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtRichCapitalPropertiesLLC"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@string/msg_rich_capital_properties"
+                        style="@style/txtManropemedium14" tools:text="@string/msg_rich_capital_properties"/>
+                </LinearLayout>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:background="@drawable/rectangle_bg_name_gray_300_radius_13"
+                    android:drawablePadding="@dimen/_4pxh"
+                    android:drawableStart="@drawable/img_signal_yellow_700"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/manrope"
+                    android:gravity="center"
+                    android:id="@+id/btnFourHundredEightyNine"
+                    android:layout_height="@dimen/_26pxv"
+                    android:layout_width="@dimen/_74pxh"
+                    android:letterSpacing="0.02"
+                    android:paddingBottom="@dimen/_6pxv"
+                    android:paddingEnd="@dimen/_9pxh"
+                    android:paddingStart="@dimen/_8pxh"
+                    android:paddingTop="@dimen/_6pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_4_8_9"
+                    android:textAllCaps="false"
+                    android:textColor="@color/{&quot;name&quot;:&quot;onPrimary&quot;}"
+                    android:textFontWeight="800"
+                    android:textSize="@dimen/_10pxh"
+                    android:textStyle="bold" tools:text="@string/lbl_4_8_9"/>
+            </LinearLayout>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtDescription"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/msg_my_associate_rachel"
+                style="@style/txtManroperegular14_1" tools:text="@string/msg_my_associate_rachel"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtDescription1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/msg_if_you_d_like_to"
+                style="@style/txtManroperegular14_1" tools:text="@string/msg_if_you_d_like_to"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTittle"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@string/lbl_about_me"
+                style="@style/txtManropebold18" tools:text="@string/lbl_about_me"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtDescription2"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/msg_diana_richards_is"
+                style="@style/txtManroperegular14_1" tools:text="@string/msg_diana_richards_is"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearHighlights"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/_24pxh" android:paddingStart="@dimen/_24pxh">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTittle1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/lbl_highlights"
+                    style="@style/txtManropebold18" tools:text="@string/lbl_highlights"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerConfirmrequestBottomsheet"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2" itemSpace="@{@dimen/_13pxh}"
+                    tools:itemCount="4" tools:listitem="@layout/row_confirmrequestbottomsheet"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

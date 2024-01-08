@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearApartment"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <FrameLayout android:gravity="center_horizontal"
+            android:id="@+id/frameExampleData"
+            android:layout_height="match_parent" android:layout_width="match_parent">
+            <FrameLayout android:id="@+id/frameTwentyFive"
+                android:layout_gravity="bottom|center"
+                android:layout_height="@dimen/_812pxv" android:layout_width="match_parent">
+                <fragment android:id="@+id/mapMap"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_812pxv"
+                    android:layout_width="match_parent" android:name="com.google.android.gms.maps.SupportMapFragment"/>
+                <fragment android:id="@+id/mapMap1"
+                    android:layout_gravity="top|center"
+                    android:layout_height="@dimen/_460pxv"
+                    android:layout_width="match_parent" android:name="com.google.android.gms.maps.SupportMapFragment"/>
+            </FrameLayout>
+            <LinearLayout android:id="@+id/linearDataList"
+                android:layout_gravity="bottom|end"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearButtonNearby"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_10pxh"
+                    android:paddingVertical="@dimen/_10pxv" style="@style/groupStyle{&quot;name&quot;:&quot;blue_gray_700_af&quot;}cornerRadius">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtItemCounter"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="@dimen/_5pxv"
+                        android:paddingEnd="@dimen/_11pxh"
+                        android:paddingStart="@dimen/_11pxh"
+                        android:paddingTop="@dimen/_5pxv"
+                        android:singleLine="true"
+                        android:text="@string/lbl_0"
+                        style="@style/txtSolidRounded" tools:text="@string/lbl_0"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="bottom"
+                        android:id="@+id/txtNearbyYou"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@string/lbl_nearby_you"
+                        style="@style/txtRalewaysemibold14" tools:text="@string/lbl_nearby_you"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerLayout"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_10pxh}" tools:itemCount="2" tools:listitem="@layout/row_layout"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

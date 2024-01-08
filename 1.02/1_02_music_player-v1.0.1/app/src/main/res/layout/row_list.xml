@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearSongNumber"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtSongNumber"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:paddingBottom="@dimen/_1pxv"
+            android:paddingEnd="@dimen/_8pxh"
+            android:paddingStart="@dimen/_8pxh"
+            android:paddingTop="@dimen/_1pxv" android:singleLine="true"
+            android:text="@string/lbl_1" style="@style/txtSolidRounded" tools:text="@string/lbl_1"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearSixteen"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtBurning"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_burning"
+                style="@style/txtRobotomedium18" tools:text="@string/lbl_burning"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPodvalCaplella"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_podval_caplella"
+                style="@style/txtRobotoregular14_1" tools:text="@string/lbl_podval_caplella"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <ImageView android:id="@+id/imageImage"
+            android:layout_height="@dimen/_4pxh"
+            android:layout_width="@dimen/_20pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_more_icon"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_more_icon"/>
+    </LinearLayout>
+</layout>

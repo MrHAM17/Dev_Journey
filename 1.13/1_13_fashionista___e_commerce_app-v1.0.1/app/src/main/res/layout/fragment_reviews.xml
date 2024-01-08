@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearWriteAReview"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <LinearLayout android:id="@+id/linearWriteAReview1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:id="@+id/linearFrame"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFortyEight"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_4_8"
+                    style="@style/txtPoppinsbold28" tools:text="@string/lbl_4_8"/>
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/ratingBarRatingBar"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:numStars="5"
+                    android:progressBackgroundTint="@color/{&quot;name&quot;:&quot;amber_500_01&quot;}"
+                    android:progressTint="@color/{&quot;name&quot;:&quot;amber_500_01&quot;}"
+                    android:rating="4" style="@style/Widget.AppCompat.RatingBar.Indicator"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtBasedOnReviews"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/msg_based_on_1_024_reviews"
+                    style="@style/txtPoppinsregular14_2" tools:text="@string/msg_based_on_1_024_reviews"/>
+                <LinearLayout android:id="@+id/linearFrame1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtExcellent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_excellent"
+                        style="@style/txtPoppinsregular14_2" tools:text="@string/lbl_excellent"/>
+                    <ProgressBar android:gravity="bottom"
+                        android:id="@+id/progressBarProgressBar"
+                        android:indeterminate="false"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_width="0dp" android:max="100"
+                        android:minHeight="@dimen/_4pxv"
+                        android:progress="93"
+                        android:progressDrawable="@drawable/layer_list_bg_name_gray_200_radius_2" style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearFrame2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtGood"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_good"
+                        style="@style/txtPoppinsregular14_2" tools:text="@string/lbl_good"/>
+                    <ProgressBar android:gravity="bottom"
+                        android:id="@+id/progressBarProgressBar1"
+                        android:indeterminate="false"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_width="0dp" android:max="100"
+                        android:minHeight="@dimen/_4pxv"
+                        android:progress="32"
+                        android:progressDrawable="@drawable/layer_list_bg_name_gray_200_radius_3" style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearFrame3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtAverage"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_average"
+                        style="@style/txtPoppinsregular14_2" tools:text="@string/lbl_average"/>
+                    <ProgressBar
+                        android:id="@+id/progressBarProgressBar2"
+                        android:indeterminate="false"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_width="0dp" android:max="100"
+                        android:minHeight="@dimen/_4pxv"
+                        android:progress="17"
+                        android:progressDrawable="@drawable/layer_list_bg_name_gray_200_radius_2" style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearFrame4"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtBellowAverage"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_bellow_average"
+                        style="@style/txtPoppinsregular14_2" tools:text="@string/lbl_bellow_average"/>
+                    <ProgressBar
+                        android:id="@+id/progressBarProgressBar3"
+                        android:indeterminate="false"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_width="0dp" android:max="100"
+                        android:minHeight="@dimen/_4pxv"
+                        android:progress="9"
+                        android:progressDrawable="@drawable/layer_list_bg_name_gray_200_radius_3" style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearFrame5"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPoor"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_poor"
+                        style="@style/txtPoppinsregular14_2" tools:text="@string/lbl_poor"/>
+                    <ProgressBar android:gravity="center_vertical"
+                        android:id="@+id/progressBarProgressBar4"
+                        android:indeterminate="false"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_width="0dp" android:max="100"
+                        android:minHeight="@dimen/_4pxv"
+                        android:progress="4"
+                        android:progressDrawable="@drawable/layer_list_bg_name_gray_200_radius_2" style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearFrame6"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageCircleImage"
+                    android:layout_height="@dimen/_33pxh"
+                    android:layout_width="@dimen/_33pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_ellipse_5_33x33}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_5_33x33"/>
+                <LinearLayout android:id="@+id/linearNinetyFour"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <LinearLayout android:id="@+id/linearArianaPeter"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearFrame7"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtArianaPeter"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@string/lbl_ariana_peter"
+                                style="@style/txtPoppinsregular14" tools:text="@string/lbl_ariana_peter"/>
+
+                            <androidx.appcompat.widget.AppCompatRatingBar
+                                android:id="@+id/ratingBarRatingBar1"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:numStars="5"
+                                android:progressBackgroundTint="@color/{&quot;name&quot;:&quot;amber_500_01&quot;}"
+                                android:progressTint="@color/{&quot;name&quot;:&quot;amber_500_01&quot;}"
+                                android:rating="4" style="@style/Widget.AppCompat.RatingBar.Small"/>
+                        </LinearLayout>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtDuration"
+                            android:layout_gravity="bottom"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_1_day_ago"
+                            style="@style/txtPoppinsregular14_2" tools:text="@string/lbl_1_day_ago"/>
+                    </LinearLayout>
+                    <TextView android:gravity="center_horizontal"
+                        android:id="@+id/txtDescription"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/msg_it_is_a_long_established2"
+                        style="@style/txtPoppinsregular14_2" tools:text="@string/msg_it_is_a_long_established2"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearFrame8"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageCircleImage1"
+                    android:layout_height="@dimen/_33pxh"
+                    android:layout_width="@dimen/_33pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_ellipse_5_33x33}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_5_33x33"/>
+                <LinearLayout android:id="@+id/linearEightyNine"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <LinearLayout android:id="@+id/linearArianaPeter1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearFrame9"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtArianaPeter1"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@string/lbl_ariana_peter"
+                                style="@style/txtPoppinsregular14" tools:text="@string/lbl_ariana_peter"/>
+
+                            <androidx.appcompat.widget.AppCompatRatingBar
+                                android:id="@+id/ratingBarRatingBar2"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:numStars="5"
+                                android:progressBackgroundTint="@color/{&quot;name&quot;:&quot;amber_500_01&quot;}"
+                                android:progressTint="@color/{&quot;name&quot;:&quot;amber_500_01&quot;}"
+                                android:rating="4" style="@style/Widget.AppCompat.RatingBar.Small"/>
+                        </LinearLayout>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtDuration1"
+                            android:layout_gravity="bottom"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_1_day_ago"
+                            style="@style/txtPoppinsregular14_2" tools:text="@string/lbl_1_day_ago"/>
+                    </LinearLayout>
+                    <TextView android:gravity="center_horizontal"
+                        android:id="@+id/txtDescription1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/msg_it_is_a_long_established2"
+                        style="@style/txtPoppinsregular14_2" tools:text="@string/msg_it_is_a_long_established2"/>
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_10"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:id="@+id/btnWriteAReview"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_14pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_14pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_write_a_review"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_write_a_review"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearAutoLayoutVertical"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <FrameLayout android:id="@+id/frameK"
+            android:layout_height="@dimen/_300pxv" android:layout_width="@dimen/_186pxh">
+            <ImageView android:id="@+id/imageK1"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_300pxh"
+                android:layout_width="@dimen/_186pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_16pxh}"
+                imageRes="@{@drawable/img_image_300x186}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_image_300x186"/>
+            <LinearLayout android:id="@+id/linearAutoLayoutHorizontal"
+                android:layout_gravity="bottom|start"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal" style="@style/groupStylecornerRadius">
+                <ImageView android:id="@+id/imageK2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_16pxh"
+                    android:layout_width="@dimen/_16pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_overflowmenu_primary}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_overflowmenu_primary"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="bottom" android:id="@+id/txtK"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/lbl_837_5k"
+                    style="@style/txtUrbanistsemibold10" tools:text="@string/lbl_837_5k"/>
+            </LinearLayout>
+        </FrameLayout>
+        <RadioButton android:drawablePadding="@dimen/_8pxh"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:id="@+id/rbArianaBlack"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_2pxv"
+            android:paddingTop="@dimen/_2pxv" android:singleLine="true"
+            android:text="@string/lbl_ariana_black"
+            android:textColor="@color/{&quot;name&quot;:&quot;gray_900&quot;}"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_12pxh" android:textStyle="bold" tools:text="@string/lbl_ariana_black"/>
+    </LinearLayout>
+</layout>

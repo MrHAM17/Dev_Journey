@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="txtManrope12_1">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtManropeextrabold14_2">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">800</item>
+    </style>
+    <style name="txtManropeextrabold14_1">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_500"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">800</item>
+    </style>
+    <style name="groupStylenameprimarycornerRadius_1">
+        <item name="android:background">@drawable/rectangle_bg_name_primary_radius_10</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;gray_50&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_gray_50_border_name_gray_300_radius_10</item>
+    </style>
+    <style name="txtManropeextrabold18">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">800</item>
+    </style>
+    <style name="groupStylecornerRadius">
+        <item name="android:background">@drawable/rectangle_border_name_gray_300_radius_10</item>
+    </style>
+    <style name="groupStylenamewhite_1">
+        <item name="android:background">@drawable/rectangle_bg_name_white_a700_radius_10</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+        <item name="android:background">@drawable/rectangle_bg_name_gray_50</item>
+    </style>
+    <style name="txtManropebold12">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtManropeextrabold24">
+        <item name="android:textSize">@dimen/_24pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">800</item>
+    </style>
+    <style name="txtManropebold16">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtManropebold14">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtManropemedium14_3">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtManropemedium14_2">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtManropemedium14_1">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"gray_300"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtManropebold18">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtManropemedium12_2">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtManropemedium12_1">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_500"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtManropeextrabold16_1">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">800</item>
+    </style>
+    <style name="txtManropemedium10_1">
+        <item name="android:textSize">@dimen/_10pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtManropeextrabold20">
+        <item name="android:textSize">@dimen/_20pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">800</item>
+    </style>
+    <style name="txtManrope12_2">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"secondaryContainer"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtManropeextrabold18_1">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">800</item>
+    </style>
+    <style name="txtManropeextrabold18_2">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/{"name":"gray_300"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">800</item>
+    </style>
+    <style name="txtManropeextrabold24_1">
+        <item name="android:textSize">@dimen/_24pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">800</item>
+    </style>
+    <style name="groupStylecornerRadius_2">
+        <item name="android:background">@drawable/rectangle_radius_7</item>
+    </style>
+    <style name="txtManropeextrabold20_1">
+        <item name="android:textSize">@dimen/_20pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">800</item>
+    </style>
+    <style name="groupStylecornerRadius_1">
+        <item name="android:background">@drawable/rectangle_border_name_gray_300_radius_8</item>
+    </style>
+    <style name="txtManroperegular14_1">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtManropebold12_1">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtManropebold14_2">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"secondaryContainer"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtManropebold14_1">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtIntermedium13">
+        <item name="android:textSize">@dimen/_13pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_900"}</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtSFProDisplayregular12">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_500"}</item>
+        <item name="android:fontFamily">@font/sf_pro_display</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="groupStyle">
+        <item name="android:background">@drawable/rectangle_dhi_0</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;gray_300&quot;}">
+        <item name="android:background">@drawable/rectangle_bg_name_gray_300</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;primary&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_primary_radius_6</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;red_400_19&quot;,&quot;opacity&quot;:0.05}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_red_400_19_opacity_0_05_radius_12</item>
+    </style>
+    <style name="txtSolidRounded">
+        <item name="android:textSize">@dimen/_10pxh</item>
+        <item name="android:textColor">@color/{"name":"secondaryContainer"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+        <item name="android:background">@drawable/rectangle_bg_name_red_400_19_radius_5</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;blue_50&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_blue_50_radius_tl_10_bl_10_br_10</item>
+    </style>
+    <style name="groupStyle_1">
+        <item name="android:background">@drawable/rectangle_dhi_0</item>
+    </style>
+    <style name="txtManrope16">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_500"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="groupStylenamegray_1">
+        <item name="android:background">@drawable/rectangle_bg_name_gray_50_radius_5</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <item name="android:background">@drawable/rectangle_bg_name_white_a700</item>
+    </style>
+    <style name="groupStylenamegray_2">
+        <item name="android:background">@drawable/rectangle_bg_name_gray_300_radius_5</item>
+    </style>
+    <style name="groupStylenamegray_3">
+        <item name="android:background">@drawable/rectangle_bg_name_gray_300_radius_10</item>
+    </style>
+    <style name="groupStylenamegray_4">
+        <item name="android:background">@drawable/rectangle_bg_name_gray_50_radius_tl_20_tr_20</item>
+    </style>
+    <style name="txtManropebold32">
+        <item name="android:textSize">@dimen/_32pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtReadexProregular14">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/readex_pro</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtManropesemibold16">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtManropesemibold14">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtSolidRounded_1">
+        <item name="android:textSize">@dimen/_10pxh</item>
+        <item name="android:textColor">@color/{"name":"onError"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+        <item name="android:background">@drawable/rectangle_bg_name_green_500_19_radius_5</item>
+    </style>
+    <style name="txtManropesemibold12">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;gray_900&quot;}">
+        <item name="android:background">@drawable/rectangle_bg_name_gray_900</item>
+    </style>
+    <style name="txtRoundedOutline">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+        <item name="android:background">@drawable/rectangle_border_name_gray_300_radius_8</item>
+    </style>
+    <style name="txt">
+        <item name="android:textSize">@dimen/_24pxh</item>
+        <item name="android:textColor">@color/{"name":"gray_300"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">800</item>
+        <item name="android:background">@drawable/rectangle_dhi_0</item>
+    </style>
+    <style name="txtManropemedium16">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtManropemedium14">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_500"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;white_A700&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_white_a700_border_name_gray_300_radius_10</item>
+    </style>
+    <style name="txtManropeextrabold16">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">800</item>
+    </style>
+    <style name="txtManropemedium12">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"onError"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtManropeextrabold14">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_600"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">800</item>
+    </style>
+    <style name="txtSFProDisplaybold12">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/sf_pro_display</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtManropemedium10">
+        <item name="android:textSize">@dimen/_10pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_500"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtManropesemibold16_1">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;gray_300&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_gray_300_radius_tl_10_tr_10_br_10</item>
+    </style>
+    <style name="txtManrope12">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_500"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtManropesemibold14_1">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_500"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtManropesemibold14_2">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtManrope10">
+        <item name="android:textSize">@dimen/_10pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_500"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtManropesemibold12_1">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_500"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtManroperegular14">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_500"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtManropesemibold12_2">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"secondaryContainer"}</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="searchViewsearch" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColorPrimary">@color/{"name":"blue_gray_500"}</item>
+        <item name="android:textColorHint">@color/{"name":"blue_gray_500"}</item>
+    </style>
+    <style name="searchViewsearch" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColorPrimary">@color/{"name":"primaryContainer"}</item>
+        <item name="android:textColorHint">@color/{"name":"primaryContainer"}</item>
+    </style>
+    <style name="searchViewsearch" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColorPrimary">@color/{"name":"blue_gray_500"}</item>
+        <item name="android:textColorHint">@color/{"name":"blue_gray_500"}</item>
+    </style>
+    <style name="searchViewsearch" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColorPrimary">@color/{"name":"blue_gray_500"}</item>
+        <item name="android:textColorHint">@color/{"name":"blue_gray_500"}</item>
+    </style>
+</resources>

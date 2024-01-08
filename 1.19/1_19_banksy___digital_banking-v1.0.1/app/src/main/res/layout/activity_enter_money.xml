@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearMessage"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_29pxv"
+        android:paddingTop="@dimen/_29pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                android:id="@+id/btnFavorite"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_favorite_onprimary" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtWelcomeBack"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_money_transfer"
+                style="@style/txtOverpassbold20" tools:text="@string/lbl_money_transfer"/>
+            <ImageButton
+                android:background="@color/{&quot;name&quot;:&quot;onPrimary&quot;}"
+                android:id="@+id/btnPlus"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_plus" tools:ignore="ContentDescription"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearEnterMoney"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_18pxv" android:paddingTop="@dimen/_18pxv">
+            <ImageView android:id="@+id/imageCircleImage"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_130pxh"
+                android:layout_width="@dimen/_130pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_ellipse_8_130x130}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_8_130x130"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtKateMorgan"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_kate_morgan"
+                style="@style/txtOverpassbold24" tools:text="@string/lbl_kate_morgan"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtOneHundredThirtySixMillionThre"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_159_107_1365"
+                style="@style/txtOverpassregular12_1" tools:text="@string/lbl_159_107_1365"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_60_00"
+                style="@style/txtOverpassbold60" tools:text="@string/lbl_60_00"/>
+            <EditText
+                android:background="@drawable/rectangle_border_name_gray_500"
+                android:ellipsize="end"
+                android:fontFamily="@font/overpass"
+                android:hint="@string/msg_type_your_message"
+                android:id="@+id/etMessage" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_20pxv"
+                android:paddingEnd="@dimen/_24pxh"
+                android:paddingStart="@dimen/_24pxh"
+                android:paddingTop="@dimen/_20pxv"
+                android:singleLine="true"
+                android:textColor="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                android:textColorHint="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_18pxh"
+                android:textStyle="normal" tools:ignore="Autofill"/>
+            <LinearLayout android:id="@+id/linearFrame"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSelectCard"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_select_card"
+                    style="@style/txtOverpassextrabold24" tools:text="@string/lbl_select_card"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAddCard"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_add_card"
+                    style="@style/txtOverpassbold16_1" tools:text="@string/lbl_add_card"/>
+            </LinearLayout>
+            <HorizontalScrollView android:fillViewport="true"
+                android:gravity="end"
+                android:id="@+id/horizontalScrollJonathanAnderson"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:scrollbars="none">
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearJonathanAnderson"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearCard"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/_23pxv"
+                        android:paddingEnd="@dimen/_20pxh"
+                        android:paddingStart="@dimen/_20pxh"
+                        android:paddingTop="@dimen/_23pxv" style="@style/groupStyle">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtJonathanAnderson"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/msg_jonathan_anderson"
+                            style="@style/txtOverpassbold12" tools:text="@string/msg_jonathan_anderson"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtText"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@string/msg_1222_3443_9881_1222"
+                            style="@style/txtOverpassbold18" tools:text="@string/msg_1222_3443_9881_1222"/>
+                        <LinearLayout android:id="@+id/linearBalance"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="horizontal">
+                            <LinearLayout android:gravity="start"
+                                android:id="@+id/linearBalance1"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content" android:orientation="vertical">
+                                <TextView android:ellipsize="end"
+                                    android:id="@+id/txtBalance"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:singleLine="true"
+                                    android:text="@string/lbl_balance"
+                                    style="@style/txtOverpasssemibold8" tools:text="@string/lbl_balance"/>
+                                <TextView android:ellipsize="end"
+                                    android:id="@+id/txtPrice1"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:singleLine="true"
+                                    android:text="@string/lbl_31_250"
+                                    style="@style/txtOverpassbold12" tools:text="@string/lbl_31_250"/>
+                            </LinearLayout>
+                            <ImageView android:id="@+id/imageUser"
+                                android:layout_height="@dimen/_20pxh"
+                                android:layout_width="@dimen/_20pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_user"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_user"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearCard1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/_23pxv"
+                        android:paddingEnd="@dimen/_20pxh"
+                        android:paddingStart="@dimen/_20pxh"
+                        android:paddingTop="@dimen/_23pxv" style="@style/groupStyle_1">
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearFifty"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtJonathanAnderson1"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@string/msg_jonathan_anderson"
+                                style="@style/txtOverpassbold12" tools:text="@string/msg_jonathan_anderson"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtText1"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@string/msg_1222_3443_9881_1222"
+                                style="@style/txtOverpassbold18" tools:text="@string/msg_1222_3443_9881_1222"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtBalance1"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:singleLine="true"
+                                android:text="@string/lbl_balance"
+                                style="@style/txtOverpasssemibold8" tools:text="@string/lbl_balance"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtPrice2"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:singleLine="true"
+                                android:text="@string/lbl_31_250"
+                                style="@style/txtOverpassbold12" tools:text="@string/lbl_31_250"/>
+                        </LinearLayout>
+                        <ImageView android:id="@+id/imageUser1"
+                            android:layout_gravity="bottom"
+                            android:layout_height="@dimen/_20pxh"
+                            android:layout_width="@dimen/_20pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_user"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_user"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@color/{&quot;name&quot;:&quot;primary&quot;}"
+            android:ellipsize="end" android:fontFamily="@font/overpass"
+            android:gravity="center" android:id="@+id/btnContinue"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_58pxv"
+            android:layout_width="@dimen/_366pxh"
+            android:paddingBottom="@dimen/_16pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_16pxv" android:singleLine="true"
+            android:text="@string/lbl_continue"
+            android:textAllCaps="true"
+            android:textColor="@color/{&quot;name&quot;:&quot;onPrimary&quot;}"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_20pxh" android:textStyle="bold" tools:text="@string/lbl_continue"/>
+    </LinearLayout>
+</layout>

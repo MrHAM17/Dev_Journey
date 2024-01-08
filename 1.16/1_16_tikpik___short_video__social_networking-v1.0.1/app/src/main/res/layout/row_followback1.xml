@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearFollowBack"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <ImageView android:id="@+id/imageClintonMcclure"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_60pxh"
+            android:layout_width="@dimen/_60pxh"
+            android:scaleType="centerCrop" circular="@{true}"
+            imageRes="@{@drawable/img_ellipse_21}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_21"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearClintonMcclure"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtClintonMcclure"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_clinton_mcclure"
+                style="@style/txtUrbanistromanbold18_1" tools:text="@string/lbl_clinton_mcclure"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtStartedfollowingyou"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@string/msg_started_following"
+                style="@style/txtUrbanistromanmedium14_2" tools:text="@string/msg_started_following"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_radius_8"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:gravity="center" android:id="@+id/btnFollowBack"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_32pxv"
+            android:layout_width="@dimen/_107pxh"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_7pxv"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_16pxh"
+            android:paddingTop="@dimen/_7pxv" android:singleLine="true"
+            android:text="@string/lbl_follow_back"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;onErrorContainer&quot;}"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_14pxh" android:textStyle="bold" tools:text="@string/lbl_follow_back"/>
+    </LinearLayout>
+</layout>

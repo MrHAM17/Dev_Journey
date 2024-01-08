@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearPrice1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <ImageView android:id="@+id/imageImage1"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_110pxh"
+            android:layout_width="@dimen/_109pxh"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_image_110x109}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_image_110x109"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearFortyEight"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <LinearLayout android:id="@+id/linearFortySeven"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearPrice2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPrice"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@string/lbl_12_50"
+                        style="@style/txtLatomedium18" tools:text="@string/lbl_12_50"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtShortsInYellow"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@string/msg_shorts_in_yellow"
+                        style="@style/txtLatoregular14_1" tools:text="@string/msg_shorts_in_yellow"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageImage2"
+                    android:layout_height="@dimen/_20pxh"
+                    android:layout_width="@dimen/_20pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_trash_2"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_trash_2"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearQty"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtQty"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_qty"
+                    style="@style/txtLatoregular14" tools:text="@string/lbl_qty"/>
+                <ImageButton android:id="@+id/btnPlusSquare1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:paddingHorizontal="@dimen/_3pxh"
+                    android:paddingVertical="@dimen/_3pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_plus_square" tools:ignore="ContentDescription"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtOne"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_1"
+                    style="@style/txtLatoregular14_1" tools:text="@string/lbl_1"/>
+                <ImageButton android:id="@+id/btnPlusSquare2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:paddingHorizontal="@dimen/_3pxh"
+                    android:paddingVertical="@dimen/_3pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_plus_square_primary" tools:ignore="ContentDescription"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

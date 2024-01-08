@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearFrame"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearFrameForty"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end" android:id="@+id/txtHome"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_logo"
+                style="@style/txtPoppinssemibold12" tools:text="@string/lbl_logo"/>
+            <LinearLayout android:id="@+id/linearTwentyFive"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtEasyToUse"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_8pxh"
+                    android:singleLine="true"
+                    android:text="@string/msg_lorem_ipsum_dolor2"
+                    style="@style/txtPoppinssemibold16" tools:text="@string/msg_lorem_ipsum_dolor2"/>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearReadInfo"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:alpha="0.5"
+                        android:ellipsize="end"
+                        android:id="@+id/txtDuration"
+                        android:layout_gravity="bottom"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_16_days_ago"
+                        style="@style/txtPoppinsmedium12" tools:text="@string/lbl_16_days_ago"/>
+                    <View
+                        android:background="@drawable/rectangle_bg_name_black_900_opacity_0_53_radius_1"
+                        android:id="@+id/viewView"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_3pxh" android:layout_width="@dimen/_3pxh"/>
+                    <TextView android:alpha="0.5"
+                        android:ellipsize="end"
+                        android:id="@+id/txtTime"
+                        android:layout_gravity="top"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_3_min_read"
+                        style="@style/txtPoppinsmedium12" tools:text="@string/lbl_3_min_read"/>
+                    <FrameLayout android:id="@+id/frameSpacer"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <ImageView android:id="@+id/imageDaysago"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_20pxh"
+                        android:layout_width="@dimen/_20pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_bookmark_icon"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_bookmark_icon"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@+id/imageLOGO"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_80pxh"
+            android:layout_width="@dimen/_80pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_5pxh}"
+            imageRes="@{@drawable/img_blog_thumbnail}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_blog_thumbnail"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearCardBig"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <ImageView android:id="@+id/imageSweetener"
+            android:layout_height="@dimen/_184pxh"
+            android:layout_width="@dimen/_184pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_28pxh}"
+            imageRes="@{@drawable/img_image_70}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_image_70"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtPositions"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@string/lbl_sweetener"
+            style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_sweetener"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtArianaGrande"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01" android:singleLine="true"
+            android:text="@string/lbl_ariana_grande"
+            style="@style/txtUrbanistsemibold14_2" tools:text="@string/lbl_ariana_grande"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtZipcode"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.01" android:singleLine="true"
+            android:text="@string/lbl_2018"
+            style="@style/txtUrbanistsemibold14_2" tools:text="@string/lbl_2018"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearShape"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <Spinner
+                android:background="@drawable/layer_list_bg_name_white_a700_border_name_blue_gray_50_radius_25"
+                android:id="@+id/spinnerButtonLocation"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" tools:listitem="@layout/spinner_item"/>
+            <LinearLayout android:id="@+id/linearGroup94"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_gray_100_border_name_gray_100_radius_25"
+                    android:id="@+id/btnIconButton"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_50pxh"
+                    android:layout_width="@dimen/_50pxh"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_ion_notifications_outline" tools:ignore="ContentDescription"/>
+                <ImageView android:id="@+id/imageShape"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_50pxh"
+                    android:layout_width="@dimen/_50pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_shape_69}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_shape_69"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearHome"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:id="@+id/txtTitle"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/msg_hey_jonathan_let_s"
+                    style="@style/txtRalewaysemibold24" tools:text="@string/msg_hey_jonathan_let_s"/>
+                <androidx.appcompat.widget.SearchView
+                    android:background="@drawable/rectangle_bg_name_white_a700_opacity_0_8_radius_12"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/searchViewSearch"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:theme="@style/searchViewsearch"
+                    app:iconifiedByDefault="false"
+                    app:queryBackground="@android:color/transparent"
+                    app:queryHint="@string/lbl_find_location" app:searchIcon="@drawable/img_menu"/>
+                <com.google.android.material.tabs.TabLayout
+                    android:gravity="end"
+                    android:id="@+id/tabLayoutTabview"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    app:tabBackground="@drawable/selector_bg_name_green_a400_radius_25"
+                    app:tabIndicatorColor="@android:color/transparent"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabMode="scrollable"
+                    app:tabSelectedTextColor="@color/{&quot;name&quot;:&quot;gray_100&quot;}" app:tabTextColor="@color/{&quot;name&quot;:&quot;blue_gray_800_01&quot;}"/>
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPagerTabBarView"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" android:layout_width="match_parent"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

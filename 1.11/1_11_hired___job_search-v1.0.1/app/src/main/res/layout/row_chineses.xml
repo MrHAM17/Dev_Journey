@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <TextView android:ellipsize="end" android:id="@+id/txtChineses"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:letterSpacing="0.0"
+        android:lineSpacingExtra="@dimen/_5pxh"
+        android:singleLine="true" android:text="@string/lbl_chineses"
+        style="@style/txtPlusJakartaSanssemibold16" tools:text="@string/lbl_chineses"/>
+</layout>

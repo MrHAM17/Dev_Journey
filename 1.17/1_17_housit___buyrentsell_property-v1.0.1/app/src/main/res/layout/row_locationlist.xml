@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearCardLocation"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_14pxh"
+        android:paddingVertical="@dimen/_14pxv" style="@style/groupStylenamewhite_7">
+        <ImageButton
+            android:background="@drawable/rectangle_bg_name_blue_gray_50_border_name_blue_gray_50_radius_25"
+            android:id="@+id/btnLinkedin"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_50pxh"
+            android:layout_width="@dimen/_50pxh"
+            android:paddingHorizontal="@dimen/_15pxh"
+            android:paddingVertical="@dimen/_15pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_linkedin_deep_orange_a200_50x50" tools:ignore="ContentDescription"/>
+        <TextView android:gravity="center_vertical"
+            android:id="@+id/txtDistance"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:text="@string/msg_2_5_km_from_srengseng"
+            style="@style/txtRalewayregular12" tools:text="@string/msg_2_5_km_from_srengseng"/>
+    </LinearLayout>
+</layout>

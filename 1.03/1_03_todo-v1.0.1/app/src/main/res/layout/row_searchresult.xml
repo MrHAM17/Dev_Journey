@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearProductItem"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_15pxh"
+        android:paddingVertical="@dimen/_15pxv" style="@style/groupStylecornerRadius">
+        <ImageView android:id="@+id/imageImage"
+            android:layout_height="@dimen/_133pxh"
+            android:layout_width="@dimen/_133pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_5pxh}"
+            imageRes="@{@drawable/img_product_image_1}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_product_image_1"/>
+        <TextView android:id="@+id/txtNikeAirMaxReact"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.03"
+            android:text="@string/msg_nike_air_max_270"
+            style="@style/txtPoppinsbold12" tools:text="@string/msg_nike_air_max_270"/>
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/ratingBarRatingBar"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:numStars="5"
+            android:progressBackgroundTint="@color/{&quot;name&quot;:&quot;blue_50&quot;}"
+            android:progressTint="@color/{&quot;name&quot;:&quot;yellow_700&quot;}"
+            android:rating="4" style="@style/Widget.AppCompat.RatingBar.Small"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtPrice1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.03" android:singleLine="true"
+            android:text="@string/lbl_299_43"
+            style="@style/txtPoppinsbold12_1" tools:text="@string/lbl_299_43"/>
+        <LinearLayout android:id="@+id/linearDiscounts"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPrice2"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@string/lbl_534_33"
+                style="@style/txtPoppinsregular10" tools:text="@string/lbl_534_33"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtOffer"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@string/lbl_24_off"
+                style="@style/txtPoppinsbold10" tools:text="@string/lbl_24_off"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

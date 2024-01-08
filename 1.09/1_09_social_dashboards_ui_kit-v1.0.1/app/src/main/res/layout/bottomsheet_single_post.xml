@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearSinglePost"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/linearModalMobile"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_22pxv"
+            android:paddingEnd="@dimen/_168pxh"
+            android:paddingStart="@dimen/_168pxh"
+            android:paddingTop="@dimen/_22pxv" style="@style/groupStylenamewhite_1">
+            <ImageView android:id="@+id/imageIndicatorOnLight"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_5pxh"
+                android:layout_width="@dimen/_38pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_indicator_on_light"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_indicator_on_light"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

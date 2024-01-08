@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearRewind"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+        <FrameLayout android:gravity="center_horizontal"
+            android:id="@+id/frameNavigationHeader01"
+            android:layout_height="@dimen/_68pxv"
+            android:layout_width="match_parent" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+            <LinearLayout android:id="@+id/linearTwelve"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_15pxv"
+                android:paddingEnd="@dimen/_28pxh"
+                android:paddingStart="@dimen/_28pxh" android:paddingTop="@dimen/_15pxv">
+                <ImageButton
+                    android:background="@drawable/rectangle_border_name_blue_gray_100_radius_12"
+                    android:id="@+id/btnRewind"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_38pxh"
+                    android:layout_width="@dimen/_38pxh"
+                    android:paddingHorizontal="@dimen/_10pxh"
+                    android:paddingVertical="@dimen/_10pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_rewind_primarycontainer_38x38" tools:ignore="ContentDescription"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtScreenTitle"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_4pxh"
+                    android:singleLine="true"
+                    android:text="@string/lbl_message"
+                    style="@style/txtInterbold16" tools:text="@string/lbl_message"/>
+                <ImageButton
+                    android:background="@drawable/rectangle_border_name_blue_gray_100_radius_12"
+                    android:id="@+id/btnIconNotification"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_38pxh"
+                    android:layout_width="@dimen/_38pxh"
+                    android:paddingHorizontal="@dimen/_10pxh"
+                    android:paddingVertical="@dimen/_10pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_icon_notification" tools:ignore="ContentDescription"/>
+            </LinearLayout>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarAppBar"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <ImageButton
+                    android:background="@drawable/rectangle_border_name_blue_gray_100_radius_12"
+                    android:id="@+id/btnRewind1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_rewind_38x38" tools:ignore="ContentDescription"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtScreenTitle1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_4pxh"
+                    android:singleLine="true"
+                    android:text="@string/lbl_messages"
+                    style="@style/txtInterbold16" tools:text="@string/lbl_messages"/>
+                <ImageButton
+                    android:background="@drawable/rectangle_border_name_blue_gray_100_radius_12"
+                    android:id="@+id/btnComputer"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_computer_white_a700" tools:ignore="ContentDescription"/>
+            </androidx.appcompat.widget.Toolbar>
+        </FrameLayout>
+        <LinearLayout android:id="@+id/linearMessages"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <com.google.android.material.tabs.TabLayout
+                android:gravity="center_horizontal"
+                android:id="@+id/tabLayoutTabview"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/{&quot;name&quot;:&quot;onPrimary&quot;}" app:tabTextColor="@color/{&quot;name&quot;:&quot;gray_700&quot;}"/>
+            <androidx.viewpager2.widget.ViewPager2
+                android:gravity="center_horizontal"
+                android:id="@+id/viewPagerTabBarView"
+                android:layout_height="match_parent"
+                android:layout_weight="1" android:layout_width="match_parent"/>
+        </LinearLayout>
+        <FrameLayout android:gravity="center_horizontal"
+            android:id="@+id/frameBottomBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" style="@style/groupStyle{&quot;name&quot;:&quot;primary&quot;}cornerRadius">
+            <ImageView android:id="@+id/imageHome"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_38pxh"
+                android:layout_width="@dimen/_38pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_home"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_home"/>
+            <ImageView android:id="@+id/imageCalendar"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_38pxh"
+                android:layout_width="@dimen/_38pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_calendar"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_calendar"/>
+            <ImageView android:id="@+id/imageAdd"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_38pxh"
+                android:layout_width="@dimen/_38pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_add"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_add"/>
+            <ImageView android:id="@+id/imageWarning"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_38pxh"
+                android:layout_width="@dimen/_38pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_warning"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_warning"/>
+            <ImageView android:id="@+id/imageProfile"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_38pxh"
+                android:layout_width="@dimen/_38pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_profile"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_profile"/>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearTypeSoundsList"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <ImageView android:id="@+id/imageK"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_80pxh"
+            android:layout_width="@dimen/_80pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_16pxh}"
+            imageRes="@{@drawable/img_image_80x80}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_image_80x80"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearAutoLayoutVertical"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSoundsTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_side_to_side"
+                style="@style/txtUrbanistromanbold18_1" tools:text="@string/lbl_side_to_side"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSinger"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@string/lbl_ariana_grande"
+                style="@style/txtUrbanistromanmedium14_2" tools:text="@string/lbl_ariana_grande"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtTime"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@string/lbl_01_00"
+                style="@style/txtUrbanistromanmedium14_2" tools:text="@string/lbl_01_00"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtTotal"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.01" android:singleLine="true"
+            android:text="@string/lbl_938_6k"
+            style="@style/txtUrbanistsemibold14_1" tools:text="@string/lbl_938_6k"/>
+    </LinearLayout>
+</layout>

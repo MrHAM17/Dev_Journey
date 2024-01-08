@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="txtMontserratextrabold25">
+        <item name="android:textSize">@dimen/_25pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_800_01"}</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textFontWeight" tools:targetApi="p">800</item>
+    </style>
+    <style name="txtRalewaymedium18_1">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_50"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtRalewaymedium14_1">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_600"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="groupStylenamegreen_1">
+        <item name="android:background">@drawable/rectangle_bg_name_green_a400_radius_71</item>
+    </style>
+    <style name="txtRalewaybold18">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_800_01"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="groupStylecornerRadius">
+        <item name="android:background">@drawable/rectangle_border_name_blue_gray_50_radius_18</item>
+    </style>
+    <style name="groupStylenamewhite_1">
+        <item name="android:background">@drawable/rectangle_bg_name_white_a700_opacity_0_8_radius_25</item>
+    </style>
+    <style name="txtRalewaysemibold8">
+        <item name="android:textSize">@dimen/_8pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="groupStylenamewhite_2">
+        <item name="android:background">@drawable/rectangle_bg_name_white_a700_radius_tl_50_tr_50</item>
+    </style>
+    <style name="txtRalewaysemibold12_3">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"onPrimaryContainer"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtRalewaysemibold12_2">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_800_01"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtRalewaysemibold12_1">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_600"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtRalewaybold24">
+        <item name="android:textSize">@dimen/_24pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_800_01"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtRalewaysemibold24">
+        <item name="android:textSize">@dimen/_24pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_800_01"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;white_A700&quot;,&quot;opacity&quot;:0.25}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_white_a700_opacity_0_25_radius_tr_18_br_18</item>
+    </style>
+    <style name="txtRalewaysemibold18">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_800_01"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtRalewaybold10">
+        <item name="android:textSize">@dimen/_10pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_800_01"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;orange_300&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_orange_300_radius_25</item>
+    </style>
+    <style name="txtRalewaybold14">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_800_01"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtRalewaybold12">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_800_01"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtRalewaymedium8">
+        <item name="android:textSize">@dimen/_8pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_600"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtMontserratregular30">
+        <item name="android:textSize">@dimen/_30pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtRalewaysemibold12">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"gray_100"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtRalewaysemibold10">
+        <item name="android:textSize">@dimen/_10pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_600"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtRalewaysemibold16">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_800_01"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtRalewaysemibold14">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="groupStylenamegray_7">
+        <item name="android:background">@drawable/rectangle_bg_name_gray_100_radius_50</item>
+    </style>
+    <style name="txtSolidRounded">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+        <item name="android:background">@drawable/rectangle_bg_name_primary_radius_15</item>
+    </style>
+    <style name="groupStylenamegray_8">
+        <item name="android:background">@drawable/rectangle_bg_name_gray_100_radius_28</item>
+    </style>
+    <style name="groupStylenameorange_1">
+        <item name="android:background">@drawable/rectangle_bg_name_orange_300_radius_71</item>
+    </style>
+    <style name="txtMontserratbold18">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_800_01"}</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="groupStylenamegray_1">
+        <item name="android:background">@drawable/rectangle_bg_name_gray_100_radius_20</item>
+    </style>
+    <style name="groupStylenamegray_2">
+        <item name="android:background">@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25</item>
+    </style>
+    <style name="groupStylenamegray_3">
+        <item name="android:background">@drawable/rectangle_bg_name_gray_100_radius_12</item>
+    </style>
+    <style name="groupStylenamegray_4">
+        <item name="android:background">@drawable/rectangle_bg_name_gray_100_border_name_gray_100_radius_6</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;gray_100&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25</item>
+    </style>
+    <style name="groupStylenamegray_5">
+        <item name="android:background">@drawable/rectangle_bg_name_gray_100_radius_tl_24_tr_24</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;blue_gray_800_01&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_blue_gray_800_01_radius_25</item>
+    </style>
+    <style name="groupStylenamegray_6">
+        <item name="android:background">@drawable/rectangle_bg_name_gray_100_radius_tl_24_tr_24</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;white_A700&quot;,&quot;opacity&quot;:0.5}">
+        <item name="android:background">@drawable/rectangle_bg_name_white_a700_opacity_0_5</item>
+    </style>
+    <style name="txtRalewayregular14_2">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtRalewayregular14_1">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"onPrimaryContainer"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtSolidRounded_1">
+        <item name="android:textSize">@dimen/_8pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+        <item name="android:background">@drawable/rectangle_bg_name_red_a200_radius_7</item>
+    </style>
+    <style name="txtRalewaybold10_2">
+        <item name="android:textSize">@dimen/_10pxh</item>
+        <item name="android:textColor">@color/{"name":"gray_100"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtRalewaybold10_1">
+        <item name="android:textSize">@dimen/_10pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_600"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtRalewaysemibold18_1">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtRalewaysemibold14_4">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtRalewaysemibold14_3">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_600"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtRalewaysemibold14_2">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"onPrimaryContainer"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtRalewayregular14">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_600"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtRalewaybold18_1">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/{"name":"red_A200"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtRalewayromansemibold8">
+        <item name="android:textSize">@dimen/_8pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtRalewaybold14_2">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtRalewaybold14_1">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="groupStylenameblue_gray_700_1">
+        <item name="android:background">@drawable/rectangle_bg_name_blue_gray_700_af_radius_8</item>
+    </style>
+    <style name="groupStylenameblue_gray_700_3">
+        <item name="android:background">@drawable/rectangle_bg_name_blue_gray_700_af_radius_tr_25</item>
+    </style>
+    <style name="txtRalewaybold8">
+        <item name="android:textSize">@dimen/_8pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_600"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="groupStylenameblue_gray_700_2">
+        <item name="android:background">@drawable/rectangle_bg_name_blue_gray_700_af_radius_5</item>
+    </style>
+    <style name="txtRalewaymedium10_2">
+        <item name="android:textSize">@dimen/_10pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_800_01"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtRalewayregular12">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_600"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtRalewaymedium10_1">
+        <item name="android:textSize">@dimen/_10pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_600"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="groupStylenameprimarycornerRadius_1">
+        <item name="android:background">@drawable/rectangle_bg_name_primary_radius_71</item>
+    </style>
+    <style name="txtRalewaymedium18">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_800_01"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtRalewaysemibold14_1">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_800_01"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;green_A400&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_green_a400_radius_25</item>
+    </style>
+    <style name="txtRalewaysemibold10_1">
+        <item name="android:textSize">@dimen/_10pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_800_01"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtRalewaymedium12">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_800_01"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtRalewaymedium8_4">
+        <item name="android:textSize">@dimen/_8pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtRalewaymedium8_3">
+        <item name="android:textSize">@dimen/_8pxh</item>
+        <item name="android:textColor">@color/{"name":"onPrimaryContainer"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtRalewaymedium14">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_800_01"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtRalewaymedium10">
+        <item name="android:textSize">@dimen/_10pxh</item>
+        <item name="android:textColor">@color/{"name":"onPrimaryContainer"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;white_A700&quot;,&quot;opacity&quot;:0.8}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_white_a700_opacity_0_8_radius_25</item>
+    </style>
+    <style name="groupStylecornerRadius_3">
+        <item name="android:background">@drawable/rectangle_radius_55</item>
+    </style>
+    <style name="groupStylecornerRadius_2">
+        <item name="android:background">@drawable/rectangle_border_name_blue_gray_50_radius_25</item>
+    </style>
+    <style name="groupStylecornerRadius_5">
+        <item name="android:background">@drawable/rectangle_radius_35</item>
+    </style>
+    <style name="groupStylecornerRadius_4">
+        <item name="android:background">@drawable/rectangle_radius_25</item>
+    </style>
+    <style name="groupStylecornerRadius_1">
+        <item name="android:background">@drawable/rectangle_gradient_s_name_green_a400_opacity_0_15_e_name_teal_a700_26_radius_25</item>
+    </style>
+    <style name="groupStyle">
+        <item name="android:background">@drawable/rectangle_dhi_0</item>
+    </style>
+    <style name="groupStylecornerRadius_7">
+        <item name="android:background">@drawable/rectangle_gradient_s_name_red_a200_33_e_name_secondarycontainer_radius_25</item>
+    </style>
+    <style name="groupStylecornerRadius_6">
+        <item name="android:background">@drawable/rectangle_radius_78</item>
+    </style>
+    <style name="groupStylecornerRadius_8">
+        <item name="android:background">@drawable/rectangle_gradient_s_name_deep_orange_400_e_name_orange_300_01_radius_25</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;primary&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_primary_radius_25</item>
+    </style>
+    <style name="groupStyle_3">
+        <item name="android:background">@drawable/rectangle_dhi_0</item>
+    </style>
+    <style name="groupStyle_4">
+        <item name="android:background">@drawable/rectangle_gradient_s_name_onprimary_e_name_blue_gray_600_opacity_0</item>
+    </style>
+    <style name="groupStyle_1">
+        <item name="android:background">@drawable/rectangle_gradient_s_name_white_a700_e_name_white_a700_opacity_0</item>
+    </style>
+    <style name="groupStyle_2">
+        <item name="android:background">@drawable/rectangle_dhi_0</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_onprimarycontainer_radius_96</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <item name="android:background">@drawable/rectangle_bg_name_white_a700</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;blue_gray_700_af&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_blue_gray_700_af_radius_25</item>
+    </style>
+    <style name="groupStylenamewhite_10">
+        <item name="android:background">@drawable/rectangle_bg_name_white_a700_opacity_0_8_radius_17</item>
+    </style>
+    <style name="groupStylenamewhite_11">
+        <item name="android:background">@drawable/rectangle_bg_name_white_a700_opacity_0_8_radius_15</item>
+    </style>
+    <style name="groupStylenamewhite_12">
+        <item name="android:background">@drawable/rectangle_bg_name_white_a700_radius_35</item>
+    </style>
+    <style name="txtRalewayregular12_3">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtRalewayregular12_2">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_800"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtRalewayregular12_1">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_800_01"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtMontserratsemibold25">
+        <item name="android:textSize">@dimen/_25pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtRalewaymedium8_2">
+        <item name="android:textSize">@dimen/_8pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_800_01"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtRalewaymedium8_1">
+        <item name="android:textSize">@dimen/_8pxh</item>
+        <item name="android:textColor">@color/{"name":"gray_100"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtRalewaybold12_1">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_600"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtRalewayregular9">
+        <item name="android:textSize">@dimen/_9pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_600"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtRalewaysemibold12_5">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtRalewaysemibold12_4">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="groupStylenamewhite_3">
+        <item name="android:background">@drawable/rectangle_bg_name_white_a700_border_name_blue_gray_50_radius_tl_25_tr_25</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;red_A200&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_red_a200_radius_71</item>
+    </style>
+    <style name="groupStylenamewhite_4">
+        <item name="android:background">@drawable/rectangle_bg_name_white_a700_radius_50</item>
+    </style>
+    <style name="groupStylenamewhite_5">
+        <item name="android:background">@drawable/rectangle_bg_name_white_a700_border_name_white_a700_radius_6</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;white_A700&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_white_a700_radius_12</item>
+    </style>
+    <style name="groupStylenamewhite_6">
+        <item name="android:background">@drawable/rectangle_bg_name_white_a700_radius_tl_16_bl_16_br_16</item>
+    </style>
+    <style name="groupStylenamewhite_7">
+        <item name="android:background">@drawable/rectangle_bg_name_white_a700_border_name_blue_gray_50_radius_25</item>
+    </style>
+    <style name="groupStylenamewhite_8">
+        <item name="android:background">@drawable/rectangle_bg_name_white_a700_opacity_0_25_radius_tl_18_bl_18</item>
+    </style>
+    <style name="groupStylenamewhite_9">
+        <item name="android:background">@drawable/rectangle_bg_name_white_a700_opacity_0_25_radius_10</item>
+    </style>
+    <style name="txtMontserratsemibold12">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtMontserratregular9">
+        <item name="android:textSize">@dimen/_9pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_600"}</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtRalewaymedium12_1">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_600"}</item>
+        <item name="android:fontFamily">@font/raleway</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtMontserratsemibold18">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="searchViewsearch" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColorPrimary">@color/{"name":"onPrimaryContainer"}</item>
+        <item name="android:textColorHint">@color/{"name":"onPrimaryContainer"}</item>
+    </style>
+    <style name="searchViewsearch" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColorPrimary">@color/{"name":"onPrimaryContainer"}</item>
+        <item name="android:textColorHint">@color/{"name":"onPrimaryContainer"}</item>
+    </style>
+    <style name="searchViewsearch" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColorPrimary">@color/{"name":"onPrimaryContainer"}</item>
+        <item name="android:textColorHint">@color/{"name":"onPrimaryContainer"}</item>
+    </style>
+    <style name="searchViewsearch" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColorPrimary">@color/{"name":"blue_gray_800_01"}</item>
+        <item name="android:textColorHint">@color/{"name":"blue_gray_800_01"}</item>
+    </style>
+    <style name="searchViewsearch" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColorPrimary">@color/{"name":"blue_gray_800_01"}</item>
+        <item name="android:textColorHint">@color/{"name":"blue_gray_800_01"}</item>
+    </style>
+    <style name="searchViewsearch" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColorPrimary">@color/{"name":"blue_gray_800_01"}</item>
+        <item name="android:textColorHint">@color/{"name":"blue_gray_800_01"}</item>
+    </style>
+    <style name="searchViewsearch" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColorPrimary">@color/{"name":"blue_gray_800_01"}</item>
+        <item name="android:textColorHint">@color/{"name":"blue_gray_800_01"}</item>
+    </style>
+    <style name="searchViewsearch" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColorPrimary">@color/{"name":"blue_gray_800_01"}</item>
+        <item name="android:textColorHint">@color/{"name":"blue_gray_800_01"}</item>
+    </style>
+</resources>

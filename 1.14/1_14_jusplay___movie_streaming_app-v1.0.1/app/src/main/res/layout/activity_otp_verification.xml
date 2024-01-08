@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearOTPVerification"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/_16pxh"
+        android:paddingStart="@dimen/_16pxh" style="@style/groupStyle{&quot;name&quot;:&quot;black_900&quot;}">
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtOTPVerification"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@string/msg_otp_verification"
+            style="@style/txtPoppinsmedium24" tools:text="@string/msg_otp_verification"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtDigitCodeHas"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@string/msg_6_digit_code_has"
+            style="@style/txtPoppinsregular14" tools:text="@string/msg_6_digit_code_has"/>
+        <com.mukesh.OtpView android:focusableInTouchMode="true"
+            android:id="@+id/otpViewOtpView" android:inputType="number"
+            android:itemBackground="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;}"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+            android:textSize="@dimen/_20pxh" app:OtpItemCount="6"
+            app:OtpItemHeight="@dimen/_44pxv"
+            app:OtpItemSpacing="@dimen/_8pxh"
+            app:OtpItemWidth="@dimen/_44pxh"
+            app:OtpLineColor="@android:color/transparent" app:OtpViewType="rectangle"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_radius_25"
+            android:ellipsize="end" android:fontFamily="@font/poppins"
+            android:gravity="center" android:id="@+id/btnVerify"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_13pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_13pxv" android:singleLine="true"
+            android:text="@string/lbl_verify"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_verify"/>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearFrameTen"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:id="@+id/txtDidnTReceiveThe"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/msg_didn_t_receive_the"
+                style="@style/txtPoppinsregular12_1" tools:text="@string/msg_didn_t_receive_the"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtResend"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_resend"
+                style="@style/txtPoppinsmedium12" tools:text="@string/lbl_resend"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

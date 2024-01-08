@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearSignUpSignIn"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_60pxv"
+        android:paddingEnd="@dimen/_16pxh"
+        android:paddingStart="@dimen/_16pxh"
+        android:paddingTop="@dimen/_60pxv" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <ImageView android:id="@+id/imageUnsplashWbeDUbI"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_299pxh"
+            android:layout_width="@dimen/_299pxh"
+            android:scaleType="centerCrop" circular="@{true}"
+            imageRes="@{@drawable/img_unsplash_w7b3edub_2i}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_unsplash_w7b3edub_2i"/>
+        <TextView android:id="@+id/txtDiscoveryourShoppingHere"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/msg_discover_your_shopping"
+            style="@style/txtPoppinsmedium24_1" tools:text="@string/msg_discover_your_shopping"/>
+        <TextView android:gravity="center_horizontal"
+            android:id="@+id/txtDescription"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_11pxh"
+            android:text="@string/msg_it_is_a_long_established"
+            style="@style/txtPoppinsregular15" tools:text="@string/msg_it_is_a_long_established"/>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearFrame"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_10"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins"
+                android:gravity="center" android:id="@+id/btnLogin"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_52pxv"
+                android:layout_width="@dimen/_160pxh"
+                android:paddingBottom="@dimen/_14pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_14pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_login"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_login"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_gray_200_radius_10"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins"
+                android:gravity="center" android:id="@+id/btnRegister"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_52pxv"
+                android:layout_width="@dimen/_160pxh"
+                android:paddingBottom="@dimen/_14pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_14pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_register"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_register"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearOtp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100_01&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageVector"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_vector"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_vector"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearOtpView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_16pxh" android:paddingTop="@dimen/_73pxv">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtEnterOTP"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_enter_otp"
+                style="@style/txtIntersemibold28" tools:text="@string/lbl_enter_otp"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCodeHasBeenSend"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/msg_code_has_been_send"
+                style="@style/txtIntermedium14" tools:text="@string/msg_code_has_been_send"/>
+            <com.mukesh.OtpView android:focusableInTouchMode="true"
+                android:id="@+id/otpViewOtpView"
+                android:inputType="number"
+                android:itemBackground="@color/{&quot;name&quot;:&quot;indigo_50&quot;}"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_900&quot;}"
+                android:textSize="@dimen/_28pxh" app:OtpItemCount="4"
+                app:OtpItemHeight="@dimen/_60pxv"
+                app:OtpItemSpacing="@dimen/_34pxh"
+                app:OtpItemWidth="@dimen/_60pxh"
+                app:OtpLineColor="@android:color/transparent" app:OtpViewType="rectangle"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_25"
+                android:ellipsize="end" android:fontFamily="@font/inter"
+                android:gravity="center" android:id="@+id/btnContinue"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_14pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_14pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_continue"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;onPrimary&quot;,&quot;opacity&quot;:1}"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_18pxh"
+                android:textStyle="normal" tools:text="@string/lbl_continue"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearFollow"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowDown"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_down"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFillYourProfile"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_follow_artists"
+                style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_follow_artists"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearFollowArtists"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_26pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_26pxv">
+            <TextView android:id="@+id/txtFollowYourFavorite"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:text="@string/msg_follow_your_favorite"
+                style="@style/txtUrbanistregular18" tools:text="@string/msg_follow_your_favorite"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerFollowArtists"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_16pxh}" tools:itemCount="4" tools:listitem="@layout/row_followartists"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearAutoLayoutVertical"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylenamewhite_2">
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_border_name_primary_radius_29"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:gravity="center" android:id="@+id/btnSkip"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_58pxv"
+                android:layout_width="@dimen/_180pxh"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_19pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_19pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_skip"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_skip"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_29"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:gravity="center" android:id="@+id/btnContinue"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_58pxv"
+                android:layout_width="@dimen/_180pxh"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_19pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_19pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_continue"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_continue"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

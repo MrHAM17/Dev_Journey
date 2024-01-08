@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearName"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_34pxv"
+        android:paddingTop="@dimen/_34pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                android:id="@+id/btnFavorite"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_favorite_onprimary" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtWelcomeBack"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/msg_electricity_bill2"
+                style="@style/txtOverpassbold20" tools:text="@string/msg_electricity_bill2"/>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearElectricBill"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearInputField"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLabel"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_name"
+                        style="@style/txtOverpassregular16_3" tools:text="@string/lbl_name"/>
+                    <EditText
+                        android:background="@drawable/rectangle_border_name_gray_500"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/overpass"
+                        android:hint="@string/lbl_name_here"
+                        android:id="@+id/etName"
+                        android:inputType="text"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_20pxv"
+                        android:paddingEnd="@dimen/_24pxh"
+                        android:paddingStart="@dimen/_24pxh"
+                        android:paddingTop="@dimen/_20pxv"
+                        android:singleLine="true"
+                        android:textColor="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                        android:textColorHint="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                        android:textFontWeight="400"
+                        android:textSize="@dimen/_18pxh"
+                        android:textStyle="normal" tools:ignore="Autofill"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearInputField1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLabel1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_address"
+                        style="@style/txtOverpassregular16_3" tools:text="@string/lbl_address"/>
+                    <EditText
+                        android:background="@drawable/rectangle_border_name_gray_500"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/overpass"
+                        android:hint="@string/lbl_address_here"
+                        android:id="@+id/etAddress"
+                        android:inputType="text"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_20pxv"
+                        android:paddingEnd="@dimen/_24pxh"
+                        android:paddingStart="@dimen/_24pxh"
+                        android:paddingTop="@dimen/_20pxv"
+                        android:singleLine="true"
+                        android:textColor="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                        android:textColorHint="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                        android:textFontWeight="400"
+                        android:textSize="@dimen/_18pxh"
+                        android:textStyle="normal" tools:ignore="Autofill"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearInputField2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLabel2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_phone"
+                        style="@style/txtOverpassregular16_3" tools:text="@string/lbl_phone"/>
+                    <EditText
+                        android:background="@drawable/rectangle_border_name_gray_500"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/overpass"
+                        android:hint="@string/lbl_phone_here"
+                        android:id="@+id/etPhone"
+                        android:inputType="text"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_20pxv"
+                        android:paddingEnd="@dimen/_24pxh"
+                        android:paddingStart="@dimen/_24pxh"
+                        android:paddingTop="@dimen/_20pxv"
+                        android:singleLine="true"
+                        android:textColor="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                        android:textColorHint="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                        android:textFontWeight="400"
+                        android:textSize="@dimen/_18pxh"
+                        android:textStyle="normal" tools:ignore="Autofill"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearInputField3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLabel3"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_code"
+                        style="@style/txtOverpassregular16_3" tools:text="@string/lbl_code"/>
+                    <EditText
+                        android:background="@drawable/rectangle_border_name_gray_500"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/overpass"
+                        android:hint="@string/msg_enter_your_billing"
+                        android:id="@+id/etInputs"
+                        android:inputType="text"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_20pxv"
+                        android:paddingEnd="@dimen/_24pxh"
+                        android:paddingStart="@dimen/_24pxh"
+                        android:paddingTop="@dimen/_20pxv"
+                        android:singleLine="true"
+                        android:textColor="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                        android:textColorHint="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                        android:textFontWeight="400"
+                        android:textSize="@dimen/_18pxh"
+                        android:textStyle="normal" tools:ignore="Autofill"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearFrame"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearInputField4"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtLabel4"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_from"
+                            style="@style/txtOverpassregular16_3" tools:text="@string/lbl_from"/>
+                        <EditText
+                            android:background="@drawable/rectangle_border_name_gray_500"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/overpass"
+                            android:hint="@string/lbl_date"
+                            android:id="@+id/etDate"
+                            android:inputType="text"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:paddingBottom="@dimen/_20pxv"
+                            android:paddingEnd="@dimen/_24pxh"
+                            android:paddingStart="@dimen/_24pxh"
+                            android:paddingTop="@dimen/_20pxv"
+                            android:singleLine="true"
+                            android:textColor="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                            android:textColorHint="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                            android:textFontWeight="400"
+                            android:textSize="@dimen/_18pxh"
+                            android:textStyle="normal" tools:ignore="Autofill"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearInputField5"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtLabel5"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_to"
+                            style="@style/txtOverpassregular16_3" tools:text="@string/lbl_to"/>
+                        <EditText
+                            android:background="@drawable/rectangle_border_name_gray_500"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/overpass"
+                            android:hint="@string/lbl_date"
+                            android:id="@+id/etDate1"
+                            android:inputType="text"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:paddingBottom="@dimen/_20pxv"
+                            android:paddingEnd="@dimen/_24pxh"
+                            android:paddingStart="@dimen/_24pxh"
+                            android:paddingTop="@dimen/_20pxv"
+                            android:singleLine="true"
+                            android:textColor="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                            android:textColorHint="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                            android:textFontWeight="400"
+                            android:textSize="@dimen/_18pxh"
+                            android:textStyle="normal" tools:ignore="Autofill"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearElectricFee"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtElectricFee"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_electric_fee"
+                        style="@style/txtOverpassregular16_1" tools:text="@string/lbl_electric_fee"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPrice"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_0"
+                        style="@style/txtOverpassbold24" tools:text="@string/lbl_0"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;blue_gray_100&quot;}"
+                    android:id="@+id/linePath"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_366pxh"/>
+                <LinearLayout android:id="@+id/linearTax"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTax"
+                        android:layout_gravity="bottom"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_tax"
+                        style="@style/txtOverpassregular16_1" tools:text="@string/lbl_tax"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPrice1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_0"
+                        style="@style/txtOverpassbold24" tools:text="@string/lbl_0"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;blue_gray_100&quot;}"
+                    android:id="@+id/linePath1"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_366pxh"/>
+                <LinearLayout android:id="@+id/linearTotal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTotal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_total"
+                        style="@style/txtOverpassregular16_1" tools:text="@string/lbl_total"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPrice2"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_0"
+                        style="@style/txtOverpassbold24" tools:text="@string/lbl_0"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;blue_gray_100&quot;}"
+                    android:id="@+id/linePath2"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_366pxh"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtOTP"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_otp"
+                    style="@style/txtOverpassbold16_2" tools:text="@string/lbl_otp"/>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;blue_gray_100&quot;}"
+                    android:id="@+id/linePath3"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_366pxh"/>
+                <LinearLayout android:id="@+id/linearFrame1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtSelectCard"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_select_card"
+                        style="@style/txtOverpassextrabold24" tools:text="@string/lbl_select_card"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtAddCard"
+                        android:layout_gravity="bottom"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_add_card"
+                        style="@style/txtOverpassbold16_1" tools:text="@string/lbl_add_card"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerElectricBill"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_20pxh}" tools:itemCount="2" tools:listitem="@layout/row_electricbill"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@color/{&quot;name&quot;:&quot;primary&quot;}"
+            android:ellipsize="end" android:fontFamily="@font/overpass"
+            android:gravity="center" android:id="@+id/btnSendOTP"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_58pxv"
+            android:layout_width="@dimen/_366pxh"
+            android:paddingBottom="@dimen/_16pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_16pxv" android:singleLine="true"
+            android:text="@string/lbl_send_otp"
+            android:textAllCaps="true"
+            android:textColor="@color/{&quot;name&quot;:&quot;onPrimary&quot;}"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_20pxh" android:textStyle="bold" tools:text="@string/lbl_send_otp"/>
+    </LinearLayout>
+</layout>

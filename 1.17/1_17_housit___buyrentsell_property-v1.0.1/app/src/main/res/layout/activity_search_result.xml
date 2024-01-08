@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearArrowLeft"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                android:id="@+id/btnArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_left" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPageTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_search_results"
+                style="@style/txtRalewaybold14" tools:text="@string/lbl_search_results"/>
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_white_a700_opacity_0_8_radius_25"
+                android:id="@+id/btnIconSetting"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_icon_setting" tools:ignore="ContentDescription"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearSearchResult"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_17pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_17pxv">
+            <androidx.appcompat.widget.SearchView
+                android:background="@drawable/rectangle_bg_name_gray_100_radius_12"
+                android:gravity="center_horizontal"
+                android:id="@+id/searchViewSearch"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:theme="@style/searchViewsearch"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="@string/lbl_modern_house" app:searchIcon="@drawable/img_rewind"/>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearItemHeader"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFound"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_found"
+                    style="@style/txtRalewaymedium18" tools:text="@string/lbl_found"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtText"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_0"
+                    style="@style/txtRalewaybold18_1" tools:text="@string/lbl_0"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtEstates"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_estates"
+                    style="@style/txtRalewaymedium18" tools:text="@string/lbl_estates"/>
+                <FrameLayout android:id="@+id/frameSpacer"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <LinearLayout android:id="@+id/linearButtonShow"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/_8pxv"
+                    android:paddingTop="@dimen/_8pxv" style="@style/groupStylenamegray_1">
+                    <FrameLayout android:id="@+id/frameButtonShow"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_24pxv"
+                        android:layout_width="@dimen/_36pxh"
+                        android:paddingBottom="@dimen/_6pxv"
+                        android:paddingEnd="@dimen/_12pxh"
+                        android:paddingStart="@dimen/_12pxh"
+                        android:paddingTop="@dimen/_6pxv" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}cornerRadius">
+                        <ImageView android:id="@+id/imageGrid"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_12pxh"
+                            android:layout_width="@dimen/_12pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_grid_onprimarycontainer"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_grid_onprimarycontainer"/>
+                    </FrameLayout>
+                    <FrameLayout android:id="@+id/frameButtonShow1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_24pxv"
+                        android:layout_width="@dimen/_36pxh"
+                        android:paddingBottom="@dimen/_6pxv"
+                        android:paddingEnd="@dimen/_12pxh"
+                        android:paddingStart="@dimen/_12pxh"
+                        android:paddingTop="@dimen/_6pxv" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}cornerRadius">
+                        <ImageView android:id="@+id/imageIconHorizontal"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_12pxh"
+                            android:layout_width="@dimen/_12pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_icon_horizontal_12x12"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_icon_horizontal_12x12"/>
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerSearchResult"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2" itemSpace="@{@dimen/_7pxh}"
+                tools:itemCount="6" tools:listitem="@layout/row_searchresult"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

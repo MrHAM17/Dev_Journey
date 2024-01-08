@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearAppleStore1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <ImageButton
+            android:background="@drawable/rectangle_bg_name_gray_100_radius_13"
+            android:id="@+id/btnVector"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_50pxh"
+            android:layout_width="@dimen/_50pxh"
+            android:paddingHorizontal="@dimen/_15pxh"
+            android:paddingVertical="@dimen/_15pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_vector" tools:ignore="ContentDescription"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearAppleStore2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtAppleStore"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_apple_store"
+                style="@style/txtPoppinsmedium14" tools:text="@string/lbl_apple_store"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtJune"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_21_june_2022"
+                style="@style/txtPoppinsmedium10" tools:text="@string/lbl_21_june_2022"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <LinearLayout android:id="@+id/linearPrice"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtPrice"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_220_00"
+                style="@style/txtPoppinsmedium12_1" tools:text="@string/lbl_220_00"/>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtDebitCard"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_debit_card"
+                style="@style/txtPoppinsmedium10" tools:text="@string/lbl_debit_card"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

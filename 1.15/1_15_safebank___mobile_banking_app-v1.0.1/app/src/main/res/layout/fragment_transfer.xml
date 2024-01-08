@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearPrice"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <LinearLayout android:id="@+id/linearPrice1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearThirtyNine"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:gravity="bottom" android:id="@+id/txtPrice"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/lbl_1_500_00"
+                    style="@style/txtPoppinsmedium32" tools:text="@string/lbl_1_500_00"/>
+                <LinearLayout android:id="@+id/linearCount"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_5pxh"
+                    android:paddingVertical="@dimen/_5pxv" style="@style/groupStylecornerRadius_3">
+                    <ImageView android:id="@+id/imageFacebook"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_15pxh"
+                        android:layout_width="@dimen/_13pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_facebook"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_facebook"/>
+                    <ImageView android:id="@+id/imageUser"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_15pxh"
+                        android:layout_width="@dimen/_13pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_user_15x13"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_user_15x13"/>
+                </LinearLayout>
+            </LinearLayout>
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_35"
+                android:id="@+id/btnArrowLeft"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_70pxh"
+                android:layout_width="@dimen/_70pxh"
+                android:paddingHorizontal="@dimen/_23pxh"
+                android:paddingVertical="@dimen/_23pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_left" tools:ignore="ContentDescription"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

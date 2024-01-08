@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearLogout"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <FrameLayout android:gravity="center_horizontal"
+            android:id="@+id/frameProfile"
+            android:layout_height="@dimen/_225pxv" android:layout_width="match_parent">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarAppBar"
+                android:layout_gravity="top|center"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:contentInsetStart="0dp" style="@style/groupStyle{&quot;name&quot;:&quot;primary&quot;}cornerRadius">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtProfile"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/lbl_profile"
+                    style="@style/txtPoppinsmedium18_1" tools:text="@string/lbl_profile"/>
+            </androidx.appcompat.widget.Toolbar>
+            <LinearLayout android:id="@+id/linearFrame"
+                android:layout_gravity="bottom|center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <FrameLayout android:id="@+id/frameIcon"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_105pxv" android:layout_width="@dimen/_92pxh">
+                    <ImageView android:id="@+id/imageCircleImage"
+                        android:layout_gravity="top|center"
+                        android:layout_height="@dimen/_91pxv"
+                        android:layout_width="match_parent"
+                        android:scaleType="centerCrop"
+                        circular="@{true}"
+                        imageRes="@{@drawable/img_ellipse_5}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_5"/>
+                    <ImageButton
+                        android:background="@drawable/rectangle_bg_name_primary_border_name_white_a700_radius_15"
+                        android:id="@+id/btnIcon"
+                        android:layout_gravity="bottom|center"
+                        android:layout_height="@dimen/_30pxh"
+                        android:layout_width="@dimen/_30pxh"
+                        android:paddingHorizontal="@dimen/_7pxh"
+                        android:paddingVertical="@dimen/_7pxv"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_icon_white_a700" tools:ignore="ContentDescription"/>
+                </FrameLayout>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtAnneChristion"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/lbl_anne_christion"
+                    style="@style/txtPoppinsmedium20" tools:text="@string/lbl_anne_christion"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtEmail"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/lbl_xyz_gmail_com"
+                    style="@style/txtPoppinsregular14_2" tools:text="@string/lbl_xyz_gmail_com"/>
+            </LinearLayout>
+        </FrameLayout>
+        <LinearLayout android:id="@+id/linearProfile"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_23pxv"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_16pxh" android:paddingTop="@dimen/_23pxv">
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearPersonOutline"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_13pxv"
+                android:paddingEnd="@dimen/_16pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_13pxv" style="@style/groupStylenamegray_1">
+                <ImageView android:id="@+id/imagePersonOutline"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_person_outline_primary"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_person_outline_primary"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPersonalData"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_personal_data"
+                    style="@style/txtPoppinsregular16" tools:text="@string/lbl_personal_data"/>
+                <FrameLayout android:id="@+id/frameSpacer"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <ImageView android:id="@+id/imageArrowRight"
+                    android:layout_height="@dimen/_16pxh"
+                    android:layout_width="@dimen/_16pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrow_right"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearStickyNoteTwo"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_11pxv"
+                android:paddingEnd="@dimen/_16pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_11pxv" style="@style/groupStylenamegray_1">
+                <ImageView android:id="@+id/imageStickyNoteTwo"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_sticky_note_2"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_sticky_note_2"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTransactionHistory"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/msg_transaction_history"
+                    style="@style/txtPoppinsregular16" tools:text="@string/msg_transaction_history"/>
+                <FrameLayout android:id="@+id/frameSpacer1"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <ImageView android:id="@+id/imageArrowRight1"
+                    android:layout_height="@dimen/_16pxh"
+                    android:layout_width="@dimen/_16pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrow_right"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearTelevision"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_14pxv"
+                android:paddingEnd="@dimen/_16pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_14pxv" style="@style/groupStylenamegray_1">
+                <ImageView android:id="@+id/imageTelevision"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_television_primary"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_television_primary"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDiscountCode"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_discount_code"
+                    style="@style/txtPoppinsregular16" tools:text="@string/lbl_discount_code"/>
+                <FrameLayout android:id="@+id/frameSpacer2"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <ImageView android:id="@+id/imageArrowRight2"
+                    android:layout_gravity="top"
+                    android:layout_height="@dimen/_16pxh"
+                    android:layout_width="@dimen/_16pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrow_right"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearSearch"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_11pxv"
+                android:paddingEnd="@dimen/_16pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_11pxv" style="@style/groupStylenamegray_1">
+                <ImageView android:id="@+id/imageSearch"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_search_primary"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_search_primary"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSettings"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_settings"
+                    style="@style/txtPoppinsregular16" tools:text="@string/lbl_settings"/>
+                <FrameLayout android:id="@+id/frameSpacer3"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <ImageView android:id="@+id/imageArrowRight3"
+                    android:layout_height="@dimen/_16pxh"
+                    android:layout_width="@dimen/_16pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrow_right"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_10"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins"
+                android:gravity="center" android:id="@+id/btnLogout"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_14pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_14pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_logout"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_logout"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

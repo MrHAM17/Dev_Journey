@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearDesignCreative"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_9pxv"
+        android:paddingEnd="@dimen/_15pxh"
+        android:paddingStart="@dimen/_15pxh"
+        android:paddingTop="@dimen/_9pxv" style="@style/groupStylenameonPrimaryContaineropacity1cornerRadius_3">
+        <ImageView android:id="@+id/imageDesignCreative"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_24pxh"
+            android:layout_width="@dimen/_24pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_checkmark"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtDesignCreative"
+            android:layout_gravity="bottom"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.0"
+            android:lineSpacingExtra="@dimen/_5pxh"
+            android:singleLine="true"
+            android:text="@string/msg_design_creative"
+            style="@style/txtPlusJakartaSanssemibold16" tools:text="@string/msg_design_creative"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearAlbums"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;black_900&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_left"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_left"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTransfer"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_albums"
+                style="@style/txtRobotomedium20" tools:text="@string/lbl_albums"/>
+            <ImageView android:id="@+id/imageMegaphone"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_megaphone"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_megaphone"/>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.recyclerview.widget.RecyclerView
+            android:gravity="center_horizontal"
+            android:id="@+id/recyclerAlbums"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            itemSpace="@{@dimen/_16pxh}" tools:itemCount="6" tools:listitem="@layout/row_albums"/>
+    </LinearLayout>
+</layout>

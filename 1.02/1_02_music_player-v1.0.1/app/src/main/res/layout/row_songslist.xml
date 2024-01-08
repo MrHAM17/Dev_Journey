@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearSongItem"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <FrameLayout android:id="@+id/frameSongNumber1"
+            android:layout_height="@dimen/_26pxv" android:layout_width="@dimen/_26pxh">
+            <TextView android:ellipsize="end" android:id="@+id/txtCount"
+                android:layout_gravity="top|start"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true" android:text="@string/lbl_1"
+                style="@style/txtRobotomedium18" tools:text="@string/lbl_1"/>
+            <View
+                android:background="@drawable/rectangle_bg_name_onprimarycontainer_opacity_0_3_radius_13"
+                android:id="@+id/viewBackground"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_26pxh" android:layout_width="@dimen/_26pxh"/>
+        </FrameLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearSongDetails"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtBurning"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_burning"
+                style="@style/txtRobotomedium18" tools:text="@string/lbl_burning"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPodvalCaplella"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_podval_caplella"
+                style="@style/txtRobotoregular14_2" tools:text="@string/lbl_podval_caplella"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <ImageView android:id="@+id/imageImage"
+            android:layout_height="@dimen/_4pxh"
+            android:layout_width="@dimen/_20pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_more_icon"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_more_icon"/>
+    </LinearLayout>
+</layout>

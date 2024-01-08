@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <FrameLayout android:id="@+id/frameOfferBannerTitle"
+        android:layout_height="match_parent" android:layout_width="match_parent">
+        <ImageView android:id="@+id/imagePromotionImage"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_206pxh"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_5pxh}"
+            imageRes="@{@drawable/img_promotion_image}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_promotion_image"/>
+        <LinearLayout android:id="@+id/linearOfferBannerTitle"
+            android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:id="@+id/txtOfferBannerTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03"
+                android:text="@string/msg_super_flash_sale_50"
+                style="@style/txtPoppinsbold24" tools:text="@string/msg_super_flash_sale_50"/>
+            <LinearLayout android:id="@+id/linearPromotionPriod"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtHours"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:paddingBottom="@dimen/_8pxv"
+                    android:paddingEnd="@dimen/_9pxh"
+                    android:paddingStart="@dimen/_9pxh"
+                    android:paddingTop="@dimen/_8pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_08"
+                    style="@style/txtSolidRounded" tools:text="@string/lbl_08"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtText"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.0"
+                    android:singleLine="true" android:text="@string/lbl"
+                    style="@style/txtPoppinsbold14" tools:text="@string/lbl"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMinutes"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:paddingBottom="@dimen/_8pxv"
+                    android:paddingEnd="@dimen/_9pxh"
+                    android:paddingStart="@dimen/_9pxh"
+                    android:paddingTop="@dimen/_8pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_34"
+                    style="@style/txtSolidRounded" tools:text="@string/lbl_34"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtText1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.0"
+                    android:singleLine="true" android:text="@string/lbl"
+                    style="@style/txtPoppinsbold14" tools:text="@string/lbl"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSecounds"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:paddingBottom="@dimen/_8pxv"
+                    android:paddingEnd="@dimen/_10pxh"
+                    android:paddingStart="@dimen/_10pxh"
+                    android:paddingTop="@dimen/_8pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_52"
+                    style="@style/txtSolidRounded" tools:text="@string/lbl_52"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

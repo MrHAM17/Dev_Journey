@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearFiftyTwo"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;primaryContainer&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:contentInsetStart="0dp" style="@style/groupStyle{&quot;name&quot;:&quot;primaryContainer&quot;}">
+            <ImageView android:id="@+id/imageArrowDown"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_down"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtShopsie"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_shopsie"
+                style="@style/txtPlayfairDisplayromanbold16" tools:text="@string/lbl_shopsie"/>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearCart"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMYCART"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_my_cart"
+                    style="@style/txtLatoregular18" tools:text="@string/lbl_my_cart"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:gravity="center_horizontal"
+                    android:id="@+id/recyclerCart"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_16pxh}" tools:itemCount="2" tools:listitem="@layout/row_cart"/>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;gray_300&quot;}"
+                    android:id="@+id/lineLineSeventeen"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_390pxh"/>
+                <LinearLayout android:id="@+id/linearTotalPrice"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtSUBTOTAL"
+                        android:layout_gravity="bottom"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_sub_total"
+                        style="@style/txtLatomedium14" tools:text="@string/lbl_sub_total"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPrice"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_111_80"
+                        style="@style/txtLatomedium18" tools:text="@string/lbl_111_80"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;gray_300&quot;}"
+                    android:id="@+id/lineLineEighteen"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_390pxh"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_radius_8"
+            android:ellipsize="end" android:fontFamily="@font/lato"
+            android:gravity="center" android:id="@+id/btnPay11180"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_14pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_14pxv" android:singleLine="true"
+            android:text="@string/lbl_pay_111_80"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_pay_111_80"/>
+    </LinearLayout>
+</layout>

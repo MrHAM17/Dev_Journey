@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <androidx.core.widget.NestedScrollView android:clipToPadding="false"
+        android:fillViewport="true"
+        android:id="@+id/scrollViewScrollView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStyle{&quot;name&quot;:&quot;black_900&quot;}">
+        <LinearLayout android:id="@+id/linearMostPopular"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:id="@+id/linearMostPopular1"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearMostPopular2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <LinearLayout android:id="@+id/linearFrame"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtMostPopular"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_most_popular"
+                            style="@style/txtPoppinssemibold16" tools:text="@string/lbl_most_popular"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSeeAll"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_see_all"
+                            style="@style/txtPoppinsregular12" tools:text="@string/lbl_see_all"/>
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerFrame"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        itemSpace="@{@dimen/_16pxh}" tools:itemCount="3" tools:listitem="@layout/row_frame4"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearFrame1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLatestMovies"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_latest_movies"
+                        style="@style/txtPoppinssemibold16" tools:text="@string/lbl_latest_movies"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtSeeAll1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_see_all"
+                        style="@style/txtPoppinsregular12" tools:text="@string/lbl_see_all"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:gravity="center_horizontal"
+                    android:id="@+id/recyclerAladdin"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_16pxh}" tools:itemCount="3" tools:listitem="@layout/row_aladdin"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

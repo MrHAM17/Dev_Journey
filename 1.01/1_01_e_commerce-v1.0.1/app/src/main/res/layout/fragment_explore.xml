@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearSearch"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <androidx.appcompat.widget.SearchView
+                android:background="@drawable/rectangle_border_name_blue_50_radius_5"
+                android:id="@+id/searchViewSearch"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:theme="@style/searchViewsearch"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="@string/lbl_search_product" app:searchIcon="@drawable/img_rewind"/>
+            <LinearLayout android:id="@+id/linearGroup29"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageLoveIcon"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_love_icon"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_love_icon"/>
+                <FrameLayout android:id="@+id/frameGroup30"
+                    android:layout_height="@dimen/_24pxv" android:layout_width="@dimen/_24pxh">
+                    <ImageView android:id="@+id/imageNotificationIcon"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_notification_icon"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_notification_icon"/>
+                    <ImageView android:id="@+id/imageClose"
+                        android:layout_gravity="top|end"
+                        android:layout_height="@dimen/_8pxh"
+                        android:layout_width="@dimen/_8pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_close_pink_300"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_close_pink_300"/>
+                </FrameLayout>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearExplore"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_25pxv"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_16pxh" android:paddingTop="@dimen/_25pxv">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearManFashion"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtManFashion"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@string/lbl_man_fashion"
+                    style="@style/txtPoppinsbold14_1" tools:text="@string/lbl_man_fashion"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerCategories"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="4" itemSpace="@{@dimen/_21pxh}"
+                    tools:itemCount="6" tools:listitem="@layout/row_categories"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearWomanFashion"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtWomanFashion"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@string/lbl_woman_fashion"
+                    style="@style/txtPoppinsbold14_1" tools:text="@string/lbl_woman_fashion"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerCategories1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="4" itemSpace="@{@dimen/_21pxh}"
+                    tools:itemCount="7" tools:listitem="@layout/row_categories1"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

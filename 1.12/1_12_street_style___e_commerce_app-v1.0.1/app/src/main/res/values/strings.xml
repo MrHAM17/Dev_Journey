@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_name">1_12_street_style___e_commerce_app</string>
+    <string name="loading">Loading…</string>
+    <string name="no_internet_connection">No internet connection!</string>
+<string name="lbl_boyfriend_tee">Boyfriend Tee</string>
+  <string name="lbl_shop">Shop</string>
+  <string name="lbl_l">L</string>
+  <string name="lbl_filter">Filter</string>
+  <string name="lbl_m">M</string>
+  <string name="lbl_bestsellers">BestSellers</string>
+  <string name="lbl_favorite">Favorite</string>
+  <string name="lbl_s">S</string>
+  <string name="lbl2">. . . .</string>
+  <string name="lbl_long_sleeve">Long Sleeve</string>
+  <string name="lbl_x">x</string>
+  <string name="lbl_coupon">Coupon</string>
+  <string name="lbl_favorites">Favorites</string>
+  <string name="lbl_my_order">My order</string>
+  <string name="lbl_ask_an_expert">Ask an Expert</string>
+  <string name="lbl_total">Total</string>
+  <string name="lbl_log_out">Log out</string>
+  <string name="lbl_surge_short">Surge Short</string>
+  <string name="lbl_shirt_sleeve">Shirt
+Sleeve</string>
+  <string name="msg_discover_your_products">Discover your products</string>
+  <string name="msg_big_seasonal_sale">BIG
+SEASONAL 
+SALE</string>
+  <string name="lbl_sleeve">Sleeve</string>
+  <string name="msg_sweater_long_sleeve">Sweater
+Long Sleeve</string>
+  <string name="lbl_58">$58</string>
+  <string name="lbl_68_usd">$68 USD</string>
+  <string name="lbl">$</string>
+  <string name="lbl_my_cards">My Cards</string>
+  <string name="lbl_yellow_size_8">Yellow
+Size 8</string>
+  <string name="msg_hollywood_hairstyles">Hollywood Hairstyles Do Not</string>
+  <string name="lbl_payment_option">Payment option</string>
+  <string name="lbl_1">1</string>
+  <string name="msg_vertlune_boyfriend">VERTLUNE
+Boyfriend Tee</string>
+  <string name="lbl_add_to_cart">Add to cart</string>
+  <string name="lbl_box_tee">Box Tee</string>
+  <string name="lbl_5">5</string>
+  <string name="lbl_01122">  0112</string>
+  <string name="lbl_8">8</string>
+  <string name="lbl_save_up_to">SAVE UP TO</string>
+  <string name="lbl_checkout">Checkout</string>
+  <string name="lbl_mildred_bennett">Mildred Bennett</string>
+  <string name="lbl_sweater">Sweater
+</string>
+  <string name="lbl_sort">Sort</string>
+  <string name="lbl_payment">Payment</string>
+  <string name="msg_sweat_jogger_french">Sweat Jogger French</string>
+  <string name="lbl_75">75%</string>
+  <string name="lbl_settings">Settings</string>
+  <string name="lbl_street_style">Street Style</string>
+  <string name="lbl_1x">1x</string>
+  <string name="lbl_116">$116</string>
+  <string name="lbl_user_gmail_com">user@gmail.com</string>
+  <string name="lbl_discover">Discover</string>
+  <string name="lbl_0112">. . . .  0112</string>
+  <string name="lbl_inbox">Inbox</string>
+  <string name="lbl_shirt">Shirt
+</string>
+  <string name="msg_fuel_your_workout">Fuel your workout routine with extra legroom and fewer distractions in our latest shorts.</string>
+  <string name="lbl_xl">XL</string>
+</resources>

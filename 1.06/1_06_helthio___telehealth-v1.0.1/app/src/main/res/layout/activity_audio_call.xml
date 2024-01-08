@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearSpacer"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylenamewhite_6">
+        <LinearLayout android:id="@+id/linearAudioCall"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_50pxv" android:paddingTop="@dimen/_50pxv">
+            <FrameLayout android:id="@+id/frameSpacer"
+                android:layout_height="wrap_content" android:layout_width="match_parent"/>
+            <ImageView android:id="@+id/imageImageTen"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_115pxh"
+                android:layout_width="@dimen/_115pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_image_10}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_image_10"/>
+            <FrameLayout android:id="@+id/frameSpacer1"
+                android:layout_height="wrap_content" android:layout_width="match_parent"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtTime"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_00_05_24"
+                style="@style/txtRalewaymedium14_4" tools:text="@string/lbl_00_05_24"/>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearCallActions"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_gray_500_radius_26"
+                    android:id="@+id/btnUpload"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_52pxh"
+                    android:layout_width="@dimen/_52pxh"
+                    android:paddingHorizontal="@dimen/_14pxh"
+                    android:paddingVertical="@dimen/_14pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_upload" tools:ignore="ContentDescription"/>
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_red_700_radius_26"
+                    android:id="@+id/btnCall"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_52pxh"
+                    android:layout_width="@dimen/_52pxh"
+                    android:paddingHorizontal="@dimen/_14pxh"
+                    android:paddingVertical="@dimen/_14pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_call" tools:ignore="ContentDescription"/>
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_gray_500_radius_26"
+                    android:id="@+id/btnMenu"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_52pxh"
+                    android:layout_width="@dimen/_52pxh"
+                    android:paddingHorizontal="@dimen/_14pxh"
+                    android:paddingVertical="@dimen/_14pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_menu" tools:ignore="ContentDescription"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearSwipeBackToMenu"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <ImageView android:id="@+id/imageArrowUp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_20pxh"
+                android:layout_width="@dimen/_20pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_up"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_up"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSwipeBackToMenu"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/msg_swipe_back_to_menu"
+                style="@style/txtRalewaymedium14_4" tools:text="@string/msg_swipe_back_to_menu"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

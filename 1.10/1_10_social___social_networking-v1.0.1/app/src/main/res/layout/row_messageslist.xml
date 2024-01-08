@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearPrifileItem"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_26pxv"
+        android:paddingEnd="@dimen/_16pxh"
+        android:paddingStart="@dimen/_16pxh" android:paddingTop="@dimen/_26pxv">
+        <FrameLayout android:id="@+id/frameRichardAlves"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_54pxv" android:layout_width="@dimen/_52pxh">
+            <ImageView android:id="@+id/imageRichardAlves"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_54pxh"
+                android:layout_width="@dimen/_52pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_27pxh}"
+                imageRes="@{@drawable/img_ellipse_22}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_22"/>
+            <View
+                android:background="@drawable/rectangle_bg_name_green_600_border_name_primary_radius_6"
+                android:id="@+id/viewView"
+                android:layout_gravity="bottom|end"
+                android:layout_height="@dimen/_13pxh" android:layout_width="@dimen/_13pxh"/>
+        </FrameLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearRichardAlves"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtRichardAlves"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_richard_alves"
+                style="@style/txtInterbold16" tools:text="@string/lbl_richard_alves"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtHeyBroWhereAre"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/msg_hey_bro_where_are"
+                style="@style/txtInterregular16_1" tools:text="@string/msg_hey_bro_where_are"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtTime"
+            android:layout_gravity="top"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@string/lbl_10_00_am"
+            style="@style/txtInterregular16_1" tools:text="@string/lbl_10_00_am"/>
+    </LinearLayout>
+</layout>

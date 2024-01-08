@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <FrameLayout
+        android:background="@drawable/rectangle_bg_name_blue_gray_900_radius_12"
+        android:id="@+id/framePhoneNumber"
+        android:layout_height="wrap_content" android:layout_width="match_parent">
+        <FrameLayout android:id="@+id/frameSixtyFive"
+            android:layout_height="wrap_content" android:layout_width="wrap_content">
+            <ImageView android:id="@+id/imageClose"
+                android:layout_height="@dimen/_18pxh"
+                android:layout_width="@dimen/_24pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_close"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_close"/>
+            <ImageView android:id="@+id/imageArrowDown"
+                android:layout_height="@dimen/_4pxh"
+                android:layout_width="@dimen/_9pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_down_onerror"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down_onerror"/>
+        </FrameLayout>
+        <EditText android:background="@android:color/transparent"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:hint="@string/lbl_phone_number"
+            android:id="@+id/etPhoneNumber" android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_100&quot;}"
+            android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_100&quot;}"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_14pxh" android:textStyle="normal" tools:ignore="Autofill"/>
+    </FrameLayout>
+</layout>

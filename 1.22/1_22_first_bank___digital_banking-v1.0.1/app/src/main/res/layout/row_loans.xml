@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearUserThirtyTwo"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_20pxv"
+        android:paddingEnd="@dimen/_24pxh"
+        android:paddingStart="@dimen/_24pxh"
+        android:paddingTop="@dimen/_20pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;,&quot;opacity&quot;:1}cornerRadius">
+        <ImageButton
+            android:background="@drawable/rectangle_bg_name_gray_100_01_radius_22"
+            android:id="@+id/btnUserThirtyTwo"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_45pxh"
+            android:layout_width="@dimen/_45pxh"
+            android:paddingHorizontal="@dimen/_12pxh"
+            android:paddingVertical="@dimen/_12pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_user_3_2" tools:ignore="ContentDescription"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearPersonalLoans"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPersonalLoans"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_personal_loans"
+                style="@style/txtInterregular12" tools:text="@string/lbl_personal_loans"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_50_000"
+                style="@style/txtIntersemibold16_2" tools:text="@string/lbl_50_000"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

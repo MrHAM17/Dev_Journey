@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearName"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <LinearLayout android:id="@+id/linearName1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearInputField"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtEmail"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_name"
+                    style="@style/txtPoppinsmedium16_1" tools:text="@string/lbl_name"/>
+                <EditText android:drawableEnd="@drawable/img_checkmark"
+                    android:drawablePadding="@dimen/_30pxh"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/msg_dmitry_ponomarev"
+                    android:id="@+id/etName" android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:textColor="@color/{&quot;name&quot;:&quot;black_900&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;black_900&quot;}"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="normal" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearInputField1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtEmail1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_email"
+                    style="@style/txtPoppinsmedium16_1" tools:text="@string/lbl_email"/>
+                <EditText android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/lbl_xyz_gmail_com"
+                    android:id="@+id/etEmail" android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:textColor="@color/{&quot;name&quot;:&quot;black_900&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;black_900&quot;}"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="normal" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <FrameLayout android:id="@+id/frameInputField"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_51pxv" android:layout_width="@dimen/_327pxh">
+                <EditText android:drawableEnd="@drawable/img_checkmark"
+                    android:drawablePadding="@dimen/_30pxh"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/lbl_1_123_456_7890"
+                    android:id="@+id/etCheckmark"
+                    android:inputType="text"
+                    android:layout_gravity="bottom|center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:textColor="@color/{&quot;name&quot;:&quot;black_900&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;black_900&quot;}"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="normal" tools:ignore="Autofill"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtEmail2"
+                    android:layout_gravity="top|start"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_phone"
+                    style="@style/txtPoppinsmedium16_1" tools:text="@string/lbl_phone"/>
+            </FrameLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="@string/lbl_password"
+                android:id="@+id/textInputLayPassword"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_5pxv"
+                android:paddingEnd="@dimen/_1pxh"
+                android:paddingStart="@dimen/_1pxh"
+                android:textColorHint="@color/{&quot;name&quot;:&quot;secondaryContainer&quot;}" style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:id="@+id/etPassword"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/lbl_xyz123"
+                    android:textColor="@color/{&quot;name&quot;:&quot;black_900&quot;}"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="normal" tools:text="@string/lbl_xyz123"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearInputField2"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtEmail3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/msg_confirm_password"
+                    style="@style/txtPoppinsmedium16_1" tools:text="@string/msg_confirm_password"/>
+                <EditText android:drawableEnd="@drawable/img_contrast"
+                    android:drawablePadding="@dimen/_30pxh"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/lbl_xyz123"
+                    android:id="@+id/etConfirmpassword"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:textColor="@color/{&quot;name&quot;:&quot;black_900&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;black_900&quot;}"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="normal" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearJan"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <FrameLayout android:id="@+id/frameDate"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_52pxv" android:layout_width="@dimen/_155pxh">
+                    <Spinner android:id="@+id/spinnerJan"
+                        android:layout_gravity="bottom|center"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" tools:listitem="@layout/spinner_item"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="top|start"
+                        android:id="@+id/txtDateOfBirth"
+                        android:layout_gravity="top|start"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@string/lbl_date_of_birth"
+                        style="@style/txtPoppinsmedium16_1" tools:text="@string/lbl_date_of_birth"/>
+                </FrameLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearCountry"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtCountryRegion"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@string/lbl_country_region"
+                        style="@style/txtPoppinsmedium16_1" tools:text="@string/lbl_country_region"/>
+                    <Spinner android:id="@+id/spinnerUnitedEstate"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" tools:listitem="@layout/spinner_item"/>
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_12"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins"
+                android:gravity="center" android:id="@+id/btnSignUp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_13pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_13pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_sign_up"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_sign_up"/>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearFrameTwo"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:id="@+id/txtConfirmation"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/msg_already_have_an"
+                    style="@style/txtPoppinsmedium16_2" tools:text="@string/msg_already_have_an"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAlreadyHaveAn"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_sign_in"
+                    style="@style/txtPoppinssemibold16" tools:text="@string/lbl_sign_in"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

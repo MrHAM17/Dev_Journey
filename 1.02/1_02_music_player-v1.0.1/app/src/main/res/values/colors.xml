@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+<color name="themes">[{"name":"lightCode"}]</color>
+  <color name="colors">[{"color":"#0c0c0c","lightCode":"#0c0c0c","displayName":"onPrimary","name":"onPrimary","type":"SCHEME"},{"color":"#82ffffff","lightCode":"#82ffffff","displayName":"onPrimaryContainer","name":"onPrimaryContainer","type":"SCHEME"},{"color":"#2f2f2f","lightCode":"#2f2f2f","displayName":"primaryContainer","name":"primaryContainer","type":"SCHEME"},{"color":"#2ad78b","lightCode":"#2ad78b","displayName":"secondaryContainer","name":"secondaryContainer","type":"SCHEME"},{"color":"#2e635b","lightCode":"#2e635b","displayName":"onError","name":"onError","type":"SCHEME"},{"color":"#757575","lightCode":"#757575","displayName":"primary","name":"primary","type":"SCHEME"},{"color":"#8c8c8c","lightCode":"#8c8c8c","displayName":"blue_gray_400","name":"blue_gray_400","type":"CONSTANT"},{"color":"#afafaf","lightCode":"#afafaf","displayName":"gray_400","name":"gray_400","type":"CONSTANT"},{"color":"#c6c6c6","lightCode":"#c6c6c6","displayName":"gray_400_01","name":"gray_400_01","type":"CONSTANT"},{"color":"#000000","lightCode":"#000000","displayName":"black_900","name":"black_900","type":"CONSTANT"}]</color>
+<color name="ic_launcher_background">#FFFFFF</color>
+</resources>

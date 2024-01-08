@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearAddNewPosition"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700_01&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowBack"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_component_1"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_component_1"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtExperience"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:singleLine="true"
+                android:text="@string/lbl_experience"
+                style="@style/txtPlusJakartaSansbold18" tools:text="@string/lbl_experience"/>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearExperienceSetting"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout android:id="@+id/linearExperience"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_15pxh"
+                    android:paddingVertical="@dimen/_15pxv" style="@style/groupStylenameonPrimaryContaineropacity1cornerRadius_1">
+                    <LinearLayout android:id="@+id/linearExperience1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtExperience1"
+                            android:layout_gravity="bottom"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.0"
+                            android:lineSpacingExtra="@dimen/_5pxh"
+                            android:singleLine="true"
+                            android:text="@string/lbl_experience"
+                            style="@style/txtPlusJakartaSansbold18" tools:text="@string/lbl_experience"/>
+                        <ImageView android:id="@+id/imageEditSquare"
+                            android:layout_gravity="top"
+                            android:layout_height="@dimen/_24pxh"
+                            android:layout_width="@dimen/_24pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_edit_square_primary"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_edit_square_primary"/>
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:gravity="center_horizontal"
+                        android:id="@+id/recyclerExperienceSetting"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        itemSpace="@{@dimen/_23pxh}" tools:itemCount="3" tools:listitem="@layout/row_experiencesetting"/>
+                </LinearLayout>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:background="@drawable/rectangle_bg_name_primary_radius_24"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/plus_jakarta_sans"
+                    android:gravity="center"
+                    android:id="@+id/btnAddNewPosition"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.0"
+                    android:lineSpacingExtra="@dimen/_5pxh"
+                    android:paddingBottom="@dimen/_17pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_17pxv"
+                    android:singleLine="true"
+                    android:text="@string/msg_add_new_position"
+                    android:textAllCaps="false"
+                    android:textColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_16pxh"
+                    android:textStyle="bold" tools:text="@string/msg_add_new_position"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearEducation"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_15pxh"
+                    android:paddingVertical="@dimen/_15pxv" style="@style/groupStylenameonPrimaryContaineropacity1cornerRadius_1">
+                    <LinearLayout android:id="@+id/linearEducation1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtEducation"
+                            android:layout_gravity="bottom"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.0"
+                            android:lineSpacingExtra="@dimen/_5pxh"
+                            android:singleLine="true"
+                            android:text="@string/lbl_education"
+                            style="@style/txtPlusJakartaSansbold16" tools:text="@string/lbl_education"/>
+                        <ImageView android:id="@+id/imageEditSquare1"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_24pxh"
+                            android:layout_width="@dimen/_24pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_edit_square_primary"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_edit_square_primary"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/linearUniversityOfOxford"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <ImageButton
+                            android:background="@drawable/rectangle_bg_name_gray_100_radius_8"
+                            android:id="@+id/btnIconButton"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_48pxh"
+                            android:layout_width="@dimen/_48pxh"
+                            android:paddingHorizontal="@dimen/_8pxh"
+                            android:paddingVertical="@dimen/_8pxv"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_frame_162724" tools:ignore="ContentDescription"/>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearNameDescription"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtUniversityOfOxford"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.0"
+                                android:lineSpacingExtra="@dimen/_4pxh"
+                                android:singleLine="true"
+                                android:text="@string/msg_university_of_oxford"
+                                style="@style/txtPlusJakartaSanssemibold14_1" tools:text="@string/msg_university_of_oxford"/>
+                            <LinearLayout android:id="@+id/linearDetail"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content" android:orientation="horizontal">
+                                <TextView android:ellipsize="end"
+                                    android:gravity="bottom"
+                                    android:id="@+id/txtSmallLabelRegular"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:letterSpacing="0.0"
+                                    android:lineSpacingExtra="@dimen/_4pxh"
+                                    android:singleLine="true"
+                                    android:text="@string/msg_computer_science"
+                                    style="@style/txtPlusJakartaSansmedium12" tools:text="@string/msg_computer_science"/>
+                                <TextView android:ellipsize="end"
+                                    android:id="@+id/txtSmallLabelRegular1"
+                                    android:layout_gravity="bottom"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:letterSpacing="0.0"
+                                    android:lineSpacingExtra="@dimen/_4pxh"
+                                    android:singleLine="true"
+                                    android:text="@string/lbl2"
+                                    style="@style/txtPlusJakartaSansmedium12" tools:text="@string/lbl2"/>
+                                <TextView android:ellipsize="end"
+                                    android:id="@+id/txtZipcode"
+                                    android:layout_gravity="top"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="wrap_content"
+                                    android:letterSpacing="0.0"
+                                    android:lineSpacingExtra="@dimen/_4pxh"
+                                    android:singleLine="true"
+                                    android:text="@string/lbl_2019"
+                                    style="@style/txtPlusJakartaSansmedium12" tools:text="@string/lbl_2019"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_radius_24"
+            android:ellipsize="end"
+            android:fontFamily="@font/plus_jakarta_sans"
+            android:gravity="center"
+            android:id="@+id/btnAddNewEducation"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_56pxv"
+            android:layout_width="@dimen/_327pxh"
+            android:letterSpacing="0.0"
+            android:lineSpacingExtra="@dimen/_5pxh"
+            android:paddingBottom="@dimen/_17pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_17pxv" android:singleLine="true"
+            android:text="@string/msg_add_new_education"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/msg_add_new_education"/>
+    </LinearLayout>
+</layout>

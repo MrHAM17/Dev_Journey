@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearSearch"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <ImageView android:id="@+id/imageMightyCincoFamily"
+            android:layout_gravity="top"
+            android:layout_height="@dimen/_40pxh"
+            android:layout_width="@dimen/_40pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_5pxh}"
+            imageRes="@{@drawable/img_img_40x40}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_img_40x40"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearTexts"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtMightyCincoFamily"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@string/msg_mighty_cinco_family"
+                style="@style/txtManropebold14" tools:text="@string/msg_mighty_cinco_family"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtStillwaterRd"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/msg_360_stillwater_rd2"
+                style="@style/txtManroperegular14" tools:text="@string/msg_360_stillwater_rd2"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearFrame"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_15pxv"
+        android:paddingEnd="@dimen/_19pxh"
+        android:paddingStart="@dimen/_19pxh"
+        android:paddingTop="@dimen/_15pxv" style="@style/groupStylenamegray_2">
+        <ImageView android:id="@+id/imageEngland1"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_40pxh"
+            android:layout_width="@dimen/_40pxh"
+            android:scaleType="centerCrop" circular="@{true}"
+            imageRes="@{@drawable/img_bg}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_bg"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtEngland"
+            android:layout_gravity="bottom"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true" android:text="@string/lbl_england"
+            style="@style/txtPoppinsmedium12" tools:text="@string/lbl_england"/>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <FrameLayout android:id="@+id/frameASelect"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_24pxv"
+            android:layout_width="@dimen/_24pxh"
+            android:paddingBottom="@dimen/_8pxv"
+            android:paddingEnd="@dimen/_6pxh"
+            android:paddingStart="@dimen/_6pxh"
+            android:paddingTop="@dimen/_8pxv" style="@style/groupStylenamewhite_1">
+            <ImageView android:id="@+id/imageEngland2"
+                android:layout_gravity="top|end"
+                android:layout_height="@dimen/_6pxh"
+                android:layout_width="@dimen/_9pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_checkmark_white_a700"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark_white_a700"/>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

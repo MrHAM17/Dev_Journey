@@ -1,0 +1,1573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearMessage"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_13pxv"
+        android:paddingTop="@dimen/_13pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearProductDetails"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <FrameLayout android:id="@+id/frameArrowLeft"
+                    android:layout_height="@dimen/_343pxv" android:layout_width="@dimen/_343pxh">
+                    <com.asksira.loopingviewpager.LoopingViewPager
+                        android:id="@+id/imageSliderImageAndDetails"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_343pxv"
+                        android:layout_width="match_parent"
+                        app:autoScroll="true" app:isInfinite="true" app:scrollInterval="5000"/>
+
+                    <com.asksira.loopingviewpager.indicator.CustomShapePagerIndicator
+                        android:id="@+id/indicatorCasourel"
+                        android:layout_gravity="bottom|center"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        app:drawable_normal="@drawable/indicator_unselected_bg_name_gray_300_opacity_0_6_radius_8"
+                        app:drawable_selected="@drawable/indicator_selected_bg_name_primary_radius_8"
+                        app:indicator_size="@dimen/_16pxh" app:indicator_spacing="@dimen/_4pxh"/>
+                </FrameLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearDescription"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTittle"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@string/lbl_description"
+                        style="@style/txtManropebold18" tools:text="@string/lbl_description"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerPropertyDetails"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        itemSpace="@{@dimen/_24pxh}" tools:itemCount="3" tools:listitem="@layout/row_propertydetails"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearAbout"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtAbout"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@string/lbl_about"
+                        style="@style/txtManropebold18" tools:text="@string/lbl_about"/>
+                    <TextView android:id="@+id/txtDescription"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/msg_casablanca_ground2"
+                        style="@style/txtManroperegular14_1" tools:text="@string/msg_casablanca_ground2"/>
+                    <LinearLayout android:id="@+id/linearSeeMore"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:id="@+id/txtSeeMore"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@string/lbl_see_more"
+                            style="@style/txtManropebold14_1" tools:text="@string/lbl_see_more"/>
+                        <ImageView android:id="@+id/imageArrowLeft"
+                            android:layout_gravity="top"
+                            android:layout_height="@dimen/_16pxh"
+                            android:layout_width="@dimen/_16pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_left"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_left"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearGallery"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtGallery"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@string/lbl_gallery"
+                        style="@style/txtManropebold18" tools:text="@string/lbl_gallery"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerImages"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        itemSpace="@{@dimen/_14pxh}" tools:itemCount="3" tools:listitem="@layout/row_images"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearLocation"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTittle1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@string/lbl_location"
+                        style="@style/txtManropebold18" tools:text="@string/lbl_location"/>
+                    <fragment android:id="@+id/mapMap"
+                        android:layout_height="@dimen/_152pxv"
+                        android:layout_width="match_parent" android:name="com.google.android.gms.maps.SupportMapFragment"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearContactToBuyerS"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_23pxh"
+                    android:paddingVertical="@dimen/_23pxv" style="@style/groupStylecornerRadius_1">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtContactToBuyerS"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@string/msg_contact_to_buyer_s"
+                        style="@style/txtManropebold16" tools:text="@string/msg_contact_to_buyer_s"/>
+                    <LinearLayout android:id="@+id/linearAvatar"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <ImageView android:id="@+id/imageProfilePic"
+                            android:layout_gravity="top"
+                            android:layout_height="@dimen/_48pxh"
+                            android:layout_width="@dimen/_48pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_profile_pic"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_profile_pic"/>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearContact"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtLeslieAlexander"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.01"
+                                android:singleLine="true"
+                                android:text="@string/msg_leslie_alexander"
+                                style="@style/txtManropebold16" tools:text="@string/msg_leslie_alexander"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtRichCapitalPropertiesLLC"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@string/msg_rich_capital_properties"
+                                style="@style/txtManropemedium14" tools:text="@string/msg_rich_capital_properties"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearButtons"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:background="@drawable/rectangle_bg_name_gray_300_radius_5"
+                            android:drawablePadding="@dimen/_12pxh"
+                            android:drawableStart="@drawable/img_user_blue_gray_500"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/manrope"
+                            android:gravity="center"
+                            android:id="@+id/btnMessage"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_45pxv"
+                            android:layout_width="@dimen/_133pxh"
+                            android:paddingBottom="@dimen/_12pxv"
+                            android:paddingEnd="@dimen/_20pxh"
+                            android:paddingStart="@dimen/_20pxh"
+                            android:paddingTop="@dimen/_12pxv"
+                            android:singleLine="true"
+                            android:text="@string/lbl_message"
+                            android:textAllCaps="false"
+                            android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+                            android:textFontWeight="600"
+                            android:textSize="@dimen/_14pxh"
+                            android:textStyle="bold" tools:text="@string/lbl_message"/>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:background="@drawable/rectangle_bg_name_gray_300_radius_5"
+                            android:drawablePadding="@dimen/_12pxh"
+                            android:drawableStart="@drawable/img_phone_blue_gray_500"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/manrope"
+                            android:gravity="center"
+                            android:id="@+id/btnPhone"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_45pxv"
+                            android:layout_width="@dimen/_133pxh"
+                            android:paddingBottom="@dimen/_12pxv"
+                            android:paddingEnd="@dimen/_29pxh"
+                            android:paddingStart="@dimen/_29pxh"
+                            android:paddingTop="@dimen/_12pxv"
+                            android:singleLine="true"
+                            android:text="@string/lbl_phone"
+                            android:textAllCaps="false"
+                            android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+                            android:textFontWeight="600"
+                            android:textSize="@dimen/_14pxh"
+                            android:textStyle="bold" tools:text="@string/lbl_phone"/>
+                    </LinearLayout>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:background="@drawable/rectangle_bg_name_gray_300_radius_5"
+                        android:drawablePadding="@dimen/_10pxh"
+                        android:drawableStart="@drawable/img_profile"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/manrope"
+                        android:gravity="center"
+                        android:id="@+id/btnAskAQuestion"
+                        android:layout_height="@dimen/_45pxv"
+                        android:layout_width="@dimen/_279pxh"
+                        android:paddingBottom="@dimen/_12pxv"
+                        android:paddingEnd="@dimen/_30pxh"
+                        android:paddingStart="@dimen/_30pxh"
+                        android:paddingTop="@dimen/_12pxv"
+                        android:singleLine="true"
+                        android:text="@string/lbl_ask_a_question"
+                        android:textAllCaps="false"
+                        android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/_14pxh"
+                        android:textStyle="bold" tools:text="@string/lbl_ask_a_question"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearKeyDetails"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearKeyDetails1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtKeyDetails"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@string/lbl_key_details"
+                            style="@style/txtManropebold18" tools:text="@string/lbl_key_details"/>
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:id="@+id/txtTime"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@string/msg_update_07_07_2022"
+                            style="@style/txtManroperegular14_1" tools:text="@string/msg_update_07_07_2022"/>
+                    </LinearLayout>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPriceInsights"
+                        android:layout_gravity="start"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@string/lbl_price_insights"
+                        style="@style/txtManropebold16" tools:text="@string/lbl_price_insights"/>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearListPrice"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtListPrice"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_list_price"
+                            style="@style/txtManroperegular14_1" tools:text="@string/lbl_list_price"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtPrice"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_3_000"
+                            style="@style/txtManropesemibold14" tools:text="@string/lbl_3_000"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearEstMoPayment"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtEstMoPayment"
+                            android:layout_gravity="bottom"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/msg_est_mo_payment"
+                            style="@style/txtManroperegular14_1" tools:text="@string/msg_est_mo_payment"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtPrice1"
+                            android:layout_gravity="top"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_15_000"
+                            style="@style/txtManropesemibold14" tools:text="@string/lbl_15_000"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearRealixEstimate"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtRelaxEstimate"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_relax_estimate"
+                            style="@style/txtManroperegular14_1" tools:text="@string/lbl_relax_estimate"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtPrice2"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_3_000"
+                            style="@style/txtManropesemibold14" tools:text="@string/lbl_3_000"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearPriceSqFt"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtPriceSqFt"
+                            android:layout_gravity="bottom"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_price_sq_ft"
+                            style="@style/txtManroperegular14_1" tools:text="@string/lbl_price_sq_ft"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtPrice3"
+                            android:layout_gravity="top"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl"
+                            style="@style/txtManropesemibold14" tools:text="@string/lbl"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtHomeFacts"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/lbl_home_facts2"
+                    style="@style/txtManropebold16" tools:text="@string/lbl_home_facts2"/>
+                <LinearLayout android:id="@+id/linearOnMarket"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearOnMarket1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtOnMarket"
+                            android:layout_gravity="top"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_on_market"
+                            style="@style/txtManroperegular14_1" tools:text="@string/lbl_on_market"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtDuration"
+                            android:layout_gravity="bottom"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_30_days"
+                            style="@style/txtManropesemibold14" tools:text="@string/lbl_30_days"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearCommunity"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtCommunity"
+                            android:layout_gravity="bottom"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_community"
+                            style="@style/txtManroperegular14_1" tools:text="@string/lbl_community"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSanFrancisco"
+                            android:layout_gravity="top"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_san_francisco"
+                            style="@style/txtManropesemibold14" tools:text="@string/lbl_san_francisco"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearCountry"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtCountry"
+                            android:layout_gravity="bottom"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_country"
+                            style="@style/txtManroperegular14_1" tools:text="@string/lbl_country"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSanFrancisco1"
+                            android:layout_gravity="top"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_san_francisco"
+                            style="@style/txtManropesemibold14" tools:text="@string/lbl_san_francisco"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearMLS"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtMLS"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_mls"
+                            style="@style/txtManroperegular14_1" tools:text="@string/lbl_mls"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtWidget"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_42212314554"
+                            style="@style/txtManropesemibold14" tools:text="@string/lbl_42212314554"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearBuilt"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtBuilt"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_built"
+                            style="@style/txtManroperegular14_1" tools:text="@string/lbl_built"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtZipcode"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_1992"
+                            style="@style/txtManropesemibold14" tools:text="@string/lbl_1992"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearLotSize"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtLotSize"
+                            android:layout_gravity="top"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_lot_size"
+                            style="@style/txtManroperegular14_1" tools:text="@string/lbl_lot_size"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSquareFeet"
+                            android:layout_gravity="bottom"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/msg_3_400_square_feet"
+                            style="@style/txtManropesemibold14" tools:text="@string/msg_3_400_square_feet"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearSeeMore1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:id="@+id/txtSeeMore1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@string/lbl_see_more"
+                            style="@style/txtManropebold14_1" tools:text="@string/lbl_see_more"/>
+                        <ImageView android:id="@+id/imageArrowLeft1"
+                            android:layout_gravity="top"
+                            android:layout_height="@dimen/_16pxh"
+                            android:layout_width="@dimen/_16pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_left"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_left"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;gray_300&quot;}"
+                    android:id="@+id/lineLineFiftySix"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_327pxh"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPopularAmenities"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/msg_popular_amenities"
+                    style="@style/txtManropebold18" tools:text="@string/msg_popular_amenities"/>
+                <HorizontalScrollView android:fillViewport="true"
+                    android:id="@+id/horizontalScrollBrightness"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:scrollbars="none">
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearBrightness"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <LinearLayout android:id="@+id/linearSunning"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <ImageView android:id="@+id/imageBrightness"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="@dimen/_24pxh"
+                                android:layout_width="@dimen/_24pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_brightness_primarycontainer"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_brightness_primarycontainer"/>
+                            <TextView android:ellipsize="end"
+                                android:gravity="center_horizontal"
+                                android:id="@+id/txtSunning"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.02"
+                                android:singleLine="true"
+                                android:text="@string/lbl_sunning"
+                                style="@style/txtManropesemibold12" tools:text="@string/lbl_sunning"/>
+                        </LinearLayout>
+                        <LinearLayout android:id="@+id/linearFreeWifi"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <ImageView android:id="@+id/imageSettings"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="@dimen/_24pxh"
+                                android:layout_width="@dimen/_24pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_settings_primarycontainer"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_settings_primarycontainer"/>
+                            <TextView android:ellipsize="end"
+                                android:gravity="center_horizontal"
+                                android:id="@+id/txtFreeWifi"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.02"
+                                android:singleLine="true"
+                                android:text="@string/lbl_free_wifi2"
+                                style="@style/txtManropesemibold12" tools:text="@string/lbl_free_wifi2"/>
+                        </LinearLayout>
+                        <LinearLayout android:id="@+id/linearRestaurant"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <ImageView android:id="@+id/imageIcon"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="@dimen/_24pxh"
+                                android:layout_width="@dimen/_24pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_icon"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_icon"/>
+                            <TextView android:ellipsize="end"
+                                android:gravity="center_horizontal"
+                                android:id="@+id/txtRestaurant"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.02"
+                                android:singleLine="true"
+                                android:text="@string/lbl_restaurant"
+                                style="@style/txtManropesemibold12" tools:text="@string/lbl_restaurant"/>
+                        </LinearLayout>
+                        <FrameLayout android:id="@+id/frameSpacer"
+                            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                        <LinearLayout android:id="@+id/linearBar"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <ImageView android:id="@+id/imageThumbsUp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="@dimen/_24pxh"
+                                android:layout_width="@dimen/_24pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_thumbs_up"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_thumbs_up"/>
+                            <TextView android:ellipsize="end"
+                                android:gravity="center_horizontal"
+                                android:id="@+id/txtBar"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.02"
+                                android:singleLine="true"
+                                android:text="@string/lbl_bar"
+                                style="@style/txtManropesemibold12" tools:text="@string/lbl_bar"/>
+                        </LinearLayout>
+                        <FrameLayout android:id="@+id/frameSpacer1"
+                            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                        <LinearLayout android:id="@+id/linearSettings"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <ImageView android:id="@+id/imageSettings1"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="@dimen/_24pxh"
+                                android:layout_width="@dimen/_24pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_settings_primarycontainer_24x24"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_settings_primarycontainer_24x24"/>
+                            <TextView android:ellipsize="end"
+                                android:gravity="center_horizontal"
+                                android:id="@+id/txtBusiness"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.02"
+                                android:singleLine="true"
+                                android:text="@string/lbl_business"
+                                style="@style/txtManropesemibold12" tools:text="@string/lbl_business"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <LinearLayout android:id="@+id/linearAllAmentities"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:id="@+id/txtAllAmenities"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@string/lbl_all_amenities"
+                        style="@style/txtManropebold14_1" tools:text="@string/lbl_all_amenities"/>
+                    <ImageView android:id="@+id/imageArrowLeft2"
+                        android:layout_gravity="top"
+                        android:layout_height="@dimen/_16pxh"
+                        android:layout_width="@dimen/_16pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow_left"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_left"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;gray_300&quot;}"
+                    android:id="@+id/lineLineFiftyFour"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_327pxh"/>
+                <LinearLayout android:id="@+id/linearReviews"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearTitle"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtReviews"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@string/lbl_reviews"
+                            style="@style/txtManropebold18" tools:text="@string/lbl_reviews"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtViewAllReviews"
+                            android:layout_gravity="bottom"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.02"
+                            android:singleLine="true"
+                            android:text="@string/msg_view_all_reviews"
+                            style="@style/txtManropebold12" tools:text="@string/msg_view_all_reviews"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearFortyNine"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtFortyNine"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@string/lbl_4_9"
+                            style="@style/txtManropebold32" tools:text="@string/lbl_4_9"/>
+                        <LinearLayout android:id="@+id/linearRatingBar"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatRatingBar
+                                android:id="@+id/ratingBarRatingBar"
+                                android:layout_gravity="top"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:numStars="5"
+                                android:progressBackgroundTint="@color/{&quot;name&quot;:&quot;yellow_700&quot;}"
+                                android:progressTint="@color/{&quot;name&quot;:&quot;yellow_700&quot;}"
+                                android:rating="5" style="@style/Widget.AppCompat.RatingBar.Small"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtRatingsCounter"
+                                android:layout_gravity="bottom"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:letterSpacing="0.02"
+                                android:singleLine="true"
+                                android:text="@string/lbl_100_ratings"
+                                style="@style/txtManropemedium12_2" tools:text="@string/lbl_100_ratings"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearFive"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtFive"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@string/lbl_5"
+                            style="@style/txtManropebold14" tools:text="@string/lbl_5"/>
+                        <ProgressBar
+                            android:id="@+id/progressBarProgressBar"
+                            android:indeterminate="false"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_width="0dp" android:max="100"
+                            android:minHeight="@dimen/_8pxv"
+                            android:progress="40"
+                            android:progressDrawable="@drawable/layer_list_bg_name_gray_300_radius_1" style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSixty"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:lineSpacingExtra="@dimen/_4pxh"
+                            android:singleLine="true"
+                            android:text="@string/lbl_60"
+                            style="@style/txtReadexProregular14" tools:text="@string/lbl_60"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearFour"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtFour"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@string/lbl_42"
+                            style="@style/txtManropebold14" tools:text="@string/lbl_42"/>
+                        <ProgressBar
+                            android:id="@+id/progressBarProgressBar1"
+                            android:indeterminate="false"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_width="0dp" android:max="100"
+                            android:minHeight="@dimen/_8pxv"
+                            android:progress="16"
+                            android:progressDrawable="@drawable/layer_list_bg_name_gray_300_radius_1" style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtTwenty"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:lineSpacingExtra="@dimen/_4pxh"
+                            android:singleLine="true"
+                            android:text="@string/lbl_20"
+                            style="@style/txtReadexProregular14" tools:text="@string/lbl_20"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearThree"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtThree"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@string/lbl_3"
+                            style="@style/txtManropebold14" tools:text="@string/lbl_3"/>
+                        <ProgressBar
+                            android:id="@+id/progressBarProgressBar2"
+                            android:indeterminate="false"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_width="0dp" android:max="100"
+                            android:minHeight="@dimen/_8pxv"
+                            android:progress="4"
+                            android:progressDrawable="@drawable/layer_list_bg_name_gray_300_radius_1" style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtTen"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:lineSpacingExtra="@dimen/_4pxh"
+                            android:singleLine="true"
+                            android:text="@string/lbl_10"
+                            style="@style/txtReadexProregular14" tools:text="@string/lbl_10"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearTwo"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtTwo"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@string/lbl_2"
+                            style="@style/txtManropebold14" tools:text="@string/lbl_2"/>
+                        <ProgressBar
+                            android:id="@+id/progressBarProgressBar3"
+                            android:indeterminate="false"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_width="0dp" android:max="100"
+                            android:minHeight="@dimen/_8pxv"
+                            android:progress="2"
+                            android:progressDrawable="@drawable/layer_list_bg_name_gray_300_radius_1" style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtFive1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:lineSpacingExtra="@dimen/_4pxh"
+                            android:singleLine="true"
+                            android:text="@string/lbl_52"
+                            style="@style/txtReadexProregular14" tools:text="@string/lbl_52"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearOne"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtOne"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@string/lbl_13"
+                            style="@style/txtManropebold14" tools:text="@string/lbl_13"/>
+                        <ProgressBar
+                            android:id="@+id/progressBarProgressBar4"
+                            android:indeterminate="false"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_width="0dp" android:max="100"
+                            android:minHeight="@dimen/_8pxv"
+                            android:progress="2"
+                            android:progressDrawable="@drawable/layer_list_bg_name_gray_300_radius_1" style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtFive2"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:lineSpacingExtra="@dimen/_4pxh"
+                            android:singleLine="true"
+                            android:text="@string/lbl_52"
+                            style="@style/txtReadexProregular14" tools:text="@string/lbl_52"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;gray_300&quot;}"
+                    android:id="@+id/lineLineFiftyEight"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_327pxh"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSaleTaxHistory"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/msg_sale_tax_history"
+                    style="@style/txtManropebold18" tools:text="@string/msg_sale_tax_history"/>
+                <LinearLayout android:id="@+id/linearTabs"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_4pxh"
+                    android:paddingVertical="@dimen/_4pxv" style="@style/groupStylenamegray_3">
+                    <LinearLayout android:id="@+id/linearForSaleTab"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/_8pxv"
+                        android:paddingEnd="@dimen/_37pxh"
+                        android:paddingStart="@dimen/_37pxh"
+                        android:paddingTop="@dimen/_8pxv" style="@style/groupStylecornerRadius_2">
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/txtSaleHistory"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@string/lbl_sale_history"
+                            style="@style/txtManropebold14" tools:text="@string/lbl_sale_history"/>
+                    </LinearLayout>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTaxHistory"
+                        android:layout_gravity="bottom"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_tax_history"
+                        style="@style/txtManropesemibold14_1" tools:text="@string/lbl_tax_history"/>
+                </LinearLayout>
+                <RadioButton android:ellipsize="end"
+                    android:fontFamily="@font/manrope"
+                    android:id="@+id/rbNotifyMeWhenThe"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/msg_notify_me_when_the"
+                    android:textColor="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+                    android:textFontWeight="500"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold" tools:text="@string/msg_notify_me_when_the"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDate"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_28_12_2021"
+                    style="@style/txtManropemedium14" tools:text="@string/lbl_28_12_2021"/>
+                <LinearLayout android:id="@+id/linearListedForSale"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearListedForSale1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="vertical">
+                        <LinearLayout
+                            android:id="@+id/linearListedForSale2"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" android:orientation="horizontal">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtListedForSale"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:letterSpacing="0.01"
+                                android:singleLine="true"
+                                android:text="@string/lbl_listed_for_sale"
+                                style="@style/txtManropesemibold16" tools:text="@string/lbl_listed_for_sale"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtPrice4"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:letterSpacing="0.01"
+                                android:singleLine="true"
+                                android:text="@string/lbl_2_400"
+                                style="@style/txtManropesemibold16" tools:text="@string/lbl_2_400"/>
+                        </LinearLayout>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtRelax"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_relax"
+                            style="@style/txtManropemedium14_3" tools:text="@string/lbl_relax"/>
+                    </LinearLayout>
+                    <View
+                        android:background="@color/{&quot;name&quot;:&quot;gray_300&quot;}"
+                        android:id="@+id/lineLine"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_327pxh"/>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearDate"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearDate1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtDate1"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@string/lbl_10_10_2021"
+                                style="@style/txtManropemedium14" tools:text="@string/lbl_10_10_2021"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtPriceChange"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.01"
+                                android:singleLine="true"
+                                android:text="@string/lbl_price_change"
+                                style="@style/txtManropesemibold16" tools:text="@string/lbl_price_change"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtRelax1"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:singleLine="true"
+                                android:text="@string/lbl_relax"
+                                style="@style/txtManropemedium14_3" tools:text="@string/lbl_relax"/>
+                        </LinearLayout>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtPrice5"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@string/lbl_2_000"
+                            style="@style/txtManropesemibold16" tools:text="@string/lbl_2_000"/>
+                    </LinearLayout>
+                    <View
+                        android:background="@color/{&quot;name&quot;:&quot;gray_300&quot;}"
+                        android:id="@+id/lineLine1"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_327pxh"/>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearDate2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearDate3"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtDate2"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@string/lbl_03_04_2020"
+                                style="@style/txtManropemedium14" tools:text="@string/lbl_03_04_2020"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtRented"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.01"
+                                android:singleLine="true"
+                                android:text="@string/lbl_rented"
+                                style="@style/txtManropesemibold16" tools:text="@string/lbl_rented"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtRelax2"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:singleLine="true"
+                                android:text="@string/lbl_relax"
+                                style="@style/txtManropemedium14_3" tools:text="@string/lbl_relax"/>
+                        </LinearLayout>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtPrice6"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@string/lbl_1_650"
+                            style="@style/txtManropesemibold16" tools:text="@string/lbl_1_650"/>
+                    </LinearLayout>
+                    <View
+                        android:background="@color/{&quot;name&quot;:&quot;gray_300&quot;}"
+                        android:id="@+id/lineLine2"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_327pxh"/>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearDate4"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearDate5"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtDate3"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@string/lbl_25_11_2019"
+                                style="@style/txtManropemedium14" tools:text="@string/lbl_25_11_2019"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtRelistedActive"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.01"
+                                android:singleLine="true"
+                                android:text="@string/msg_relisted_active"
+                                style="@style/txtManropesemibold16" tools:text="@string/msg_relisted_active"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtRelax3"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:singleLine="true"
+                                android:text="@string/lbl_relax"
+                                style="@style/txtManropemedium14_3" tools:text="@string/lbl_relax"/>
+                        </LinearLayout>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtPrice7"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@string/lbl_1_500"
+                            style="@style/txtManropesemibold16" tools:text="@string/lbl_1_500"/>
+                    </LinearLayout>
+                    <View
+                        android:background="@color/{&quot;name&quot;:&quot;gray_300&quot;}"
+                        android:id="@+id/lineLine3"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_327pxh"/>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearDate6"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearDate7"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtDate4"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@string/lbl_09_02_2019"
+                                style="@style/txtManropemedium14" tools:text="@string/lbl_09_02_2019"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtListedForSale1"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.01"
+                                android:singleLine="true"
+                                android:text="@string/lbl_listed_for_sale"
+                                style="@style/txtManropesemibold16" tools:text="@string/lbl_listed_for_sale"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtRelax4"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:singleLine="true"
+                                android:text="@string/lbl_relax"
+                                style="@style/txtManropemedium14_3" tools:text="@string/lbl_relax"/>
+                        </LinearLayout>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtPrice8"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@string/lbl_1_400"
+                            style="@style/txtManropesemibold16" tools:text="@string/lbl_1_400"/>
+                    </LinearLayout>
+                    <View
+                        android:background="@color/{&quot;name&quot;:&quot;gray_300&quot;}"
+                        android:id="@+id/lineLine4"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_327pxh"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearSchool"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtSchool"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@string/lbl_school"
+                        style="@style/txtManropebold18" tools:text="@string/lbl_school"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtThisHomeIsWithin"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@string/msg_this_home_is_within"
+                        style="@style/txtManroperegular14" tools:text="@string/msg_this_home_is_within"/>
+                    <TextView android:id="@+id/txtDescription1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/msg_seattle_s_enrollment"
+                        style="@style/txtManroperegular14" tools:text="@string/msg_seattle_s_enrollment"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerCards"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        itemSpace="@{@dimen/_12pxh}" tools:itemCount="3" tools:listitem="@layout/row_cards"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearShow4More"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:id="@+id/txtShowMore"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@string/lbl_show_4_more"
+                        style="@style/txtManropebold14_1" tools:text="@string/lbl_show_4_more"/>
+                    <ImageView android:id="@+id/imageArrowLeft3"
+                        android:layout_gravity="top"
+                        android:layout_height="@dimen/_16pxh"
+                        android:layout_width="@dimen/_16pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow_left"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_left"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;gray_300&quot;}"
+                    android:id="@+id/lineLineFiftyFive"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_327pxh"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearClimateRisk"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtClimateRisk"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@string/lbl_climate_risk"
+                        style="@style/txtManropebold18" tools:text="@string/lbl_climate_risk"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtAboutClimateRisk"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/msg_about_climate_risk"
+                        style="@style/txtManropesemibold14" tools:text="@string/msg_about_climate_risk"/>
+                    <TextView android:id="@+id/txtDescription2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/msg_most_home_have_some"
+                        style="@style/txtManroperegular14" tools:text="@string/msg_most_home_have_some"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearFloodRisk"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtFloodRisk"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_flood_risk"
+                        style="@style/txtManropesemibold14" tools:text="@string/lbl_flood_risk"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtProvidedByFirst"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@string/msg_provided_by_first"
+                        style="@style/txtManroperegular14" tools:text="@string/msg_provided_by_first"/>
+                    <LinearLayout android:id="@+id/linearOne1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/_12pxv"
+                        android:paddingEnd="@dimen/_11pxh"
+                        android:paddingStart="@dimen/_11pxh"
+                        android:paddingTop="@dimen/_12pxv" style="@style/groupStylecornerRadius_1">
+                        <ImageView android:id="@+id/imageIcon1"
+                            android:layout_height="@dimen/_24pxh"
+                            android:layout_width="@dimen/_24pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_icon_primarycontainer_24x24"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_icon_primarycontainer_24x24"/>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearText"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtFloodFactor"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:letterSpacing="0.02"
+                                android:singleLine="true"
+                                android:text="@string/lbl_flood_factor"
+                                style="@style/txtManropebold12_1" tools:text="@string/lbl_flood_factor"/>
+                            <TextView android:id="@+id/txtDuration1"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.02"
+                                android:text="@string/msg_minimal_unlikely"
+                                style="@style/txtManrope12_1" tools:text="@string/msg_minimal_unlikely"/>
+                        </LinearLayout>
+                        <ImageView android:id="@+id/imageArrowRight"
+                            android:layout_height="@dimen/_20pxh"
+                            android:layout_width="@dimen/_20pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_right"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearEnvironmentalRisks"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtEnvironmentalRisks"
+                        android:layout_gravity="start"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/msg_environmental_risks"
+                        style="@style/txtManropesemibold14" tools:text="@string/msg_environmental_risks"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="start"
+                        android:id="@+id/txtProvidedbyClimateCheck"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@string/msg_provided_by_climatecheck"
+                        style="@style/txtManroperegular14" tools:text="@string/msg_provided_by_climatecheck"/>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearTwo1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/_12pxv"
+                        android:paddingEnd="@dimen/_11pxh"
+                        android:paddingStart="@dimen/_11pxh"
+                        android:paddingTop="@dimen/_12pxv" style="@style/groupStylecornerRadius_1">
+                        <ImageView android:id="@+id/imageIcon2"
+                            android:layout_height="@dimen/_24pxh"
+                            android:layout_width="@dimen/_24pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_icon_24x24"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_icon_24x24"/>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearText1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtStormRisk"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:letterSpacing="0.02"
+                                android:singleLine="true"
+                                android:text="@string/lbl_storm_risk"
+                                style="@style/txtManropebold12_1" tools:text="@string/lbl_storm_risk"/>
+                            <TextView
+                                android:id="@+id/txtVeryHighStorms"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.02"
+                                android:text="@string/msg_very_high_24_storms"
+                                style="@style/txtManrope12_1" tools:text="@string/msg_very_high_24_storms"/>
+                        </LinearLayout>
+                        <ImageView android:id="@+id/imageArrowRight1"
+                            android:layout_height="@dimen/_20pxh"
+                            android:layout_width="@dimen/_20pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_right"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearThree1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/_13pxv"
+                        android:paddingEnd="@dimen/_11pxh"
+                        android:paddingStart="@dimen/_11pxh"
+                        android:paddingTop="@dimen/_13pxv" style="@style/groupStylecornerRadius_1">
+                        <ImageView android:id="@+id/imageIcon3"
+                            android:layout_height="@dimen/_24pxh"
+                            android:layout_width="@dimen/_24pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_icon_1"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_icon_1"/>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearText2"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtDroughtRisk"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:letterSpacing="0.02"
+                                android:singleLine="true"
+                                android:text="@string/lbl_drought_risk"
+                                style="@style/txtManropebold12_1" tools:text="@string/lbl_drought_risk"/>
+                            <TextView android:id="@+id/txtModerateWater"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.02"
+                                android:text="@string/msg_moderate_water"
+                                style="@style/txtManrope12_1" tools:text="@string/msg_moderate_water"/>
+                        </LinearLayout>
+                        <ImageView android:id="@+id/imageArrowRight2"
+                            android:layout_height="@dimen/_20pxh"
+                            android:layout_width="@dimen/_20pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_right"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearFour1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/_12pxv"
+                        android:paddingEnd="@dimen/_11pxh"
+                        android:paddingStart="@dimen/_11pxh"
+                        android:paddingTop="@dimen/_12pxv" style="@style/groupStylecornerRadius_1">
+                        <ImageView android:id="@+id/imageBrightness1"
+                            android:layout_height="@dimen/_24pxh"
+                            android:layout_width="@dimen/_24pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_brightness_primarycontainer"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_brightness_primarycontainer"/>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearText3"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtHeatRisk"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:letterSpacing="0.02"
+                                android:singleLine="true"
+                                android:text="@string/lbl_heat_risk"
+                                style="@style/txtManropebold12_1" tools:text="@string/lbl_heat_risk"/>
+                            <TextView
+                                android:id="@+id/txtRelativelyTwentyEight"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.02"
+                                android:text="@string/msg_relatively_28"
+                                style="@style/txtManrope12_1" tools:text="@string/msg_relatively_28"/>
+                        </LinearLayout>
+                        <ImageView android:id="@+id/imageArrowRight3"
+                            android:layout_height="@dimen/_20pxh"
+                            android:layout_width="@dimen/_20pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_right"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearFive1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/_12pxv"
+                        android:paddingEnd="@dimen/_11pxh"
+                        android:paddingStart="@dimen/_11pxh"
+                        android:paddingTop="@dimen/_12pxv" style="@style/groupStylecornerRadius_1">
+                        <ImageView android:id="@+id/imageIcon4"
+                            android:layout_height="@dimen/_24pxh"
+                            android:layout_width="@dimen/_24pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_icon_2"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_icon_2"/>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearText4"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtFireRisk"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:letterSpacing="0.02"
+                                android:singleLine="true"
+                                android:text="@string/lbl_fire_risk"
+                                style="@style/txtManropebold12_1" tools:text="@string/lbl_fire_risk"/>
+                            <TextView android:id="@+id/txtRelativelyLow"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.02"
+                                android:text="@string/msg_relatively_low"
+                                style="@style/txtManrope12_1" tools:text="@string/msg_relatively_low"/>
+                        </LinearLayout>
+                        <ImageView android:id="@+id/imageArrowRight4"
+                            android:layout_height="@dimen/_20pxh"
+                            android:layout_width="@dimen/_20pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_right"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <LinearLayout android:id="@+id/linearBTN"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical" style="@style/groupStyle">
+            <LinearLayout android:id="@+id/linearPrice"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrice9"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_price2"
+                    style="@style/txtManropemedium14_2" tools:text="@string/lbl_price2"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrice10"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/lbl_1_940_00"
+                    style="@style/txtManropeextrabold20_1" tools:text="@string/lbl_1_940_00"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearBTNs"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_gray_50_border_name_gray_300_radius_20"
+                    android:id="@+id/btnHeart"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_44pxh"
+                    android:layout_width="@dimen/_44pxh"
+                    android:paddingHorizontal="@dimen/_12pxh"
+                    android:paddingVertical="@dimen/_12pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_heart" tools:ignore="ContentDescription"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:background="@drawable/rectangle_bg_name_primary_radius_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/manrope"
+                    android:gravity="center"
+                    android:id="@+id/btnScheduleTour"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_48pxv"
+                    android:layout_width="@dimen/_271pxh"
+                    android:letterSpacing="0.01"
+                    android:paddingBottom="@dimen/_13pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_13pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_schedule_tour"
+                    android:textAllCaps="false"
+                    android:textColor="@color/{&quot;name&quot;:&quot;gray_50&quot;}"
+                    android:textFontWeight="700"
+                    android:textSize="@dimen/_16pxh"
+                    android:textStyle="bold" tools:text="@string/lbl_schedule_tour"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearPay76686"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_10pxv"
+        android:paddingTop="@dimen/_10pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_left"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_left"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtChooseCard"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@string/lbl_choose_card"
+                style="@style/txtPoppinsbold16" tools:text="@string/lbl_choose_card"/>
+            <ImageView android:id="@+id/imagePlusIcon"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_plus_icon"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_plus_icon"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearEightyThree"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_27pxv"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_16pxh" android:paddingTop="@dimen/_27pxv">
+            <com.asksira.loopingviewpager.LoopingViewPager
+                android:gravity="center_horizontal"
+                android:id="@+id/imageSliderUser"
+                android:layout_height="@dimen/_190pxv"
+                android:layout_width="match_parent"
+                app:autoScroll="true" app:isInfinite="true" app:scrollInterval="5000"/>
+
+            <com.asksira.loopingviewpager.indicator.CustomShapePagerIndicator
+                android:id="@+id/indicatorSettings"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                app:drawable_normal="@drawable/indicator_unselected_bg_name_blue_50_radius_8"
+                app:drawable_selected="@drawable/indicator_selected_bg_name_primary_opacity_1_radius_8"
+                app:indicator_size="@dimen/_8pxh" app:indicator_spacing="@dimen/_8pxh"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_opacity_1_radius_5"
+            android:ellipsize="end" android:fontFamily="@font/poppins"
+            android:gravity="center" android:id="@+id/btnPay76686"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.03"
+            android:paddingBottom="@dimen/_18pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_18pxv" android:singleLine="true"
+            android:text="@string/lbl_pay_766_86"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_14pxh" android:textStyle="bold" tools:text="@string/lbl_pay_766_86"/>
+    </LinearLayout>
+</layout>

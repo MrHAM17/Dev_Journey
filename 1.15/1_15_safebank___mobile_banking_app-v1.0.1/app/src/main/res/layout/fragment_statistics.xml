@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearIncome"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <LinearLayout android:id="@+id/linearIncome1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:id="@+id/linearChat"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearSUN"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearDay"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSUN"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@string/lbl_sun"
+                            style="@style/txtPoppinsmedium10" tools:text="@string/lbl_sun"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtMON"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@string/lbl_mon"
+                            style="@style/txtPoppinsmedium10" tools:text="@string/lbl_mon"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtTUE"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@string/lbl_tue"
+                            style="@style/txtPoppinsmedium10" tools:text="@string/lbl_tue"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtWED"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@string/lbl_wed"
+                            style="@style/txtPoppinsmedium10" tools:text="@string/lbl_wed"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtTHU"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@string/lbl_thu"
+                            style="@style/txtPoppinsmedium10" tools:text="@string/lbl_thu"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtFRI"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@string/lbl_fri"
+                            style="@style/txtPoppinsmedium10" tools:text="@string/lbl_fri"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSAT"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@string/lbl_sat"
+                            style="@style/txtPoppinsmedium10" tools:text="@string/lbl_sat"/>
+                    </LinearLayout>
+                    <ImageView android:gravity="center_vertical"
+                        android:id="@+id/imageGraph"
+                        android:layout_height="@dimen/_161pxh"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_graph"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_graph"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearPoint"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtZero"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_0"
+                        style="@style/txtPoppinsmedium10" tools:text="@string/lbl_0"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTwenty"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_20"
+                        style="@style/txtPoppinsmedium10" tools:text="@string/lbl_20"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtForty"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_40"
+                        style="@style/txtPoppinsmedium10" tools:text="@string/lbl_40"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtSixty"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_60"
+                        style="@style/txtPoppinsmedium10" tools:text="@string/lbl_60"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtEighty"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_80"
+                        style="@style/txtPoppinsmedium10" tools:text="@string/lbl_80"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtOneHundred"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_100"
+                        style="@style/txtPoppinsmedium10" tools:text="@string/lbl_100"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearIncome2"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_5pxh"
+                android:paddingVertical="@dimen/_5pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}cornerRadius">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:background="@drawable/rectangle_bg_name_primary_radius_7"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:gravity="center" android:id="@+id/btnIncome"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_40pxv"
+                    android:layout_width="@dimen/_115pxh"
+                    android:paddingBottom="@dimen/_9pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_9pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_income"
+                    android:textAllCaps="false"
+                    android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                    android:textFontWeight="500"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold" tools:text="@string/lbl_income"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtExpense"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_expense"
+                    style="@style/txtPoppinsmedium14" tools:text="@string/lbl_expense"/>
+            </LinearLayout>
+            <androidx.viewpager2.widget.ViewPager2
+                android:gravity="center_horizontal"
+                android:id="@+id/viewPagerTabBarView"
+                android:layout_height="match_parent"
+                android:layout_weight="1" android:layout_width="match_parent"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

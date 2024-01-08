@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <TextView android:ellipsize="end" android:id="@+id/txtTime"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:paddingBottom="@dimen/_10pxv"
+        android:paddingEnd="@dimen/_13pxh"
+        android:paddingStart="@dimen/_13pxh"
+        android:paddingTop="@dimen/_10pxv" android:singleLine="true"
+        android:text="@string/lbl_9_00_am"
+        style="@style/txtRoundedOutline" tools:text="@string/lbl_9_00_am"/>
+</layout>

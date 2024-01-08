@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearNotificationSettings"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowDown"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_down"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFillYourProfile"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_notifications"
+                style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_notifications"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearGeneralNotification"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_27pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_27pxv">
+            <LinearLayout android:id="@+id/linearAutoLayoutHorizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtGeneralNotification"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/msg_general_notification"
+                    style="@style/txtUrbanistsemibold18" tools:text="@string/msg_general_notification"/>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchMaterialSwitch"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearAutoLayoutHorizontal1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSound"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_sound"
+                    style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_sound"/>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchMaterialStateDisabled"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearAutoLayoutHorizontal2"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtVibrate"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_vibrate"
+                    style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_vibrate"/>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchMaterialStateDisabled1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearAutoLayoutHorizontal3"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAppUpdates"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_app_updates"
+                    style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_app_updates"/>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchMaterialSwitch1"
+                    android:layout_gravity="top"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearAutoLayoutHorizontal4"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtNewServiceAvailable"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/msg_new_service_available"
+                    style="@style/txtUrbanistsemibold18" tools:text="@string/msg_new_service_available"/>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchMaterialStateDisabled2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearAutoLayoutHorizontal5"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtNewTipsAvailable"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/msg_new_tips_available"
+                    style="@style/txtUrbanistsemibold18" tools:text="@string/msg_new_tips_available"/>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchMaterialStateDisabled3"
+                    android:layout_gravity="top"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

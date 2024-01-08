@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="start" android:id="@+id/linearFrame1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_23pxv"
+        android:paddingEnd="@dimen/_24pxh"
+        android:paddingStart="@dimen/_24pxh"
+        android:paddingTop="@dimen/_23pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_900&quot;}cornerRadius">
+        <TextView android:ellipsize="end" android:id="@+id/txtVoucher"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true" android:text="@string/lbl_voucher"
+            style="@style/txtPoppinsmedium14_1" tools:text="@string/lbl_voucher"/>
+        <LinearLayout android:id="@+id/linearFrame2"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <EditText
+                android:background="@drawable/rectangle_bg_name_blue_gray_800_radius_20"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins"
+                android:hint="@string/msg_have_a_vucher_code"
+                android:id="@+id/etInputsFied" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_11pxv"
+                android:paddingEnd="@dimen/_24pxh"
+                android:paddingStart="@dimen/_24pxh"
+                android:paddingTop="@dimen/_11pxv"
+                android:singleLine="true"
+                android:textColor="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+                android:textColorHint="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_12pxh"
+                android:textStyle="normal" tools:ignore="Autofill"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_19"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins"
+                android:gravity="center" android:id="@+id/btnApply"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_39pxv"
+                android:layout_width="@dimen/_80pxh"
+                android:paddingBottom="@dimen/_9pxv"
+                android:paddingEnd="@dimen/_18pxh"
+                android:paddingStart="@dimen/_18pxh"
+                android:paddingTop="@dimen/_9pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_apply"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:text="@string/lbl_apply"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

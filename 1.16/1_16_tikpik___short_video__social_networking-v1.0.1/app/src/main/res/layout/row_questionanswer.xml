@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearAutoLayoutHorizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearSeventy"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageBennySpanbauer"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_60pxh"
+                android:layout_width="@dimen/_60pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_ellipse_15}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_15"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearAutoLayoutVertical1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtBennySpanbauer"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/lbl_benny_spanbauer"
+                    style="@style/txtUrbanistromanmedium14_2" tools:text="@string/lbl_benny_spanbauer"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtWhatIsYourFavorite"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/msg_what_is_your_favorite"
+                    style="@style/txtUrbanistsemibold16_2" tools:text="@string/msg_what_is_your_favorite"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearAutoLayoutVertical2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <ImageView android:id="@+id/imageImage"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_24pxh"
+                android:layout_width="@dimen/_24pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_iconly_bold_heart"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_iconly_bold_heart"/>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtSevenHundredThirtySix"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@string/lbl_736"
+                style="@style/txtUrbanistromanmedium12_4" tools:text="@string/lbl_736"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

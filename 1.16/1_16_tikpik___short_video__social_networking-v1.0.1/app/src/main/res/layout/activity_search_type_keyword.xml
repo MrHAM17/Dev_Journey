@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearSearchTypeKeyword"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_24pxh"
+        android:paddingVertical="@dimen/_24pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onErrorContainer&quot;}">
+        <androidx.appcompat.widget.SearchView
+            android:background="@drawable/rectangle_bg_name_red_a200_14_border_name_primary_radius_12"
+            android:gravity="center_horizontal"
+            android:id="@+id/searchViewSearch"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:theme="@style/searchViewsearch"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@android:color/transparent"
+            app:queryHint="@string/lbl_ariana" app:searchIcon="@drawable/img_user_primary_20x20"/>
+        <LinearLayout android:id="@+id/linearAutoLayoutHorizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtRecent"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_recent"
+                style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_recent"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtClearAll"
+                android:layout_gravity="top"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@string/lbl_clear_all"
+                style="@style/txtUrbanistromanbold16_2" tools:text="@string/lbl_clear_all"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:gravity="center_horizontal"
+            android:id="@+id/recyclerAutoLayoutVertical"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            itemSpace="@{@dimen/_24pxh}" tools:itemCount="4" tools:listitem="@layout/row_autolayoutvertical2"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtSuggestedSearches"
+            android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@string/msg_suggested_searches"
+            style="@style/txtUrbanistromanbold20" tools:text="@string/msg_suggested_searches"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:gravity="center_horizontal"
+            android:id="@+id/recyclerAutoLayoutVertical1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            itemSpace="@{@dimen/_25pxh}" tools:itemCount="4" tools:listitem="@layout/row_autolayoutvertical3"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearFrame4"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_10pxv"
+        android:paddingTop="@dimen/_10pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_900&quot;}cornerRadius">
+        <ImageView android:id="@+id/imageImage2"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_112pxh"
+            android:layout_width="@dimen/_112pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_15pxh}"
+            imageRes="@{@drawable/img_rectangle_12103_4}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle_12103_4"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearFrame5"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <LinearLayout android:id="@+id/linearFrame"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearFrame1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:id="@+id/txtMysteryOfMuye"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@string/msg_mystery_of_muye"
+                        style="@style/txtPoppinsmedium12" tools:text="@string/msg_mystery_of_muye"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtActionAdventure"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@string/msg_action_adventure"
+                        style="@style/txtPoppinsregular12_1" tools:text="@string/msg_action_adventure"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageImage3"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_notification"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_notification"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearFrame2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTwentyThousandFiveHundredThirt"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_2_05_32"
+                    style="@style/txtPoppinsmedium10" tools:text="@string/lbl_2_05_32"/>
+                <ImageView android:id="@+id/imageImage"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_10pxh"
+                    android:layout_width="@dimen/_1pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_vector_106"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_vector_106"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFilesize"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_1_2gb"
+                    style="@style/txtPoppinsmedium10" tools:text="@string/lbl_1_2gb"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

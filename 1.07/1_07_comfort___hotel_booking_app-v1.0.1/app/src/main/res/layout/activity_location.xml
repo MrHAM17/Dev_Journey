@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearLocation"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}">
+        <FrameLayout android:gravity="center_horizontal"
+            android:id="@+id/frameLinkedin"
+            android:layout_height="match_parent" android:layout_width="match_parent">
+            <fragment android:id="@+id/mapImage"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_882pxv"
+                android:layout_width="match_parent" android:name="com.google.android.gms.maps.SupportMapFragment"/>
+            <ImageView android:id="@+id/imageLinkedin"
+                android:layout_gravity="top|center"
+                android:layout_height="@dimen/_50pxh"
+                android:layout_width="@dimen/_42pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_linkedin"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_linkedin"/>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarAppBar"
+                android:layout_gravity="top|center"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:contentInsetStart="0dp" style="@style/groupStyle_1">
+                <ImageView android:id="@+id/imageArrowDown"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrow_down"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFillYourProfile"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/lbl_hotel_location"
+                    style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_hotel_location"/>
+            </androidx.appcompat.widget.Toolbar>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

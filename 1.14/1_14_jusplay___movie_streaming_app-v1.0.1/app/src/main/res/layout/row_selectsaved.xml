@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearFrame"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_10pxh"
+        android:paddingVertical="@dimen/_10pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_900&quot;}cornerRadius">
+        <ImageView android:id="@+id/imageImage"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_112pxh"
+            android:layout_width="@dimen/_112pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_15pxh}"
+            imageRes="@{@drawable/img_rectangle_12103_1}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle_12103_1"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearWatchNow"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:id="@+id/txtTheIceAgeAdventures"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/msg_the_ice_age_adventures"
+                style="@style/txtPoppinsmedium12" tools:text="@string/msg_the_ice_age_adventures"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtActionAdventure"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/msg_action_adventure"
+                style="@style/txtPoppinsregular12_1" tools:text="@string/msg_action_adventure"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_15"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins"
+                android:gravity="center" android:id="@+id/btnWatchNow"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_6pxv"
+                android:paddingEnd="@dimen/_25pxh"
+                android:paddingStart="@dimen/_25pxh"
+                android:paddingTop="@dimen/_6pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_watch_now"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_12pxh"
+                android:textStyle="normal" tools:text="@string/lbl_watch_now"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

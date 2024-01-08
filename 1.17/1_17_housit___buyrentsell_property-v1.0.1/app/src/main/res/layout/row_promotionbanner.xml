@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <FrameLayout android:id="@+id/frameItemPromotion"
+        android:layout_height="wrap_content"
+        android:layout_width="@dimen/_300pxh" style="@style/groupStyle{&quot;name&quot;:&quot;primary&quot;}cornerRadius">
+        <LinearLayout android:id="@+id/linearHalloweenSale"
+            android:layout_gravity="top|start"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:id="@+id/txtHalloweenSale"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/msg_halloween_sale"
+                style="@style/txtRalewaysemibold18_1" tools:text="@string/msg_halloween_sale"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtOffer"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/msg_all_discount_up"
+                style="@style/txtRalewayregular12_3" tools:text="@string/msg_all_discount_up"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameFortySeven"
+            android:layout_gravity="bottom|start"
+            android:layout_height="@dimen/_56pxv"
+            android:layout_width="@dimen/_93pxh"
+            android:paddingBottom="@dimen/_24pxv"
+            android:paddingEnd="@dimen/_38pxh"
+            android:paddingStart="@dimen/_38pxh"
+            android:paddingTop="@dimen/_24pxv" style="@style/groupStylenameblue_gray_700_3">
+            <ImageView android:id="@+id/imageImage"
+                android:layout_gravity="top|center"
+                android:layout_height="@dimen/_7pxh"
+                android:layout_width="@dimen/_17pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_left_white_a700"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_left_white_a700"/>
+        </FrameLayout>
+        <ImageView android:id="@+id/imageHalloweenSale"
+            android:layout_gravity="bottom|end"
+            android:layout_height="@dimen/_145pxh"
+            android:layout_width="@dimen/_207pxh"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_subtract_145x207}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_subtract_145x207"/>
+    </FrameLayout>
+</layout>

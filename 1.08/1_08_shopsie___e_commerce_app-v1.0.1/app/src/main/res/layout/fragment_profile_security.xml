@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearSixtySeven"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;primaryContainer&quot;}">
+        <LinearLayout android:id="@+id/linearThirty"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtChangePassword"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_change_password"
+                style="@style/txtLatosemibold14_1" tools:text="@string/lbl_change_password"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearCurrentPassword"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCurrentPassword"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/msg_current_password"
+                    style="@style/txtLatomedium14_1" tools:text="@string/msg_current_password"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_name_gray_50_radius_8"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/lato"
+                    android:hint="@string/lbl_password"
+                    android:id="@+id/etPassword"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_15pxv"
+                    android:paddingEnd="@dimen/_24pxh"
+                    android:paddingStart="@dimen/_24pxh"
+                    android:paddingTop="@dimen/_15pxv"
+                    android:singleLine="true"
+                    android:textColor="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="normal" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearNewPassword"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtNewPassword"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_new_password"
+                    style="@style/txtLatomedium14_1" tools:text="@string/lbl_new_password"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_name_gray_50_radius_8"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/lato"
+                    android:hint="@string/lbl_password"
+                    android:id="@+id/etNewpassword"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_15pxv"
+                    android:paddingEnd="@dimen/_24pxh"
+                    android:paddingStart="@dimen/_24pxh"
+                    android:paddingTop="@dimen/_15pxv"
+                    android:singleLine="true"
+                    android:textColor="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="normal" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_gray_300_radius_8"
+                android:ellipsize="end" android:fontFamily="@font/lato"
+                android:gravity="center"
+                android:id="@+id/btnUpdatePassword"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_14pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_14pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_update_password"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_update_password"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearArrowLeft"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                android:id="@+id/btnArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_left" tools:ignore="ContentDescription"/>
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_white_a700_opacity_0_8_radius_25"
+                android:id="@+id/btnThumbsUp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_thumbs_up" tools:ignore="ContentDescription"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearNotificationList"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <com.google.android.material.tabs.TabLayout
+                android:gravity="center_horizontal"
+                android:id="@+id/tabLayoutTabview"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:tabBackground="@drawable/selector_bg_name_white_a700_radius_16"
+                app:tabIndicatorColor="@android:color/transparent"
+                app:tabIndicatorHeight="0dp" app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/{&quot;name&quot;:&quot;blue_gray_800_01&quot;}"
+                app:tabTextColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;}" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}cornerRadius"/>
+            <androidx.viewpager2.widget.ViewPager2
+                android:gravity="center_horizontal"
+                android:id="@+id/viewPagerTabBarView"
+                android:layout_height="match_parent"
+                android:layout_weight="1" android:layout_width="match_parent"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

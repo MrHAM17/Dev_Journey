@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearTopAlbumsGlobal"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageImage"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_iconly_light_outline_arrow"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_iconly_light_outline_arrow"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearPrice"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_30pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_30pxv">
+            <FrameLayout android:id="@+id/framePrice"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_184pxv" android:layout_width="@dimen/_380pxh">
+                <ImageView android:id="@+id/imageImage1"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_184pxh"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitXY"
+                    cornerRadius="@{@dimen/_28pxh}"
+                    imageRes="@{@drawable/img_image_184x380}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_image_184x380"/>
+                <TextView android:id="@+id/txtPrice"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="@string/msg_top_albums_global"
+                    style="@style/txtUrbanistromanbold24_1" tools:text="@string/msg_top_albums_global"/>
+            </FrameLayout>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTopAlbumsGlobal"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/msg_top_albums_global2"
+                style="@style/txtUrbanistromanbold24" tools:text="@string/msg_top_albums_global2"/>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtTheMostPlayed"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@string/msg_the_most_played"
+                style="@style/txtUrbanistromanmedium18" tools:text="@string/msg_the_most_played"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPrice1"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@string/msg_by_hearme_12_24_2022"
+                style="@style/txtUrbanistsemibold14_2" tools:text="@string/msg_by_hearme_12_24_2022"/>
+            <View
+                android:background="@color/{&quot;name&quot;:&quot;blue_gray_100&quot;}"
+                android:id="@+id/lineLine"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_380pxh"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerTopAlbumsGlobal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_24pxh}" tools:itemCount="5" tools:listitem="@layout/row_topalbumsglobal2"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

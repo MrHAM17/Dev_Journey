@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearSplashScreen"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;primary&quot;}">
+        <ImageView android:id="@+id/imageImage"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_102pxh"
+            android:layout_width="@dimen/_102pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_clarity_employee_solid"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_clarity_employee_solid"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtHired"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.01"
+            android:lineSpacingExtra="@dimen/_9pxh"
+            android:singleLine="true" android:text="@string/lbl_hired"
+            style="@style/txtPlusJakartaSansbold32" tools:text="@string/lbl_hired"/>
+    </LinearLayout>
+</layout>

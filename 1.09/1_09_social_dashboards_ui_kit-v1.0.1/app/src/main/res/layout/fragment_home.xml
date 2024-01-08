@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearSeventeen"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:contentInsetStart="0dp" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+            <ImageButton
+                android:background="@drawable/rectangle_border_name_blue_gray_100_radius_12"
+                android:id="@+id/btnRewind"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_rewind" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtScreenTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_4pxh"
+                android:singleLine="true"
+                android:text="@string/lbl_home"
+                style="@style/txtInterbold16" tools:text="@string/lbl_home"/>
+            <ImageButton
+                android:background="@drawable/rectangle_border_name_blue_gray_100_radius_12"
+                android:id="@+id/btnIconNotification"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_icon_notification" tools:ignore="ContentDescription"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearHome"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearFeatured"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFeatured"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_4pxh"
+                    android:singleLine="true"
+                    android:text="@string/lbl_featured"
+                    style="@style/txtInterbold16" tools:text="@string/lbl_featured"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerSixtySeven"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_18pxh}" tools:itemCount="6" tools:listitem="@layout/row_sixtyseven"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerEightyTwo"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_18pxh}" tools:itemCount="2" tools:listitem="@layout/row_eightytwo"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearOnbordingOne"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle">
+        <LinearLayout android:id="@+id/linearOne"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_13pxv"
+            android:paddingTop="@dimen/_13pxv" style="@style/groupStyle_1">
+            <androidx.appcompat.widget.Toolbar
+                android:gravity="center_horizontal"
+                android:id="@+id/toolbarAppBar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSkip"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/lbl_skip"
+                    style="@style/txtPoppinsmedium18_1" tools:text="@string/lbl_skip"/>
+            </androidx.appcompat.widget.Toolbar>
+            <FrameLayout android:id="@+id/frameSpacer"
+                android:layout_height="wrap_content" android:layout_width="match_parent"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCoolProduct"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_cool_product"
+                style="@style/txtPoppinsmedium24" tools:text="@string/lbl_cool_product"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtDescription"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/msg_we_create_products"
+                style="@style/txtPoppinsregular14_1" tools:text="@string/msg_we_create_products"/>
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_white_a700_radius_30"
+                android:id="@+id/btnArrowDown"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_60pxh"
+                android:layout_width="@dimen/_60pxh"
+                android:paddingHorizontal="@dimen/_18pxh"
+                android:paddingVertical="@dimen/_18pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_down" tools:ignore="ContentDescription"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

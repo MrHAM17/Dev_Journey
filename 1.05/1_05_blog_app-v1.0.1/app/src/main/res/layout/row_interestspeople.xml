@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="start" android:id="@+id/linearFrame"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_10pxv"
+        android:paddingEnd="@dimen/_20pxh"
+        android:paddingStart="@dimen/_20pxh"
+        android:paddingTop="@dimen/_10pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_300&quot;}">
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtMorePeopleToFollow"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@string/msg_more_people_to_follow"
+            style="@style/txtPoppinssemibold14" tools:text="@string/msg_more_people_to_follow"/>
+    </LinearLayout>
+</layout>

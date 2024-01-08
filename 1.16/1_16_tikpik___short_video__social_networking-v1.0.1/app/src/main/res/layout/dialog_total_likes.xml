@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearTotalLikes"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/linearThemeLightModal"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_31pxv"
+            android:paddingEnd="@dimen/_32pxh"
+            android:paddingStart="@dimen/_32pxh"
+            android:paddingTop="@dimen/_31pxv" style="@style/groupStylenameonErrorContainercornerRadius_1">
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtDistance"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_27m_total_likes"
+                style="@style/txtUrbanistromanbold24_1" tools:text="@string/lbl_27m_total_likes"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtDistance1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:text="@string/msg_jenny_wilson_received"
+                style="@style/txtUrbanistregular16" tools:text="@string/msg_jenny_wilson_received"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_16"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:gravity="center" android:id="@+id/btnOk"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_58pxv"
+                android:layout_width="@dimen/_276pxh"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_19pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_19pxv"
+                android:singleLine="true" android:text="@string/lbl_ok"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;onErrorContainer&quot;}"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_ok"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

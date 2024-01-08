@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearLongSleeveTshirt"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <ImageView android:id="@+id/imageLongSleeveTshirt"
+            android:layout_height="@dimen/_171pxh"
+            android:layout_width="@dimen/_171pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_8pxh}"
+            imageRes="@{@drawable/img_image_171x171}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_image_171x171"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtLongSleeveTShirt"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@string/msg_long_sleeve_t_shirt"
+            style="@style/txtLatoregular14_1" tools:text="@string/msg_long_sleeve_t_shirt"/>
+    </LinearLayout>
+</layout>

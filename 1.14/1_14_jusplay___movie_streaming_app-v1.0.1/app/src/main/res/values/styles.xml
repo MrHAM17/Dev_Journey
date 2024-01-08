@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="groupStyle{&quot;name&quot;:&quot;primary&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_primary_radius_15</item>
+    </style>
+    <style name="txtSolidRounded">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+        <item name="android:background">@drawable/rectangle_bg_name_primary_radius_17</item>
+    </style>
+    <style name="txtPoppinsregular22">
+        <item name="android:textSize">@dimen/_22pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;gray_900&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_gray_900_radius_20</item>
+    </style>
+    <style name="txtPoppinsbold16">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="groupStylenamegray_1">
+        <item name="android:background">@drawable/rectangle_bg_name_gray_900_radius_16</item>
+    </style>
+    <style name="groupStylenamegray_2">
+        <item name="android:background">@drawable/rectangle_bg_name_gray_900_border_name_white_a700_radius_20</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;primary&quot;}">
+        <item name="android:background">@drawable/rectangle_bg_name_primary</item>
+    </style>
+    <style name="groupStylenamewhite_1">
+        <item name="android:background">@drawable/rectangle_bg_name_white_a700_radius_12</item>
+    </style>
+    <style name="txtPoppinsmedium14_2">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtPoppinslight10">
+        <item name="android:textSize">@dimen/_10pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">300</item>
+    </style>
+    <style name="txtPoppinsmedium14_3">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer","opacity":0.67}</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtPoppinsmedium16">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtPoppinsregular14_1">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtPoppinsmedium18">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtPoppinsregular12_1">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtPoppinsmedium14_1">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtPoppinssemibold14">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;black_900&quot;}">
+        <item name="android:background">@drawable/rectangle_bg_name_black_900</item>
+    </style>
+    <style name="txtPoppinsmedium12">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtPoppinssemibold16">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtPoppinsmedium13">
+        <item name="android:textSize">@dimen/_13pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtPoppinsregular14">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtPoppinsmedium14">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtPoppinsmedium10_1">
+        <item name="android:textSize">@dimen/_10pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtSolidRounded_1">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+        <item name="android:background">@drawable/rectangle_bg_name_gray_900_radius_17</item>
+    </style>
+    <style name="txtPoppinssemibold12">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtPoppinsmedium10">
+        <item name="android:textSize">@dimen/_10pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtPoppinsbold20">
+        <item name="android:textSize">@dimen/_20pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtPoppinsregular12">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;gray_900&quot;}">
+        <item name="android:background">@drawable/rectangle_bg_name_gray_900</item>
+    </style>
+    <style name="txtPoppinsmedium8">
+        <item name="android:textSize">@dimen/_8pxh</item>
+        <item name="android:textColor">@color/{"name":"primaryContainer"}</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;gray_400&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_gray_400_radius_92</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;white_A700&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_white_a700_border_name_white_a700_radius_45</item>
+    </style>
+    <style name="txtPoppinssemibold24">
+        <item name="android:textSize">@dimen/_24pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtPoppinsmedium24">
+        <item name="android:textSize">@dimen/_24pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="groupStyle">
+        <item name="android:background">@drawable/rectangle_gradient_s_name_onprimary_e_name_black_900</item>
+    </style>
+    <style name="searchViewsearch" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColorPrimary">@color/{"name":"primaryContainer"}</item>
+        <item name="android:textColorHint">@color/{"name":"primaryContainer"}</item>
+    </style>
+    <style name="searchViewsearch" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColorPrimary">@color/{"name":"primaryContainer"}</item>
+        <item name="android:textColorHint">@color/{"name":"primaryContainer"}</item>
+    </style>
+    <style name="searchViewsearch" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColorPrimary">@color/{"name":"primaryContainer"}</item>
+        <item name="android:textColorHint">@color/{"name":"primaryContainer"}</item>
+    </style>
+    <style name="searchViewsearch" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColorPrimary">@color/{"name":"primaryContainer"}</item>
+        <item name="android:textColorHint">@color/{"name":"primaryContainer"}</item>
+    </style>
+    <style name="searchViewsearch" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColorPrimary">@color/{"name":"primaryContainer"}</item>
+        <item name="android:textColorHint">@color/{"name":"primaryContainer"}</item>
+    </style>
+</resources>

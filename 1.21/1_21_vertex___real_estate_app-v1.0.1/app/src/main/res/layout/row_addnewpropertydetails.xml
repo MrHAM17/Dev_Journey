@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearEstimatePrice"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_16pxv"
+        android:paddingEnd="@dimen/_12pxh"
+        android:paddingStart="@dimen/_12pxh"
+        android:paddingTop="@dimen/_16pxv" style="@style/groupStylenamewhite_1">
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtEstimatePrice"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.02" android:singleLine="true"
+            android:text="@string/lbl_estimate_price"
+            style="@style/txtManropemedium10" tools:text="@string/lbl_estimate_price"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01" android:singleLine="true"
+            android:text="@string/lbl_4_200_00"
+            style="@style/txtManropebold14" tools:text="@string/lbl_4_200_00"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtWidget"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.02"
+            android:paddingBottom="@dimen/_4pxv"
+            android:paddingEnd="@dimen/_8pxh"
+            android:paddingStart="@dimen/_8pxh"
+            android:paddingTop="@dimen/_4pxv" android:singleLine="true"
+            android:text="@string/lbl_4" style="@style/txtSolidRounded" tools:text="@string/lbl_4"/>
+    </LinearLayout>
+</layout>

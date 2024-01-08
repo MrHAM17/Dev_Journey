@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "1_11_hired___job_search"

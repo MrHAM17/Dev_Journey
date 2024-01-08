@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearEstatesCardVertical"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_8pxh"
+        android:paddingVertical="@dimen/_8pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}cornerRadius">
+        <FrameLayout android:id="@+id/frameShape"
+            android:layout_height="@dimen/_160pxv" android:layout_width="@dimen/_144pxh">
+            <ImageView android:id="@+id/imageHouse"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_160pxh"
+                android:layout_width="@dimen/_144pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_15pxh}"
+                imageRes="@{@drawable/img_shape_43}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_shape_43"/>
+            <LinearLayout android:id="@+id/linearCheckmark"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_white_a700_radius_12"
+                    android:id="@+id/btnCheckmark"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_25pxh"
+                    android:layout_width="@dimen/_25pxh"
+                    android:paddingHorizontal="@dimen/_7pxh"
+                    android:paddingVertical="@dimen/_7pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_checkmark" tools:ignore="ContentDescription"/>
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_blue_gray_700_af_radius_8"
+                    android:id="@+id/btnClose"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_25pxh"
+                    android:layout_width="@dimen/_25pxh"
+                    android:paddingHorizontal="@dimen/_5pxh"
+                    android:paddingVertical="@dimen/_5pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_close" tools:ignore="ContentDescription"/>
+            </LinearLayout>
+        </FrameLayout>
+        <TextView android:ellipsize="end" android:id="@+id/txtHouse"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true" android:text="@string/lbl_house"
+            style="@style/txtRalewaysemibold14_1" tools:text="@string/lbl_house"/>
+    </LinearLayout>
+</layout>

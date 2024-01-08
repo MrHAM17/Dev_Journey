@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearOnbordingThree"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylenamewhite_2">
+        <LinearLayout android:id="@+id/linearTwo"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_5pxv"
+            android:paddingTop="@dimen/_5pxv" style="@style/groupStyle_1">
+            <androidx.appcompat.widget.Toolbar
+                android:gravity="center_horizontal"
+                android:id="@+id/toolbarAppBar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_white_a700_radius_20"
+                    android:id="@+id/btnArrowDown"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_arrow_down" tools:ignore="ContentDescription"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSkip"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/lbl_skip"
+                    style="@style/txtPoppinsmedium18_1" tools:text="@string/lbl_skip"/>
+            </androidx.appcompat.widget.Toolbar>
+            <FrameLayout android:id="@+id/frameSpacer"
+                android:layout_height="wrap_content" android:layout_width="match_parent"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtAllForYou"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_all_for_you"
+                style="@style/txtPoppinsmedium24" tools:text="@string/lbl_all_for_you"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtDescription"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@string/msg_we_always_try_provide"
+                style="@style/txtPoppinsregular14_1" tools:text="@string/msg_we_always_try_provide"/>
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_white_a700_radius_30"
+                android:id="@+id/btnArrowDown1"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_60pxh"
+                android:layout_width="@dimen/_60pxh"
+                android:paddingHorizontal="@dimen/_18pxh"
+                android:paddingVertical="@dimen/_18pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_down" tools:ignore="ContentDescription"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

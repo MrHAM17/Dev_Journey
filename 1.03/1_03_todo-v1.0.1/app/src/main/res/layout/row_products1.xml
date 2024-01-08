@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <ImageView android:id="@+id/imageProductPicture"
+        android:layout_height="@dimen/_72pxv"
+        android:layout_width="@dimen/_72pxh" android:scaleType="fitXY"
+        cornerRadius="@{@dimen/_8pxh}"
+        imageRes="@{@drawable/img_product_picture02}"
+        tools:ignore="ContentDescription" tools:src="@drawable/img_product_picture02"/>
+</layout>

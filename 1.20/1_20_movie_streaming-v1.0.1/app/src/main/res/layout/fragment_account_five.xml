@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearLogout"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_900&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <TextView android:ellipsize="end" android:id="@+id/txtNons"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_account"
+                style="@style/txtRobotosemibold16" tools:text="@string/lbl_account"/>
+            <ImageView android:id="@+id/imageIcon"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_icon_1"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_icon_1"/>
+        </androidx.appcompat.widget.Toolbar>
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearAccountFive"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout android:id="@+id/linearLikedMoviesOption"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageLikedMoviesIcon"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_liked_movies_icon"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_liked_movies_icon"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="top"
+                        android:id="@+id/txtLikedMovies"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@string/lbl_liked_movies"
+                        style="@style/txtRobotoregular16" tools:text="@string/lbl_liked_movies"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearLikedMoviesOption1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageNotificationIcon"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_notification_icon"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_notification_icon"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="top"
+                        android:id="@+id/txtLikedMovies1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@string/lbl_notification"
+                        style="@style/txtRobotoregular16" tools:text="@string/lbl_notification"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearLikedMoviesOption2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageMySubscription"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_my_subscription"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_my_subscription"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="bottom"
+                        android:id="@+id/txtLikedMovies2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@string/msg_my_subscription"
+                        style="@style/txtRobotoregular16" tools:text="@string/msg_my_subscription"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearLikedMoviesOption3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageTransactionHistory"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_transaction_history"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_transaction_history"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="bottom"
+                        android:id="@+id/txtLikedMovies3"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@string/msg_transaction_history"
+                        style="@style/txtRobotoregular16" tools:text="@string/msg_transaction_history"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearLikedMoviesOption4"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageProfileSettings"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_profile_settings"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_profile_settings"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:id="@+id/txtLikedMovies4"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@string/msg_profile_settings"
+                        style="@style/txtRobotoregular16" tools:text="@string/msg_profile_settings"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearLikedMoviesOption5"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageWatchHistoryIcon"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_watch_history_icon"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_watch_history_icon"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="bottom"
+                        android:id="@+id/txtLikedMovies5"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@string/lbl_watch_history"
+                        style="@style/txtRobotoregular16" tools:text="@string/lbl_watch_history"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearLikedMoviesOption6"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageFollowingIcon"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_following_icon"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_following_icon"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="bottom"
+                        android:id="@+id/txtLikedMovies6"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@string/lbl_following"
+                        style="@style/txtRobotoregular16" tools:text="@string/lbl_following"/>
+                </LinearLayout>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:background="@drawable/rectangle_bg_name_primary_radius_5"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center" android:id="@+id/btnLogout"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_16pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_16pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_logout"
+                    android:textAllCaps="false"
+                    android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="normal" tools:text="@string/lbl_logout"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

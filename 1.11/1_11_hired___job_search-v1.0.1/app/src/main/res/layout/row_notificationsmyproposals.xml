@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="start" android:id="@+id/linearOpened"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/linearEighteen"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_gray_100_radius_8"
+                android:id="@+id/btnIconButton"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_48pxh"
+                android:layout_width="@dimen/_48pxh"
+                android:paddingHorizontal="@dimen/_7pxh"
+                android:paddingVertical="@dimen/_7pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_group_red_800" tools:ignore="ContentDescription"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearSeniorUIUXDesigner"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSeniorUIUXDesigner"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.0"
+                    android:lineSpacingExtra="@dimen/_4pxh"
+                    android:singleLine="true"
+                    android:text="@string/msg_senior_ui_ux_designer"
+                    style="@style/txtPlusJakartaSansbold14" tools:text="@string/msg_senior_ui_ux_designer"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSmallLabelRegular"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.0"
+                    android:lineSpacingExtra="@dimen/_4pxh"
+                    android:singleLine="true"
+                    android:text="@string/lbl_shell"
+                    style="@style/txtPlusJakartaSanssemibold12_1" tools:text="@string/lbl_shell"/>
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_green_50_radius_4"
+            android:ellipsize="end"
+            android:fontFamily="@font/plus_jakarta_sans"
+            android:gravity="center" android:id="@+id/btnOpened"
+            android:layout_height="@dimen/_28pxv"
+            android:layout_width="@dimen/_81pxh"
+            android:letterSpacing="0.0"
+            android:lineSpacingExtra="@dimen/_4pxh"
+            android:paddingBottom="@dimen/_6pxv"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_16pxh"
+            android:paddingTop="@dimen/_6pxv" android:singleLine="true"
+            android:text="@string/lbl_opened"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;green_600&quot;}"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_12pxh" android:textStyle="normal" tools:text="@string/lbl_opened"/>
+    </LinearLayout>
+</layout>

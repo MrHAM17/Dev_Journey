@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearAlbum"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <ImageView android:id="@+id/imageFlowerPower1"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_78pxh"
+            android:layout_width="@dimen/_78pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_8pxh}"
+            imageRes="@{@drawable/img_thumbnail_78x78}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_thumbnail_78x78"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearSongDetails"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFlowerPower"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_flower_power"
+                style="@style/txtRobotomedium18" tools:text="@string/lbl_flower_power"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtRayCharles"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_ray_charles"
+                style="@style/txtRobotoregular16" tools:text="@string/lbl_ray_charles"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtZipcode"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_2018"
+                style="@style/txtRobotoregular16_2" tools:text="@string/lbl_2018"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <ImageView android:id="@+id/imageFlowerPower2"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_4pxh"
+            android:layout_width="@dimen/_20pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_more_icon"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_more_icon"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearCharoletteHanlin2"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearCharoletteHanlin3"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageCharoletteHanlin1"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_60pxh"
+                android:layout_width="@dimen/_60pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_ellipse_14}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_14"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearCharoletteHanlin"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCharoletteHanlin"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/msg_charolette_hanlin"
+                    style="@style/txtUrbanistromanbold18_1" tools:text="@string/msg_charolette_hanlin"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtInformation"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@string/msg_leave_a_comment"
+                    style="@style/txtUrbanistromanmedium14_2" tools:text="@string/msg_leave_a_comment"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@+id/imageCharoletteHanlin2"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_60pxh"
+            android:layout_width="@dimen/_60pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_12pxh}"
+            imageRes="@{@drawable/img_image_60x60}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_image_60x60"/>
+    </LinearLayout>
+</layout>

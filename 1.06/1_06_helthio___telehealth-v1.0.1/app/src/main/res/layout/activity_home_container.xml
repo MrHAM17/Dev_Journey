@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearLearnMore"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <FrameLayout android:id="@+id/fragmentContainer"
+            android:layout_height="match_parent"
+            android:layout_weight="1" android:layout_width="match_parent"/>
+        <FrameLayout android:gravity="center_horizontal"
+            android:id="@+id/frameBottomBar"
+            android:layout_height="wrap_content" android:layout_width="match_parent">
+            <ImageView android:id="@+id/imageHome"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_32pxh"
+                android:layout_width="@dimen/_32pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_home"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_home"/>
+            <ImageView android:id="@+id/imageMessage"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_32pxh"
+                android:layout_width="@dimen/_32pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_message"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_message"/>
+            <ImageView android:id="@+id/imageCalendar"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_32pxh"
+                android:layout_width="@dimen/_32pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_calendar"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_calendar"/>
+            <ImageView android:id="@+id/imageLock"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_32pxh"
+                android:layout_width="@dimen/_32pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_lock_gray_500"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_lock_gray_500"/>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

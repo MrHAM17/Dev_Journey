@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearEnglishUK"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <TextView android:ellipsize="end" android:id="@+id/txtEnglishUK"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.0"
+            android:lineSpacingExtra="@dimen/_5pxh"
+            android:singleLine="true"
+            android:text="@string/lbl_english_uk"
+            style="@style/txtPlusJakartaSanssemibold16_3" tools:text="@string/lbl_english_uk"/>
+        <ImageView android:id="@+id/imageEnglishUK"
+            android:layout_height="@dimen/_24pxh"
+            android:layout_width="@dimen/_24pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_checkmark_green_a700"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark_green_a700"/>
+    </LinearLayout>
+</layout>

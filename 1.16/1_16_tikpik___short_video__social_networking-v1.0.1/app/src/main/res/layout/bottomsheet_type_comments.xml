@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearTypeComments"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/linearFourteen"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylenameonErrorContainercornerRadius_4">
+            <ImageView android:id="@+id/imageImage"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_3pxh"
+                android:layout_width="@dimen/_38pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_frame_gray_300"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_frame_gray_300"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtKComments"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_24_8k_comments"
+                style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_24_8k_comments"/>
+            <View
+                android:background="@color/{&quot;name&quot;:&quot;gray_200&quot;}"
+                android:id="@+id/lineLine"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_380pxh"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerTypeComments"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_24pxh}" tools:itemCount="3" tools:listitem="@layout/row_typecomments"/>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearAutoLayoutHorizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_24pxh"
+                android:paddingVertical="@dimen/_24pxv" style="@style/groupStylenameonErrorContainercornerRadius_5">
+                <EditText
+                    android:background="@drawable/rectangle_bg_name_red_a200_14_border_name_primary_radius_12"
+                    android:drawableEnd="@drawable/img_categoriesgift_componentadditional_icons_primary"
+                    android:drawablePadding="@dimen/_30pxh"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/urbanist"
+                    android:hint="@string/msg_you_re_so_adorable"
+                    android:id="@+id/etCategoriesGiftComponentAdditio"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:paddingBottom="@dimen/_19pxv"
+                    android:paddingEnd="@dimen/_18pxh"
+                    android:paddingStart="@dimen/_18pxh"
+                    android:paddingTop="@dimen/_19pxv"
+                    android:singleLine="true"
+                    android:textColor="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold" tools:ignore="Autofill"/>
+                <ImageButton
+                    android:background="@drawable/rectangle_gradient_s_name_deep_orange_a400_e_name_orange_600_radius_28"
+                    android:id="@+id/btnIconButton"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_56pxh"
+                    android:layout_width="@dimen/_56pxh"
+                    android:paddingHorizontal="@dimen/_16pxh"
+                    android:paddingVertical="@dimen/_16pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_auto_layout_horizontal_onerrorcontainer" tools:ignore="ContentDescription"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

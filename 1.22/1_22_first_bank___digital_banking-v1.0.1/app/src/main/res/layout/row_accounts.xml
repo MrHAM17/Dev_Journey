@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearMoneyTagOne"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_20pxv"
+        android:paddingEnd="@dimen/_15pxh"
+        android:paddingStart="@dimen/_15pxh"
+        android:paddingTop="@dimen/_20pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;,&quot;opacity&quot;:1}cornerRadius">
+        <ImageButton
+            android:background="@drawable/rectangle_bg_name_gray_100_01_radius_22"
+            android:id="@+id/btnMoneyTagOne"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_45pxh"
+            android:layout_width="@dimen/_45pxh"
+            android:paddingHorizontal="@dimen/_12pxh"
+            android:paddingVertical="@dimen/_12pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_money_tag_1" tools:ignore="ContentDescription"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearMyBalance"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtMyBalance"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_my_balance"
+                style="@style/txtInterregular12" tools:text="@string/lbl_my_balance"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_12_750"
+                style="@style/txtIntersemibold16_2" tools:text="@string/lbl_12_750"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

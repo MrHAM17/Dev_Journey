@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearNotificationFeed"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_left"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_left"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtFeed"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@string/lbl_feed"
+                style="@style/txtPoppinsbold16" tools:text="@string/lbl_feed"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearNewProduct"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_11pxv" android:paddingTop="@dimen/_11pxv">
+            <LinearLayout android:id="@+id/linearFeedItem"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_16pxh"
+                android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                <ImageView android:id="@+id/imageProductImage"
+                    android:layout_height="@dimen/_48pxh"
+                    android:layout_width="@dimen/_48pxh"
+                    android:scaleType="fitXY"
+                    cornerRadius="@{@dimen/_5pxh}"
+                    imageRes="@{@drawable/img_product_image}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_product_image"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearFeedDetails"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtNewProduct"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@string/lbl_new_product"
+                        style="@style/txtPoppinsbold14_1" tools:text="@string/lbl_new_product"/>
+                    <TextView android:id="@+id/txtNikeAirZoomPegasus"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.03"
+                        android:text="@string/msg_nike_air_zoom_pegasus2"
+                        style="@style/txtPoppinsregular12" tools:text="@string/msg_nike_air_zoom_pegasus2"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTime"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@string/msg_june_3_2015_5_06"
+                        style="@style/txtPoppinsregular10_1" tools:text="@string/msg_june_3_2015_5_06"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearFeedItem1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_16pxh"
+                android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                <ImageView android:id="@+id/imageProductImage1"
+                    android:layout_height="@dimen/_48pxh"
+                    android:layout_width="@dimen/_48pxh"
+                    android:scaleType="fitXY"
+                    cornerRadius="@{@dimen/_5pxh}"
+                    imageRes="@{@drawable/img_image_product}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_image_product"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearFeedDetails1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtBestProduct"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@string/lbl_best_product"
+                        style="@style/txtPoppinsbold14_1" tools:text="@string/lbl_best_product"/>
+                    <TextView android:id="@+id/txtNikeAirZoomPegasus1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.03"
+                        android:text="@string/msg_nike_air_zoom_pegasus2"
+                        style="@style/txtPoppinsregular12" tools:text="@string/msg_nike_air_zoom_pegasus2"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTime1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@string/msg_june_3_2015_5_06"
+                        style="@style/txtPoppinsregular10_1" tools:text="@string/msg_june_3_2015_5_06"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearFeedItem2"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_16pxh"
+                android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                <ImageView android:id="@+id/imageProductImage2"
+                    android:layout_height="@dimen/_48pxh"
+                    android:layout_width="@dimen/_48pxh"
+                    android:scaleType="fitXY"
+                    cornerRadius="@{@dimen/_5pxh}"
+                    imageRes="@{@drawable/img_product_image_1}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_product_image_1"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearFeedDetails2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtNewProduct1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@string/lbl_new_product"
+                        style="@style/txtPoppinsbold14_1" tools:text="@string/lbl_new_product"/>
+                    <TextView android:id="@+id/txtNikeAirZoomPegasus2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.03"
+                        android:text="@string/msg_nike_air_zoom_pegasus2"
+                        style="@style/txtPoppinsregular12" tools:text="@string/msg_nike_air_zoom_pegasus2"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTime2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@string/msg_june_3_2015_5_06"
+                        style="@style/txtPoppinsregular10_1" tools:text="@string/msg_june_3_2015_5_06"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearFiftyFour"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_gray_300_radius_18"
+                android:id="@+id/btnClose"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_close" tools:ignore="ContentDescription"/>
+        </androidx.appcompat.widget.Toolbar>
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearTermsAndConditions"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTermAndCondition"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/msg_terms_and_conditions"
+                    style="@style/txtPoppinssemibold18" tools:text="@string/msg_terms_and_conditions"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMonth"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/msg_effective_september"
+                    style="@style/txtPoppinsregular14_3" tools:text="@string/msg_effective_september"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtYouCanSeeOur"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/msg_you_can_see_our"
+                    style="@style/txtPoppinsregular12" tools:text="@string/msg_you_can_see_our"/>
+                <TextView android:alpha="0.87"
+                    android:id="@+id/txtDescription"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/msg_lorem_ipsum_dolor5"
+                    style="@style/txtPoppinsregular14_4" tools:text="@string/msg_lorem_ipsum_dolor5"/>
+                <TextView android:alpha="0.87"
+                    android:id="@+id/txtDescription1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/msg_lorem_ipsum_dolor4"
+                    style="@style/txtPoppinsregular14_4" tools:text="@string/msg_lorem_ipsum_dolor4"/>
+                <TextView android:alpha="0.87"
+                    android:id="@+id/txtDescription2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/msg_lorem_ipsum_dolor4"
+                    style="@style/txtPoppinsregular14_4" tools:text="@string/msg_lorem_ipsum_dolor4"/>
+                <TextView android:alpha="0.87"
+                    android:id="@+id/txtDescription3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/msg_lorem_ipsum_dolor5"
+                    style="@style/txtPoppinsregular14_4" tools:text="@string/msg_lorem_ipsum_dolor5"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTitle"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/msg_your_account_and"
+                    style="@style/txtPoppinsmedium18" tools:text="@string/msg_your_account_and"/>
+                <TextView android:alpha="0.87"
+                    android:id="@+id/txtDescription4"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/msg_lorem_ipsum_dolor5"
+                    style="@style/txtPoppinsregular14_4" tools:text="@string/msg_lorem_ipsum_dolor5"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

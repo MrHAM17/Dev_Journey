@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <androidx.core.widget.NestedScrollView android:clipToPadding="false"
+        android:fillViewport="true"
+        android:id="@+id/scrollViewScrollView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}">
+        <LinearLayout android:id="@+id/linearFive"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:id="@+id/linearFive1"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearRattingHeader"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearRating"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtRating"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_rating"
+                            style="@style/txtUrbanistsemibold16" tools:text="@string/lbl_rating"/>
+                        <FrameLayout android:id="@+id/frameSpacer"
+                            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                        <ImageView android:id="@+id/imageSignal"
+                            android:layout_height="@dimen/_16pxh"
+                            android:layout_width="@dimen/_16pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_signal_yellow_a700"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_signal_yellow_a700"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtFortyEight"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/lbl_4_8"
+                            style="@style/txtUrbanistsemibold16_1" tools:text="@string/lbl_4_8"/>
+                    </LinearLayout>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtReviews"
+                        android:layout_gravity="top"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_4_981_reviews"
+                        style="@style/txtUrbanistregular14_2" tools:text="@string/lbl_4_981_reviews"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:gravity="center_horizontal"
+                    android:id="@+id/recyclerReview"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_20pxh}" tools:itemCount="5" tools:listitem="@layout/row_review"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

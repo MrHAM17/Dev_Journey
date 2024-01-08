@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearMessagesList"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_24pxh"
+        android:paddingVertical="@dimen/_24pxv" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <LinearLayout android:id="@+id/linearAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                android:id="@+id/btnArrowLeft"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_50pxh"
+                android:layout_width="@dimen/_50pxh"
+                android:paddingHorizontal="@dimen/_16pxh"
+                android:paddingVertical="@dimen/_16pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_left" tools:ignore="ContentDescription"/>
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_white_a700_opacity_0_8_radius_25"
+                android:id="@+id/btnThumbsUp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_50pxh"
+                android:layout_width="@dimen/_50pxh"
+                android:paddingHorizontal="@dimen/_15pxh"
+                android:paddingVertical="@dimen/_15pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_thumbs_up" tools:ignore="ContentDescription"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearLayout"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_9pxv"
+            android:paddingEnd="@dimen/_8pxh"
+            android:paddingStart="@dimen/_8pxh"
+            android:paddingTop="@dimen/_9pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}cornerRadius">
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_white_a700_radius_tl_16_bl_16_br_16"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway"
+                android:gravity="center" android:id="@+id/btnListing"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_32pxv"
+                android:layout_width="@dimen/_152pxh"
+                android:paddingBottom="@dimen/_7pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_7pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_listing"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_800_01&quot;}"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:text="@string/lbl_listing"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtHistory"
+                android:layout_gravity="bottom"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_history"
+                style="@style/txtRalewaysemibold14_2" tools:text="@string/lbl_history"/>
+        </LinearLayout>
+        <TextView android:ellipsize="end" android:id="@+id/txtAllchats"
+            android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@string/lbl_all_chats"
+            style="@style/txtRalewaysemibold18" tools:text="@string/lbl_all_chats"/>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearCardMessage"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_10pxh"
+            android:paddingVertical="@dimen/_10pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}cornerRadius">
+            <FrameLayout android:id="@+id/framePhotosUser"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_50pxv" android:layout_width="@dimen/_50pxh">
+                <ImageView android:id="@+id/imageShape"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_50pxh"
+                    android:layout_width="@dimen/_50pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_shape_27}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_shape_27"/>
+                <LinearLayout android:id="@+id/linearShape"
+                    android:layout_gravity="top|end"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_2pxh"
+                    android:paddingVertical="@dimen/_2pxv" style="@style/groupStylenamewhite_5">
+                    <View
+                        android:background="@drawable/rectangle_bg_name_green_a400_radius_4"
+                        android:id="@+id/viewShape"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_8pxh" android:layout_width="@dimen/_8pxh"/>
+                </LinearLayout>
+            </FrameLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearFrameNinety"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMilano"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_milano"
+                    style="@style/txtRalewaysemibold14_1" tools:text="@string/lbl_milano"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTemporincididuntutlaboreetdolo"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/msg_tempor_incididunt"
+                    style="@style/txtRalewayregular12" tools:text="@string/msg_tempor_incididunt"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearLayout1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtText"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/lbl_10_45"
+                    style="@style/txtRalewaymedium8_3" tools:text="@string/lbl_10_45"/>
+                <TextView android:ellipsize="end" android:gravity="end"
+                    android:id="@+id/txtItemCounter"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_1pxv"
+                    android:paddingEnd="@dimen/_5pxh"
+                    android:paddingStart="@dimen/_5pxh"
+                    android:paddingTop="@dimen/_1pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_1"
+                    style="@style/txtSolidRounded_1" tools:text="@string/lbl_1"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearCardMessage1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_10pxh"
+            android:paddingVertical="@dimen/_10pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}cornerRadius">
+            <ImageView android:id="@+id/imageShape1"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_50pxh"
+                android:layout_width="@dimen/_50pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_shape_28}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_shape_28"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearFrameNinetyOne"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSamuelElla"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/lbl_samuel_ella"
+                    style="@style/txtRalewaysemibold14_1" tools:text="@string/lbl_samuel_ella"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLoremipsumdolorsitamet"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/msg_lorem_ipsum_dolor3"
+                    style="@style/txtRalewayregular12" tools:text="@string/msg_lorem_ipsum_dolor3"/>
+            </LinearLayout>
+            <FrameLayout android:id="@+id/frameSpacer"
+                android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtText1"
+                android:layout_gravity="top"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_11_00"
+                style="@style/txtRalewaymedium8_3" tools:text="@string/lbl_11_00"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearCardMessage2"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_10pxh"
+            android:paddingVertical="@dimen/_10pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}cornerRadius">
+            <ImageView android:id="@+id/imageShape2"
+                android:layout_height="@dimen/_50pxh"
+                android:layout_width="@dimen/_50pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_shape_29}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_shape_29"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearFrameNinetyOne1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtEmmetPerry"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_emmet_perry"
+                    style="@style/txtRalewaysemibold14_1" tools:text="@string/lbl_emmet_perry"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtExcepteursintoccaecatcupidatat"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/msg_excepteur_sint_occaecat"
+                    style="@style/txtRalewayregular12" tools:text="@string/msg_excepteur_sint_occaecat"/>
+            </LinearLayout>
+            <TextView android:ellipsize="end" android:id="@+id/txtText2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_12_50"
+                style="@style/txtRalewaymedium8_3" tools:text="@string/lbl_12_50"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearCardMessage3"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_10pxh"
+            android:paddingVertical="@dimen/_10pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}cornerRadius">
+            <ImageView android:id="@+id/imageShape3"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_50pxh"
+                android:layout_width="@dimen/_50pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_shape_24}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_shape_24"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearFrameNinetyOne2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtWalterLindsey"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/lbl_walter_lindsey"
+                    style="@style/txtRalewaysemibold14_1" tools:text="@string/lbl_walter_lindsey"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtQuisnostrudexercitationullamco"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@string/msg_quis_nostrud_exercitation2"
+                    style="@style/txtRalewayregular12" tools:text="@string/msg_quis_nostrud_exercitation2"/>
+            </LinearLayout>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDuration"
+                android:layout_gravity="top"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_1_day_ago"
+                style="@style/txtRalewaymedium8_3" tools:text="@string/lbl_1_day_ago"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearCardMessage4"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_10pxh"
+            android:paddingVertical="@dimen/_10pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}cornerRadius">
+            <ImageView android:id="@+id/imageShape4"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_50pxh"
+                android:layout_width="@dimen/_50pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_shape_26}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_shape_26"/>
+            <FrameLayout android:id="@+id/frameVelmaCole"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_40pxv" android:layout_width="@dimen/_247pxh">
+                <LinearLayout android:id="@+id/linearFrameNinetyOne3"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtVelmaCole"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_velma_cole"
+                        style="@style/txtRalewaysemibold14_1" tools:text="@string/lbl_velma_cole"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtExcepteursintoccaecatcupidatat1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@string/msg_excepteur_sint_occaecat"
+                        style="@style/txtRalewayregular12" tools:text="@string/msg_excepteur_sint_occaecat"/>
+                </LinearLayout>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDuration1"
+                    android:layout_gravity="top|end"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_2_days_ago"
+                    style="@style/txtRalewaymedium8_3" tools:text="@string/lbl_2_days_ago"/>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

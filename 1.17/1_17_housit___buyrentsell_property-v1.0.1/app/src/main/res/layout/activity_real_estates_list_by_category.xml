@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearVilla"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRealEstatesList"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <FrameLayout android:id="@+id/frameHeader"
+                    android:layout_height="@dimen/_330pxv" android:layout_width="match_parent">
+                    <ImageView android:id="@+id/imageBackground"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_330pxh"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitXY"
+                        imageRes="@{@drawable/img_background}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_background"/>
+                    <LinearLayout android:id="@+id/linearVilla1"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <LinearLayout android:id="@+id/linearAppbar"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="horizontal">
+                            <ImageButton
+                                android:background="@drawable/rectangle_bg_name_white_a700_opacity_0_8_radius_25"
+                                android:id="@+id/btnArrowLeft"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="@dimen/_50pxh"
+                                android:layout_width="@dimen/_50pxh"
+                                android:paddingHorizontal="@dimen/_16pxh"
+                                android:paddingVertical="@dimen/_16pxv"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/img_arrow_left" tools:ignore="ContentDescription"/>
+                            <ImageButton
+                                android:background="@drawable/rectangle_bg_name_white_a700_opacity_0_8_radius_25"
+                                android:id="@+id/btnIconSetting"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="@dimen/_50pxh"
+                                android:layout_width="@dimen/_50pxh"
+                                android:paddingHorizontal="@dimen/_15pxh"
+                                android:paddingVertical="@dimen/_15pxv"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/img_icon_setting" tools:ignore="ContentDescription"/>
+                        </LinearLayout>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:background="@drawable/rectangle_bg_name_blue_gray_700_af_radius_17"
+                            android:drawablePadding="@dimen/_10pxh"
+                            android:drawableStart="@drawable/drawable_img_close"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/raleway"
+                            android:gravity="center"
+                            android:id="@+id/btnVilla"
+                            android:layout_height="@dimen/_53pxv"
+                            android:layout_width="@dimen/_89pxh"
+                            android:letterSpacing="0.02"
+                            android:lineSpacingExtra="@dimen/_3pxh"
+                            android:paddingBottom="@dimen/_19pxv"
+                            android:paddingEnd="@dimen/_17pxh"
+                            android:paddingStart="@dimen/_17pxh"
+                            android:paddingTop="@dimen/_19pxv"
+                            android:singleLine="true"
+                            android:text="@string/lbl_villa"
+                            android:textAllCaps="false"
+                            android:textColor="@color/{&quot;name&quot;:&quot;gray_100&quot;}"
+                            android:textFontWeight="500"
+                            android:textSize="@dimen/_12pxh"
+                            android:textStyle="bold" tools:text="@string/lbl_villa"/>
+                    </LinearLayout>
+                </FrameLayout>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFeaturedEstates"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_top_villa"
+                    style="@style/txtRalewaysemibold18" tools:text="@string/lbl_top_villa"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:gravity="end"
+                    android:id="@+id/recyclerDataList"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_10pxh}" tools:itemCount="2" tools:listitem="@layout/row_datalist"/>
+                <androidx.appcompat.widget.SearchView
+                    android:background="@drawable/rectangle_bg_name_gray_100_radius_12"
+                    android:id="@+id/searchViewSearch"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:theme="@style/searchViewsearch"
+                    app:iconifiedByDefault="false"
+                    app:queryBackground="@android:color/transparent"
+                    app:queryHint="@string/msg_search_in_villa_s" app:searchIcon="@drawable/img_menu"/>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearItemHeader"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtText"
+                        android:layout_gravity="bottom"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_120"
+                        style="@style/txtRalewaybold18_1" tools:text="@string/lbl_120"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtVilla"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_villa"
+                        style="@style/txtRalewaymedium18" tools:text="@string/lbl_villa"/>
+                    <FrameLayout android:id="@+id/frameSpacer"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <LinearLayout android:id="@+id/linearButtonShow"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/_8pxv"
+                        android:paddingTop="@dimen/_8pxv" style="@style/groupStylenamegray_1">
+                        <FrameLayout android:id="@+id/frameButtonShow"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_24pxv"
+                            android:layout_width="@dimen/_36pxh"
+                            android:paddingBottom="@dimen/_6pxv"
+                            android:paddingEnd="@dimen/_12pxh"
+                            android:paddingStart="@dimen/_12pxh"
+                            android:paddingTop="@dimen/_6pxv" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}cornerRadius">
+                            <ImageView android:id="@+id/imageGrid"
+                                android:layout_gravity="center"
+                                android:layout_height="@dimen/_12pxh"
+                                android:layout_width="@dimen/_12pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_grid"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_grid"/>
+                        </FrameLayout>
+                        <FrameLayout android:id="@+id/frameButtonShow1"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_24pxv"
+                            android:layout_width="@dimen/_36pxh"
+                            android:paddingBottom="@dimen/_6pxv"
+                            android:paddingEnd="@dimen/_12pxh"
+                            android:paddingStart="@dimen/_12pxh"
+                            android:paddingTop="@dimen/_6pxv" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}cornerRadius">
+                            <ImageView
+                                android:id="@+id/imageIconHorizontal"
+                                android:layout_gravity="center"
+                                android:layout_height="@dimen/_12pxh"
+                                android:layout_width="@dimen/_12pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_icon_horizontal_onprimarycontainer"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_icon_horizontal_onprimarycontainer"/>
+                        </FrameLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:gravity="center_horizontal"
+                    android:id="@+id/recyclerRealEstatesListbyCategory"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2" itemSpace="@{@dimen/_7pxh}"
+                    tools:itemCount="4" tools:listitem="@layout/row_realestateslistbycategory"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearMsg" android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <FrameLayout android:id="@+id/frameAvatar"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_48pxv" android:layout_width="@dimen/_48pxh">
+            <ImageView android:id="@+id/imageWadeWarren"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_48pxh"
+                android:layout_width="@dimen/_48pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_img_48x48}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_img_48x48"/>
+            <View
+                android:background="@drawable/rectangle_bg_name_onerror_border_name_gray_50_radius_6"
+                android:id="@+id/viewView"
+                android:layout_gravity="bottom|end"
+                android:layout_height="@dimen/_12pxh" android:layout_width="@dimen/_12pxh"/>
+        </FrameLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearNameAndMessage"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtWadeWarren"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@string/lbl_wade_warren"
+                style="@style/txtManropebold16" tools:text="@string/lbl_wade_warren"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtMessage"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/msg_oh_hello_willam"
+                style="@style/txtManropemedium14" tools:text="@string/msg_oh_hello_willam"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtTime"
+            android:layout_gravity="top"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true" android:text="@string/lbl_23_15"
+            style="@style/txtManroperegular14" tools:text="@string/lbl_23_15"/>
+    </LinearLayout>
+</layout>

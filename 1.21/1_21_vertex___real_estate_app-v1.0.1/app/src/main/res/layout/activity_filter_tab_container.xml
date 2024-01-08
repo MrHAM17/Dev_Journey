@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearLine"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearPopup"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout android:id="@+id/linearLine1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <View
+                        android:background="@drawable/rectangle_bg_name_blue_gray_500_radius_2"
+                        android:id="@+id/lineLine"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_5pxv" android:layout_width="@dimen/_56pxh"/>
+                    <LinearLayout android:id="@+id/linearHeader"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/_8pxv"
+                        android:paddingEnd="@dimen/_24pxh"
+                        android:paddingStart="@dimen/_24pxh"
+                        android:paddingTop="@dimen/_8pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+                        <ImageButton
+                            android:background="@drawable/rectangle_bg_name_white_a700_border_name_gray_300_radius_20"
+                            android:id="@+id/btnIcon"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_40pxh"
+                            android:layout_width="@dimen/_40pxh"
+                            android:paddingHorizontal="@dimen/_8pxh"
+                            android:paddingVertical="@dimen/_8pxv"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_icon_primarycontainer" tools:ignore="ContentDescription"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtNotification"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@string/lbl_filters"
+                            style="@style/txtManropeextrabold18" tools:text="@string/lbl_filters"/>
+                    </LinearLayout>
+                    <com.google.android.material.tabs.TabLayout
+                        android:gravity="center_horizontal"
+                        android:id="@+id/tabLayoutTabview"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        app:tabBackground="@drawable/selector_bg_name_white_a700_radius_7"
+                        app:tabIndicatorColor="@android:color/transparent"
+                        app:tabIndicatorHeight="0dp" app:tabMode="fixed"
+                        app:tabSelectedTextColor="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+                        app:tabTextColor="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}" style="@style/groupStylenamegray_3"/>
+                </LinearLayout>
+                <androidx.viewpager2.widget.ViewPager2
+                    android:gravity="center_horizontal"
+                    android:id="@+id/viewPagerTabBarView"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" android:layout_width="match_parent"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

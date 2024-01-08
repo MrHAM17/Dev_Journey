@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearDBCounter"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:orientation="vertical">
+        <TextView android:ellipsize="end" android:gravity="end"
+            android:id="@+id/txtDBCounter"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true" android:text="@string/lbl_4_db"
+            style="@style/txtRobotoregular12_1" tools:text="@string/lbl_4_db"/>
+        <ImageView android:id="@+id/imageDB"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_298pxh"
+            android:layout_width="@dimen/_19pxh"
+            android:scaleType="fitXY" android:src="@drawable/img_1"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_1"/>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtHzCounter"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true" android:text="@string/lbl_100_hz"
+            style="@style/txtRobotoregular12_1" tools:text="@string/lbl_100_hz"/>
+    </LinearLayout>
+</layout>

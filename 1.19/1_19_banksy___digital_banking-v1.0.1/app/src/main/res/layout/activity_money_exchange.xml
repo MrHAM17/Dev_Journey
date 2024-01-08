@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearMoneyExchange"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                android:id="@+id/btnFavorite"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_favorite_onprimary" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtWelcomeBack"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_money_exchange2"
+                style="@style/txtOverpassbold20" tools:text="@string/lbl_money_exchange2"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearInputs"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_33pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_33pxv">
+            <FrameLayout android:id="@+id/frameInputs"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_91pxv" android:layout_width="@dimen/_366pxh">
+                <LinearLayout android:id="@+id/linearFrom"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtFrom"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_from"
+                        style="@style/txtOverpassregular16_4" tools:text="@string/lbl_from"/>
+                    <EditText
+                        android:background="@drawable/rectangle_border_name_gray_500"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/overpass"
+                        android:hint="@string/lbl_usd"
+                        android:id="@+id/etInputs"
+                        android:inputType="text"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_20pxv"
+                        android:paddingEnd="@dimen/_30pxh"
+                        android:paddingStart="@dimen/_30pxh"
+                        android:paddingTop="@dimen/_20pxv"
+                        android:singleLine="true"
+                        android:textColor="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                        android:textColorHint="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                        android:textFontWeight="400"
+                        android:textSize="@dimen/_18pxh"
+                        android:textStyle="normal" tools:ignore="Autofill"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearTo"
+                    android:layout_gravity="end"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTo"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_to"
+                        style="@style/txtOverpassregular16_4" tools:text="@string/lbl_to"/>
+                    <EditText
+                        android:background="@drawable/rectangle_border_name_gray_500"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/overpass"
+                        android:hint="@string/lbl_bdt"
+                        android:id="@+id/etPrice"
+                        android:inputType="text"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_20pxv"
+                        android:paddingEnd="@dimen/_30pxh"
+                        android:paddingStart="@dimen/_30pxh"
+                        android:paddingTop="@dimen/_20pxv"
+                        android:singleLine="true"
+                        android:textColor="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                        android:textColorHint="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                        android:textFontWeight="400"
+                        android:textSize="@dimen/_18pxh"
+                        android:textStyle="normal" tools:ignore="Autofill"/>
+                </LinearLayout>
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_primary_radius_20"
+                    android:id="@+id/btnTelevision"
+                    android:layout_gravity="bottom|center"
+                    android:layout_height="@dimen/_40pxh"
+                    android:layout_width="@dimen/_40pxh"
+                    android:paddingHorizontal="@dimen/_12pxh"
+                    android:paddingVertical="@dimen/_12pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_television_onprimary" tools:ignore="ContentDescription"/>
+            </FrameLayout>
+            <LinearLayout android:id="@+id/linearFrame"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtExchangeRate"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_exchange_rate"
+                    style="@style/txtOverpassextrabold24" tools:text="@string/lbl_exchange_rate"/>
+                <Spinner android:gravity="center_vertical"
+                    android:id="@+id/spinnerFavorite"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" tools:listitem="@layout/spinner_item"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearCountry"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearCountry1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtCountry"
+                        android:layout_gravity="bottom"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_country"
+                        style="@style/txtOverpasssemibold18" tools:text="@string/lbl_country"/>
+                    <FrameLayout android:id="@+id/frameSpacer"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtUSD"
+                        android:layout_gravity="top"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_usd"
+                        style="@style/txtOverpasssemibold18" tools:text="@string/lbl_usd"/>
+                    <FrameLayout android:id="@+id/frameSpacer1"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtCR"
+                        android:layout_gravity="top"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_cr"
+                        style="@style/txtOverpasssemibold18" tools:text="@string/lbl_cr"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearClose"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <FrameLayout android:id="@+id/frameFlag"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_18pxv"
+                        android:layout_width="@dimen/_24pxh" style="@style/groupStylenamegray_100_1">
+                        <ImageView android:id="@+id/imageClose"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_18pxh"
+                            android:layout_width="@dimen/_24pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_close"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_close"/>
+                    </FrameLayout>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtVietnamese"
+                        android:layout_gravity="top"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_vietnamese"
+                        style="@style/txtOverpasssemibold14" tools:text="@string/lbl_vietnamese"/>
+                    <FrameLayout android:id="@+id/frameSpacer2"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtOneThousandFourHundredThree"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_1"
+                        style="@style/txtOverpassregular16_4" tools:text="@string/lbl_1"/>
+                    <FrameLayout android:id="@+id/frameSpacer3"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtOneThousandSevenHundredFortySi"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_1_746"
+                        style="@style/txtOverpasssemibold16" tools:text="@string/lbl_1_746"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;blue_gray_100&quot;}"
+                    android:id="@+id/linePath"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_366pxh"/>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearMicrophone"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageMicrophone"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_18pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_microphone"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_microphone"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtVietnamese1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_england"
+                        style="@style/txtOverpasssemibold14" tools:text="@string/lbl_england"/>
+                    <FrameLayout android:id="@+id/frameSpacer4"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtOneThousandFourHundredThree1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_1"
+                        style="@style/txtOverpassregular16_4" tools:text="@string/lbl_1"/>
+                    <FrameLayout android:id="@+id/frameSpacer5"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtOneThousandSevenHundredFortySi1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_34_56"
+                        style="@style/txtOverpasssemibold16" tools:text="@string/lbl_34_56"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;blue_gray_100&quot;}"
+                    android:id="@+id/linePath1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_366pxh"/>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearTelevision"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageTelevision"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_18pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_television_red_a200"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_television_red_a200"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtVietnamese2"
+                        android:layout_gravity="top"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_france"
+                        style="@style/txtOverpasssemibold14" tools:text="@string/lbl_france"/>
+                    <FrameLayout android:id="@+id/frameSpacer6"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtOneThousandFourHundredThree2"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_1"
+                        style="@style/txtOverpassregular16_4" tools:text="@string/lbl_1"/>
+                    <FrameLayout android:id="@+id/frameSpacer7"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtOneThousandSevenHundredFortySi2"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_12_09"
+                        style="@style/txtOverpasssemibold16" tools:text="@string/lbl_12_09"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;blue_gray_100&quot;}"
+                    android:id="@+id/linePath2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_366pxh"/>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearTelevision1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageTelevision1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_18pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_television_light_green_a700"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_television_light_green_a700"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtVietnamese3"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_afghanistan"
+                        style="@style/txtOverpasssemibold14" tools:text="@string/lbl_afghanistan"/>
+                    <FrameLayout android:id="@+id/frameSpacer8"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtOneThousandFourHundredThree3"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_1"
+                        style="@style/txtOverpassregular16_4" tools:text="@string/lbl_1"/>
+                    <FrameLayout android:id="@+id/frameSpacer9"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtOneThousandSevenHundredFortySi3"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_1_746"
+                        style="@style/txtOverpasssemibold16" tools:text="@string/lbl_1_746"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;blue_gray_100&quot;}"
+                    android:id="@+id/linePath3"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_366pxh"/>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearPathClipped"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <FrameLayout android:id="@+id/frameFlag1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_17pxv"
+                        android:layout_width="@dimen/_23pxh" style="@style/groupStylenamegray_100_2">
+                        <ImageView android:id="@+id/imagePathClipped"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_17pxh"
+                            android:layout_width="@dimen/_23pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_path_clipped"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_path_clipped"/>
+                    </FrameLayout>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtVietnamese4"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_japan"
+                        style="@style/txtOverpasssemibold14" tools:text="@string/lbl_japan"/>
+                    <FrameLayout android:id="@+id/frameSpacer10"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtOneThousandFourHundredThree4"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_1"
+                        style="@style/txtOverpassregular16_4" tools:text="@string/lbl_1"/>
+                    <FrameLayout android:id="@+id/frameSpacer11"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtOneThousandSevenHundredFortySi4"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_2_234"
+                        style="@style/txtOverpasssemibold16" tools:text="@string/lbl_2_234"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;blue_gray_100&quot;}"
+                    android:id="@+id/linePath4"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_366pxh"/>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearThumbsUp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageThumbsUp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_18pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_thumbs_up_gray_100_01"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_thumbs_up_gray_100_01"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtVietnamese5"
+                        android:layout_gravity="top"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_korea"
+                        style="@style/txtOverpasssemibold14" tools:text="@string/lbl_korea"/>
+                    <FrameLayout android:id="@+id/frameSpacer12"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtOneThousandFourHundredThree5"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_1"
+                        style="@style/txtOverpassregular16_4" tools:text="@string/lbl_1"/>
+                    <FrameLayout android:id="@+id/frameSpacer13"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtOneThousandSevenHundredFortySi5"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_1_746"
+                        style="@style/txtOverpasssemibold16" tools:text="@string/lbl_1_746"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;blue_gray_100&quot;}"
+                    android:id="@+id/linePath5"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_366pxh"/>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearSignal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <FrameLayout android:id="@+id/frameFlag2"
+                        android:layout_gravity="bottom"
+                        android:layout_height="@dimen/_18pxv"
+                        android:layout_width="@dimen/_24pxh"
+                        android:paddingHorizontal="@dimen/_1pxh"
+                        android:paddingVertical="@dimen/_1pxv" style="@style/groupStyle{&quot;name&quot;:&quot;red_A200&quot;}cornerRadius">
+                        <ImageView android:id="@+id/imageSignal"
+                            android:layout_gravity="top|start"
+                            android:layout_height="@dimen/_7pxh"
+                            android:layout_width="@dimen/_7pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_signal"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_signal"/>
+                    </FrameLayout>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtVietnamese6"
+                        android:layout_gravity="top"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_china"
+                        style="@style/txtOverpasssemibold14" tools:text="@string/lbl_china"/>
+                    <FrameLayout android:id="@+id/frameSpacer14"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtOneThousandFourHundredThree6"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_1"
+                        style="@style/txtOverpassregular16_4" tools:text="@string/lbl_1"/>
+                    <FrameLayout android:id="@+id/frameSpacer15"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtOneThousandSevenHundredFortySi6"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/lbl_1_746"
+                        style="@style/txtOverpasssemibold16" tools:text="@string/lbl_1_746"/>
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                android:ellipsize="end"
+                android:fontFamily="@font/overpass"
+                android:gravity="center" android:id="@+id/btnEXCHANGE"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_58pxv"
+                android:layout_width="@dimen/_366pxh"
+                android:paddingBottom="@dimen/_16pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_16pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_exchange"
+                android:textAllCaps="true"
+                android:textColor="@color/{&quot;name&quot;:&quot;onPrimary&quot;}"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_20pxh"
+                android:textStyle="bold" tools:text="@string/lbl_exchange"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

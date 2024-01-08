@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearBag" android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_15pxh"
+        android:paddingVertical="@dimen/_15pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}cornerRadius">
+        <ImageButton
+            android:background="@drawable/rectangle_bg_name_gray_100_radius_8"
+            android:id="@+id/btnBag"
+            android:layout_height="@dimen/_48pxh"
+            android:layout_width="@dimen/_48pxh"
+            android:paddingHorizontal="@dimen/_8pxh"
+            android:paddingVertical="@dimen/_8pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_bag" tools:ignore="ContentDescription"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearDigitalMarketing"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDigitalMarketing"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:singleLine="true"
+                android:text="@string/lbl_ux_designer"
+                style="@style/txtPlusJakartaSansbold16" tools:text="@string/lbl_ux_designer"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtMotorola"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_4pxh"
+                android:singleLine="true"
+                android:text="@string/lbl_motorola"
+                style="@style/txtPlusJakartaSanssemibold12_1" tools:text="@string/lbl_motorola"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_4pxh"
+                android:singleLine="true"
+                android:text="@string/msg_560_12_000_month"
+                style="@style/txtPlusJakartaSansmedium12" tools:text="@string/msg_560_12_000_month"/>
+            <FrameLayout android:id="@+id/frameFulltime1"
+                android:layout_height="wrap_content" android:layout_width="wrap_content">
+                <FrameLayout
+                    android:background="@drawable/rectangle_bg_name_gray_100_radius_8"
+                    android:id="@+id/frameFulltime2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:paddingBottom="@dimen/_6pxv"
+                    android:paddingEnd="@dimen/_12pxh"
+                    android:paddingStart="@dimen/_12pxh" android:paddingTop="@dimen/_6pxv"/>
+                <FrameLayout
+                    android:background="@drawable/rectangle_bg_name_gray_100_radius_8"
+                    android:id="@+id/frameTwodaysago"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:paddingBottom="@dimen/_6pxv"
+                    android:paddingEnd="@dimen/_12pxh"
+                    android:paddingStart="@dimen/_12pxh" android:paddingTop="@dimen/_6pxv"/>
+            </FrameLayout>
+        </LinearLayout>
+        <ImageView android:id="@+id/imageUXDesigner"
+            android:layout_height="@dimen/_24pxh"
+            android:layout_width="@dimen/_24pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_component_3"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_component_3"/>
+    </LinearLayout>
+</layout>
