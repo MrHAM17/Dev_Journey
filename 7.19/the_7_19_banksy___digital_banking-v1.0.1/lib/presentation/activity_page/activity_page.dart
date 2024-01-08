@@ -1,0 +1,615 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_svg_provider/flutter_svg_provider.dart' as fs;
+import 'package:the_7_19_banksy___digital_banking/core/app_export.dart';
+import 'package:the_7_19_banksy___digital_banking/widgets/custom_elevated_button.dart';
+import 'package:the_7_19_banksy___digital_banking/widgets/custom_icon_button.dart';
+
+// ignore_for_file: must_be_immutable
+class ActivityPage extends StatelessWidget {
+  const ActivityPage({Key? key})
+      : super(
+          key: key,
+        );
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+        body: Container(
+          width: double.maxFinite,
+          decoration: AppDecoration.bg,
+          child: Column(
+            children: [
+              SizedBox(height: 40.v),
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Padding(
+                    padding: EdgeInsets.only(
+                      left: 24.h,
+                      right: 24.h,
+                      bottom: 5.v,
+                    ),
+                    child: Column(
+                      children: [
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Row(
+                            children: [
+                              CustomIconButton(
+                                height: 44.adaptSize,
+                                width: 44.adaptSize,
+                                padding: EdgeInsets.all(10.h),
+                                child: CustomImageView(
+                                  imagePath: ImageConstant.imgGrid,
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(
+                                  left: 102.h,
+                                  top: 8.v,
+                                  bottom: 9.v,
+                                ),
+                                child: Text(
+                                  "Activity",
+                                  style: theme.textTheme.titleLarge,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(height: 40.v),
+                        _buildIcome(context),
+                        SizedBox(height: 40.v),
+                        _buildTransaction(context),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  /// Section Widget
+  Widget _buildSeventyThree(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(right: 1.h),
+      child: Column(
+        children: [
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8.h),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CustomIconButton(
+                  height: 40.adaptSize,
+                  width: 40.adaptSize,
+                  padding: EdgeInsets.all(10.h),
+                  child: CustomImageView(
+                    imagePath: ImageConstant.imgCalendar,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(
+                    left: 10.h,
+                    top: 7.v,
+                    bottom: 10.v,
+                  ),
+                  child: Text(
+                    "16 – 23 Jan",
+                    style: CustomTextStyles.bodyLargeOnPrimaryContainer17,
+                  ),
+                ),
+                Spacer(),
+                CustomImageView(
+                  imagePath: ImageConstant.imgUserOnprimarycontainer,
+                  height: 24.adaptSize,
+                  width: 24.adaptSize,
+                  margin: EdgeInsets.symmetric(vertical: 8.v),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 24.v),
+          SizedBox(
+            height: 208.v,
+            width: 335.h,
+            child: Stack(
+              alignment: Alignment.topCenter,
+              children: [
+                CustomImageView(
+                  imagePath: ImageConstant.imgLine,
+                  height: 208.v,
+                  width: 264.h,
+                  alignment: Alignment.center,
+                ),
+                Align(
+                  alignment: Alignment.topCenter,
+                  child: Container(
+                    margin: EdgeInsets.only(top: 14.v),
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 103.h,
+                      vertical: 23.v,
+                    ),
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: fs.Svg(
+                          ImageConstant.imgGroup3,
+                        ),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        SizedBox(height: 32.v),
+                        CustomElevatedButton(
+                          height: 40.v,
+                          width: 90.h,
+                          text: "2,366",
+                          leftIcon: Container(
+                            padding: EdgeInsets.all(3.h),
+                            margin: EdgeInsets.only(right: 4.h),
+                            decoration: BoxDecoration(
+                              color: theme.colorScheme.onPrimary,
+                              borderRadius: BorderRadius.circular(
+                                6.h,
+                              ),
+                            ),
+                            child: CustomImageView(
+                              imagePath: ImageConstant.imgArrowup,
+                              height: 10.adaptSize,
+                              width: 10.adaptSize,
+                            ),
+                          ),
+                          buttonStyle: CustomButtonStyles.outlineBlueGray,
+                          buttonTextStyle: CustomTextStyles.bodyMediumOnPrimary,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  /// Section Widget
+  Widget _buildIcome(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 15.h),
+      decoration: AppDecoration.white,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          SizedBox(height: 24.v),
+          Padding(
+            padding: EdgeInsets.only(
+              left: 48.h,
+              right: 38.h,
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(bottom: 1.v),
+                  child: Text(
+                    "Income",
+                    style: theme.textTheme.titleLarge,
+                  ),
+                ),
+                Text(
+                  "Expenses",
+                  style: CustomTextStyles.titleLargeGray500,
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 25.v),
+          _buildSeventyThree(context),
+        ],
+      ),
+    );
+  }
+
+  /// Section Widget
+  Widget _buildTransaction(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(
+        horizontal: 24.h,
+        vertical: 23.v,
+      ),
+      decoration: AppDecoration.white,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Text(
+                "Transaction",
+                style: CustomTextStyles.headlineSmallExtraBold,
+              ),
+              Spacer(),
+              Padding(
+                padding: EdgeInsets.only(
+                  top: 8.v,
+                  bottom: 6.v,
+                ),
+                child: Text(
+                  "25 Jan",
+                  style: CustomTextStyles.labelLargeGray500,
+                ),
+              ),
+              CustomImageView(
+                imagePath: ImageConstant.imgFavoriteGray500,
+                height: 12.adaptSize,
+                width: 12.adaptSize,
+                margin: EdgeInsets.only(
+                  left: 3.h,
+                  top: 12.v,
+                  bottom: 6.v,
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 29.v),
+          Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(
+                      top: 6.v,
+                      bottom: 5.v,
+                    ),
+                    child: CustomIconButton(
+                      height: 40.adaptSize,
+                      width: 40.adaptSize,
+                      padding: EdgeInsets.all(10.h),
+                      child: CustomImageView(
+                        imagePath: ImageConstant.imgUserOnprimary,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(
+                      left: 10.h,
+                      top: 13.v,
+                      bottom: 16.v,
+                    ),
+                    child: Text(
+                      "Limit",
+                      style: CustomTextStyles.titleMediumSemiBold,
+                    ),
+                  ),
+                  Spacer(),
+                  Column(
+                    children: [
+                      Text(
+                        "105.00",
+                        style: theme.textTheme.titleLarge,
+                      ),
+                      SizedBox(height: 5.v),
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: Text(
+                          "per day",
+                          style: CustomTextStyles.bodyLarge16,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              SizedBox(height: 25.v),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 17.h),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Column(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.symmetric(horizontal: 5.h),
+                          decoration: AppDecoration.fillGray.copyWith(
+                            borderRadius: BorderRadiusStyle.roundedBorder5,
+                          ),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              SizedBox(height: 47.v),
+                              Container(
+                                height: 75.v,
+                                width: 10.h,
+                                decoration: BoxDecoration(
+                                  color: theme.colorScheme.primary,
+                                  borderRadius: BorderRadius.circular(
+                                    5.h,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(height: 11.v),
+                        Text(
+                          "17",
+                          style: CustomTextStyles.labelLargeGray700,
+                        ),
+                        SizedBox(height: 2.v),
+                        Text(
+                          "Mon",
+                          style: theme.textTheme.labelMedium,
+                        ),
+                      ],
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 25.h),
+                      child: Column(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.symmetric(horizontal: 3.h),
+                            decoration: AppDecoration.fillGray.copyWith(
+                              borderRadius: BorderRadiusStyle.roundedBorder5,
+                            ),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                SizedBox(height: 83.v),
+                                Container(
+                                  height: 39.v,
+                                  width: 10.h,
+                                  decoration: BoxDecoration(
+                                    color: theme.colorScheme.primary,
+                                    borderRadius: BorderRadius.circular(
+                                      5.h,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 11.v),
+                          Text(
+                            "18",
+                            style: CustomTextStyles.labelLargeGray700,
+                          ),
+                          SizedBox(height: 2.v),
+                          Text(
+                            "Tue",
+                            style: theme.textTheme.labelMedium,
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 25.h),
+                      child: Column(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.symmetric(horizontal: 5.h),
+                            decoration: AppDecoration.fillGray.copyWith(
+                              borderRadius: BorderRadiusStyle.roundedBorder5,
+                            ),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                SizedBox(height: 70.v),
+                                Container(
+                                  height: 52.v,
+                                  width: 10.h,
+                                  decoration: BoxDecoration(
+                                    color: theme.colorScheme.primary,
+                                    borderRadius: BorderRadius.circular(
+                                      5.h,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 11.v),
+                          Text(
+                            "19",
+                            style: CustomTextStyles.labelLargeGray700,
+                          ),
+                          SizedBox(height: 2.v),
+                          Text(
+                            "Wed",
+                            style: theme.textTheme.labelMedium,
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 25.h),
+                      child: Column(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.symmetric(horizontal: 3.h),
+                            decoration: AppDecoration.fillGray.copyWith(
+                              borderRadius: BorderRadiusStyle.roundedBorder5,
+                            ),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                SizedBox(height: 23.v),
+                                Container(
+                                  height: 99.v,
+                                  width: 10.h,
+                                  decoration: BoxDecoration(
+                                    color: theme.colorScheme.primary,
+                                    borderRadius: BorderRadius.circular(
+                                      5.h,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 11.v),
+                          Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              "20",
+                              style: CustomTextStyles.labelLargeGray700,
+                            ),
+                          ),
+                          SizedBox(height: 2.v),
+                          Text(
+                            "Thu",
+                            style: theme.textTheme.labelMedium,
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 28.h),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Align(
+                            alignment: Alignment.centerRight,
+                            child: Container(
+                              margin: EdgeInsets.only(left: 1.h),
+                              decoration: AppDecoration.fillGray.copyWith(
+                                borderRadius: BorderRadiusStyle.roundedBorder5,
+                              ),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  SizedBox(height: 57.v),
+                                  Container(
+                                    height: 65.v,
+                                    width: 10.h,
+                                    decoration: BoxDecoration(
+                                      color: theme.colorScheme.primary,
+                                      borderRadius: BorderRadius.circular(
+                                        5.h,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 11.v),
+                          Text(
+                            "21",
+                            style: CustomTextStyles.labelLargeGray700,
+                          ),
+                          SizedBox(height: 2.v),
+                          Align(
+                            alignment: Alignment.centerRight,
+                            child: Text(
+                              "Fri",
+                              style: theme.textTheme.labelMedium,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Spacer(),
+                    Column(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.symmetric(horizontal: 2.h),
+                          decoration: AppDecoration.fillGray.copyWith(
+                            borderRadius: BorderRadiusStyle.roundedBorder5,
+                          ),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [
+                              SizedBox(height: 89.v),
+                              Container(
+                                height: 33.v,
+                                width: 10.h,
+                                decoration: BoxDecoration(
+                                  color: theme.colorScheme.primary,
+                                  borderRadius: BorderRadius.circular(
+                                    5.h,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(height: 11.v),
+                        Text(
+                          "22",
+                          style: CustomTextStyles.labelLargeGray700,
+                        ),
+                        SizedBox(height: 2.v),
+                        Text(
+                          "Sat",
+                          style: theme.textTheme.labelMedium,
+                        ),
+                      ],
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 27.h),
+                      child: Column(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.symmetric(horizontal: 3.h),
+                            decoration: AppDecoration.fillGray.copyWith(
+                              borderRadius: BorderRadiusStyle.roundedBorder5,
+                            ),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                SizedBox(height: 57.v),
+                                Container(
+                                  height: 65.v,
+                                  width: 10.h,
+                                  decoration: BoxDecoration(
+                                    color: theme.colorScheme.primary,
+                                    borderRadius: BorderRadius.circular(
+                                      5.h,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: 11.v),
+                          Text(
+                            "23",
+                            style: CustomTextStyles.labelLargeGray700,
+                          ),
+                          SizedBox(height: 2.v),
+                          Text(
+                            "Sun",
+                            style: theme.textTheme.labelMedium,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}

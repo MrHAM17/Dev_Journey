@@ -1,0 +1,59 @@
+import 'package:flutter/material.dart';
+import 'package:the_7_22_first_bank___digital_banking/core/app_export.dart';
+import 'package:the_7_22_first_bank___digital_banking/widgets/custom_icon_button.dart';
+
+// ignore: must_be_immutable
+class LoansItemWidget extends StatelessWidget {
+  const LoansItemWidget({Key? key})
+      : super(
+          key: key,
+        );
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(
+        horizontal: 24.h,
+        vertical: 20.v,
+      ),
+      decoration: AppDecoration.white.copyWith(
+        borderRadius: BorderRadiusStyle.roundedBorder17,
+      ),
+      width: 221.h,
+      child: Row(
+        children: [
+          CustomIconButton(
+            height: 45.adaptSize,
+            width: 45.adaptSize,
+            padding: EdgeInsets.all(12.h),
+            decoration: IconButtonStyleHelper.fillGrayTL22,
+            child: CustomImageView(
+              imagePath: ImageConstant.imgUser32,
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(
+              left: 12.h,
+              top: 2.v,
+              bottom: 2.v,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Personal Loans",
+                  style: theme.textTheme.bodySmall,
+                ),
+                SizedBox(height: 5.v),
+                Text(
+                  "50,000",
+                  style: CustomTextStyles.titleMediumPrimary_1,
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

@@ -1,0 +1,170 @@
+import '../transfer_tab_container_screen/widgets/transfertabcontainer_item_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_svg_provider/flutter_svg_provider.dart' as fs;
+import 'package:the_7_15_safebank___mobile_banking_app/core/app_export.dart';
+import 'package:the_7_15_safebank___mobile_banking_app/presentation/transfer_page/transfer_page.dart';
+import 'package:the_7_15_safebank___mobile_banking_app/widgets/app_bar/appbar_leading_iconbutton.dart';
+import 'package:the_7_15_safebank___mobile_banking_app/widgets/app_bar/appbar_subtitle.dart';
+import 'package:the_7_15_safebank___mobile_banking_app/widgets/app_bar/appbar_trailing_iconbutton.dart';
+import 'package:the_7_15_safebank___mobile_banking_app/widgets/app_bar/custom_app_bar.dart';
+
+class TransferTabContainerScreen extends StatefulWidget {
+  const TransferTabContainerScreen({Key? key}) : super(key: key);
+
+  @override
+  TransferTabContainerScreenState createState() =>
+      TransferTabContainerScreenState();
+}
+
+// ignore_for_file: must_be_immutable
+class TransferTabContainerScreenState extends State<TransferTabContainerScreen>
+    with TickerProviderStateMixin {
+  late TabController tabviewController;
+
+  @override
+  void initState() {
+    super.initState();
+    tabviewController = TabController(length: 3, vsync: this);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+        child: Scaffold(
+            appBar: _buildAppBar(context),
+            body: SizedBox(
+                width: double.maxFinite,
+                child: Column(children: [
+                  SizedBox(height: 30.v),
+                  _buildTransferTabContainer(context),
+                  SizedBox(height: 12.v),
+                  Text("Alex Dordan", style: CustomTextStyles.titleMedium18),
+                  SizedBox(height: 1.v),
+                  Text("Web Developer", style: theme.textTheme.labelMedium),
+                  SizedBox(height: 28.v),
+                  _buildContrast(context),
+                  SizedBox(height: 51.v),
+                  Container(
+                      height: 30.v,
+                      width: 210.h,
+                      child: TabBar(
+                          controller: tabviewController,
+                          labelPadding: EdgeInsets.zero,
+                          labelColor: appTheme.whiteA700,
+                          labelStyle: TextStyle(
+                              fontSize: 12.fSize,
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w500),
+                          unselectedLabelColor: appTheme.black900,
+                          unselectedLabelStyle: TextStyle(
+                              fontSize: 12.fSize,
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w500),
+                          indicator: BoxDecoration(
+                              color: theme.colorScheme.primary,
+                              borderRadius: BorderRadius.circular(7.h),
+                              boxShadow: [
+                                BoxShadow(
+                                    color: theme.colorScheme.onError,
+                                    spreadRadius: 2.h,
+                                    blurRadius: 2.h,
+                                    offset: Offset(0, 4))
+                              ]),
+                          tabs: [
+                            Tab(child: Text("EUR")),
+                            Tab(child: Text("USD")),
+                            Tab(child: Text("GBP"))
+                          ])),
+                  _buildTabBarView(context)
+                ]))));
+  }
+
+  /// Section Widget
+  PreferredSizeWidget _buildAppBar(BuildContext context) {
+    return CustomAppBar(
+        leadingWidth: 59.h,
+        leading: AppbarLeadingIconbutton(
+            imagePath: ImageConstant.imgArrowLeftBlack900,
+            margin: EdgeInsets.only(left: 24.h, top: 8.v, bottom: 7.v),
+            onTap: () {
+              onTapArrowLeft(context);
+            }),
+        centerTitle: true,
+        title: AppbarSubtitle(text: "Transfer"),
+        actions: [
+          AppbarTrailingIconbutton(
+              imagePath: ImageConstant.imgUser,
+              margin: EdgeInsets.fromLTRB(24.h, 7.v, 24.h, 8.v))
+        ]);
+  }
+
+  /// Section Widget
+  Widget _buildTransferTabContainer(BuildContext context) {
+    return Align(
+        alignment: Alignment.centerLeft,
+        child: SizedBox(
+            height: 80.v,
+            child: ListView.separated(
+                scrollDirection: Axis.horizontal,
+                separatorBuilder: (context, index) {
+                  return SizedBox(width: 24.h);
+                },
+                itemCount: 5,
+                itemBuilder: (context, index) {
+                  return TransfertabcontainerItemWidget();
+                })));
+  }
+
+  /// Section Widget
+  Widget _buildContrast(BuildContext context) {
+    return Container(
+        width: 325.h,
+        margin: EdgeInsets.symmetric(horizontal: 25.h),
+        padding: EdgeInsets.symmetric(horizontal: 44.h, vertical: 49.v),
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: fs.Svg(ImageConstant.imgGroup199), fit: BoxFit.cover)),
+        child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              CustomImageView(
+                  imagePath: ImageConstant.imgContrastWhiteA700,
+                  height: 23.v,
+                  width: 36.h,
+                  margin: EdgeInsets.only(bottom: 18.v)),
+              CustomImageView(
+                  imagePath: ImageConstant.img1,
+                  height: 4.v,
+                  width: 32.h,
+                  margin: EdgeInsets.only(left: 20.h, top: 10.v, bottom: 27.v)),
+              CustomImageView(
+                  imagePath: ImageConstant.img1,
+                  height: 4.v,
+                  width: 32.h,
+                  margin: EdgeInsets.only(left: 10.h, top: 10.v, bottom: 27.v)),
+              Padding(
+                  padding: EdgeInsets.only(left: 10.h, top: 3.v, bottom: 22.v),
+                  child: Text("4023",
+                      style: CustomTextStyles.labelMediumWhiteA700_1)),
+              Padding(
+                  padding: EdgeInsets.only(left: 8.h, top: 3.v, bottom: 22.v),
+                  child: Text("5534",
+                      style: CustomTextStyles.labelMediumWhiteA700_1))
+            ]));
+  }
+
+  /// Section Widget
+  Widget _buildTabBarView(BuildContext context) {
+    return SizedBox(
+        height: 303.v,
+        child: TabBarView(
+            controller: tabviewController,
+            children: [TransferPage(), TransferPage(), TransferPage()]));
+  }
+
+  /// Navigates back to the previous screen.
+  onTapArrowLeft(BuildContext context) {
+    Navigator.pop(context);
+  }
+}

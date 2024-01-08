@@ -1,0 +1,210 @@
+import 'package:flutter/material.dart';
+import 'package:the_7_15_safebank___mobile_banking_app/core/app_export.dart';
+import 'package:the_7_15_safebank___mobile_banking_app/widgets/custom_elevated_button.dart';
+
+// ignore_for_file: must_be_immutable
+class StatisticsPage extends StatefulWidget {
+  const StatisticsPage({Key? key})
+      : super(
+          key: key,
+        );
+
+  @override
+  StatisticsPageState createState() => StatisticsPageState();
+}
+
+class StatisticsPageState extends State<StatisticsPage>
+    with AutomaticKeepAliveClientMixin<StatisticsPage> {
+  @override
+  bool get wantKeepAlive => true;
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+        body: Container(
+          width: double.maxFinite,
+          decoration: AppDecoration.white,
+          child: Column(
+            children: [
+              SizedBox(height: 40.v),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 24.h),
+                child: Column(
+                  children: [
+                    _buildChat(context),
+                    SizedBox(height: 33.v),
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: 43.h),
+                      padding: EdgeInsets.all(5.h),
+                      decoration: AppDecoration.fillGray.copyWith(
+                        borderRadius: BorderRadiusStyle.roundedBorder10,
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          CustomElevatedButton(
+                            height: 40.v,
+                            width: 115.h,
+                            text: "Income",
+                            buttonStyle: CustomButtonStyles.fillPrimaryTL7,
+                            buttonTextStyle:
+                                CustomTextStyles.titleSmallWhiteA700,
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(
+                              left: 28.h,
+                              top: 11.v,
+                              bottom: 7.v,
+                            ),
+                            child: Text(
+                              "Expense",
+                              style: theme.textTheme.titleSmall,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 22.v),
+                    _buildTabBarView(context),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  /// Section Widget
+  Widget _buildChat(BuildContext context) {
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: EdgeInsets.only(
+                top: 4.v,
+                bottom: 3.v,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(left: 1.h),
+                    child: Text(
+                      "SUN",
+                      style: theme.textTheme.labelMedium,
+                    ),
+                  ),
+                  SizedBox(height: 8.v),
+                  Text(
+                    "MON",
+                    style: theme.textTheme.labelMedium,
+                  ),
+                  SizedBox(height: 8.v),
+                  Padding(
+                    padding: EdgeInsets.only(left: 1.h),
+                    child: Text(
+                      "TUE",
+                      style: theme.textTheme.labelMedium,
+                    ),
+                  ),
+                  SizedBox(height: 7.v),
+                  Padding(
+                    padding: EdgeInsets.only(left: 1.h),
+                    child: Text(
+                      "WED",
+                      style: theme.textTheme.labelMedium,
+                    ),
+                  ),
+                  SizedBox(height: 8.v),
+                  Padding(
+                    padding: EdgeInsets.only(left: 1.h),
+                    child: Text(
+                      "THU",
+                      style: theme.textTheme.labelMedium,
+                    ),
+                  ),
+                  SizedBox(height: 6.v),
+                  Padding(
+                    padding: EdgeInsets.only(left: 1.h),
+                    child: Text(
+                      "FRI",
+                      style: theme.textTheme.labelMedium,
+                    ),
+                  ),
+                  SizedBox(height: 8.v),
+                  Padding(
+                    padding: EdgeInsets.only(left: 1.h),
+                    child: Text(
+                      "SAT",
+                      style: theme.textTheme.labelMedium,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            CustomImageView(
+              imagePath: ImageConstant.imgGraph,
+              height: 161.v,
+              width: 291.h,
+              margin: EdgeInsets.only(left: 11.h),
+            ),
+          ],
+        ),
+        SizedBox(height: 9.v),
+        Align(
+          alignment: Alignment.centerRight,
+          child: Padding(
+            padding: EdgeInsets.only(
+              left: 31.h,
+              right: 6.h,
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "0",
+                  style: theme.textTheme.labelMedium,
+                ),
+                Text(
+                  "20",
+                  style: theme.textTheme.labelMedium,
+                ),
+                Text(
+                  "40",
+                  style: theme.textTheme.labelMedium,
+                ),
+                Text(
+                  "60",
+                  style: theme.textTheme.labelMedium,
+                ),
+                Text(
+                  "80",
+                  style: theme.textTheme.labelMedium,
+                ),
+                Text(
+                  "100",
+                  style: theme.textTheme.labelMedium,
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  /// Section Widget
+  Widget _buildTabBarView(BuildContext context) {
+    return Container(
+      height: 155.v,
+      child: TabBarView(
+        controller: tabController,
+        children: [],
+      ),
+    );
+  }
+}

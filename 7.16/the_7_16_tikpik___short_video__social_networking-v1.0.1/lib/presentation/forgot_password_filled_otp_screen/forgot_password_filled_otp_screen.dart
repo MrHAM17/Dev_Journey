@@ -1,0 +1,13 @@
+import 'package:flutter/material.dart';import 'package:the_7_16_tikpik___short_video__social_networking/core/app_export.dart';import 'package:the_7_16_tikpik___short_video__social_networking/widgets/app_bar/appbar_leading_image.dart';import 'package:the_7_16_tikpik___short_video__social_networking/widgets/app_bar/appbar_title.dart';import 'package:the_7_16_tikpik___short_video__social_networking/widgets/app_bar/custom_app_bar.dart';import 'package:the_7_16_tikpik___short_video__social_networking/widgets/custom_elevated_button.dart';import 'package:the_7_16_tikpik___short_video__social_networking/widgets/custom_pin_code_text_field.dart';class ForgotPasswordFilledOtpScreen extends StatelessWidget {const ForgotPasswordFilledOtpScreen({Key? key}) : super(key: key);
+
+@override Widget build(BuildContext context) { return SafeArea(child: Scaffold(resizeToAvoidBottomInset: false, appBar: _buildAppBar(context), body: Container(width: double.maxFinite, padding: EdgeInsets.symmetric(horizontal: 24.h), child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [SizedBox(height: 20.v), Text("Code has been send to +1 111 ******99", style: CustomTextStyles.titleMediumMedium), SizedBox(height: 61.v), CustomPinCodeTextField(context: context, onChanged: (value) {}), SizedBox(height: 61.v), RichText(text: TextSpan(children: [TextSpan(text: "Resend code in ", style: CustomTextStyles.titleMediumMedium_1), TextSpan(text: "53", style: CustomTextStyles.titleMediumPrimaryMedium), TextSpan(text: " s", style: CustomTextStyles.titleMediumMedium_1)]), textAlign: TextAlign.left)])), bottomNavigationBar: _buildVerify(context))); } 
+/// Section Widget
+PreferredSizeWidget _buildAppBar(BuildContext context) { return CustomAppBar(height: 51.v, leadingWidth: 52.h, leading: AppbarLeadingImage(imagePath: ImageConstant.imgArrowDown, margin: EdgeInsets.only(left: 24.h, top: 10.v, bottom: 13.v), onTap: () {onTapArrowDown(context);}), title: AppbarTitle(text: "Forgot Password", margin: EdgeInsets.only(left: 16.h))); } 
+/// Section Widget
+Widget _buildVerify(BuildContext context) { return CustomElevatedButton(text: "Verify", margin: EdgeInsets.only(left: 24.h, right: 24.h, bottom: 48.v), buttonStyle: CustomButtonStyles.fillPrimary, buttonTextStyle: CustomTextStyles.titleMediumOnErrorContainer16, onPressed: () {onTapVerify(context);}); } 
+
+/// Navigates back to the previous screen.
+onTapArrowDown(BuildContext context) { Navigator.pop(context); } 
+/// Navigates to the createNewPasswordScreen when the action is triggered.
+onTapVerify(BuildContext context) { Navigator.pushNamed(context, AppRoutes.createNewPasswordScreen); } 
+ }
