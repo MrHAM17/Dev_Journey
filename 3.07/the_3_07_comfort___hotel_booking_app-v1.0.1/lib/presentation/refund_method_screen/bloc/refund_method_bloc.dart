@@ -1,0 +1,7 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/refundmethod_item_model.dart';import 'package:the_3_07_comfort___hotel_booking_app/presentation/refund_method_screen/models/refund_method_model.dart';part 'refund_method_event.dart';part 'refund_method_state.dart';/// A bloc that manages the state of a RefundMethod according to the event that is dispatched to it.
+class RefundMethodBloc extends Bloc<RefundMethodEvent, RefundMethodState> {RefundMethodBloc(RefundMethodState initialState) : super(initialState) { on<RefundMethodInitialEvent>(_onInitialize); }
+
+_onInitialize(RefundMethodInitialEvent event, Emitter<RefundMethodState> emit, ) async  { emit(state.copyWith(refundMethodModelObj: state.refundMethodModelObj?.copyWith(refundmethodItemList: fillRefundmethodItemList())));// TODO: implement Actions
+ } 
+List<RefundmethodItemModel> fillRefundmethodItemList() { return [RefundmethodItemModel(paypal: ImageConstant.imgFrameLightBlue600, paypal1: "Paypal", paypal2: ImageConstant.imgContrastPrimary20x20), RefundmethodItemModel(paypal: ImageConstant.imgFrame, paypal1: "Google Pay", paypal2: ImageConstant.imgContrastPrimary20x20), RefundmethodItemModel(paypal: ImageConstant.imgFrameWhiteA70032x32, paypal1: "Apple Pay", paypal2: ImageConstant.imgContrastPrimary20x20), RefundmethodItemModel(paypal: ImageConstant.imgImage27x44, paypal1: "•••• •••• •••• •••• 4679")]; } 
+ }

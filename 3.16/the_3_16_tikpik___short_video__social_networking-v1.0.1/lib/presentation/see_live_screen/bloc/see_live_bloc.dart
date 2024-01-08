@@ -1,0 +1,6 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/seelive_item_model.dart';import 'package:the_3_16_tikpik___short_video__social_networking/presentation/see_live_screen/models/see_live_model.dart';part 'see_live_event.dart';part 'see_live_state.dart';/// A bloc that manages the state of a SeeLive according to the event that is dispatched to it.
+class SeeLiveBloc extends Bloc<SeeLiveEvent, SeeLiveState> {SeeLiveBloc(SeeLiveState initialState) : super(initialState) { on<SeeLiveInitialEvent>(_onInitialize); }
+
+_onInitialize(SeeLiveInitialEvent event, Emitter<SeeLiveState> emit, ) async  { emit(state.copyWith(seeLiveModelObj: state.seeLiveModelObj?.copyWith(seeliveItemList: fillSeeliveItemList()))); } 
+List<SeeliveItemModel> fillSeeliveItemList() { return [SeeliveItemModel(darylNehls: "Daryl Nehls", woohoooo: "woohoooo"), SeeliveItemModel(darylNehls: "Alfonzo Schuessler", woohoooo: "How are you?"), SeeliveItemModel(darylNehls: "Tynisha Obey", woohoooo: "I'd like if we could elaborate more on this."), SeeliveItemModel(darylNehls: "Kylee Danford", woohoooo: "Wow, this is really epic"), SeeliveItemModel(darylNehls: "Benny Spanbauer", woohoooo: "Haha that's terrifying 😂"), SeeliveItemModel(woohoooo: "Augustina Midgett")]; } 
+ }

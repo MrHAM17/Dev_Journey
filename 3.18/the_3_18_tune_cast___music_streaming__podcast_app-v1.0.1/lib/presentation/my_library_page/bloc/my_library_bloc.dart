@@ -1,0 +1,6 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/frame2_item_model.dart';import 'package:the_3_18_tune_cast___music_streaming__podcast_app/presentation/my_library_page/models/my_library_model.dart';part 'my_library_event.dart';part 'my_library_state.dart';/// A bloc that manages the state of a MyLibrary according to the event that is dispatched to it.
+class MyLibraryBloc extends Bloc<MyLibraryEvent, MyLibraryState> {MyLibraryBloc(MyLibraryState initialState) : super(initialState) { on<MyLibraryInitialEvent>(_onInitialize); }
+
+_onInitialize(MyLibraryInitialEvent event, Emitter<MyLibraryState> emit, ) async  { emit(state.copyWith(myLibraryModelObj: state.myLibraryModelObj?.copyWith(frame2ItemList: fillFrame2ItemList())));NavigatorService.pushNamed(AppRoutes.playlistsScreen, );NavigatorService.pushNamed(AppRoutes.downloadsScreen, ); } 
+List<Frame2ItemModel> fillFrame2ItemList() { return [Frame2ItemModel(theJordanHarb: ImageConstant.imgImage31, billSullivan: "The Jordan Harb..."), Frame2ItemModel(theJordanHarb: ImageConstant.imgImage32, billSullivan: "Apple Talk"), Frame2ItemModel(theJordanHarb: ImageConstant.imgImage33, billSullivan: "Dr. Death")]; } 
+ }

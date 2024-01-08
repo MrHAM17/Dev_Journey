@@ -1,0 +1,9 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/hotels_item_model.dart';import '../models/sixty_item_model.dart';import 'package:the_3_07_comfort___hotel_booking_app/presentation/home_screen_page/models/home_screen_model.dart';part 'home_screen_event.dart';part 'home_screen_state.dart';/// A bloc that manages the state of a HomeScreen according to the event that is dispatched to it.
+class HomeScreenBloc extends Bloc<HomeScreenEvent, HomeScreenState> {HomeScreenBloc(HomeScreenState initialState) : super(initialState) { on<HomeScreenInitialEvent>(_onInitialize); }
+
+_onInitialize(HomeScreenInitialEvent event, Emitter<HomeScreenState> emit, ) async  { emit(state.copyWith(homeScreenModelObj: state.homeScreenModelObj?.copyWith(hotelsItemList: fillHotelsItemList(), sixtyItemList: fillSixtyItemList())));// TODO: implement Actions
+NavigatorService.pushNamed(AppRoutes.searchPage, );// TODO: implement Actions
+NavigatorService.pushNamed(AppRoutes.profileSettingsPage, ); } 
+List<HotelsItemModel> fillHotelsItemList() { return [HotelsItemModel(image: ImageConstant.imgRectangle3, emeraldaDeHotel: "Emeralda De Hotel", parisFrance: "Paris, France", price: "29", perNight: "/ per night"), HotelsItemModel(image: ImageConstant.imgRectangle3400x300, emeraldaDeHotel: "Emeralda De Hotel", parisFrance: "Paris, France", price: "29", perNight: "/ per night")]; } 
+List<SixtyItemModel> fillSixtyItemList() { return [SixtyItemModel(martinezCannes: ImageConstant.imgRectangle4, presidentHotel: "Martinez Cannes", parisFrance: "Paris, France", fortyEight: "4.8", reviews: "(4,378 reviews)", price: "32", night: "/ night"), SixtyItemModel(martinezCannes: ImageConstant.imgRectangle41, presidentHotel: "Palazzo Versace", parisFrance: "Paris, France", fortyEight: "4.8", reviews: "(4,378 reviews)", price: "36", night: "/ night")]; } 
+ }

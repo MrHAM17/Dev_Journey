@@ -1,0 +1,6 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/subscribe_item_model.dart';import 'package:the_3_18_tune_cast___music_streaming__podcast_app/presentation/subscribe_screen/models/subscribe_model.dart';part 'subscribe_event.dart';part 'subscribe_state.dart';/// A bloc that manages the state of a Subscribe according to the event that is dispatched to it.
+class SubscribeBloc extends Bloc<SubscribeEvent, SubscribeState> {SubscribeBloc(SubscribeState initialState) : super(initialState) { on<SubscribeInitialEvent>(_onInitialize); }
+
+_onInitialize(SubscribeInitialEvent event, Emitter<SubscribeState> emit, ) async  { emit(state.copyWith(subscribeModelObj: state.subscribeModelObj?.copyWith(subscribeItemList: fillSubscribeItemList()))); } 
+List<SubscribeItemModel> fillSubscribeItemList() { return [SubscribeItemModel(price: "9.99", month: "/month", listeningWithBetter: "Listening with better audio quality", listeningWithout: "Listening without restrictions & ads", shufflePlayDownload: "Shuffle play & download unlimited"), SubscribeItemModel(price: "19.99", month: "/3 months", listeningWithBetter: "Listening with better audio quality", listeningWithout: "Listening without restrictions & ads", shufflePlayDownload: "Shuffle play & download unlimited")]; } 
+ }

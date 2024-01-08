@@ -1,0 +1,6 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/preferable_item_model.dart';import 'package:the_3_17_housit___buyrentsell_property/presentation/preferable_screen/models/preferable_model.dart';part 'preferable_event.dart';part 'preferable_state.dart';/// A bloc that manages the state of a Preferable according to the event that is dispatched to it.
+class PreferableBloc extends Bloc<PreferableEvent, PreferableState> {PreferableBloc(PreferableState initialState) : super(initialState) { on<PreferableInitialEvent>(_onInitialize); }
+
+_onInitialize(PreferableInitialEvent event, Emitter<PreferableState> emit, ) async  { emit(state.copyWith(preferableModelObj: state.preferableModelObj?.copyWith(preferableItemList: fillPreferableItemList()))); } 
+List<PreferableItemModel> fillPreferableItemList() { return [PreferableItemModel(house: ImageConstant.imgShape43, house1: "House"), PreferableItemModel(house: ImageConstant.imgShape44, house1: "Apartment"), PreferableItemModel(house: ImageConstant.imgShape45, house1: "Villa"), PreferableItemModel(house: ImageConstant.imgShape46, house1: "Cottage"), PreferableItemModel(house: ImageConstant.imgShape47, house1: "House"), PreferableItemModel(house: ImageConstant.imgShape48, house1: "House")]; } 
+ }

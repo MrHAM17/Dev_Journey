@@ -1,0 +1,7 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import 'package:the_3_16_tikpik___short_video__social_networking/presentation/sign_in_blank_form_screen/models/sign_in_blank_form_model.dart';part 'sign_in_blank_form_event.dart';part 'sign_in_blank_form_state.dart';/// A bloc that manages the state of a SignInBlankForm according to the event that is dispatched to it.
+class SignInBlankFormBloc extends Bloc<SignInBlankFormEvent, SignInBlankFormState> {SignInBlankFormBloc(SignInBlankFormState initialState) : super(initialState) { on<SignInBlankFormInitialEvent>(_onInitialize); on<ChangePasswordVisibilityEvent>(_changePasswordVisibility); on<ChangeCheckBoxEvent>(_changeCheckBox); }
+
+_changePasswordVisibility(ChangePasswordVisibilityEvent event, Emitter<SignInBlankFormState> emit, ) { emit(state.copyWith(isShowPassword: event.value)); } 
+_changeCheckBox(ChangeCheckBoxEvent event, Emitter<SignInBlankFormState> emit, ) { emit(state.copyWith(rememberme: event.value)); } 
+_onInitialize(SignInBlankFormInitialEvent event, Emitter<SignInBlankFormState> emit, ) async  { emit(state.copyWith(emailController: TextEditingController(), passwordController: TextEditingController(), isShowPassword: true, rememberme: false));NavigatorService.pushNamed(AppRoutes.forgotPasswordMethodsScreen, );NavigatorService.pushNamed(AppRoutes.chooseYourInterestScreen, ); } 
+ }

@@ -1,0 +1,6 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/autolayoutvertical6_item_model.dart';import 'package:the_3_16_tikpik___short_video__social_networking/presentation/profile_two_page/models/profile_two_model.dart';part 'profile_two_event.dart';part 'profile_two_state.dart';/// A bloc that manages the state of a ProfileTwo according to the event that is dispatched to it.
+class ProfileTwoBloc extends Bloc<ProfileTwoEvent, ProfileTwoState> {ProfileTwoBloc(ProfileTwoState initialState) : super(initialState) { on<ProfileTwoInitialEvent>(_onInitialize); }
+
+_onInitialize(ProfileTwoInitialEvent event, Emitter<ProfileTwoState> emit, ) async  { emit(state.copyWith(profileTwoModelObj: state.profileTwoModelObj?.copyWith(autolayoutvertical6ItemList: fillAutolayoutvertical6ItemList())));NavigatorService.pushNamed(AppRoutes.settingsScreen, ); } 
+List<Autolayoutvertical6ItemModel> fillAutolayoutvertical6ItemList() { return [Autolayoutvertical6ItemModel(k: ImageConstant.imgImage72, k1: ImageConstant.imgOverflowmenuPrimary, k2: "367.5K", k3: ImageConstant.imgImage73, overflowMenu: ImageConstant.imgOverflowMenuPrimary16x16, k4: "837.9K")]; } 
+ }

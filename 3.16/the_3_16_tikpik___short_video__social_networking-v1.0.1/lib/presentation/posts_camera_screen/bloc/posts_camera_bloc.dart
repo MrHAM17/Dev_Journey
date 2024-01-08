@@ -1,0 +1,7 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/autolayouthorizontal5_item_model.dart';import 'package:the_3_16_tikpik___short_video__social_networking/presentation/posts_camera_screen/models/posts_camera_model.dart';part 'posts_camera_event.dart';part 'posts_camera_state.dart';/// A bloc that manages the state of a PostsCamera according to the event that is dispatched to it.
+class PostsCameraBloc extends Bloc<PostsCameraEvent, PostsCameraState> {PostsCameraBloc(PostsCameraState initialState) : super(initialState) { on<PostsCameraInitialEvent>(_onInitialize); on<UpdateChipViewEvent>(_updateChipView); }
+
+_onInitialize(PostsCameraInitialEvent event, Emitter<PostsCameraState> emit, ) async  { emit(state.copyWith(postsCameraModelObj: state.postsCameraModelObj?.copyWith(autolayouthorizontal5ItemList: fillAutolayouthorizontal5ItemList()))); } 
+_updateChipView(UpdateChipViewEvent event, Emitter<PostsCameraState> emit, ) { List<Autolayouthorizontal5ItemModel> newList = List<Autolayouthorizontal5ItemModel>.from(state.postsCameraModelObj!.autolayouthorizontal5ItemList); newList[event.index] = newList[event.index].copyWith(isSelected: event.isSelected); emit(state.copyWith(postsCameraModelObj: state.postsCameraModelObj?.copyWith(autolayouthorizontal5ItemList: newList))); } 
+List<Autolayouthorizontal5ItemModel> fillAutolayouthorizontal5ItemList() { return List.generate(3, (index) => Autolayouthorizontal5ItemModel()); } 
+ }
