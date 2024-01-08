@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/soundused_item_model.dart';import 'package:the_6_16_tikpik___short_video__social_networking/presentation/sound_used_screen/models/sound_used_model.dart';part 'sound_used_state.dart';final soundUsedNotifier = StateNotifierProvider<SoundUsedNotifier, SoundUsedState>((ref) => SoundUsedNotifier(SoundUsedState(soundUsedModelObj: SoundUsedModel(soundusedItemList: [SoundusedItemModel(image: ImageConstant.imgImage200x121), SoundusedItemModel(image: ImageConstant.imgImage200x120), SoundusedItemModel(image: ImageConstant.imgImage1), SoundusedItemModel(image: ImageConstant.imgImage2), SoundusedItemModel(image: ImageConstant.imgImage3), SoundusedItemModel(image: ImageConstant.imgImage4)]))));
+/// A notifier that manages the state of a SoundUsed according to the event that is dispatched to it.
+class SoundUsedNotifier extends StateNotifier<SoundUsedState> {SoundUsedNotifier(SoundUsedState state) : super(state);
+
+ }

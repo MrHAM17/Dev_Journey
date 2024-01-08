@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/songplayoverscreen_item_model.dart';import 'package:the_6_18_tune_cast___music_streaming__podcast_app/presentation/song_play_over_screen_page/models/song_play_over_screen_model.dart';part 'song_play_over_screen_state.dart';final songPlayOverScreenNotifier = StateNotifierProvider<SongPlayOverScreenNotifier, SongPlayOverScreenState>((ref) => SongPlayOverScreenNotifier(SongPlayOverScreenState(songPlayOverScreenModelObj: SongPlayOverScreenModel(songplayoverscreenItemList: [SongplayoverscreenItemModel(image: ImageConstant.imgImage60, songTitle: "Starboy", details: "The Weeknd, Daft Punk", image1: ImageConstant.imgIconlyBoldPlayOnprimarycontainer, image2: ImageConstant.imgCategoriesMore)]))));
+/// A notifier that manages the state of a SongPlayOverScreen according to the event that is dispatched to it.
+class SongPlayOverScreenNotifier extends StateNotifier<SongPlayOverScreenState> {SongPlayOverScreenNotifier(SongPlayOverScreenState state) : super(state);
+
+ }

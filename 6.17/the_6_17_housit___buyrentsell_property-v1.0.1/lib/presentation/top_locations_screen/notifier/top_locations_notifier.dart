@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/data_item_model.dart';import 'package:the_6_17_housit___buyrentsell_property/presentation/top_locations_screen/models/top_locations_model.dart';part 'top_locations_state.dart';final topLocationsNotifier = StateNotifierProvider<TopLocationsNotifier, TopLocationsState>((ref) => TopLocationsNotifier(TopLocationsState(topLocationsModelObj: TopLocationsModel(dataItemList: [DataItemModel(bali: ImageConstant.imgShape174x144, bali1: "Bali"), DataItemModel(bali: ImageConstant.imgShape5, bali1: "Jakarta"), DataItemModel(bali: ImageConstant.imgShape6, bali1: "Yogyakarta"), DataItemModel(bali: ImageConstant.imgShape7, bali1: "Semarang"), DataItemModel(bali: ImageConstant.imgShape8, bali1: "Jakarta"), DataItemModel(bali: ImageConstant.imgShape9, bali1: "Jakarta")]))));
+/// A notifier that manages the state of a TopLocations according to the event that is dispatched to it.
+class TopLocationsNotifier extends StateNotifier<TopLocationsState> {TopLocationsNotifier(TopLocationsState state) : super(state);
+
+ }

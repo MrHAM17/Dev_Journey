@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import 'package:the_6_17_housit___buyrentsell_property/presentation/top_agents_profile_detail_tab_container_screen/models/top_agents_profile_detail_tab_container_model.dart';part 'top_agents_profile_detail_tab_container_state.dart';final topAgentsProfileDetailTabContainerNotifier = StateNotifierProvider<TopAgentsProfileDetailTabContainerNotifier, TopAgentsProfileDetailTabContainerState>((ref) => TopAgentsProfileDetailTabContainerNotifier(TopAgentsProfileDetailTabContainerState(topAgentsProfileDetailTabContainerModelObj: TopAgentsProfileDetailTabContainerModel())));
+/// A notifier that manages the state of a TopAgentsProfileDetailTabContainer according to the event that is dispatched to it.
+class TopAgentsProfileDetailTabContainerNotifier extends StateNotifier<TopAgentsProfileDetailTabContainerState> {TopAgentsProfileDetailTabContainerNotifier(TopAgentsProfileDetailTabContainerState state) : super(state);
+
+ }

@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/homealarm_item_model.dart';import 'package:the_6_21_vertex___real_estate_app/presentation/home_alarm_page/models/home_alarm_model.dart';part 'home_alarm_state.dart';final homeAlarmNotifier = StateNotifierProvider<HomeAlarmNotifier, HomeAlarmState>((ref) => HomeAlarmNotifier(HomeAlarmState(searchController: TextEditingController(), homeAlarmModelObj: HomeAlarmModel(homealarmItemList: [HomealarmItemModel(mightyCincoFamily: "Mighty Cinco Family", stCelinaDelaware: "St. Celina, Delaware 10299", jan: ImageConstant.imgCalendar, jan1: "Jan 1, 2021", pm: ImageConstant.imgClock, time: "4:00 PM", mightyCincoFamily1: ImageConstant.imgAvatar, buyerSAgent: "Buyer’s Agent", leslieAlexander: "Leslie Alexander")]))));
+/// A notifier that manages the state of a HomeAlarm according to the event that is dispatched to it.
+class HomeAlarmNotifier extends StateNotifier<HomeAlarmState> {HomeAlarmNotifier(HomeAlarmState state) : super(state);
+
+ }

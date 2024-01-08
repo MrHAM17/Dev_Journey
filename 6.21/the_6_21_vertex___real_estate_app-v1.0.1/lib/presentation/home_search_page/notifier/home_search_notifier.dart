@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/homesearch_item_model.dart';import 'package:the_6_21_vertex___real_estate_app/presentation/home_search_page/models/home_search_model.dart';part 'home_search_state.dart';final homeSearchNotifier = StateNotifierProvider<HomeSearchNotifier, HomeSearchState>((ref) => HomeSearchNotifier(HomeSearchState(searchController: TextEditingController(), homeSearchModelObj: HomeSearchModel(homesearchItemList: [HomesearchItemModel(mightyCincoFamily: ImageConstant.imgImg40x40, mightyCincoFamily1: "Mighty Cinco Family"), HomesearchItemModel(mightyCincoFamily: ImageConstant.imgImg5, mightyCincoFamily1: "Casablanca Ground"), HomesearchItemModel(mightyCincoFamily: ImageConstant.imgImg6, mightyCincoFamily1: "Primary Apartment")]))));
+/// A notifier that manages the state of a HomeSearch according to the event that is dispatched to it.
+class HomeSearchNotifier extends StateNotifier<HomeSearchState> {HomeSearchNotifier(HomeSearchState state) : super(state);
+
+ }

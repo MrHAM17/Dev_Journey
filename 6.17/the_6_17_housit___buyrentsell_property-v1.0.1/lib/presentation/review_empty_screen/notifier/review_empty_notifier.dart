@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/cardlist_item_model.dart';import 'package:the_6_17_housit___buyrentsell_property/presentation/review_empty_screen/models/review_empty_model.dart';part 'review_empty_state.dart';final reviewEmptyNotifier = StateNotifierProvider<ReviewEmptyNotifier, ReviewEmptyState>((ref) => ReviewEmptyNotifier(ReviewEmptyState(formDateEmptyController: TextEditingController(), formDateEmptyController1: TextEditingController(), televisionController: TextEditingController(), reviewEmptyModelObj: ReviewEmptyModel(cardlistItemList: [CardlistItemModel(text: "•••••••• 1222", balance: "Balance", price: " 31,250", balance1: ImageConstant.imgUser), CardlistItemModel(text: "•••••••• 1542", balance: "Balance", price: " 54,200", balance1: ImageConstant.imgSettings)]))));
+/// A notifier that manages the state of a ReviewEmpty according to the event that is dispatched to it.
+class ReviewEmptyNotifier extends StateNotifier<ReviewEmptyState> {ReviewEmptyNotifier(ReviewEmptyState state) : super(state);
+
+ }

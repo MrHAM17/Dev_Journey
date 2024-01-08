@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/addreviewfill_item_model.dart';import 'package:the_6_17_housit___buyrentsell_property/presentation/add_review_fill_screen/models/add_review_fill_model.dart';part 'add_review_fill_state.dart';final addReviewFillNotifier = StateNotifierProvider<AddReviewFillNotifier, AddReviewFillState>((ref) => AddReviewFillNotifier(AddReviewFillState(formTextareaController: TextEditingController(), addReviewFillModelObj: AddReviewFillModel(addreviewfillItemList: [AddreviewfillItemModel(shape: ImageConstant.imgShape50, iconClose: ImageConstant.imgIconCloseWhiteA700), AddreviewfillItemModel(shape: ImageConstant.imgShape51, iconClose: ImageConstant.imgIconCloseWhiteA700)]))));
+/// A notifier that manages the state of a AddReviewFill according to the event that is dispatched to it.
+class AddReviewFillNotifier extends StateNotifier<AddReviewFillState> {AddReviewFillNotifier(AddReviewFillState state) : super(state);
+
+ }

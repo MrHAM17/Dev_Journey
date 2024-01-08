@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/historymusic_item_model.dart';import 'package:the_6_18_tune_cast___music_streaming__podcast_app/presentation/history_music_page/models/history_music_model.dart';part 'history_music_state.dart';final historyMusicNotifier = StateNotifierProvider<HistoryMusicNotifier, HistoryMusicState>((ref) => HistoryMusicNotifier(HistoryMusicState(historyMusicModelObj: HistoryMusicModel(historymusicItemList: [HistorymusicItemModel(image: ImageConstant.imgImage61, songTitle: "Starboy Speed Up", details: "Just Lowkey", image1: ImageConstant.imgCategoriesMore), HistorymusicItemModel(image: ImageConstant.imgImage62, songTitle: "Die For You", details: "The Weeknd", image1: ImageConstant.imgCategoriesMore)]))));
+/// A notifier that manages the state of a HistoryMusic according to the event that is dispatched to it.
+class HistoryMusicNotifier extends StateNotifier<HistoryMusicState> {HistoryMusicNotifier(HistoryMusicState state) : super(state);
+
+ }

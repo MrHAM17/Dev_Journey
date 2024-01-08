@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/selectpaymentmethod_item_model.dart';import 'package:the_6_18_tune_cast___music_streaming__podcast_app/presentation/select_payment_method_screen/models/select_payment_method_model.dart';part 'select_payment_method_state.dart';final selectPaymentMethodNotifier = StateNotifierProvider<SelectPaymentMethodNotifier, SelectPaymentMethodState>((ref) => SelectPaymentMethodNotifier(SelectPaymentMethodState(selectPaymentMethodModelObj: SelectPaymentMethodModel(selectpaymentmethodItemList: [SelectpaymentmethodItemModel(payPal: ImageConstant.imgFrameLightBlue600, payPal1: "PayPal"), SelectpaymentmethodItemModel(payPal: ImageConstant.imgFrameRed500, payPal1: "Google Pay")]))));
+/// A notifier that manages the state of a SelectPaymentMethod according to the event that is dispatched to it.
+class SelectPaymentMethodNotifier extends StateNotifier<SelectPaymentMethodState> {SelectPaymentMethodNotifier(SelectPaymentMethodState state) : super(state);
+
+ }

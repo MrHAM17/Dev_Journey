@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/topalbumsglobal_item_model.dart';import '../models/topalbumsglobal1_item_model.dart';import 'package:the_6_18_tune_cast___music_streaming__podcast_app/presentation/charts_screen/models/charts_model.dart';part 'charts_state.dart';final chartsNotifier = StateNotifierProvider<ChartsNotifier, ChartsState>((ref) => ChartsNotifier(ChartsState(chartsModelObj: ChartsModel(topalbumsglobalItemList: [TopalbumsglobalItemModel(price: "TOP\nALBUMS\nGLOBAL", loremIpsumDolor: "Top Albums Global"), TopalbumsglobalItemModel(price: "TOP\nALBUMS\nGLOBAL", loremIpsumDolor: "Top Albums United..")], topalbumsglobal1ItemList: [Topalbumsglobal1ItemModel(price: "TOP\nALBUMS\nGLOBAL", loremIpsumDolor: "Top Albums Global"), Topalbumsglobal1ItemModel(price: "TOP\nALBUMS\nGLOBAL", loremIpsumDolor: "Top Albums United..")]))));
+/// A notifier that manages the state of a Charts according to the event that is dispatched to it.
+class ChartsNotifier extends StateNotifier<ChartsState> {ChartsNotifier(ChartsState state) : super(state);
+
+ }

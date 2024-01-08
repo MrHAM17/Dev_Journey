@@ -1,0 +1,6 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/sizelargetypeborder_item_model.dart';import 'package:the_6_16_tikpik___short_video__social_networking/presentation/choose_your_interest_screen/models/choose_your_interest_model.dart';part 'choose_your_interest_state.dart';final chooseYourInterestNotifier = StateNotifierProvider<ChooseYourInterestNotifier, ChooseYourInterestState>((ref) => ChooseYourInterestNotifier(ChooseYourInterestState(chooseYourInterestModelObj: ChooseYourInterestModel(sizelargetypeborderItemList: List.generate(17, (index) => SizelargetypeborderItemModel())))));
+/// A notifier that manages the state of a ChooseYourInterest according to the event that is dispatched to it.
+class ChooseYourInterestNotifier extends StateNotifier<ChooseYourInterestState> {ChooseYourInterestNotifier(ChooseYourInterestState state) : super(state);
+
+void onSelectedChipView1(int index, bool value, ) { List<SizelargetypeborderItemModel> newList = List<SizelargetypeborderItemModel>.from(state.chooseYourInterestModelObj!.sizelargetypeborderItemList); newList[index] = newList[index].copyWith(isSelected: value); state = state.copyWith(chooseYourInterestModelObj: state.chooseYourInterestModelObj?.copyWith(sizelargetypeborderItemList: newList)); } 
+ }

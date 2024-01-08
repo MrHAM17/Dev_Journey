@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/playlistdetails_item_model.dart';import 'package:the_6_18_tune_cast___music_streaming__podcast_app/presentation/playlist_details_screen/models/playlist_details_model.dart';part 'playlist_details_state.dart';final playlistDetailsNotifier = StateNotifierProvider<PlaylistDetailsNotifier, PlaylistDetailsState>((ref) => PlaylistDetailsNotifier(PlaylistDetailsState(playlistDetailsModelObj: PlaylistDetailsModel(playlistdetailsItemList: [PlaylistdetailsItemModel(image: ImageConstant.imgImage61, songTitle: "Starboy Speed Up", details: "Just Lowkey"), PlaylistdetailsItemModel(image: ImageConstant.imgImage64, songTitle: "The Hills", details: "The Weeknd"), PlaylistdetailsItemModel(image: ImageConstant.imgImage65, songTitle: "I Feel It Coming", details: "The Weeknd, Daft Punk")]))));
+/// A notifier that manages the state of a PlaylistDetails according to the event that is dispatched to it.
+class PlaylistDetailsNotifier extends StateNotifier<PlaylistDetailsState> {PlaylistDetailsNotifier(PlaylistDetailsState state) : super(state);
+
+ }

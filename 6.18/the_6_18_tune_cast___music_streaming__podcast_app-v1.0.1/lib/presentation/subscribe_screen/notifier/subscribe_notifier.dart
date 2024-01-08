@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/subscribe_item_model.dart';import 'package:the_6_18_tune_cast___music_streaming__podcast_app/presentation/subscribe_screen/models/subscribe_model.dart';part 'subscribe_state.dart';final subscribeNotifier = StateNotifierProvider<SubscribeNotifier, SubscribeState>((ref) => SubscribeNotifier(SubscribeState(subscribeModelObj: SubscribeModel(subscribeItemList: [SubscribeItemModel(price: "9.99", month: "/month", listeningWithBetter: "Listening with better audio quality", listeningWithout: "Listening without restrictions & ads", shufflePlayDownload: "Shuffle play & download unlimited"), SubscribeItemModel(price: "19.99", month: "/3 months", listeningWithBetter: "Listening with better audio quality", listeningWithout: "Listening without restrictions & ads", shufflePlayDownload: "Shuffle play & download unlimited")]))));
+/// A notifier that manages the state of a Subscribe according to the event that is dispatched to it.
+class SubscribeNotifier extends StateNotifier<SubscribeState> {SubscribeNotifier(SubscribeState state) : super(state);
+
+ }

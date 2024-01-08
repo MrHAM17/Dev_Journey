@@ -1,0 +1,33 @@
+// ignore_for_file: must_be_immutable
+
+import 'package:equatable/equatable.dart';
+import '../../../core/app_export.dart';
+import 'searchseven_item_model.dart';
+import 'frameseventynine_item_model.dart';
+
+/// This class defines the variables used in the [search_seven_screen],
+/// and is typically used to hold data that is passed between different parts of the application.
+class SearchSevenModel extends Equatable {
+  SearchSevenModel({
+    this.searchsevenItemList = const [],
+    this.frameseventynineItemList = const [],
+  }) {}
+
+  List<SearchsevenItemModel> searchsevenItemList;
+
+  List<FrameseventynineItemModel> frameseventynineItemList;
+
+  SearchSevenModel copyWith({
+    List<SearchsevenItemModel>? searchsevenItemList,
+    List<FrameseventynineItemModel>? frameseventynineItemList,
+  }) {
+    return SearchSevenModel(
+      searchsevenItemList: searchsevenItemList ?? this.searchsevenItemList,
+      frameseventynineItemList:
+          frameseventynineItemList ?? this.frameseventynineItemList,
+    );
+  }
+
+  @override
+  List<Object?> get props => [searchsevenItemList, frameseventynineItemList];
+}

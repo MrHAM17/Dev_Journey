@@ -1,0 +1,15 @@
+import '../home_search_page/widgets/homesearch_item_widget.dart';import 'models/homesearch_item_model.dart';import 'notifier/home_search_notifier.dart';import 'package:flutter/material.dart';import 'package:the_6_21_vertex___real_estate_app/core/app_export.dart';import 'package:the_6_21_vertex___real_estate_app/widgets/app_bar/appbar_title_searchview.dart';import 'package:the_6_21_vertex___real_estate_app/widgets/app_bar/appbar_trailing_iconbutton_one.dart';import 'package:the_6_21_vertex___real_estate_app/widgets/app_bar/custom_app_bar.dart';class HomeSearchPage extends ConsumerStatefulWidget {const HomeSearchPage({Key? key}) : super(key: key);
+
+@override HomeSearchPageState createState() =>  HomeSearchPageState();
+
+ }
+class HomeSearchPageState extends ConsumerState<HomeSearchPage> {@override Widget build(BuildContext context) { return SafeArea(child: Scaffold(appBar: _buildAppBar(context), body: Container(width: double.maxFinite, padding: EdgeInsets.symmetric(horizontal: 24.h, vertical: 12.v), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [Row(children: [CustomImageView(imagePath: ImageConstant.imgBrightness, height: 20.adaptSize, width: 20.adaptSize, margin: EdgeInsets.only(bottom: 2.v)), Padding(padding: EdgeInsets.only(left: 12.h, top: 2.v), child: Text("msg_or_use_my_current".tr, style: theme.textTheme.titleSmall))]), SizedBox(height: 31.v), Text("lbl_search_results".tr, style: CustomTextStyles.titleSmallBluegray500_1), SizedBox(height: 18.v), _buildHomeSearch(context)])))); } 
+/// Section Widget
+PreferredSizeWidget _buildAppBar(BuildContext context) { return CustomAppBar(title: Consumer(builder: (context, ref, _) {return AppbarTitleSearchview(margin: EdgeInsets.only(left: 24.h), hintText: "msg_360_stillwater_rd".tr, controller: ref.watch(homeSearchNotifier).searchController);}), actions: [AppbarTrailingIconbuttonOne(imagePath: ImageConstant.imgFile, margin: EdgeInsets.fromLTRB(8.h, 4.v, 24.h, 4.v), onTap: () {onTapFile(context);})]); } 
+/// Section Widget
+Widget _buildHomeSearch(BuildContext context) { return Expanded(child: Padding(padding: EdgeInsets.only(right: 78.h), child: Consumer(builder: (context, ref, _) {return ListView.separated(physics: BouncingScrollPhysics(), shrinkWrap: true, separatorBuilder: (context, index) {return SizedBox(height: 17.v);}, itemCount: ref.watch(homeSearchNotifier).homeSearchModelObj?.homesearchItemList.length ?? 0, itemBuilder: (context, index) {HomesearchItemModel model = ref.watch(homeSearchNotifier).homeSearchModelObj?.homesearchItemList[index] ?? HomesearchItemModel(); return HomesearchItemWidget(model, onTapSearch: () {onTapSearch(context);});});}))); } 
+/// Navigates to the productDetailsScreen when the action is triggered.
+onTapSearch(BuildContext context) { NavigatorService.pushNamed(AppRoutes.productDetailsScreen); } 
+/// Navigates to the filterTabContainerScreen when the action is triggered.
+onTapFile(BuildContext context) { NavigatorService.pushNamed(AppRoutes.filterTabContainerScreen, ); } 
+ }

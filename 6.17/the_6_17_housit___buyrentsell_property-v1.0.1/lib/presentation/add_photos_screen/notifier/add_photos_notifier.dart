@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/gallery_item_model.dart';import 'package:the_6_17_housit___buyrentsell_property/presentation/add_photos_screen/models/add_photos_model.dart';part 'add_photos_state.dart';final addPhotosNotifier = StateNotifierProvider<AddPhotosNotifier, AddPhotosState>((ref) => AddPhotosNotifier(AddPhotosState(addPhotosModelObj: AddPhotosModel(galleryItemList: [GalleryItemModel(shape: ImageConstant.imgShape161x159, iconClose: ImageConstant.imgIconCloseWhiteA700), GalleryItemModel(shape: ImageConstant.imgShape21, iconClose: ImageConstant.imgIconCloseWhiteA700), GalleryItemModel(shape: ImageConstant.imgShape22, iconClose: ImageConstant.imgIconCloseWhiteA700)]))));
+/// A notifier that manages the state of a AddPhotos according to the event that is dispatched to it.
+class AddPhotosNotifier extends StateNotifier<AddPhotosState> {AddPhotosNotifier(AddPhotosState state) : super(state);
+
+ }

@@ -1,0 +1,6 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/autolayouthorizontal5_item_model.dart';import 'package:the_6_16_tikpik___short_video__social_networking/presentation/posts_camera_screen/models/posts_camera_model.dart';part 'posts_camera_state.dart';final postsCameraNotifier = StateNotifierProvider<PostsCameraNotifier, PostsCameraState>((ref) => PostsCameraNotifier(PostsCameraState(postsCameraModelObj: PostsCameraModel(autolayouthorizontal5ItemList: List.generate(3, (index) => Autolayouthorizontal5ItemModel())))));
+/// A notifier that manages the state of a PostsCamera according to the event that is dispatched to it.
+class PostsCameraNotifier extends StateNotifier<PostsCameraState> {PostsCameraNotifier(PostsCameraState state) : super(state);
+
+void onSelectedChipView1(int index, bool value, ) { List<Autolayouthorizontal5ItemModel> newList = List<Autolayouthorizontal5ItemModel>.from(state.postsCameraModelObj!.autolayouthorizontal5ItemList); newList[index] = newList[index].copyWith(isSelected: value); state = state.copyWith(postsCameraModelObj: state.postsCameraModelObj?.copyWith(autolayouthorizontal5ItemList: newList)); } 
+ }

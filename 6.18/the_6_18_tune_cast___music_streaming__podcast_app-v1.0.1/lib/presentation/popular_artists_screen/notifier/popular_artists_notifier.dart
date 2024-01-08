@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/popularartists_item_model.dart';import 'package:the_6_18_tune_cast___music_streaming__podcast_app/presentation/popular_artists_screen/models/popular_artists_model.dart';part 'popular_artists_state.dart';final popularArtistsNotifier = StateNotifierProvider<PopularArtistsNotifier, PopularArtistsState>((ref) => PopularArtistsNotifier(PopularArtistsState(popularArtistsModelObj: PopularArtistsModel(popularartistsItemList: [PopularartistsItemModel(arianaGrande: ImageConstant.imgImage21, artistsName: "Ariana Grande"), PopularartistsItemModel(arianaGrande: ImageConstant.imgImage22, artistsName: "The Weeknd"), PopularartistsItemModel(arianaGrande: ImageConstant.imgImage23, artistsName: "Acidrap"), PopularartistsItemModel(arianaGrande: ImageConstant.imgImage24, artistsName: "Ryan Jones")]))));
+/// A notifier that manages the state of a PopularArtists according to the event that is dispatched to it.
+class PopularArtistsNotifier extends StateNotifier<PopularArtistsState> {PopularArtistsNotifier(PopularArtistsState state) : super(state);
+
+ }

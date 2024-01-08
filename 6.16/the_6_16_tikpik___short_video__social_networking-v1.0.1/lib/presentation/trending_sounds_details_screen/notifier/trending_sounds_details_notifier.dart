@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import '../models/autolayoutvertical3_item_model.dart';import 'package:the_6_16_tikpik___short_video__social_networking/presentation/trending_sounds_details_screen/models/trending_sounds_details_model.dart';part 'trending_sounds_details_state.dart';final trendingSoundsDetailsNotifier = StateNotifierProvider<TrendingSoundsDetailsNotifier, TrendingSoundsDetailsState>((ref) => TrendingSoundsDetailsNotifier(TrendingSoundsDetailsState(trendingSoundsDetailsModelObj: TrendingSoundsDetailsModel(autolayoutvertical3ItemList: [Autolayoutvertical3ItemModel(k: ImageConstant.imgImage25, k1: ImageConstant.imgOverflowmenuPrimary, k2: "837.5K", k3: ImageConstant.imgImage26, k4: "837.5K", k5: ImageConstant.imgImage27, k6: "837.5K", k7: ImageConstant.imgImage28, k8: "837.5K")]))));
+/// A notifier that manages the state of a TrendingSoundsDetails according to the event that is dispatched to it.
+class TrendingSoundsDetailsNotifier extends StateNotifier<TrendingSoundsDetailsState> {TrendingSoundsDetailsNotifier(TrendingSoundsDetailsState state) : super(state);
+
+ }

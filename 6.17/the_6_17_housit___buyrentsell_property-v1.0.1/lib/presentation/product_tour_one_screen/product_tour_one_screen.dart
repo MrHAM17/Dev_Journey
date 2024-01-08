@@ -1,0 +1,13 @@
+import 'notifier/product_tour_one_notifier.dart';import 'package:flutter/material.dart';import 'package:the_6_17_housit___buyrentsell_property/core/app_export.dart';import 'package:the_6_17_housit___buyrentsell_property/widgets/app_bar/appbar_leading_image.dart';import 'package:the_6_17_housit___buyrentsell_property/widgets/app_bar/appbar_trailing_button.dart';import 'package:the_6_17_housit___buyrentsell_property/widgets/app_bar/custom_app_bar.dart';import 'package:the_6_17_housit___buyrentsell_property/widgets/custom_elevated_button.dart';class ProductTourOneScreen extends ConsumerStatefulWidget {const ProductTourOneScreen({Key? key}) : super(key: key);
+
+@override ProductTourOneScreenState createState() =>  ProductTourOneScreenState();
+
+ }
+class ProductTourOneScreenState extends ConsumerState<ProductTourOneScreen> {@override Widget build(BuildContext context) { return SafeArea(child: Scaffold(appBar: _buildAppBar(context), body: SizedBox(width: double.maxFinite, child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [SizedBox(height: 38.v), Container(width: 260.h, margin: EdgeInsets.only(left: 24.h), child: Text("msg_find_best_place".tr, maxLines: 2, overflow: TextOverflow.ellipsis, style: theme.textTheme.headlineSmall!.copyWith(height: 1.50))), SizedBox(height: 18.v), Container(width: 262.h, margin: EdgeInsets.only(left: 24.h), child: Text("msg_lorem_ipsum_dolor".tr, maxLines: 2, overflow: TextOverflow.ellipsis, style: theme.textTheme.bodyMedium!.copyWith(height: 1.50))), SizedBox(height: 32.v), SizedBox(height: 520.v, width: double.maxFinite, child: Stack(alignment: Alignment.bottomCenter, children: [CustomImageView(imagePath: ImageConstant.imgBackgroundIllustration, height: 520.v, width: 375.h, alignment: Alignment.center), CustomElevatedButton(width: 230.h, text: "lbl_next".tr, margin: EdgeInsets.only(bottom: 24.v), onPressed: () {onTapNext(context);}, alignment: Alignment.bottomCenter)]))])))); } 
+/// Section Widget
+PreferredSizeWidget _buildAppBar(BuildContext context) { return CustomAppBar(height: 88.v, leadingWidth: 111.h, leading: AppbarLeadingImage(imagePath: ImageConstant.imgVector, margin: EdgeInsets.only(left: 24.h)), actions: [AppbarTrailingButton(margin: EdgeInsets.symmetric(horizontal: 24.h, vertical: 13.v), onTap: () {onTapSkip(context);})]); } 
+/// Navigates to the loginScreen when the action is triggered.
+onTapSkip(BuildContext context) { NavigatorService.pushNamed(AppRoutes.loginScreen, ); } 
+/// Navigates to the productTourTwoScreen when the action is triggered.
+onTapNext(BuildContext context) { NavigatorService.pushNamed(AppRoutes.productTourTwoScreen, ); } 
+ }
