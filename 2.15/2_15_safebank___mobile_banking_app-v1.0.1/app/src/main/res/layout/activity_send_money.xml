@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="sendMoneyVM" type="com.safebankmobilebankingapp.app.modules.sendmoney.data.viewmodel.SendMoneyVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSendMoney"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@drawable/rectangle_border_name_gray_300_radius_17"
+                android:id="@+id/btnArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_left_black_900" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTransfer"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{sendMoneyVM.sendMoneyModel.txtTransfer}"
+                style="@style/txtPoppinssemibold18" tools:text="@string/lbl_send_money"/>
+            <ImageButton android:id="@+id/btnContrast"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_contrast_gray_300" tools:ignore="ContentDescription"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearSendMoney1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_24pxh" android:paddingVertical="@dimen/_24pxv">
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearFortyFour"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_15pxv"
+                android:paddingEnd="@dimen/_16pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_15pxv" style="@style/groupStylenamewhite_1">
+                <ImageView android:id="@+id/imageCircleImage"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_50pxh"
+                    android:layout_width="@dimen/_50pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_ellipse_311}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_311"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearFortyTwo"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtAlexDordan"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{sendMoneyVM.sendMoneyModel.txtAlexDordan}"
+                        style="@style/txtPoppinsmedium16" tools:text="@string/lbl_alex_dordan"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtWebDeveloper"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{sendMoneyVM.sendMoneyModel.txtWebDeveloper}"
+                        style="@style/txtPoppinsmedium10" tools:text="@string/lbl_web_developer"/>
+                </LinearLayout>
+                <FrameLayout android:id="@+id/frameSpacer"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <ImageView android:id="@+id/imageFloatingIcon"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_30pxh"
+                    android:layout_width="@dimen/_30pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_floating_icon"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_floating_icon"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearMastercard"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_15pxh"
+                android:paddingVertical="@dimen/_15pxv" style="@style/groupStylenamewhite_1">
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_primary_radius_25"
+                    android:id="@+id/btnContrast1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_50pxh"
+                    android:layout_width="@dimen/_50pxh"
+                    android:paddingHorizontal="@dimen/_13pxh"
+                    android:paddingVertical="@dimen/_13pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_contrast_white_a700" tools:ignore="ContentDescription"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearTwentyThree"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtMastercard"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{sendMoneyVM.sendMoneyModel.txtMastercard}"
+                        style="@style/txtPoppinsmedium16" tools:text="@string/lbl_mastercard"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtWidget"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{sendMoneyVM.sendMoneyModel.txtWidget}"
+                        style="@style/txtPoppinsmedium10" tools:text="@string/msg_5093_4690_4039_5534"/>
+                </LinearLayout>
+                <FrameLayout android:id="@+id/frameSpacer1"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <ImageView android:id="@+id/imageCheckmark"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_30pxh"
+                    android:layout_width="@dimen/_30pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_checkmark_gray_100"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark_gray_100"/>
+            </LinearLayout>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtEnterYourAccount"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{sendMoneyVM.sendMoneyModel.txtEnterYourAccount}"
+                style="@style/txtPoppinsmedium16_2" tools:text="@string/msg_enter_your_account"/>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearPrice"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrice"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{sendMoneyVM.sendMoneyModel.txtPrice}"
+                    style="@style/txtPoppinsmedium32" tools:text="@string/lbl_1_500_00"/>
+                <Spinner android:id="@+id/spinnerUSD"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" tools:listitem="@layout/spinner_item"/>
+            </LinearLayout>
+            <FrameLayout android:id="@+id/frameKeyboard"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_229pxv" android:layout_width="@dimen/_327pxh">
+                <LinearLayout android:id="@+id/linearNumbers"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <LinearLayout android:id="@+id/linearOne"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtOne"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{sendMoneyVM.sendMoneyModel.txtOne}"
+                            style="@style/txtPoppinsmedium22" tools:text="@string/lbl_1"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtTwo"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{sendMoneyVM.sendMoneyModel.txtTwo}"
+                            style="@style/txtPoppinsmedium22" tools:text="@string/lbl_2"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtThree"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{sendMoneyVM.sendMoneyModel.txtThree}"
+                            style="@style/txtPoppinsmedium22" tools:text="@string/lbl_3"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearFour"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtFour"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{sendMoneyVM.sendMoneyModel.txtFour}"
+                            style="@style/txtPoppinsmedium22" tools:text="@string/lbl_4"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtFive"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{sendMoneyVM.sendMoneyModel.txtFive}"
+                            style="@style/txtPoppinsmedium22" tools:text="@string/lbl_5"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSix"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{sendMoneyVM.sendMoneyModel.txtSix}"
+                            style="@style/txtPoppinsmedium22" tools:text="@string/lbl_6"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearSeven"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSeven"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{sendMoneyVM.sendMoneyModel.txtSeven}"
+                            style="@style/txtPoppinsmedium22" tools:text="@string/lbl_7"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtEight"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{sendMoneyVM.sendMoneyModel.txtEight}"
+                            style="@style/txtPoppinsmedium22" tools:text="@string/lbl_8"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtNine"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{sendMoneyVM.sendMoneyModel.txtNine}"
+                            style="@style/txtPoppinsmedium22" tools:text="@string/lbl_9"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="end"
+                        android:id="@+id/linearZero"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtZero"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{sendMoneyVM.sendMoneyModel.txtZero}"
+                            style="@style/txtPoppinsmedium22" tools:text="@string/lbl_0"/>
+                        <ImageView android:id="@+id/imageArrowDown"
+                            android:layout_height="@dimen/_10pxh"
+                            android:layout_width="@dimen/_17pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_down"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageImage"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_229pxh"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_group"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_group"/>
+            </FrameLayout>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_radius_12"
+            android:ellipsize="end" android:fontFamily="@font/poppins"
+            android:gravity="center" android:id="@+id/btnSendMoney"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_50pxv"
+            android:layout_width="@dimen/_327pxh"
+            android:paddingBottom="@dimen/_13pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_13pxv" android:singleLine="true"
+            android:text="@string/lbl_send_money"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_send_money"/>
+    </LinearLayout>
+</layout>

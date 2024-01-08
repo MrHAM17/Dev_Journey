@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="chinesesRowModel" type="com.hiredjobsearch.app.modules.language.data.model.ChinesesRowModel"/>
+    </data>
+    <TextView android:ellipsize="end" android:id="@+id/txtChineses"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:letterSpacing="0.0"
+        android:lineSpacingExtra="@dimen/_5pxh"
+        android:singleLine="true"
+        android:text="@{chinesesRowModel.txtChineses}"
+        style="@style/txtPlusJakartaSanssemibold16" tools:text="@string/lbl_chineses"/>
+</layout>

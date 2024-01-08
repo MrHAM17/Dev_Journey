@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="messagehistoryRowModel" type="com.helthiotelehealth.app.modules.messagehistory.data.model.MessagehistoryRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearDrMarcusHorizon1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <ImageView android:id="@+id/imageDrMarcusHorizon"
+            android:layout_height="@dimen/_50pxh"
+            android:layout_width="@dimen/_50pxh"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_close_40x40}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_close_40x40"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearDrMarcusHorizon2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDrMarcusHorizon"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{messagehistoryRowModel.txtDrMarcusHorizon}"
+                style="@style/txtRalewaysemibold16_1" tools:text="@string/msg_dr_marcus_horizon"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtIDonTHaveAny"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{messagehistoryRowModel.txtIDonTHaveAny}"
+                style="@style/txtRalewayregular12" tools:text="@string/msg_i_don_t_have_any2"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearOneThousandTwentyFour"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtOneThousandTwentyFour"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{messagehistoryRowModel.txtOneThousandTwentyFour}"
+                style="@style/txtRalewayregular12_1" tools:text="@string/lbl_10_24"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtWidget" android:layout_gravity="end"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingBottom="@dimen/_1pxv"
+                android:paddingEnd="@dimen/_4pxh"
+                android:paddingStart="@dimen/_4pxh"
+                android:paddingTop="@dimen/_1pxv"
+                android:singleLine="true"
+                android:text="@{messagehistoryRowModel.txtWidget}"
+                style="@style/txtSolidRounded" tools:text="@string/lbl_1"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

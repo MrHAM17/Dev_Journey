@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="newreleaseslistRowModel" type="com.musicplayer.app.modules.homepage.data.model.NewreleaseslistRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearUrgentSiege"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:orientation="vertical">
+        <ImageView android:id="@+id/imageUrgentSiege"
+            android:layout_height="@dimen/_181pxh"
+            android:layout_width="@dimen/_159pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_12pxh}"
+            imageRes="@{@drawable/img_thumbnails}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_thumbnails"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtUrgentSiege"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{newreleaseslistRowModel.txtUrgentSiege}"
+            style="@style/txtRobotomedium18" tools:text="@string/lbl_urgent_siege"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtDamnedAnthem"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{newreleaseslistRowModel.txtDamnedAnthem}"
+            style="@style/txtRobotoregular14" tools:text="@string/lbl_damned_anthem"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="confirmationVM" type="com.safebankmobilebankingapp.app.modules.confirmation.data.viewmodel.ConfirmationVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearConfirmation"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/_24pxh"
+        android:paddingStart="@dimen/_24pxh" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtConfirmation"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{confirmationVM.confirmationModel.txtConfirmation}"
+            style="@style/txtPoppinssemibold18" tools:text="@string/lbl_confirmation"/>
+        <ImageView android:id="@+id/imageIllustration"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_200pxh"
+            android:layout_width="@dimen/_143pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_illustration_gray_100"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_illustration_gray_100"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_radius_12"
+            android:ellipsize="end" android:fontFamily="@font/poppins"
+            android:gravity="center" android:id="@+id/btnBackHome"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_50pxv"
+            android:layout_width="@dimen/_327pxh"
+            android:paddingBottom="@dimen/_13pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_13pxv" android:singleLine="true"
+            android:text="@string/lbl_back_home"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_back_home"/>
+    </LinearLayout>
+</layout>

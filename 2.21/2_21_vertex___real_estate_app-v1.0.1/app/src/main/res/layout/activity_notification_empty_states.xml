@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="notificationEmptyStatesVM" type="com.vertexrealestateapp.app.modules.notificationemptystates.data.viewmodel.NotificationEmptyStatesVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearNotificationEmpty"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:contentInsetStart="0dp" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_white_a700_border_name_gray_300_radius_20"
+                android:id="@+id/btnArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_left_primarycontainer" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtNotification"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{notificationEmptyStatesVM.notificationEmptyStatesModel.txtNotification}"
+                style="@style/txtManropeextrabold18" tools:text="@string/lbl_notification"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearNotificationsSettings"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/_41pxh"
+            android:paddingStart="@dimen/_41pxh" android:paddingTop="@dimen/_100pxv">
+            <ImageView android:id="@+id/imageMailNotification"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_204pxh"
+                android:layout_width="@dimen/_255pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_mail_notification"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_mail_notification"/>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtNoNotifications"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{notificationEmptyStatesVM.notificationEmptyStatesModel.txtNoNotifications}"
+                style="@style/txtManropeextrabold20" tools:text="@string/msg_no_notifications"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtNoNotification"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.02"
+                android:text="@{notificationEmptyStatesVM.notificationEmptyStatesModel.txtNoNotification}"
+                style="@style/txtManrope16" tools:text="@string/msg_no_notification"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_10"
+                android:ellipsize="end"
+                android:fontFamily="@font/manrope"
+                android:gravity="center"
+                android:id="@+id/btnNotificationsSettings"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_45pxv"
+                android:layout_width="@dimen/_218pxh"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_11pxv"
+                android:paddingEnd="@dimen/_21pxh"
+                android:paddingStart="@dimen/_21pxh"
+                android:paddingTop="@dimen/_11pxv"
+                android:singleLine="true"
+                android:text="@string/msg_notifications_settings"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;gray_50&quot;}"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/msg_notifications_settings"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

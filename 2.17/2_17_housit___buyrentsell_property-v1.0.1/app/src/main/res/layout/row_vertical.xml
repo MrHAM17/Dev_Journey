@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="verticalRowModel" type="com.housitbuyrentsellproperty.app.modules.vertical.data.model.VerticalRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearEstatesCardVertical"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_8pxh"
+        android:paddingVertical="@dimen/_8pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}cornerRadius">
+        <FrameLayout android:id="@+id/frameShape"
+            android:layout_height="@dimen/_160pxv" android:layout_width="@dimen/_144pxh">
+            <ImageView android:id="@+id/imageTheLaurelsVilla"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_160pxh"
+                android:layout_width="@dimen/_144pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_15pxh}"
+                imageRes="@{@drawable/img_shape_30}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_shape_30"/>
+            <LinearLayout android:id="@+id/linearFavorite"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_red_a200_radius_12"
+                    android:id="@+id/btnFavorite"
+                    android:layout_gravity="end"
+                    android:layout_height="@dimen/_25pxh"
+                    android:layout_width="@dimen/_25pxh"
+                    android:paddingHorizontal="@dimen/_6pxh"
+                    android:paddingVertical="@dimen/_6pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_favorite" tools:ignore="ContentDescription"/>
+                <LinearLayout android:id="@+id/linearClose"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <ImageButton
+                        android:background="@drawable/rectangle_bg_name_blue_gray_700_af_radius_8"
+                        android:id="@+id/btnClose"
+                        android:layout_gravity="bottom"
+                        android:layout_height="@dimen/_25pxh"
+                        android:layout_width="@dimen/_25pxh"
+                        android:paddingHorizontal="@dimen/_5pxh"
+                        android:paddingVertical="@dimen/_5pxv"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_close" tools:ignore="ContentDescription"/>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearLayout2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/_6pxv"
+                        android:paddingEnd="@dimen/_8pxh"
+                        android:paddingStart="@dimen/_8pxh"
+                        android:paddingTop="@dimen/_6pxv" style="@style/groupStylenameblue_gray_700_1">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtPrice"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{verticalRowModel.txtPrice}"
+                            style="@style/txtRalewaysemibold12" tools:text="@string/lbl_320"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtMonth"
+                            android:layout_gravity="bottom"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{verticalRowModel.txtMonth}"
+                            style="@style/txtRalewaymedium8_1" tools:text="@string/lbl_night"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtTheLaurelsVilla"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{verticalRowModel.txtTheLaurelsVilla}"
+            style="@style/txtRalewaybold12" tools:text="@string/msg_the_laurels_villa"/>
+        <LinearLayout android:id="@+id/linearLayout3"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <LinearLayout android:id="@+id/linearLayout"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageImage"
+                    android:layout_gravity="top"
+                    android:layout_height="@dimen/_9pxh"
+                    android:layout_width="@dimen/_9pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_signal_orange_300_9x9"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_signal_orange_300_9x9"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtText"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{verticalRowModel.txtText}"
+                    style="@style/txtRalewaybold8" tools:text="@string/lbl_4_9"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/imageBaliIndonesia"
+                android:layout_gravity="top"
+                android:layout_height="@dimen/_9pxh"
+                android:layout_width="@dimen/_9pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_linkedin"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_linkedin"/>
+            <TextView android:ellipsize="end" android:gravity="top"
+                android:id="@+id/txtBaliIndonesia"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{verticalRowModel.txtBaliIndonesia}"
+                style="@style/txtRalewaymedium8" tools:text="@string/lbl_bali_indonesia"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="settingVM" type="com.jusplaymoviestreamingapp.app.modules.setting.data.viewmodel.SettingVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSetting"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;black_900&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_gray_900_radius_17"
+                android:id="@+id/btnArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_left" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtComedy"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{settingVM.settingModel.txtComedy}"
+                style="@style/txtPoppinsmedium18" tools:text="@string/lbl_setting"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearGlobe"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_25pxv"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_16pxh" android:paddingTop="@dimen/_25pxv">
+            <LinearLayout android:id="@+id/linearFrame"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_10pxh"
+                android:paddingVertical="@dimen/_10pxv" style="@style/groupStylenamegray_1">
+                <ImageView android:id="@+id/imageGlobe"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_40pxh"
+                    android:layout_width="@dimen/_40pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_globe"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_globe"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearFrame1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLanguage"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{settingVM.settingModel.txtLanguage}"
+                        style="@style/txtPoppinsmedium12" tools:text="@string/lbl_language"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtEnglish"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{settingVM.settingModel.txtEnglish}"
+                        style="@style/txtPoppinsmedium10_1" tools:text="@string/lbl_english"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearFrame2"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_10pxh"
+                android:paddingVertical="@dimen/_10pxv" style="@style/groupStylenamegray_1">
+                <ImageView android:id="@+id/imageImage"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_40pxh"
+                    android:layout_width="@dimen/_40pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_frame_427319100"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_frame_427319100"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtNotifiction"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{settingVM.settingModel.txtNotifiction}"
+                    style="@style/txtPoppinsmedium12" tools:text="@string/lbl_notifiction"/>
+                <FrameLayout android:id="@+id/frameSpacer"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchMaterialRadioButton"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearFrame3"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_10pxh"
+                android:paddingVertical="@dimen/_10pxv" style="@style/groupStylenamegray_1">
+                <ImageView android:id="@+id/imageClose"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_40pxh"
+                    android:layout_width="@dimen/_40pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_close_blue_gray_800"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_close_blue_gray_800"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDownloadInHigh"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{settingVM.settingModel.txtDownloadInHigh}"
+                    style="@style/txtPoppinsmedium12" tools:text="@string/msg_download_in_high"/>
+                <FrameLayout android:id="@+id/frameSpacer1"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchMaterialRadioButton1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearFrame4"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_10pxh"
+                android:paddingVertical="@dimen/_10pxv" style="@style/groupStylenamegray_1">
+                <ImageView android:id="@+id/imageSettings"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_40pxh"
+                    android:layout_width="@dimen/_40pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_settings"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_settings"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDownloadUsingOnly"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{settingVM.settingModel.txtDownloadUsingOnly}"
+                    style="@style/txtPoppinsmedium12" tools:text="@string/msg_download_using_only"/>
+                <FrameLayout android:id="@+id/frameSpacer2"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchMaterialRadioButton2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

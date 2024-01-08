@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="movies3RowModel" type="com.moviestreaming.app.modules.detailpageeleven.data.model.Movies3RowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearMovieCard"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:orientation="vertical">
+        <ImageView android:id="@+id/imageIONetflix"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_180pxh"
+            android:layout_width="@dimen/_120pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_2pxh}"
+            imageRes="@{@drawable/img_thumbnail_image_180x120}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_thumbnail_image_180x120"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtTitle1"
+            android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{movies3RowModel.txtTitle1}"
+            style="@style/txtRobotomedium12_1" tools:text="@string/lbl_io_netflix"/>
+        <TextView android:gravity="center_horizontal"
+            android:id="@+id/txtTitle2"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@{movies3RowModel.txtTitle2}"
+            style="@style/txtRobotoregular12_2" tools:text="@string/msg_in_near_future_we"/>
+    </LinearLayout>
+</layout>

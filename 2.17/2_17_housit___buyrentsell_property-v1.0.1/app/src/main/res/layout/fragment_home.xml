@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="homeVM" type="com.housitbuyrentsellproperty.app.modules.home.data.viewmodel.HomeVM"/>
+    </data>
+    <androidx.core.widget.NestedScrollView android:clipToPadding="false"
+        android:fillViewport="true"
+        android:id="@+id/scrollViewScrollView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <LinearLayout android:id="@+id/linearApartment"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearApartment1"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerPromotionBanner"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_10pxh}" tools:itemCount="2" tools:listitem="@layout/row_promotionbanner"/>
+                <LinearLayout android:id="@+id/linearItemHeader"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtFeaturedEstates"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{homeVM.homeModel.txtFeaturedEstates}"
+                        style="@style/txtRalewaysemibold18" tools:text="@string/msg_featured_estates"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtViewall"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{homeVM.homeModel.txtViewall}"
+                        style="@style/txtRalewaysemibold12_5" tools:text="@string/lbl_view_all"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerLayout"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_10pxh}" tools:itemCount="2" tools:listitem="@layout/row_layout9"/>
+                <LinearLayout android:id="@+id/linearItemHeader1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTopLocations"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{homeVM.homeModel.txtTopLocations}"
+                        style="@style/txtRalewaysemibold18" tools:text="@string/lbl_top_locations"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtExplore"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{homeVM.homeModel.txtExplore}"
+                        style="@style/txtRalewaysemibold12_5" tools:text="@string/lbl_explore"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerLayout1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_4pxh}" tools:itemCount="4" tools:listitem="@layout/row_layout10"/>
+                <LinearLayout android:id="@+id/linearItemHeader2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTopEstateAgent"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{homeVM.homeModel.txtTopEstateAgent}"
+                        style="@style/txtRalewaysemibold18" tools:text="@string/msg_top_estate_agent"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtExplore1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{homeVM.homeModel.txtExplore1}"
+                        style="@style/txtRalewaysemibold12_5" tools:text="@string/lbl_explore"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerLayout2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_15pxh}" tools:itemCount="5" tools:listitem="@layout/row_layout11"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtExploreEstates"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{homeVM.homeModel.txtExploreEstates}"
+                    style="@style/txtRalewaysemibold18" tools:text="@string/msg_explore_nearby_estates"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerHome"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2" itemSpace="@{@dimen/_7pxh}"
+                    tools:itemCount="4" tools:listitem="@layout/row_home"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

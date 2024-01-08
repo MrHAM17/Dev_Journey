@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="notificationsVM" type="com.comforthotelbookingapp.app.modules.notifications.data.viewmodel.NotificationsVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearNotifications"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowDown"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_down"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtNotifications"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{notificationsVM.notificationsModel.txtNotifications}"
+                style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_notifications"/>
+            <ImageButton android:id="@+id/btnSettings"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_settings_white_a700" tools:ignore="ContentDescription"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearToday"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_31pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_31pxv">
+            <TextView android:ellipsize="end" android:id="@+id/txtToday"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{notificationsVM.notificationsModel.txtToday}"
+                style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_today"/>
+            <LinearLayout android:id="@+id/linearAutoLayoutHorizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_16pxv"
+                android:paddingTop="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;blue_gray_900&quot;}cornerRadius">
+                <ImageView android:id="@+id/imageCheckmark"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_80pxh"
+                    android:layout_width="@dimen/_83pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_checkmark_primary_80x83"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark_primary_80x83"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearAutoLayoutVertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPaymentSuccessful"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{notificationsVM.notificationsModel.txtPaymentSuccessful}"
+                        style="@style/txtUrbanistromanbold18" tools:text="@string/msg_payment_successful"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLalunaHotelBooking"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{notificationsVM.notificationsModel.txtLalunaHotelBooking}"
+                        style="@style/txtUrbanistromanmedium14_1" tools:text="@string/msg_laluna_hotel_booking"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearAutoLayoutHorizontal1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_16pxv"
+                android:paddingTop="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;blue_gray_900&quot;}cornerRadius">
+                <ImageView android:id="@+id/imageFloatingIcon"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_80pxh"
+                    android:layout_width="@dimen/_83pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_floating_icon_cyan_500"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_floating_icon_cyan_500"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearAutoLayoutVertical1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtEWalletConnected"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{notificationsVM.notificationsModel.txtEWalletConnected}"
+                        style="@style/txtUrbanistromanbold18" tools:text="@string/msg_e_wallet_connected"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtEWalletHasBeen"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{notificationsVM.notificationsModel.txtEWalletHasBeen}"
+                        style="@style/txtUrbanistromanmedium14_1" tools:text="@string/msg_e_wallet_has_been"/>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtYesterday"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{notificationsVM.notificationsModel.txtYesterday}"
+                style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_yesterday"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerNotifications"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_24pxh}" tools:itemCount="2" tools:listitem="@layout/row_notifications"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

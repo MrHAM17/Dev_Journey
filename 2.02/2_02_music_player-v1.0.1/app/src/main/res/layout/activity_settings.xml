@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="settingsVM" type="com.musicplayer.app.modules.settings.data.viewmodel.SettingsVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSettings"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;black_900&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_left"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_left"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTransfer"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{settingsVM.settingsModel.txtTransfer}"
+                style="@style/txtRobotomedium20" tools:text="@string/lbl_equalizer"/>
+            <ImageView android:id="@+id/imageClose"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_close_onprimarycontainer"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_close_onprimarycontainer"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearDBCounter"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_19pxv"
+            android:paddingEnd="@dimen/_20pxh"
+            android:paddingStart="@dimen/_20pxh" android:paddingTop="@dimen/_19pxv">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerEqualizer"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_23pxh}" tools:itemCount="6" tools:listitem="@layout/row_equalizer"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtMySettings"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{settingsVM.settingsModel.txtMySettings}"
+                style="@style/txtRobotoregular16" tools:text="@string/lbl_my_settings"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDefault"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{settingsVM.settingsModel.txtDefault}"
+                style="@style/txtRobotoregular16" tools:text="@string/lbl_default"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtClubMusic"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{settingsVM.settingsModel.txtClubMusic}"
+                style="@style/txtRobotoregular16_1" tools:text="@string/lbl_club_music"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtClassicalMusic"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{settingsVM.settingsModel.txtClassicalMusic}"
+                style="@style/txtRobotoregular16" tools:text="@string/lbl_classical_music"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDanceMusic"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{settingsVM.settingsModel.txtDanceMusic}"
+                style="@style/txtRobotoregular16" tools:text="@string/lbl_dance_music"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLowFrequencyGain"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{settingsVM.settingsModel.txtLowFrequencyGain}"
+                style="@style/txtRobotoregular16" tools:text="@string/msg_low_frequency_gain"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLowFrequencyGain1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{settingsVM.settingsModel.txtLowFrequencyGain1}"
+                style="@style/txtRobotoregular16" tools:text="@string/msg_low_frequency_gain"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

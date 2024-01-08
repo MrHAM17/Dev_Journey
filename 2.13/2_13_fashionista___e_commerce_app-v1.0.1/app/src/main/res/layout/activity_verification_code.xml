@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="verificationCodeVM" type="com.fashionistaecommerceapp.app.modules.verificationcode.data.viewmodel.VerificationCodeVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearVerificationCode"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_gray_200_radius_20"
+                android:id="@+id/btnArrowDown"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_down" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLetSSignIn"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{verificationCodeVM.verificationCodeModel.txtLetSSignIn}"
+                style="@style/txtPoppinsmedium18" tools:text="@string/msg_verification_code"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearOtpView"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_26pxv"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_16pxh" android:paddingTop="@dimen/_26pxv">
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtEnterTheCodeWe"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{verificationCodeVM.verificationCodeModel.txtEnterTheCodeWe}"
+                style="@style/txtPoppinsregular16" tools:text="@string/msg_enter_the_code_we"/>
+            <com.mukesh.OtpView android:focusableInTouchMode="true"
+                android:id="@+id/otpViewOtpView"
+                android:inputType="number"
+                android:itemBackground="@color/{&quot;name&quot;:&quot;gray_200&quot;}"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                android:textSize="@dimen/_24pxh" app:OtpItemCount="5"
+                app:OtpItemHeight="@dimen/_52pxv"
+                app:OtpItemSpacing="@dimen/_16pxh"
+                app:OtpItemWidth="@dimen/_52pxh"
+                app:OtpLineColor="@android:color/transparent" app:OtpViewType="rectangle"/>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtDidTReceiveA"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_7pxh"
+                android:singleLine="true"
+                android:text="@{verificationCodeVM.verificationCodeModel.txtDidTReceiveA}"
+                style="@style/txtPoppinsregular13" tools:text="@string/msg_did_t_receive_a"/>
+            <FrameLayout android:id="@+id/frameSpacer"
+                android:layout_height="wrap_content" android:layout_width="match_parent"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_10"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins"
+                android:gravity="center" android:id="@+id/btnConfirm"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_14pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_14pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_confirm"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_confirm"/>
+            <FrameLayout android:id="@+id/frameSpacer1"
+                android:layout_height="wrap_content" android:layout_width="match_parent"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

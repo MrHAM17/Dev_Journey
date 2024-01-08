@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="settingsVM" type="com.vertexrealestateapp.app.modules.settings.data.viewmodel.SettingsVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSettings"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:contentInsetStart="0dp" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_white_a700_border_name_gray_300_radius_20"
+                android:id="@+id/btnArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_left_primarycontainer" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtNotification"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{settingsVM.settingsModel.txtNotification}"
+                style="@style/txtManropeextrabold18" tools:text="@string/lbl_settings"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearApplicationSettings"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_26pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_26pxv">
+            <LinearLayout android:id="@+id/linearApplicationSettings1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtApplicationSettings"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{settingsVM.settingsModel.txtApplicationSettings}"
+                    style="@style/txtManropeextrabold14_1" tools:text="@string/msg_application_settings"/>
+                <LinearLayout android:id="@+id/linearText"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtNotification1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{settingsVM.settingsModel.txtNotification1}"
+                        style="@style/txtManropesemibold14" tools:text="@string/lbl_notification"/>
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchMaterialToggle"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;gray_300&quot;}"
+                    android:id="@+id/lineLine"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_327pxh"/>
+                <LinearLayout android:id="@+id/linearText1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDarkMode"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{settingsVM.settingsModel.txtDarkMode}"
+                        style="@style/txtManropesemibold14" tools:text="@string/lbl_dark_mode"/>
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchMaterialToggle1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;gray_300&quot;}"
+                    android:id="@+id/lineLine1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_327pxh"/>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearText2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLanguage"
+                        android:layout_gravity="bottom"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{settingsVM.settingsModel.txtLanguage}"
+                        style="@style/txtManropesemibold14" tools:text="@string/lbl_language"/>
+                    <FrameLayout android:id="@+id/frameSpacer"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTittle"
+                        android:layout_gravity="bottom"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{settingsVM.settingsModel.txtTittle}"
+                        style="@style/txtManropesemibold14_1" tools:text="@string/lbl_english"/>
+                    <ImageView android:id="@+id/imageArrowRight"
+                        android:layout_gravity="top"
+                        android:layout_height="@dimen/_20pxh"
+                        android:layout_width="@dimen/_20pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow_right"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;gray_300&quot;}"
+                    android:id="@+id/lineLine2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_327pxh"/>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearText3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtCountry"
+                        android:layout_gravity="bottom"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{settingsVM.settingsModel.txtCountry}"
+                        style="@style/txtManropesemibold14" tools:text="@string/lbl_country"/>
+                    <FrameLayout android:id="@+id/frameSpacer1"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTittle1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{settingsVM.settingsModel.txtTittle1}"
+                        style="@style/txtManropesemibold14_1" tools:text="@string/lbl_us"/>
+                    <ImageView android:id="@+id/imageArrowRight1"
+                        android:layout_gravity="top"
+                        android:layout_height="@dimen/_20pxh"
+                        android:layout_width="@dimen/_20pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow_right"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearSupport"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSupport"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{settingsVM.settingsModel.txtSupport}"
+                    style="@style/txtManropeextrabold14_1" tools:text="@string/lbl_support"/>
+                <LinearLayout android:id="@+id/linearText4"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTermsOfUse"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{settingsVM.settingsModel.txtTermsOfUse}"
+                        style="@style/txtManropesemibold14" tools:text="@string/lbl_terms_of_use"/>
+                    <ImageView android:id="@+id/imageArrowRight2"
+                        android:layout_gravity="top"
+                        android:layout_height="@dimen/_20pxh"
+                        android:layout_width="@dimen/_20pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow_right_blue_gray_500"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right_blue_gray_500"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;gray_300&quot;}"
+                    android:id="@+id/lineLine3"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_327pxh"/>
+                <LinearLayout android:id="@+id/linearText5"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPrivacyPolicy"
+                        android:layout_gravity="bottom"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{settingsVM.settingsModel.txtPrivacyPolicy}"
+                        style="@style/txtManropesemibold14" tools:text="@string/lbl_privacy_policy"/>
+                    <ImageView android:id="@+id/imageArrowRight3"
+                        android:layout_gravity="top"
+                        android:layout_height="@dimen/_20pxh"
+                        android:layout_width="@dimen/_20pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow_right_blue_gray_500"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right_blue_gray_500"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;gray_300&quot;}"
+                    android:id="@+id/lineLine4"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_327pxh"/>
+                <LinearLayout android:id="@+id/linearText6"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtAbout"
+                        android:layout_gravity="bottom"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{settingsVM.settingsModel.txtAbout}"
+                        style="@style/txtManropesemibold14" tools:text="@string/lbl_about"/>
+                    <ImageView android:id="@+id/imageArrowRight4"
+                        android:layout_gravity="top"
+                        android:layout_height="@dimen/_20pxh"
+                        android:layout_width="@dimen/_20pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow_right_blue_gray_500"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right_blue_gray_500"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;gray_300&quot;}"
+                    android:id="@+id/lineLine5"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_327pxh"/>
+                <LinearLayout android:id="@+id/linearFAQs"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtFAQs"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{settingsVM.settingsModel.txtFAQs}"
+                        style="@style/txtManropesemibold14" tools:text="@string/lbl_faqs"/>
+                    <ImageView android:id="@+id/imageArrowRight5"
+                        android:layout_gravity="top"
+                        android:layout_height="@dimen/_20pxh"
+                        android:layout_width="@dimen/_20pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow_right_blue_gray_500"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right_blue_gray_500"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

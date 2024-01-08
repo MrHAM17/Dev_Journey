@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="notificationOfferVM" type="com.ecommerce.app.modules.notificationoffer.data.viewmodel.NotificationOfferVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearNotificationOffer"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_left"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_left"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtNotification"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{notificationOfferVM.notificationOfferModel.txtNotification}"
+                style="@style/txtPoppinsbold16" tools:text="@string/lbl_notification"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearSort"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_12pxv" android:paddingTop="@dimen/_12pxv">
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearOfferItem"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_16pxh"
+                android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                <ImageView android:id="@+id/imageSort"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_sort"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_sort"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearOfferDetails"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTheBestTitle"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@{notificationOfferVM.notificationOfferModel.txtTheBestTitle}"
+                        style="@style/txtPoppinsbold14_1" tools:text="@string/lbl_the_best_title"/>
+                    <TextView android:id="@+id/txtDescription"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.03"
+                        android:text="@{notificationOfferVM.notificationOfferModel.txtDescription}"
+                        style="@style/txtPoppinsregular12" tools:text="@string/msg_culpa_cillum_consectetur"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTime"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@{notificationOfferVM.notificationOfferModel.txtTime}"
+                        style="@style/txtPoppinsregular10_1" tools:text="@string/msg_april_30_2014_1_01"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearOfferItem1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_16pxh"
+                android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                <ImageView android:id="@+id/imageSort1"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_sort"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_sort"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearOfferDetails1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtOffer"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@{notificationOfferVM.notificationOfferModel.txtOffer}"
+                        style="@style/txtPoppinsbold14_1" tools:text="@string/msg_summer_offer_98"/>
+                    <TextView android:id="@+id/txtDescription1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.03"
+                        android:text="@{notificationOfferVM.notificationOfferModel.txtDescription1}"
+                        style="@style/txtPoppinsregular12" tools:text="@string/msg_culpa_cillum_consectetur"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTime1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@{notificationOfferVM.notificationOfferModel.txtTime1}"
+                        style="@style/txtPoppinsregular10_1" tools:text="@string/msg_april_30_2014_1_01"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearOfferItem2"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_16pxh"
+                android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                <ImageView android:id="@+id/imageSort2"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_sort"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_sort"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearOfferDetails2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtOffer1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@{notificationOfferVM.notificationOfferModel.txtOffer1}"
+                        style="@style/txtPoppinsbold14_1" tools:text="@string/msg_special_offer_25"/>
+                    <TextView android:id="@+id/txtDescription2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.03"
+                        android:text="@{notificationOfferVM.notificationOfferModel.txtDescription2}"
+                        style="@style/txtPoppinsregular12" tools:text="@string/msg_culpa_cillum_consectetur"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTime2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@{notificationOfferVM.notificationOfferModel.txtTime2}"
+                        style="@style/txtPoppinsregular10_1" tools:text="@string/msg_april_30_2014_1_01"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

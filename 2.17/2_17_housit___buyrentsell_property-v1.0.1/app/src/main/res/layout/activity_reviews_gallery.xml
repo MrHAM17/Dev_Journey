@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="reviewsGalleryVM" type="com.housitbuyrentsellproperty.app.modules.reviewsgallery.data.viewmodel.ReviewsGalleryVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearReviewsGallery"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle_3">
+        <ImageButton
+            android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+            android:id="@+id/btnArrowLeft"
+            android:layout_height="@dimen/_50pxh"
+            android:layout_width="@dimen/_50pxh"
+            android:paddingHorizontal="@dimen/_16pxh"
+            android:paddingVertical="@dimen/_16pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_arrow_left" tools:ignore="ContentDescription"/>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="match_parent"/>
+        <LinearLayout android:id="@+id/linearRefresh"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:id="@+id/linearRefresh1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <FrameLayout android:id="@+id/frameButtonMove"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_83pxv"
+                    android:layout_width="@dimen/_42pxh"
+                    android:paddingBottom="@dimen/_30pxv"
+                    android:paddingEnd="@dimen/_7pxh"
+                    android:paddingStart="@dimen/_7pxh"
+                    android:paddingTop="@dimen/_30pxv" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;,&quot;opacity&quot;:0.25}cornerRadius">
+                    <ImageView android:id="@+id/imageRefresh"
+                        android:layout_gravity="start"
+                        android:layout_height="@dimen/_22pxh"
+                        android:layout_width="@dimen/_23pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_refresh"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_refresh"/>
+                </FrameLayout>
+                <FrameLayout android:id="@+id/frameButtonMove1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_83pxv"
+                    android:layout_width="@dimen/_42pxh"
+                    android:paddingBottom="@dimen/_30pxv"
+                    android:paddingEnd="@dimen/_7pxh"
+                    android:paddingStart="@dimen/_7pxh"
+                    android:paddingTop="@dimen/_30pxv" style="@style/groupStylenamewhite_8">
+                    <ImageView android:id="@+id/imageForward"
+                        android:layout_gravity="end"
+                        android:layout_height="@dimen/_22pxh"
+                        android:layout_width="@dimen/_23pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_forward"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_forward"/>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearTwentyNine"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_24pxh"
+                android:paddingVertical="@dimen/_24pxv" style="@style/groupStyle_4">
+                <LinearLayout android:id="@+id/linearItemStarUser"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/_10pxv"
+                    android:paddingTop="@dimen/_10pxv" style="@style/groupStylenamewhite_12">
+                    <ImageView android:id="@+id/imageShape"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_50pxh"
+                        android:layout_width="@dimen/_50pxh"
+                        android:scaleType="centerCrop"
+                        circular="@{true}"
+                        imageRes="@{@drawable/img_shape_28}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_shape_28"/>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearLayout"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSamuelElla"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{reviewsGalleryVM.reviewsGalleryModel.txtSamuelElla}"
+                            style="@style/txtRalewaybold12" tools:text="@string/lbl_samuel_ella"/>
+                        <androidx.appcompat.widget.AppCompatRatingBar
+                            android:id="@+id/ratingBarRatingBar"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:numStars="4" android:rating="0" style="@style/Widget.AppCompat.RatingBar.Small"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearGallery"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <ImageView android:id="@+id/imageShape1"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_63pxh"
+                        android:layout_width="@dimen/_58pxh"
+                        android:scaleType="fitXY"
+                        cornerRadius="@{@dimen/_18pxh}"
+                        imageRes="@{@drawable/img_shape_60}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_shape_60"/>
+                    <ImageView android:id="@+id/imageShape2"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_63pxh"
+                        android:layout_width="@dimen/_58pxh"
+                        android:scaleType="fitXY"
+                        cornerRadius="@{@dimen/_18pxh}"
+                        imageRes="@{@drawable/img_shape_59}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_shape_59"/>
+                    <ImageView android:id="@+id/imageShape3"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_63pxh"
+                        android:layout_width="@dimen/_58pxh"
+                        android:scaleType="fitXY"
+                        cornerRadius="@{@dimen/_18pxh}"
+                        imageRes="@{@drawable/img_shape_58}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_shape_58"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="messageactionRowModel" type="com.hiredjobsearch.app.modules.messageaction.data.model.MessageactionRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearEstherHoward"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <FrameLayout android:id="@+id/frameProfile"
+            android:layout_height="@dimen/_56pxv" android:layout_width="@dimen/_56pxh">
+            <ImageView android:id="@+id/imageEstherHoward"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_56pxh"
+                android:layout_width="@dimen/_56pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_image_56x56}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_image_56x56"/>
+            <View
+                android:background="@drawable/rectangle_bg_name_green_600_border_name_onprimarycontainer_opacity_1_radius_8"
+                android:id="@+id/viewDot"
+                android:layout_gravity="bottom|end"
+                android:layout_height="@dimen/_16pxh" android:layout_width="@dimen/_16pxh"/>
+        </FrameLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearNameDescription"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtEstherHoward"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:singleLine="true"
+                android:text="@{messageactionRowModel.txtEstherHoward}"
+                style="@style/txtPlusJakartaSansbold18" tools:text="@string/lbl_esther_howard"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLoremIpsumDolor"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_4pxh"
+                android:singleLine="true"
+                android:text="@{messageactionRowModel.txtLoremIpsumDolor}"
+                style="@style/txtPlusJakartaSansmedium14" tools:text="@string/msg_lorem_ipsum_dolor4"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <LinearLayout android:id="@+id/linearTime"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtTime"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_4pxh"
+                android:singleLine="true"
+                android:text="@{messageactionRowModel.txtTime}"
+                style="@style/txtPlusJakartaSanssemibold12_2" tools:text="@string/lbl_10_20"/>
+            <TextView android:ellipsize="end" android:gravity="end"
+                android:id="@+id/txtWidget"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_3pxh"
+                android:paddingBottom="@dimen/_5pxv"
+                android:paddingEnd="@dimen/_8pxh"
+                android:paddingStart="@dimen/_8pxh"
+                android:paddingTop="@dimen/_5pxv"
+                android:singleLine="true"
+                android:text="@{messageactionRowModel.txtWidget}"
+                style="@style/txtSolidRounded" tools:text="@string/lbl_2"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

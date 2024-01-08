@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="addNewPropertyHomeFactsVM" type="com.vertexrealestateapp.app.modules.addnewpropertyhomefacts.data.viewmodel.AddNewPropertyHomeFactsVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linear0608"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:contentInsetStart="0dp" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_white_a700_border_name_gray_300_radius_20"
+                android:id="@+id/btnArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_left_primarycontainer" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtNotification"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{addNewPropertyHomeFactsVM.addNewPropertyHomeFactsModel.txtNotification}"
+                style="@style/txtManropeextrabold18" tools:text="@string/msg_add_new_property"/>
+        </androidx.appcompat.widget.Toolbar>
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearAddNewPropertyHome"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout android:id="@+id/linearAddressAndProgress"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtHomeFacts"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{addNewPropertyHomeFactsVM.addNewPropertyHomeFactsModel.txtHomeFacts}"
+                        style="@style/txtManropesemibold14" tools:text="@string/lbl_home_facts"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:background="@drawable/rectangle_bg_name_primary_radius_16"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/manrope"
+                        android:gravity="center"
+                        android:id="@+id/btnSixHundredEight"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_33pxv"
+                        android:layout_width="@dimen/_79pxh"
+                        android:paddingBottom="@dimen/_6pxv"
+                        android:paddingEnd="@dimen/_16pxh"
+                        android:paddingStart="@dimen/_16pxh"
+                        android:paddingTop="@dimen/_6pxv"
+                        android:singleLine="true"
+                        android:text="@string/lbl_06_08"
+                        android:textAllCaps="false"
+                        android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/_14pxh"
+                        android:textStyle="bold" tools:text="@string/lbl_06_08"/>
+                </LinearLayout>
+                <ProgressBar android:gravity="center_horizontal"
+                    android:id="@+id/progressBarProgressBar"
+                    android:indeterminate="false"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:max="100" android:minHeight="@dimen/_6pxv"
+                    android:progress="75"
+                    android:progressDrawable="@drawable/layer_list_bg_name_gray_300_radius_3" style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtHomeFacts1"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{addNewPropertyHomeFactsVM.addNewPropertyHomeFactsModel.txtHomeFacts1}"
+                    style="@style/txtManropebold18" tools:text="@string/lbl_home_facts"/>
+                <TextView android:gravity="center_horizontal"
+                    android:id="@+id/txtThisHelpsYour"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.02"
+                    android:text="@{addNewPropertyHomeFactsVM.addNewPropertyHomeFactsModel.txtThisHelpsYour}"
+                    style="@style/txtManrope12" tools:text="@string/msg_this_helps_your"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearTypeProperty"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTypeProperty"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.02"
+                        android:singleLine="true"
+                        android:text="@{addNewPropertyHomeFactsVM.addNewPropertyHomeFactsModel.txtTypeProperty}"
+                        style="@style/txtManropemedium12_1" tools:text="@string/lbl_type_property"/>
+                    <Spinner
+                        android:background="@drawable/layer_list_bg_name_gray_300_radius_10"
+                        android:id="@+id/spinnerInputFields"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" tools:listitem="@layout/spinner_item"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearInputs"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <LinearLayout android:id="@+id/linearTypeProperty1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <LinearLayout android:id="@+id/linearTitle"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="horizontal">
+                            <TextView android:ellipsize="end"
+                                android:gravity="bottom"
+                                android:id="@+id/txtFinishedSqFt"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.02"
+                                android:singleLine="true"
+                                android:text="@{addNewPropertyHomeFactsVM.addNewPropertyHomeFactsModel.txtFinishedSqFt}"
+                                style="@style/txtManropemedium12_1" tools:text="@string/msg_finished_sq_ft"/>
+                            <ImageView
+                                android:id="@+id/imageVideoCamera"
+                                android:layout_gravity="top"
+                                android:layout_height="@dimen/_16pxh"
+                                android:layout_width="@dimen/_16pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_video_camera"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_video_camera"/>
+                        </LinearLayout>
+                        <EditText
+                            android:background="@drawable/rectangle_bg_name_gray_300_radius_10"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/manrope"
+                            android:hint="@string/lbl_0"
+                            android:id="@+id/etInputFields"
+                            android:inputType="text"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:paddingHorizontal="@dimen/_14pxh"
+                            android:paddingVertical="@dimen/_14pxv"
+                            android:singleLine="true"
+                            android:text="@={addNewPropertyHomeFactsVM.addNewPropertyHomeFactsModel.etInputFieldsValue}"
+                            android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+                            android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+                            android:textFontWeight="500"
+                            android:textSize="@dimen/_14pxh"
+                            android:textStyle="bold" tools:ignore="Autofill"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearTypeProperty2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtLotSize"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.02"
+                            android:singleLine="true"
+                            android:text="@{addNewPropertyHomeFactsVM.addNewPropertyHomeFactsModel.txtLotSize}"
+                            style="@style/txtManropemedium12_1" tools:text="@string/lbl_lot_size"/>
+                        <EditText
+                            android:background="@drawable/rectangle_bg_name_gray_300_radius_10"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/manrope"
+                            android:hint="@string/lbl_0"
+                            android:id="@+id/etInputFields1"
+                            android:inputType="text"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:paddingHorizontal="@dimen/_14pxh"
+                            android:paddingVertical="@dimen/_14pxv"
+                            android:singleLine="true"
+                            android:text="@={addNewPropertyHomeFactsVM.addNewPropertyHomeFactsModel.etInputFields1Value}"
+                            android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+                            android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+                            android:textFontWeight="500"
+                            android:textSize="@dimen/_14pxh"
+                            android:textStyle="bold" tools:ignore="Autofill"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearInputs1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearTypeProperty3"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtYearBuilt"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.02"
+                            android:singleLine="true"
+                            android:text="@{addNewPropertyHomeFactsVM.addNewPropertyHomeFactsModel.txtYearBuilt}"
+                            style="@style/txtManropemedium12_1" tools:text="@string/lbl_year_built"/>
+                        <EditText
+                            android:background="@drawable/rectangle_bg_name_gray_300_radius_10"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/manrope"
+                            android:hint="@string/lbl_0"
+                            android:id="@+id/etInputFields2"
+                            android:inputType="text"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:paddingHorizontal="@dimen/_14pxh"
+                            android:paddingVertical="@dimen/_14pxv"
+                            android:singleLine="true"
+                            android:text="@={addNewPropertyHomeFactsVM.addNewPropertyHomeFactsModel.etInputFields2Value}"
+                            android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+                            android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+                            android:textFontWeight="500"
+                            android:textSize="@dimen/_14pxh"
+                            android:textStyle="bold" tools:ignore="Autofill"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearTypeProperty4"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtBedrooms"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.02"
+                            android:singleLine="true"
+                            android:text="@{addNewPropertyHomeFactsVM.addNewPropertyHomeFactsModel.txtBedrooms}"
+                            style="@style/txtManropemedium12_1" tools:text="@string/lbl_bedrooms"/>
+                        <EditText
+                            android:background="@drawable/rectangle_bg_name_gray_300_radius_10"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/manrope"
+                            android:hint="@string/lbl_0"
+                            android:id="@+id/etInputFields3"
+                            android:inputType="text"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:paddingHorizontal="@dimen/_14pxh"
+                            android:paddingVertical="@dimen/_14pxv"
+                            android:singleLine="true"
+                            android:text="@={addNewPropertyHomeFactsVM.addNewPropertyHomeFactsModel.etInputFields3Value}"
+                            android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+                            android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+                            android:textFontWeight="500"
+                            android:textSize="@dimen/_14pxh"
+                            android:textStyle="bold" tools:ignore="Autofill"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearInputs2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <LinearLayout android:id="@+id/linearTypeProperty5"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <LinearLayout android:id="@+id/linearTitle1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="horizontal">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtFullBaths"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:letterSpacing="0.02"
+                                android:singleLine="true"
+                                android:text="@{addNewPropertyHomeFactsVM.addNewPropertyHomeFactsModel.txtFullBaths}"
+                                style="@style/txtManropemedium12_1" tools:text="@string/lbl_full_baths"/>
+                            <ImageView
+                                android:id="@+id/imageVideoCamera1"
+                                android:layout_gravity="top"
+                                android:layout_height="@dimen/_16pxh"
+                                android:layout_width="@dimen/_16pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_video_camera"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_video_camera"/>
+                        </LinearLayout>
+                        <EditText
+                            android:background="@drawable/rectangle_bg_name_gray_300_radius_10"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/manrope"
+                            android:hint="@string/lbl_0"
+                            android:id="@+id/etInputFields4"
+                            android:inputType="text"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:paddingHorizontal="@dimen/_14pxh"
+                            android:paddingVertical="@dimen/_14pxv"
+                            android:singleLine="true"
+                            android:text="@={addNewPropertyHomeFactsVM.addNewPropertyHomeFactsModel.etInputFields4Value}"
+                            android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+                            android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+                            android:textFontWeight="500"
+                            android:textSize="@dimen/_14pxh"
+                            android:textStyle="bold" tools:ignore="Autofill"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearTypeProperty6"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <LinearLayout android:id="@+id/linearTitle2"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="horizontal">
+                            <TextView android:ellipsize="end"
+                                android:gravity="bottom"
+                                android:id="@+id/txtSecurityDeposit"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.02"
+                                android:singleLine="true"
+                                android:text="@{addNewPropertyHomeFactsVM.addNewPropertyHomeFactsModel.txtSecurityDeposit}"
+                                style="@style/txtManropemedium12_1" tools:text="@string/msg_security_deposit"/>
+                            <ImageView
+                                android:id="@+id/imageVideoCamera2"
+                                android:layout_gravity="top"
+                                android:layout_height="@dimen/_16pxh"
+                                android:layout_width="@dimen/_16pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_video_camera"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_video_camera"/>
+                        </LinearLayout>
+                        <EditText
+                            android:background="@drawable/rectangle_bg_name_gray_300_radius_10"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/manrope"
+                            android:hint="@string/lbl_02"
+                            android:id="@+id/etPrice"
+                            android:inputType="text"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:paddingHorizontal="@dimen/_14pxh"
+                            android:paddingVertical="@dimen/_14pxv"
+                            android:singleLine="true"
+                            android:text="@={addNewPropertyHomeFactsVM.addNewPropertyHomeFactsModel.etPriceValue}"
+                            android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+                            android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+                            android:textFontWeight="500"
+                            android:textSize="@dimen/_14pxh"
+                            android:textStyle="bold" tools:ignore="Autofill"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearTypeProperty7"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtMonthlyRent"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.02"
+                        android:singleLine="true"
+                        android:text="@{addNewPropertyHomeFactsVM.addNewPropertyHomeFactsModel.txtMonthlyRent}"
+                        style="@style/txtManropemedium12_1" tools:text="@string/lbl_monthly_rent"/>
+                    <EditText
+                        android:background="@drawable/rectangle_bg_name_gray_300_radius_10"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/manrope"
+                        android:hint="@string/lbl_02"
+                        android:id="@+id/etPrice1"
+                        android:inputType="text"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:paddingHorizontal="@dimen/_14pxh"
+                        android:paddingVertical="@dimen/_14pxv"
+                        android:singleLine="true"
+                        android:text="@={addNewPropertyHomeFactsVM.addNewPropertyHomeFactsModel.etPrice1Value}"
+                        android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+                        android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+                        android:textFontWeight="500"
+                        android:textSize="@dimen/_14pxh"
+                        android:textStyle="bold" tools:ignore="Autofill"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout android:id="@+id/linearBTN"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical" style="@style/groupStyle">
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_10"
+                android:ellipsize="end"
+                android:fontFamily="@font/manrope"
+                android:gravity="center" android:id="@+id/btnNext"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_17pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_17pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_next"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;gray_50&quot;}"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_next"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

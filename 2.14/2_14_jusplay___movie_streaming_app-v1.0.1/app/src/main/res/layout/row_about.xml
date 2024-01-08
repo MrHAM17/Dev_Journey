@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="aboutRowModel" type="com.jusplaymoviestreamingapp.app.modules.about.data.model.AboutRowModel"/>
+    </data>
+    <FrameLayout android:id="@+id/frameMenaMassoud"
+        android:layout_height="wrap_content" android:layout_width="@dimen/_104pxh">
+        <ImageView android:id="@+id/imageMenaMassoud"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_127pxh"
+            android:layout_width="@dimen/_104pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_12pxh}"
+            imageRes="@{@drawable/img_rectangle_12050}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle_12050"/>
+        <TextView android:gravity="top|start"
+            android:id="@+id/txtMenaMassoud"
+            android:layout_gravity="bottom|start"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@{aboutRowModel.txtMenaMassoud}"
+            style="@style/txtPoppinsregular12" tools:text="@string/lbl_mena_massoud"/>
+    </FrameLayout>
+</layout>

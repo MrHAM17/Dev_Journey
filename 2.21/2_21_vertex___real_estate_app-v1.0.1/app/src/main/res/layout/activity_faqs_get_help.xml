@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="faqsGetHelpVM" type="com.vertexrealestateapp.app.modules.faqsgethelp.data.viewmodel.FaqsGetHelpVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearFAQsGetHelp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:contentInsetStart="0dp" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_white_a700_border_name_gray_300_radius_20"
+                android:id="@+id/btnArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_left_primarycontainer" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtNotification"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{faqsGetHelpVM.faqsGetHelpModel.txtNotification}"
+                style="@style/txtManropeextrabold18" tools:text="@string/lbl_faqs"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearSearch"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_28pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_28pxv">
+            <androidx.appcompat.widget.SearchView
+                android:background="@drawable/rectangle_border_name_gray_300_radius_10"
+                android:id="@+id/searchViewSearch"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:theme="@style/searchViewsearch"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="@string/msg_search_questions" app:searchIcon="@drawable/img_rewind"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFrequentlyAsked"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{faqsGetHelpVM.faqsGetHelpModel.txtFrequentlyAsked}"
+                style="@style/txtManropebold18" tools:text="@string/msg_frequently_asked"/>
+            <LinearLayout android:id="@+id/linearQuestions"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <LinearLayout android:id="@+id/linearQ1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <LinearLayout android:id="@+id/linearQAndA"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="vertical">
+                        <LinearLayout android:id="@+id/linearQ2"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" android:orientation="horizontal">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtHowDoesRelaxWork"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:letterSpacing="0.01"
+                                android:singleLine="true"
+                                android:text="@{faqsGetHelpVM.faqsGetHelpModel.txtHowDoesRelaxWork}"
+                                style="@style/txtManropebold14" tools:text="@string/msg_how_does_relax_work"/>
+                            <ImageView android:id="@+id/imageArrowUp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="@dimen/_20pxh"
+                                android:layout_width="@dimen/_20pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_arrow_up"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_up"/>
+                        </LinearLayout>
+                        <TextView android:gravity="center_horizontal"
+                            android:id="@+id/txtDescription"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.02"
+                            android:text="@{faqsGetHelpVM.faqsGetHelpModel.txtDescription}"
+                            style="@style/txtManrope12_1" tools:text="@string/msg_lorem_ipsum_dolor"/>
+                    </LinearLayout>
+                    <View
+                        android:background="@color/{&quot;name&quot;:&quot;gray_300&quot;}"
+                        android:id="@+id/lineLine"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_327pxh"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearQ3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <LinearLayout android:id="@+id/linearWhoCanBuyAHome"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtWhoCanBuyAHome"
+                            android:layout_gravity="bottom"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@{faqsGetHelpVM.faqsGetHelpModel.txtWhoCanBuyAHome}"
+                            style="@style/txtManropebold14" tools:text="@string/msg_who_can_buy_a_home"/>
+                        <ImageView android:id="@+id/imageArrowDown"
+                            android:layout_gravity="top"
+                            android:layout_height="@dimen/_20pxh"
+                            android:layout_width="@dimen/_20pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_down_blue_gray_500_20x20"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down_blue_gray_500_20x20"/>
+                    </LinearLayout>
+                    <View
+                        android:background="@color/{&quot;name&quot;:&quot;gray_300&quot;}"
+                        android:id="@+id/lineLine1"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_327pxh"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearQ4"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <LinearLayout android:id="@+id/linearHowCanISellMy"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:gravity="bottom"
+                            android:id="@+id/txtHowCanISellMy"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@{faqsGetHelpVM.faqsGetHelpModel.txtHowCanISellMy}"
+                            style="@style/txtManropebold14" tools:text="@string/msg_how_can_i_sell_my"/>
+                        <ImageView android:id="@+id/imageArrowDown1"
+                            android:layout_gravity="top"
+                            android:layout_height="@dimen/_20pxh"
+                            android:layout_width="@dimen/_20pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_down_blue_gray_500_20x20"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down_blue_gray_500_20x20"/>
+                    </LinearLayout>
+                    <View
+                        android:background="@color/{&quot;name&quot;:&quot;gray_300&quot;}"
+                        android:id="@+id/lineLine2"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_327pxh"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearQ5"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:gravity="bottom"
+                        android:id="@+id/txtHowDoIContact"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@{faqsGetHelpVM.faqsGetHelpModel.txtHowDoIContact}"
+                        style="@style/txtManropebold14" tools:text="@string/msg_how_do_i_contact"/>
+                    <ImageView android:id="@+id/imageArrowDown2"
+                        android:layout_gravity="top"
+                        android:layout_height="@dimen/_20pxh"
+                        android:layout_width="@dimen/_20pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow_down_blue_gray_500_20x20"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down_blue_gray_500_20x20"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearShowAll"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:id="@+id/txtShowAll"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{faqsGetHelpVM.faqsGetHelpModel.txtShowAll}"
+                    style="@style/txtManropebold14_1" tools:text="@string/lbl_show_all"/>
+                <ImageView android:id="@+id/imageArrowLeft"
+                    android:layout_gravity="top"
+                    android:layout_height="@dimen/_16pxh"
+                    android:layout_width="@dimen/_16pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrow_left"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_left"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

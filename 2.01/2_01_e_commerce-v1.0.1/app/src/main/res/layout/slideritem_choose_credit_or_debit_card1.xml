@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="imageSliderUserModel" type="com.ecommerce.app.modules.choosecreditordebitcard.data.model.ImageSliderUserModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearCreditCard"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_16pxv"
+        android:paddingEnd="@dimen/_21pxh"
+        android:paddingStart="@dimen/_21pxh"
+        android:paddingTop="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;primary&quot;,&quot;opacity&quot;:1}cornerRadius">
+        <ImageView android:id="@+id/imageUser"
+            android:layout_height="@dimen/_22pxh"
+            android:layout_width="@dimen/_36pxh"
+            android:scaleType="fitXY" android:src="@drawable/img_user"
+            imageUrl="@{imageSliderUserModel.imageUser}"
+            placeHolder="@{@drawable/img_user}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_user"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtDebitCardNumber"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.03" android:singleLine="true"
+            android:text="@{imageSliderUserModel.txtDebitCardNumber}"
+            style="@style/txtPoppinsbold24" tools:text="@string/msg_6326_9124"/>
+        <LinearLayout android:id="@+id/linearSeventySeven"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <LinearLayout android:id="@+id/linearSeventyThree"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:alpha="0.5" android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtCARDHOLDER"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{imageSliderUserModel.txtCARDHOLDER}"
+                    style="@style/txtPoppinsregular10_2" tools:text="@string/lbl_card_holder"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtDominicOvo"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{imageSliderUserModel.txtDominicOvo}"
+                    style="@style/txtPoppinsbold10_2" tools:text="@string/lbl_dominic_ovo"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearSixtyNine"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:alpha="0.5" android:ellipsize="end"
+                    android:id="@+id/txtCARDSAVE"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{imageSliderUserModel.txtCARDSAVE}"
+                    style="@style/txtPoppinsregular10_2" tools:text="@string/lbl_card_save"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDebitCardExpiry"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{imageSliderUserModel.txtDebitCardExpiry}"
+                    style="@style/txtPoppinsbold10_2" tools:text="@string/lbl_06_24"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="languageVM" type="com.hiredjobsearch.app.modules.language.data.viewmodel.LanguageVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearLanguage"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700_01&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowBack"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_component_1"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_component_1"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLanguage"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:singleLine="true"
+                android:text="@{languageVM.languageModel.txtLanguage}"
+                style="@style/txtPlusJakartaSansbold18" tools:text="@string/lbl_language"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearSuggestedLanguages"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_28pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_28pxv">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearSuggestedLanguages1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_20pxv"
+                android:paddingEnd="@dimen/_15pxh"
+                android:paddingStart="@dimen/_15pxh"
+                android:paddingTop="@dimen/_20pxv" style="@style/groupStylenameonPrimaryContaineropacity1cornerRadius_1">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSuggestedLanguages"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.0"
+                    android:lineSpacingExtra="@dimen/_4pxh"
+                    android:singleLine="true"
+                    android:text="@{languageVM.languageModel.txtSuggestedLanguages}"
+                    style="@style/txtPlusJakartaSanssemibold12_2" tools:text="@string/msg_suggested_languages"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerEnglishUK"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_14pxh}" tools:itemCount="3" tools:listitem="@layout/row_englishuk"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearOtherLanguages"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_15pxh"
+                android:paddingVertical="@dimen/_15pxv" style="@style/groupStylenameonPrimaryContaineropacity1cornerRadius_1">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtOtherLanguages"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.0"
+                    android:lineSpacingExtra="@dimen/_4pxh"
+                    android:singleLine="true"
+                    android:text="@{languageVM.languageModel.txtOtherLanguages}"
+                    style="@style/txtPlusJakartaSanssemibold12_2" tools:text="@string/lbl_other_languages"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerChineses"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_16pxh}" tools:itemCount="6" tools:listitem="@layout/row_chineses"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

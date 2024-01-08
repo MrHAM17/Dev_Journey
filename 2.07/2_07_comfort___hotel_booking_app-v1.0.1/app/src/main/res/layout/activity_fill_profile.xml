@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="fillProfileVM" type="com.comforthotelbookingapp.app.modules.fillprofile.data.viewmodel.FillProfileVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearFullName"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowDown"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_down"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFillYourProfile"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/msg_fill_your_profile"
+                style="@style/txtUrbanistromanbold24" tools:text="@string/msg_fill_your_profile"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearFillProfile"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_40pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_40pxv">
+            <FrameLayout android:id="@+id/frameAvtar"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_140pxv" android:layout_width="@dimen/_140pxh">
+                <ImageView android:id="@+id/imageCircleImage"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_140pxh"
+                    android:layout_width="@dimen/_140pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_ellipse}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse"/>
+                <ImageButton android:id="@+id/btnEdit"
+                    android:layout_gravity="bottom|end"
+                    android:layout_height="@dimen/_35pxh"
+                    android:layout_width="@dimen/_35pxh"
+                    android:paddingHorizontal="@dimen/_2pxh"
+                    android:paddingVertical="@dimen/_2pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_edit_primary" tools:ignore="ContentDescription"/>
+            </FrameLayout>
+            <EditText
+                android:background="@drawable/rectangle_bg_name_blue_gray_900_radius_12"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:hint="@string/lbl_full_name"
+                android:id="@+id/etFullName" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_19pxv"
+                android:paddingEnd="@dimen/_20pxh"
+                android:paddingStart="@dimen/_20pxh"
+                android:paddingTop="@dimen/_19pxv"
+                android:singleLine="true"
+                android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_100&quot;}"
+                android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_100&quot;}"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="normal" tools:ignore="Autofill"/>
+            <EditText
+                android:background="@drawable/rectangle_bg_name_blue_gray_900_radius_12"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:hint="@string/lbl_nickname"
+                android:id="@+id/etName" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_19pxv"
+                android:paddingEnd="@dimen/_20pxh"
+                android:paddingStart="@dimen/_20pxh"
+                android:paddingTop="@dimen/_19pxv"
+                android:singleLine="true"
+                android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_100&quot;}"
+                android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_100&quot;}"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="normal" tools:ignore="Autofill"/>
+            <EditText
+                android:background="@drawable/rectangle_bg_name_blue_gray_900_radius_12"
+                android:drawableEnd="@drawable/img_iconly_curved_calendar"
+                android:drawablePadding="@dimen/_30pxh"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:hint="@string/lbl_date_of_birth"
+                android:id="@+id/etDateOfBirth" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_19pxv"
+                android:paddingEnd="@dimen/_20pxh"
+                android:paddingStart="@dimen/_20pxh"
+                android:paddingTop="@dimen/_19pxv"
+                android:singleLine="true"
+                android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_100&quot;}"
+                android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_100&quot;}"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="normal" tools:ignore="Autofill"/>
+            <EditText
+                android:background="@drawable/rectangle_bg_name_blue_gray_900_radius_12"
+                android:drawableEnd="@drawable/drawable_img_checkmark_blue_gray_100_15x15"
+                android:drawablePadding="@dimen/_30pxh"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:hint="@string/lbl_email"
+                android:id="@+id/etEmail" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_19pxv"
+                android:paddingEnd="@dimen/_22pxh"
+                android:paddingStart="@dimen/_20pxh"
+                android:paddingTop="@dimen/_19pxv"
+                android:singleLine="true"
+                android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_100&quot;}"
+                android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_100&quot;}"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="normal" tools:ignore="Autofill"/>
+            <include android:id="@+id/included"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                dhi0Model="@{fillProfileVM.includedModel}" layout="@layout/component_dhi_0"/>
+            <Spinner
+                android:background="@drawable/layer_list_bg_name_blue_gray_900_radius_12"
+                android:gravity="center_horizontal"
+                android:id="@+id/spinnerGender"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" tools:listitem="@layout/spinner_item"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_radius_27"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:gravity="center" android:id="@+id/btnContinue"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_54pxv"
+            android:layout_width="@dimen/_380pxh"
+            android:paddingBottom="@dimen/_15pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_15pxv" android:singleLine="true"
+            android:text="@string/lbl_continue"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_continue"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="similiarVM" type="com.jusplaymoviestreamingapp.app.modules.similiar.data.viewmodel.SimiliarVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRectangle"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;black_900&quot;}">
+        <LinearLayout android:id="@+id/linearSeven"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/_2pxh"
+            android:paddingStart="@dimen/_2pxh" style="@style/groupStyle{&quot;name&quot;:&quot;black_900&quot;}">
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerSimiliar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="1" itemSpace="@{@dimen/_1pxh}"
+                tools:itemCount="10" tools:listitem="@layout/row_similiar"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

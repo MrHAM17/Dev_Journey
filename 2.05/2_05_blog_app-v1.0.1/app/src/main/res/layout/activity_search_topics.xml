@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="searchTopicsVM" type="com.blogapp.app.modules.searchtopics.data.viewmodel.SearchTopicsVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSearchTopics"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_left"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_left"/>
+            <androidx.appcompat.widget.SearchView
+                android:background="@drawable/rectangle_bg_name_gray_300_radius_10"
+                android:id="@+id/searchViewSearch"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:theme="@style/searchViewsearch"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="@string/lbl_search" app:searchIcon="@drawable/img_rewind"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearSeventyEight"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_19pxv"
+            android:paddingEnd="@dimen/_20pxh"
+            android:paddingStart="@dimen/_20pxh" android:paddingTop="@dimen/_19pxv">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtExploreTopics"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{searchTopicsVM.searchTopicsModel.txtExploreTopics}"
+                style="@style/txtPoppinsbold18" tools:text="@string/lbl_explore_topics"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtBooks"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{searchTopicsVM.searchTopicsModel.txtBooks}"
+                style="@style/txtPoppinsregular18" tools:text="@string/lbl_books"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFiction"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{searchTopicsVM.searchTopicsModel.txtFiction}"
+                style="@style/txtPoppinsregular18" tools:text="@string/lbl_fiction"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtComics"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{searchTopicsVM.searchTopicsModel.txtComics}"
+                style="@style/txtPoppinsregular18" tools:text="@string/lbl_comics"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtArt"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{searchTopicsVM.searchTopicsModel.txtArt}"
+                style="@style/txtPoppinsregular18" tools:text="@string/lbl_art"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtVisualDesign"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{searchTopicsVM.searchTopicsModel.txtVisualDesign}"
+                style="@style/txtPoppinsregular18" tools:text="@string/lbl_visual_design"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTechnology"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{searchTopicsVM.searchTopicsModel.txtTechnology}"
+                style="@style/txtPoppinsregular18" tools:text="@string/lbl_technology"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtScience"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{searchTopicsVM.searchTopicsModel.txtScience}"
+                style="@style/txtPoppinsregular18" tools:text="@string/lbl_science"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtBusiness"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{searchTopicsVM.searchTopicsModel.txtBusiness}"
+                style="@style/txtPoppinsregular18" tools:text="@string/lbl_business"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPsychology"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{searchTopicsVM.searchTopicsModel.txtPsychology}"
+                style="@style/txtPoppinsregular18" tools:text="@string/lbl_psychology"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCreativity"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{searchTopicsVM.searchTopicsModel.txtCreativity}"
+                style="@style/txtPoppinsregular18" tools:text="@string/lbl_creativity"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtEducation"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{searchTopicsVM.searchTopicsModel.txtEducation}"
+                style="@style/txtPoppinsregular18" tools:text="@string/lbl_education"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFeminism"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{searchTopicsVM.searchTopicsModel.txtFeminism}"
+                style="@style/txtPoppinsregular18" tools:text="@string/lbl_feminism"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtArtificialIntelligence"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{searchTopicsVM.searchTopicsModel.txtArtificialIntelligence}"
+                style="@style/txtPoppinsregular18" tools:text="@string/msg_artificial_intelligence"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtHealth"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{searchTopicsVM.searchTopicsModel.txtHealth}"
+                style="@style/txtPoppinsregular18" tools:text="@string/lbl_health"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDesign"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{searchTopicsVM.searchTopicsModel.txtDesign}"
+                style="@style/txtPoppinsregular18" tools:text="@string/lbl_design"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

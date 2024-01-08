@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="searchSevenVM" type="com.moviestreaming.app.modules.searchseven.data.viewmodel.SearchSevenVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSearch"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_900&quot;}">
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearSearchSeven"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <androidx.appcompat.widget.SearchView
+                    android:background="@color/{&quot;name&quot;:&quot;secondaryContainer&quot;}"
+                    android:id="@+id/searchViewSearch"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:theme="@style/searchViewsearch"
+                    app:iconifiedByDefault="false"
+                    app:queryBackground="@android:color/transparent"
+                    app:queryHint="@string/lbl_love" app:searchIcon="@drawable/img_icon_white_a700_18x18"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtHeading"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{searchSevenVM.searchSevenModel.txtHeading}"
+                    style="@style/txtRobotosemibold18" tools:text="@string/msg_search_result_for"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMovies"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{searchSevenVM.searchSevenModel.txtMovies}"
+                    style="@style/txtRobotobold14" tools:text="@string/lbl_movies_6"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerSearchSeven"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="3" itemSpace="@{@dimen/_16pxh}"
+                    tools:itemCount="7" tools:listitem="@layout/row_searchseven"/>
+                <FrameLayout android:id="@+id/frameFrameSeventyNine"
+                    android:layout_height="wrap_content" android:layout_width="match_parent">
+                    <FrameLayout
+                        android:background="@drawable/rectangle_bg_name_onsecondarycontainer_border_name_primary_radius_17"
+                        android:id="@+id/frameTags"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="@dimen/_9pxv"
+                        android:paddingEnd="@dimen/_10pxh"
+                        android:paddingStart="@dimen/_10pxh" android:paddingTop="@dimen/_9pxv"/>
+                    <FrameLayout
+                        android:background="@drawable/rectangle_bg_name_onsecondarycontainer_border_name_primary_radius_17"
+                        android:id="@+id/frameTags1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="@dimen/_9pxv"
+                        android:paddingEnd="@dimen/_10pxh"
+                        android:paddingStart="@dimen/_10pxh" android:paddingTop="@dimen/_9pxv"/>
+                    <FrameLayout
+                        android:background="@drawable/rectangle_bg_name_onsecondarycontainer_border_name_primary_radius_17"
+                        android:id="@+id/frameTags2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="@dimen/_9pxv"
+                        android:paddingEnd="@dimen/_10pxh"
+                        android:paddingStart="@dimen/_10pxh" android:paddingTop="@dimen/_9pxv"/>
+                    <FrameLayout
+                        android:background="@drawable/rectangle_bg_name_onsecondarycontainer_border_name_primary_radius_17"
+                        android:id="@+id/frameTags3"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="@dimen/_9pxv"
+                        android:paddingEnd="@dimen/_10pxh"
+                        android:paddingStart="@dimen/_10pxh" android:paddingTop="@dimen/_9pxv"/>
+                </FrameLayout>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCast"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{searchSevenVM.searchSevenModel.txtCast}"
+                    style="@style/txtRobotobold14" tools:text="@string/lbl_categories_1"/>
+                <FrameLayout android:id="@+id/frameFrameThirtyEight"
+                    android:layout_height="@dimen/_60pxv" android:layout_width="@dimen/_90pxh">
+                    <ImageView android:id="@+id/imageThumbnailImage"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_60pxh"
+                        android:layout_width="@dimen/_90pxh"
+                        android:scaleType="fitXY"
+                        cornerRadius="@{@dimen/_2pxh}"
+                        imageRes="@{@drawable/img_thumbnail_image_33}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_thumbnail_image_33"/>
+                    <TextView android:alpha="0.87"
+                        android:ellipsize="end"
+                        android:id="@+id/txtDrama"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{searchSevenVM.searchSevenModel.txtDrama}"
+                        style="@style/txtRobotoregular14" tools:text="@string/lbl_love"/>
+                </FrameLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

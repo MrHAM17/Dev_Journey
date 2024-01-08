@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="topplaylistRowModel" type="com.musicplayer.app.modules.topplaylists.data.model.TopplaylistRowModel"/>
+    </data>
+    <FrameLayout android:id="@+id/framePlaylistItem"
+        android:layout_height="wrap_content" android:layout_width="match_parent">
+        <ImageView android:id="@+id/imageRenaissance"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_181pxh"
+            android:layout_width="@dimen/_342pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_8pxh}"
+            imageRes="@{@drawable/img_playlist_background}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_playlist_background"/>
+        <FrameLayout android:id="@+id/frameEightyThree"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_181pxv" android:layout_width="@dimen/_342pxh">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_onprimarycontainer_opacity_1_radius_20"
+                android:id="@+id/btnBookmark"
+                android:layout_gravity="top|start"
+                android:layout_height="@dimen/_40pxh"
+                android:layout_width="@dimen/_40pxh"
+                android:paddingHorizontal="@dimen/_8pxh"
+                android:paddingVertical="@dimen/_8pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_bookmark_black_900" tools:ignore="ContentDescription"/>
+            <LinearLayout android:id="@+id/linearEight"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_16pxh"
+                android:paddingVertical="@dimen/_16pxv" style="@style/groupStylecornerRadius">
+                <LinearLayout android:id="@+id/linearFifteen"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/txtRenaissance"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{topplaylistRowModel.txtRenaissance}"
+                        style="@style/txtRobotomedium28" tools:text="@string/lbl_renaissance"/>
+                    <LinearLayout android:id="@+id/linearFourteen"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtTracksCounter"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{topplaylistRowModel.txtTracksCounter}"
+                            style="@style/txtRobotoregular16" tools:text="@string/lbl_843_tracks"/>
+                        <View
+                            android:background="@drawable/rectangle_bg_name_onprimarycontainer_opacity_0_58_radius_1"
+                            android:id="@+id/viewFour"
+                            android:layout_gravity="bottom"
+                            android:layout_height="@dimen/_3pxh" android:layout_width="@dimen/_2pxh"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtDuration"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{topplaylistRowModel.txtDuration}"
+                            style="@style/txtRobotoregular16" tools:text="@string/lbl_23_hours"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <ImageButton android:id="@+id/btnOverflowMenu"
+                    android:layout_height="@dimen/_50pxh"
+                    android:layout_width="@dimen/_50pxh"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_overflow_menu" tools:ignore="ContentDescription"/>
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
+</layout>

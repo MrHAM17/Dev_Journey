@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="addLocationVM" type="com.housitbuyrentsellproperty.app.modules.addlocation.data.viewmodel.AddLocationVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearNext"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_21pxv"
+        android:paddingTop="@dimen/_21pxv" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                android:id="@+id/btnArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_left" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPageTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{addLocationVM.addLocationModel.txtPageTitle}"
+                style="@style/txtRalewaybold14" tools:text="@string/lbl_add_listing"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearAddLocation"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_11pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_11pxv">
+            <TextView android:ellipsize="end" android:id="@+id/txtTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{addLocationVM.addLocationModel.txtTitle}"
+                style="@style/txtRalewaysemibold24" tools:text="@string/msg_where_is_the_location"/>
+            <LinearLayout android:id="@+id/linearLinkedin"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                    android:id="@+id/btnLinkedin"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_50pxh"
+                    android:layout_width="@dimen/_50pxh"
+                    android:paddingHorizontal="@dimen/_15pxh"
+                    android:paddingVertical="@dimen/_15pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_linkedin_blue_gray_600" tools:ignore="ContentDescription"/>
+                <TextView android:gravity="center_vertical"
+                    android:id="@+id/txtJlCisangkuyCitarum"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:text="@{addLocationVM.addLocationModel.txtJlCisangkuyCitarum}"
+                    style="@style/txtRalewayregular12" tools:text="@string/msg_jl_cisangkuy_citarum"/>
+            </LinearLayout>
+            <FrameLayout android:id="@+id/frameLayout"
+                android:layout_height="@dimen/_356pxv"
+                android:layout_width="@dimen/_327pxh" style="@style/groupStylecornerRadius_4">
+                <fragment android:id="@+id/mapMap"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_356pxv"
+                    android:layout_width="match_parent" android:name="com.google.android.gms.maps.SupportMapFragment"/>
+                <LinearLayout android:id="@+id/linearSelectOnTheMap"
+                    android:layout_gravity="bottom|center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_16pxv"
+                    android:paddingEnd="@dimen/_112pxh"
+                    android:paddingStart="@dimen/_112pxh"
+                    android:paddingTop="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;,&quot;opacity&quot;:0.5}">
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/txtSelectOnTheMap"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{addLocationVM.addLocationModel.txtSelectOnTheMap}"
+                        style="@style/txtRalewayregular12_1" tools:text="@string/msg_select_on_the_map"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageLinkedin"
+                    android:layout_gravity="top|center"
+                    android:layout_height="@dimen/_51pxh"
+                    android:layout_width="@dimen/_34pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_linkedin_primary"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_linkedin_primary"/>
+            </FrameLayout>
+            <ImageView android:id="@+id/imageProgressBarGradient"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_1pxh"
+                android:layout_width="@dimen/_100pxh"
+                android:scaleType="fitXY" tools:ignore="ContentDescription"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_radius_35"
+            android:ellipsize="end" android:fontFamily="@font/raleway"
+            android:gravity="center" android:id="@+id/btnNext"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_70pxv"
+            android:layout_width="@dimen/_327pxh"
+            android:paddingBottom="@dimen/_25pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_25pxv" android:singleLine="true"
+            android:text="@string/lbl_next" android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_next"/>
+    </LinearLayout>
+</layout>

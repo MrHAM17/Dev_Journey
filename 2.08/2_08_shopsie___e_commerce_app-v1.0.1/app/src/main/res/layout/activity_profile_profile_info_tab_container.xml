@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="profileProfileInfoTabContainerVM" type="com.shopsieecommerceapp.app.modules.profileprofileinfotabcontainer.data.viewmodel.ProfileProfileInfoTabContainerVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSeventySeven"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;primaryContainer&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:contentInsetStart="0dp" style="@style/groupStyle{&quot;name&quot;:&quot;primaryContainer&quot;}">
+            <ImageView android:id="@+id/imageArrowDown"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_down"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtShopsie"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{profileProfileInfoTabContainerVM.profileProfileInfoTabContainerModel.txtShopsie}"
+                style="@style/txtPlayfairDisplayromanbold16" tools:text="@string/lbl_shopsie"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearSixtyEight"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:id="@+id/linearProfileDetails"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_32pxv"
+                android:paddingEnd="@dimen/_104pxh"
+                android:paddingStart="@dimen/_104pxh"
+                android:paddingTop="@dimen/_32pxv" style="@style/groupStyle{&quot;name&quot;:&quot;primaryContainer&quot;}">
+                <FrameLayout android:id="@+id/frameProfilePic"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_116pxv" android:layout_width="@dimen/_100pxh">
+                    <ImageView android:id="@+id/imageProfileImage"
+                        android:layout_gravity="top|center"
+                        android:layout_height="@dimen/_100pxv"
+                        android:layout_width="match_parent"
+                        android:scaleType="centerCrop"
+                        circular="@{true}"
+                        imageRes="@{@drawable/img_profile_image}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_profile_image"/>
+                    <ImageButton
+                        android:background="@drawable/rectangle_bg_name_primarycontainer_radius_16"
+                        android:id="@+id/btnEditTwo"
+                        android:layout_gravity="bottom|start"
+                        android:layout_height="@dimen/_32pxh"
+                        android:layout_width="@dimen/_32pxh"
+                        android:paddingHorizontal="@dimen/_5pxh"
+                        android:paddingVertical="@dimen/_5pxv"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_edit_2" tools:ignore="ContentDescription"/>
+                </FrameLayout>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtProfileName"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.05"
+                    android:singleLine="true"
+                    android:text="@{profileProfileInfoTabContainerVM.profileProfileInfoTabContainerModel.txtProfileName}"
+                    android:textAllCaps="true"
+                    style="@style/txtLatoregular18" tools:text="@string/lbl_archie_copeland"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLocation"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{profileProfileInfoTabContainerVM.profileProfileInfoTabContainerModel.txtLocation}"
+                    style="@style/txtLatoregular14" tools:text="@string/msg_allentown_new_mexico"/>
+            </LinearLayout>
+            <com.google.android.material.tabs.TabLayout
+                android:gravity="center_horizontal"
+                android:id="@+id/tabLayoutTabview"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/{&quot;name&quot;:&quot;primary&quot;}" app:tabTextColor="@color/{&quot;name&quot;:&quot;gray_600&quot;}"/>
+            <androidx.viewpager2.widget.ViewPager2
+                android:gravity="center_horizontal"
+                android:id="@+id/viewPagerTabBarView"
+                android:layout_height="match_parent"
+                android:layout_weight="1" android:layout_width="match_parent"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

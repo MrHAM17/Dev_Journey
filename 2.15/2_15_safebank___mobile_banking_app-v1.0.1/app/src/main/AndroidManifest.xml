@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest package="com.safebankmobilebankingapp.app" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:largeHeap="true"
+        android:name="com.safebankmobilebankingapp.app.appcomponents.di.MyApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
+        <activity android:exported="true"
+            android:name="com.safebankmobilebankingapp.app.modules.transferamount.ui.TransferAmountActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.safebankmobilebankingapp.app.modules.verifyemail.ui.VerifyEmailActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.safebankmobilebankingapp.app.modules.loginpagetabcontainer.ui.LoginPageTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.safebankmobilebankingapp.app.modules.transferrequest.ui.TransferRequestActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.safebankmobilebankingapp.app.modules.transfertabcontainer.ui.TransferTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.safebankmobilebankingapp.app.modules.atmlocation.ui.AtmLocationActivity" android:screenOrientation="portrait"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/str_maps_api_key"/>
+        <activity
+            android:name="com.safebankmobilebankingapp.app.modules.countryorregion.ui.CountryOrRegionActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.safebankmobilebankingapp.app.modules.settings.ui.SettingsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.safebankmobilebankingapp.app.modules.currencyexchange.ui.CurrencyExchangeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.safebankmobilebankingapp.app.modules.history.ui.HistoryActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.safebankmobilebankingapp.app.modules.minepagecontainer.ui.MinePageContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.safebankmobilebankingapp.app.modules.sendmoney.ui.SendMoneyActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.safebankmobilebankingapp.app.modules.forgotpassword.ui.ForgotPasswordActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.safebankmobilebankingapp.app.modules.confirmation.ui.ConfirmationActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.safebankmobilebankingapp.app.modules.splash.ui.SplashActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

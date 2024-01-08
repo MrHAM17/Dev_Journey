@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="allreviewsRowModel" type="com.housitbuyrentsellproperty.app.modules.allreviews.data.model.AllreviewsRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearCardReview1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/linearLayout5"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_9pxv"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_16pxh"
+            android:paddingTop="@dimen/_9pxv" style="@style/groupStylenamewhite_3">
+            <ImageView android:id="@+id/imageFairviewApartment"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_36pxh"
+                android:layout_width="@dimen/_74pxh"
+                android:scaleType="fitXY" cornerRadius="@{@dimen/_8pxh}"
+                imageRes="@{@drawable/img_shape_36x74}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_shape_36x74"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearLayout6"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFairviewApartment"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{allreviewsRowModel.txtFairviewApartment}"
+                    style="@style/txtRalewaybold10" tools:text="@string/msg_fairview_apartment"/>
+                <LinearLayout android:id="@+id/linearLayout"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <LinearLayout android:id="@+id/linearLayout1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <ImageView android:id="@+id/imageImage"
+                            android:layout_gravity="top"
+                            android:layout_height="@dimen/_9pxh"
+                            android:layout_width="@dimen/_9pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_signal_yellow_700_9x9"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_signal_yellow_700_9x9"/>
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:id="@+id/txtText"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{allreviewsRowModel.txtText}"
+                            style="@style/txtRalewaybold10_1" tools:text="@string/lbl_4_9"/>
+                    </LinearLayout>
+                    <ImageView android:id="@+id/imageSemarangIndonesia"
+                        android:layout_gravity="top"
+                        android:layout_height="@dimen/_9pxh"
+                        android:layout_width="@dimen/_9pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_linkedin_deep_orange_a200"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_linkedin_deep_orange_a200"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="top"
+                        android:id="@+id/txtSemarangIndonesia"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{allreviewsRowModel.txtSemarangIndonesia}"
+                        style="@style/txtRalewaymedium8" tools:text="@string/msg_semarang_indonesia"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearCardReview2"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_10pxh"
+            android:paddingVertical="@dimen/_10pxv" style="@style/groupStylenamegray_2">
+            <ImageView android:id="@+id/imageGeraldo"
+                android:layout_height="@dimen/_50pxh"
+                android:layout_width="@dimen/_50pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_shape_23}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_shape_23"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearLayout2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearGeraldo"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <LinearLayout android:id="@+id/linearLayout3"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtGeraldo"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{allreviewsRowModel.txtGeraldo}"
+                            style="@style/txtRalewaysemibold12_2" tools:text="@string/lbl_geraldo"/>
+                        <androidx.appcompat.widget.AppCompatRatingBar
+                            android:id="@+id/ratingBarRatingBar"
+                            android:layout_gravity="top"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:numStars="5" android:rating="0" style="@style/Widget.AppCompat.RatingBar.Small"/>
+                    </LinearLayout>
+                    <TextView android:id="@+id/txtDescription"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@{allreviewsRowModel.txtDescription}"
+                        style="@style/txtRalewaymedium10_1" tools:text="@string/msg_lorem_ipsum_dolor5"/>
+                </LinearLayout>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTime"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{allreviewsRowModel.txtTime}"
+                    style="@style/txtRalewaymedium8_3" tools:text="@string/lbl_10_mins_ago"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

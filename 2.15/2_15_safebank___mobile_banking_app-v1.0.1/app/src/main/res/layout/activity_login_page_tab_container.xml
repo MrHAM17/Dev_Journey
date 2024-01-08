@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="loginPageTabContainerVM" type="com.safebankmobilebankingapp.app.modules.loginpagetabcontainer.data.viewmodel.LoginPageTabContainerVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearLogin"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <com.google.android.material.tabs.TabLayout
+            android:gravity="start" android:id="@+id/tabLayoutTabview"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:tabBackground="@drawable/selector_bg_name_primary_radius_10"
+            app:tabIndicatorColor="@android:color/transparent"
+            app:tabIndicatorHeight="0dp" app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}" app:tabTextColor="@color/{&quot;name&quot;:&quot;secondaryContainer&quot;}"/>
+        <androidx.viewpager2.widget.ViewPager2 android:gravity="start"
+            android:id="@+id/viewPagerTabBarView"
+            android:layout_height="match_parent"
+            android:layout_weight="1" android:layout_width="match_parent"/>
+    </LinearLayout>
+</layout>

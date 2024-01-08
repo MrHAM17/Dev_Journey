@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="filterTabContainerVM" type="com.ecommerce.app.modules.filtertabcontainer.data.viewmodel.FilterTabContainerVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearPrice"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageCloseIcon"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_close_icon"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_close_icon"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFilterSearch"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{filterTabContainerVM.filterTabContainerModel.txtFilterSearch}"
+                style="@style/txtPoppinsbold16" tools:text="@string/lbl_filter_search"/>
+        </androidx.appcompat.widget.Toolbar>
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearFilter"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearPriceRange"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/_16pxh" android:paddingStart="@dimen/_16pxh">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPriceRange"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@{filterTabContainerVM.filterTabContainerModel.txtPriceRange}"
+                        style="@style/txtPoppinsbold14_1" tools:text="@string/lbl_price_range"/>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearPrice1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <EditText
+                            android:background="@drawable/rectangle_bg_name_onprimarycontainer_opacity_1_border_name_blue_50_radius_5"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/poppins"
+                            android:hint="@string/lbl_1_245"
+                            android:id="@+id/etPrice"
+                            android:inputType="text"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.03"
+                            android:paddingBottom="@dimen/_15pxv"
+                            android:paddingEnd="@dimen/_16pxh"
+                            android:paddingStart="@dimen/_16pxh"
+                            android:paddingTop="@dimen/_15pxv"
+                            android:singleLine="true"
+                            android:text="@={filterTabContainerVM.filterTabContainerModel.etPriceValue}"
+                            android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_300&quot;}"
+                            android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_300&quot;}"
+                            android:textFontWeight="700"
+                            android:textSize="@dimen/_12pxh"
+                            android:textStyle="bold" tools:ignore="Autofill"/>
+                        <EditText
+                            android:background="@drawable/rectangle_bg_name_onprimarycontainer_opacity_1_border_name_blue_50_radius_5"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/poppins"
+                            android:hint="@string/lbl_9_344"
+                            android:id="@+id/etPrice1"
+                            android:inputType="text"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.03"
+                            android:paddingBottom="@dimen/_15pxv"
+                            android:paddingEnd="@dimen/_16pxh"
+                            android:paddingStart="@dimen/_16pxh"
+                            android:paddingTop="@dimen/_15pxv"
+                            android:singleLine="true"
+                            android:text="@={filterTabContainerVM.filterTabContainerModel.etPrice1Value}"
+                            android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_300&quot;}"
+                            android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_300&quot;}"
+                            android:textFontWeight="700"
+                            android:textSize="@dimen/_12pxh"
+                            android:textStyle="bold" tools:ignore="Autofill"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearCondition"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/_16pxh" android:paddingStart="@dimen/_16pxh">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtCondition"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.03"
+                        android:singleLine="true"
+                        android:text="@{filterTabContainerVM.filterTabContainerModel.txtCondition}"
+                        style="@style/txtPoppinsbold14_1" tools:text="@string/lbl_condition"/>
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabLayoutTabview"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        app:tabBackground="@drawable/selector_border_name_blue_50_radius_5"
+                        app:tabIndicatorColor="@android:color/transparent"
+                        app:tabIndicatorHeight="0dp" app:tabMode="fixed"
+                        app:tabSelectedTextColor="@color/{&quot;name&quot;:&quot;blue_gray_300&quot;}" app:tabTextColor="@color/{&quot;name&quot;:&quot;primary&quot;,&quot;opacity&quot;:1}"/>
+                </LinearLayout>
+                <androidx.viewpager2.widget.ViewPager2
+                    android:gravity="center_horizontal"
+                    android:id="@+id/viewPagerTabBarView"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" android:layout_width="match_parent"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

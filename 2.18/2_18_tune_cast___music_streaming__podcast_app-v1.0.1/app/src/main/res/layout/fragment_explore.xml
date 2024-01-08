@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="exploreVM" type="com.tunecastmusicstreamingpodcastapp.app.modules.explore.data.viewmodel.ExploreVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearVector"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <LinearLayout android:id="@+id/linearHeaderContent"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_5pxv"
+            android:paddingTop="@dimen/_5pxv" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+            <androidx.appcompat.widget.Toolbar
+                android:gravity="center_horizontal"
+                android:id="@+id/toolbarAppBar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <ImageView android:id="@+id/imageVector"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_vector"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_vector"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtExplore"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{exploreVM.exploreModel.txtExplore}"
+                    style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_explore"/>
+                <ImageButton android:id="@+id/btnSettings"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_settings_gray_900_01" tools:ignore="ContentDescription"/>
+            </androidx.appcompat.widget.Toolbar>
+            <androidx.appcompat.widget.SearchView
+                android:background="@drawable/rectangle_bg_name_gray_100_radius_16"
+                android:gravity="center_horizontal"
+                android:id="@+id/searchViewSearch"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:theme="@style/searchViewsearch"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="@string/msg_artists_songs" app:searchIcon="@drawable/img_rewind_gray_400"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearExplore"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_17pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_17pxv">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtBrowseAll"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{exploreVM.exploreModel.txtBrowseAll}"
+                style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_browse_all"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerExplore"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2" itemSpace="@{@dimen/_12pxh}"
+                tools:itemCount="8" tools:listitem="@layout/row_explore"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

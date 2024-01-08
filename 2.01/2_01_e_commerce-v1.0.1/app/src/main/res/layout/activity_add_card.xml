@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="addCardVM" type="com.ecommerce.app.modules.addcard.data.viewmodel.AddCardVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearCardNumber"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_10pxv"
+        android:paddingTop="@dimen/_10pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_left"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_left"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtAddCard"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{addCardVM.addCardModel.txtAddCard}"
+                style="@style/txtPoppinsbold16" tools:text="@string/lbl_add_card"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearAddCard"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_27pxv"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_16pxh" android:paddingTop="@dimen/_27pxv">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearCardNumber1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCardNumber"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{addCardVM.addCardModel.txtCardNumber}"
+                    style="@style/txtPoppinsbold14_1" tools:text="@string/lbl_card_number"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_name_onprimarycontainer_opacity_1_border_name_blue_50_radius_5"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/msg_enter_card_number"
+                    android:id="@+id/etCardNumber"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.03"
+                    android:paddingBottom="@dimen/_15pxv"
+                    android:paddingEnd="@dimen/_16pxh"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_15pxv"
+                    android:singleLine="true"
+                    android:text="@={addCardVM.addCardModel.etCardNumberValue}"
+                    android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_300&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_300&quot;}"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_12pxh"
+                    android:textStyle="normal" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearExpirationDate"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtExpirationDate"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{addCardVM.addCardModel.txtExpirationDate}"
+                    style="@style/txtPoppinsbold14_1" tools:text="@string/lbl_expiration_date"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_name_onprimarycontainer_opacity_1_border_name_blue_50_radius_5"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/lbl_expiration_date"
+                    android:id="@+id/etExpirationDate"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.03"
+                    android:paddingBottom="@dimen/_15pxv"
+                    android:paddingEnd="@dimen/_16pxh"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_15pxv"
+                    android:singleLine="true"
+                    android:text="@={addCardVM.addCardModel.etExpirationDateValue}"
+                    android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_300&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_300&quot;}"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_12pxh"
+                    android:textStyle="normal" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearSecurityCode"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSecurityCode"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{addCardVM.addCardModel.txtSecurityCode}"
+                    style="@style/txtPoppinsbold14_1" tools:text="@string/lbl_security_code"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_name_onprimarycontainer_opacity_1_border_name_blue_50_radius_5"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/lbl_security_code"
+                    android:id="@+id/etSecurityCode"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.03"
+                    android:paddingBottom="@dimen/_15pxv"
+                    android:paddingEnd="@dimen/_16pxh"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_15pxv"
+                    android:singleLine="true"
+                    android:text="@={addCardVM.addCardModel.etSecurityCodeValue}"
+                    android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_300&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_300&quot;}"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_12pxh"
+                    android:textStyle="normal" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearCardHolder"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCardHolder"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{addCardVM.addCardModel.txtCardHolder}"
+                    style="@style/txtPoppinsbold14_1" tools:text="@string/lbl_card_holder2"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_name_onprimarycontainer_opacity_1_border_name_blue_50_radius_5"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/msg_enter_card_number"
+                    android:id="@+id/etCardNumber1"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.03"
+                    android:paddingBottom="@dimen/_15pxv"
+                    android:paddingEnd="@dimen/_16pxh"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_15pxv"
+                    android:singleLine="true"
+                    android:text="@={addCardVM.addCardModel.etCardNumber1Value}"
+                    android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_300&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_300&quot;}"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_12pxh"
+                    android:textStyle="normal" tools:ignore="Autofill"/>
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_opacity_1_radius_5"
+            android:ellipsize="end" android:fontFamily="@font/poppins"
+            android:gravity="center" android:id="@+id/btnAddCard"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.03"
+            android:paddingBottom="@dimen/_18pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_18pxv" android:singleLine="true"
+            android:text="@string/lbl_add_card"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_14pxh" android:textStyle="bold" tools:text="@string/lbl_add_card"/>
+    </LinearLayout>
+</layout>

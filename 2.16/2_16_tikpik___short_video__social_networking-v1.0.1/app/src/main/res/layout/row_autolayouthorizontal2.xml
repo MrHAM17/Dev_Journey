@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="autolayouthorizontal2RowModel" type="com.tikpikshortvideosocialnetworking.app.modules.trendingsounds.data.model.Autolayouthorizontal2RowModel"/>
+    </data>
+    <FrameLayout android:id="@+id/frameMask"
+        android:layout_height="wrap_content" android:layout_width="@dimen/_121pxh">
+        <ImageView android:id="@+id/imageK1"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_200pxh"
+            android:layout_width="@dimen/_121pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_12pxh}"
+            imageRes="@{@drawable/img_image_22}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_image_22"/>
+        <LinearLayout android:id="@+id/linearAutoLayoutHorizontal"
+            android:layout_gravity="bottom|start"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal" style="@style/groupStylecornerRadius">
+            <ImageView android:id="@+id/imageK2"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_16pxh"
+                android:layout_width="@dimen/_16pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_overflowmenu_primary}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_overflowmenu_primary"/>
+            <TextView android:ellipsize="end" android:gravity="bottom"
+                android:id="@+id/txtK"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{autolayouthorizontal2RowModel.txtK}"
+                style="@style/txtUrbanistsemibold10" tools:text="@string/lbl_728_5k"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

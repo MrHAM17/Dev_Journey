@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="notificationsRowModel" type="com.blogapp.app.modules.notifications.data.model.NotificationsRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearFrame"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <ImageView android:id="@+id/imageCircleImage"
+            android:layout_height="@dimen/_52pxh"
+            android:layout_width="@dimen/_52pxh"
+            android:scaleType="centerCrop" circular="@{true}"
+            imageRes="@{@drawable/img_unsplash_93bshrwb1yq}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_unsplash_93bshrwb1yq"/>
+        <TextView android:id="@+id/txtDescription"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:text="@{notificationsRowModel.txtDescription}"
+            style="@style/txtPoppinsregular14" tools:text="@string/msg_bezaleel_nwabia"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="layout10RowModel" type="com.housitbuyrentsellproperty.app.modules.home.data.model.Layout10RowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearLayout"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_8pxh"
+        android:paddingVertical="@dimen/_8pxv" style="@style/groupStylenamegray_8">
+        <ImageView android:id="@+id/imageBali"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_40pxh"
+            android:layout_width="@dimen/_40pxh"
+            android:scaleType="centerCrop" circular="@{true}"
+            imageRes="@{@drawable/img_shape_40x40}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_shape_40x40"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtBali"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{layout10RowModel.txtBali}"
+            style="@style/txtRalewaymedium14" tools:text="@string/lbl_bali"/>
+    </LinearLayout>
+</layout>

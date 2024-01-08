@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="productTourOneVM" type="com.housitbuyrentsellproperty.app.modules.producttourone.data.viewmodel.ProductTourOneVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearProductTourOne"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageVector"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_vector"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_vector"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_gray_100_radius_19"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway"
+                android:gravity="center" android:id="@+id/btnSkip"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@string/lbl_skip"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_800_01&quot;}"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="normal" tools:text="@string/lbl_skip"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearNext"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <TextView android:id="@+id/txtTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{productTourOneVM.productTourOneModel.txtTitle}"
+                style="@style/txtRalewaysemibold24" tools:text="@string/msg_find_best_place"/>
+            <TextView android:id="@+id/txtDescription"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{productTourOneVM.productTourOneModel.txtDescription}"
+                style="@style/txtRalewayregular14" tools:text="@string/msg_lorem_ipsum_dolor"/>
+            <FrameLayout android:id="@+id/frameOne"
+                android:layout_height="@dimen/_520pxv" android:layout_width="match_parent">
+                <ImageView android:id="@+id/imageImage"
+                    android:layout_gravity="center"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitXY"
+                    imageRes="@{@drawable/img_background_illustration}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_background_illustration"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:background="@drawable/rectangle_bg_name_primary_radius_35"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/raleway"
+                    android:gravity="center" android:id="@+id/btnNext"
+                    android:layout_gravity="bottom|center"
+                    android:layout_height="@dimen/_70pxv"
+                    android:layout_width="@dimen/_230pxh"
+                    android:paddingBottom="@dimen/_25pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_25pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_16pxh"
+                    android:textStyle="bold" tools:text="@string/lbl_next"/>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

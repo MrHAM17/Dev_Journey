@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="loanoneRowModel" type="com.firstbankdigitalbanking.app.modules.services.data.model.LoanoneRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearLoanOne"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_12pxh"
+        android:paddingVertical="@dimen/_12pxv" style="@style/groupStylenameonPrimaryopacity1cornerRadius_1">
+        <ImageButton
+            android:background="@drawable/rectangle_bg_name_gray_100_01_radius_12"
+            android:id="@+id/btnLoanOne"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_45pxh"
+            android:layout_width="@dimen/_45pxh"
+            android:paddingHorizontal="@dimen/_12pxh"
+            android:paddingVertical="@dimen/_12pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_loan_1" tools:ignore="ContentDescription"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearBusinessLoans"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtBusinessLoans"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{loanoneRowModel.txtBusinessLoans}"
+                style="@style/txtIntermedium14_2" tools:text="@string/lbl_business_loans2"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtItisalongestablished"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{loanoneRowModel.txtItisalongestablished}"
+                style="@style/txtInterregular12" tools:text="@string/msg_it_is_a_long_established"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtViewDetails"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{loanoneRowModel.txtViewDetails}"
+            style="@style/txtIntermedium10_2" tools:text="@string/lbl_view_details"/>
+    </LinearLayout>
+</layout>

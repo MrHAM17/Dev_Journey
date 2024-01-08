@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="profileaddressdetailsRowModel" type="com.shopsieecommerceapp.app.modules.profileaddressdetails.data.model.ProfileaddressdetailsRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearCurrentAddress"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_21pxv"
+        android:paddingEnd="@dimen/_16pxh"
+        android:paddingStart="@dimen/_16pxh"
+        android:paddingTop="@dimen/_21pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}cornerRadius">
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearHomeAddress"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtHomeAddress"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{profileaddressdetailsRowModel.txtHomeAddress}"
+                style="@style/txtLatomedium14" tools:text="@string/lbl_home_address"/>
+            <FrameLayout android:id="@+id/frameSpacer"
+                android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            <ImageView android:id="@+id/imageHomeaddress"
+                android:layout_gravity="top"
+                android:layout_height="@dimen/_16pxh"
+                android:layout_width="@dimen/_16pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_edit_2_1"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_edit_2_1"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtEdit"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{profileaddressdetailsRowModel.txtEdit}"
+                style="@style/txtLatomedium14_2" tools:text="@string/lbl_edit"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearAddressCounter1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtAddressCounter1"
+                android:layout_gravity="top"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{profileaddressdetailsRowModel.txtAddressCounter1}"
+                style="@style/txtLatoregular14" tools:text="@string/lbl_address_1"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtAmoySt1"
+                android:layout_gravity="bottom"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{profileaddressdetailsRowModel.txtAmoySt1}"
+                style="@style/txtLatoregular14_1" tools:text="@string/lbl_amoy_st_592"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearAddressCounter2"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtAddressCounter2"
+                android:layout_gravity="top"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{profileaddressdetailsRowModel.txtAddressCounter2}"
+                style="@style/txtLatoregular14" tools:text="@string/lbl_address_2"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtAmoySt2"
+                android:layout_gravity="bottom"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{profileaddressdetailsRowModel.txtAmoySt2}"
+                style="@style/txtLatoregular14_1" tools:text="@string/lbl_amoy_st_592"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearCity"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end" android:id="@+id/txtCity"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{profileaddressdetailsRowModel.txtCity}"
+                style="@style/txtLatoregular14" tools:text="@string/lbl_city"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLosAngeles"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{profileaddressdetailsRowModel.txtLosAngeles}"
+                style="@style/txtLatoregular14_1" tools:text="@string/lbl_los_angeles"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearPostalCode"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPostalCode"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{profileaddressdetailsRowModel.txtPostalCode}"
+                style="@style/txtLatoregular14" tools:text="@string/lbl_postal_code2"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtZero"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{profileaddressdetailsRowModel.txtZero}"
+                style="@style/txtLatoregular14_1" tools:text="@string/lbl_0000000"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

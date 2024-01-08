@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="cardaddedRowModel" type="com.comforthotelbookingapp.app.modules.cardadded.data.model.CardaddedRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearPaymentMethodsPayPal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_24pxh"
+        android:paddingVertical="@dimen/_24pxv" style="@style/groupStylenameblue_gray_7">
+        <ImageView android:id="@+id/imagePaypal1"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_32pxh"
+            android:layout_width="@dimen/_32pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_frame_light_blue_600"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_frame_light_blue_600"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtPaypal"
+            android:layout_gravity="bottom"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{cardaddedRowModel.txtPaypal}"
+            style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_paypal"/>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <ImageView android:id="@+id/imagePaypal2"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_20pxh"
+            android:layout_width="@dimen/_20pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_contrast_primary_20x20"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_contrast_primary_20x20"/>
+    </LinearLayout>
+</layout>

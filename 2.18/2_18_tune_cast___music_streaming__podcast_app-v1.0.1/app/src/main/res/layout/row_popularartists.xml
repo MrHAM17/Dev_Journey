@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="popularartistsRowModel" type="com.tunecastmusicstreamingpodcastapp.app.modules.popularartists.data.model.PopularartistsRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearCard"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <ImageView android:id="@+id/imageArianaGrande"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_188pxh"
+            android:layout_width="@dimen/_184pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_92pxh}"
+            imageRes="@{@drawable/img_image_21}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_image_21"/>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtArtistsName"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01" android:singleLine="true"
+            android:text="@{popularartistsRowModel.txtArtistsName}"
+            style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_ariana_grande"/>
+    </LinearLayout>
+</layout>

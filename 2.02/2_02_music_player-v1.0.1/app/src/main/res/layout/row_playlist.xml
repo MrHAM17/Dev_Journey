@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="playlistRowModel" type="com.musicplayer.app.modules.playlist.data.model.PlaylistRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearPlaylistItem"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <ImageView android:id="@+id/imageFlashbacks1"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_59pxh"
+            android:layout_width="@dimen/_60pxh"
+            android:scaleType="centerCrop" circular="@{true}"
+            imageRes="@{@drawable/img_photo_8}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_photo_8"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearSongDetails"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtRenaissance"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{playlistRowModel.txtRenaissance}"
+                style="@style/txtRobotomedium18" tools:text="@string/lbl_flashbacks"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPodvalCaplella"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{playlistRowModel.txtPodvalCaplella}"
+                style="@style/txtRobotoregular14_1" tools:text="@string/lbl_emika"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <ImageView android:id="@+id/imageFlashbacks2"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_4pxh"
+            android:layout_width="@dimen/_20pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_more_icon"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_more_icon"/>
+    </LinearLayout>
+</layout>

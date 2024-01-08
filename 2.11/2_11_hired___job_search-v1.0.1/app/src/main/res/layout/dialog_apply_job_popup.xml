@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="applyJobPopupVM" type="com.hiredjobsearch.app.modules.applyjobpopup.data.viewmodel.ApplyJobPopupVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearApplyJobPopup"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/linearPopUp"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_28pxv"
+            android:paddingEnd="@dimen/_32pxh"
+            android:paddingStart="@dimen/_32pxh"
+            android:paddingTop="@dimen/_28pxv" style="@style/groupStylenameonPrimaryContaineropacity1cornerRadius_8">
+            <ImageView android:id="@+id/imageThumbsUpEleven"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_101pxh"
+                android:layout_width="@dimen/_101pxh"
+                android:scaleType="fitXY"
+                imageRes="@{@drawable/img_thumbs_up_1_1}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_thumbs_up_1_1"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTypeThirtyTwo"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:singleLine="true"
+                android:text="@{applyJobPopupVM.applyJobPopupModel.txtTypeThirtyTwo}"
+                style="@style/txtPlusJakartaSansbold18" tools:text="@string/lbl_success"/>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtYourApplication"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_4pxh"
+                android:singleLine="true"
+                android:text="@{applyJobPopupVM.applyJobPopupModel.txtYourApplication}"
+                style="@style/txtPlusJakartaSanssemibold14_4" tools:text="@string/msg_your_application"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_24"
+                android:ellipsize="end"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:gravity="center" android:id="@+id/btnContinue"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_54pxv"
+                android:layout_width="@dimen/_127pxh"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_4pxh"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_continue"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:text="@string/lbl_continue"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

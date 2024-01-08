@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="paybillRowModel" type="com.banksydigitalbanking.app.modules.paybill.data.model.PaybillRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start" android:id="@+id/linearOne"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_23pxv"
+        android:paddingEnd="@dimen/_20pxh"
+        android:paddingStart="@dimen/_20pxh"
+        android:paddingTop="@dimen/_23pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}">
+        <ImageView android:id="@+id/imageElectricityBill"
+            android:layout_height="@dimen/_36pxh"
+            android:layout_width="@dimen/_36pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_user_yellow_a400"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_user_yellow_a400"/>
+        <TextView android:id="@+id/txtElectricityBill"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@{paybillRowModel.txtElectricityBill}"
+            style="@style/txtOverpassbold20" tools:text="@string/msg_electricity_bill"/>
+        <TextView android:id="@+id/txtCard"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@{paybillRowModel.txtCard}"
+            style="@style/txtOverpassregular16_1" tools:text="@string/msg_pay_bill_of_this"/>
+    </LinearLayout>
+</layout>

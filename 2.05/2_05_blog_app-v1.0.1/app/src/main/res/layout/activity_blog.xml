@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="blogVM" type="com.blogapp.app.modules.blog.data.viewmodel.BlogVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearBlog"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_gray_300_radius_18"
+                android:id="@+id/btnClose"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_close" tools:ignore="ContentDescription"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearSeventySix"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_12pxv"
+            android:paddingEnd="@dimen/_20pxh"
+            android:paddingStart="@dimen/_20pxh" android:paddingTop="@dimen/_12pxv">
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearFrameFortyFive"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:id="@+id/txtHome"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{blogVM.blogModel.txtHome}"
+                    style="@style/txtPoppinsmedium14" tools:text="@string/msg_john_doe_in_lorem"/>
+                <FrameLayout android:id="@+id/frameSpacer"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <View
+                    android:background="@drawable/rectangle_bg_name_gray_600_radius_1"
+                    android:id="@+id/viewView"
+                    android:layout_gravity="top"
+                    android:layout_height="@dimen/_3pxh" android:layout_width="@dimen/_3pxh"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMonth"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{blogVM.blogModel.txtMonth}"
+                    style="@style/txtPoppinsmedium14_1" tools:text="@string/lbl_29_july"/>
+            </LinearLayout>
+            <TextView android:gravity="start" android:id="@+id/txtTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{blogVM.blogModel.txtTitle}"
+                style="@style/txtPoppinssemibold24" tools:text="@string/msg_lorem_ipsum_dolor3"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtDescription"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{blogVM.blogModel.txtDescription}"
+                style="@style/txtPoppinsmedium14_2" tools:text="@string/msg_lorem_ipsum_dolor4"/>
+            <LinearLayout android:id="@+id/linearFour"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <ImageView android:gravity="center_horizontal"
+                    android:id="@+id/imageBlogImage"
+                    android:layout_height="@dimen/_174pxh"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitXY"
+                    cornerRadius="@{@dimen/_5pxh}"
+                    imageRes="@{@drawable/img_blog_thumbnail}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_blog_thumbnail"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtImageCaption"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{blogVM.blogModel.txtImageCaption}"
+                    style="@style/txtPoppinsregular12_1" tools:text="@string/msg_image_credit_lorem"/>
+                <TextView android:gravity="start"
+                    android:id="@+id/txtDescription1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@{blogVM.blogModel.txtDescription1}"
+                    style="@style/txtPoppinsregular14" tools:text="@string/msg_duis_aute_irure"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="qrCodeVM" type="com.tikpikshortvideosocialnetworking.app.modules.qrcode.data.viewmodel.QrCodeVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearVector"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle_1">
+        <LinearLayout android:id="@+id/linearQrCode"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:id="@+id/linearFrame"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_18pxh"
+                android:paddingVertical="@dimen/_18pxv" style="@style/groupStylenameonErrorContainercornerRadius_7">
+                <FrameLayout android:gravity="center_horizontal"
+                    android:id="@+id/frameVector"
+                    android:layout_height="match_parent" android:layout_width="match_parent"/>
+            </LinearLayout>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtAndrewAinsley"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{qrCodeVM.qrCodeModel.txtAndrewAinsley}"
+                style="@style/txtUrbanistromanbold24_3" tools:text="@string/lbl_andrew_ainsley3"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_deep_orange_50_radius_16"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:gravity="center" android:id="@+id/btnScanQRCode"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_58pxv"
+            android:layout_width="@dimen/_380pxh"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_19pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_19pxv" android:singleLine="true"
+            android:text="@string/lbl_scan_qr_code"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;primary&quot;}"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_scan_qr_code"/>
+    </LinearLayout>
+</layout>

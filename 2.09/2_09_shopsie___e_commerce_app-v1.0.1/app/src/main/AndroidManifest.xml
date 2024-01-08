@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest package="com.shopsieecommerceapp.app" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:largeHeap="true"
+        android:name="com.shopsieecommerceapp.app.appcomponents.di.MyApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
+        <activity
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" android:name="com.facebook.FacebookActivity"/>
+        <activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="@string/fb_login_protocol_scheme"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true"
+            android:name="com.shopsieecommerceapp.app.modules.archivedmessagetabcontainer.ui.ArchivedMessageTabContainerActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.shopsieecommerceapp.app.modules.comments.ui.CommentsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.shopsieecommerceapp.app.modules.videochat.ui.VideoChatActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.shopsieecommerceapp.app.modules.notifications.ui.NotificationsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.shopsieecommerceapp.app.modules.userprofiletabcontainer.ui.UserProfileTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.shopsieecommerceapp.app.modules.signup.ui.SignupActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.shopsieecommerceapp.app.modules.myfriends.ui.MyFriendsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.shopsieecommerceapp.app.modules.messagestabcontainer.ui.MessagesTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.shopsieecommerceapp.app.modules.settings.ui.SettingsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.shopsieecommerceapp.app.modules.homecontainer.ui.HomeContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.shopsieecommerceapp.app.modules.searchtabcontainer.ui.SearchTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.shopsieecommerceapp.app.modules.login.ui.LoginActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.shopsieecommerceapp.app.modules.searchresults.ui.SearchResultsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.shopsieecommerceapp.app.modules.eventstabcontainer.ui.EventsTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.shopsieecommerceapp.app.modules.singlestory.ui.SingleStoryActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

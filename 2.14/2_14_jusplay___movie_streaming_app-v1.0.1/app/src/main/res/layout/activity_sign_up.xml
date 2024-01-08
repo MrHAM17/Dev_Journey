@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="signUpVM" type="com.jusplaymoviestreamingapp.app.modules.signup.data.viewmodel.SignUpVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSignUp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_47pxv"
+        android:paddingEnd="@dimen/_16pxh"
+        android:paddingStart="@dimen/_16pxh"
+        android:paddingTop="@dimen/_47pxv" style="@style/groupStyle{&quot;name&quot;:&quot;black_900&quot;}">
+        <TextView android:ellipsize="end" android:id="@+id/txtSignUp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{signUpVM.signUpModel.txtSignUp}"
+            style="@style/txtPoppinsmedium24" tools:text="@string/lbl_sign_up"/>
+        <EditText android:ellipsize="end"
+            android:fontFamily="@font/poppins"
+            android:hint="@string/lbl_full_name"
+            android:id="@+id/etFullName" android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@={signUpVM.signUpModel.etFullNameValue}"
+            android:textColor="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+            android:textColorHint="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_14pxh" android:textStyle="normal" tools:ignore="Autofill"/>
+        <EditText android:ellipsize="end"
+            android:fontFamily="@font/poppins"
+            android:hint="@string/lbl_email_address"
+            android:id="@+id/etEmail" android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@={signUpVM.signUpModel.etEmailValue}"
+            android:textColor="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+            android:textColorHint="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_14pxh" android:textStyle="normal" tools:ignore="Autofill"/>
+        <EditText android:drawableEnd="@drawable/img_eye"
+            android:drawablePadding="@dimen/_30pxh"
+            android:ellipsize="end" android:fontFamily="@font/poppins"
+            android:hint="@string/lbl_password"
+            android:id="@+id/etPassword" android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_1pxv"
+            android:paddingEnd="@dimen/_20pxh"
+            android:paddingTop="@dimen/_1pxv" android:singleLine="true"
+            android:text="@={signUpVM.signUpModel.etPasswordValue}"
+            android:textColor="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+            android:textColorHint="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_14pxh" android:textStyle="normal" tools:ignore="Autofill"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_radius_25"
+            android:ellipsize="end" android:fontFamily="@font/poppins"
+            android:gravity="center" android:id="@+id/btnSignUp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_13pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_13pxv" android:singleLine="true"
+            android:text="@string/lbl_sign_up"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_sign_up"/>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearFrame"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <View
+                android:background="@color/{&quot;name&quot;:&quot;blue_gray_800&quot;}"
+                android:id="@+id/lineVector"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_132pxh"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtOr"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{signUpVM.signUpModel.txtOr}"
+                style="@style/txtPoppinsregular12_1" tools:text="@string/lbl_or"/>
+            <View
+                android:background="@color/{&quot;name&quot;:&quot;blue_gray_800&quot;}"
+                android:id="@+id/lineVector1"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_132pxh"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearFrame1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_onprimarycontainer_radius_25"
+                android:drawablePadding="@dimen/_12pxh"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins"
+                android:gravity="center" android:id="@+id/btnGoogle"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_50pxv"
+                android:layout_width="@dimen/_163pxh"
+                android:paddingBottom="@dimen/_16pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_16pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_google"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_12pxh"
+                android:textStyle="normal" tools:text="@string/lbl_google"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_onprimarycontainer_radius_25"
+                android:drawablePadding="@dimen/_12pxh"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins"
+                android:gravity="center" android:id="@+id/btnFacebook"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_50pxv"
+                android:layout_width="@dimen/_163pxh"
+                android:paddingBottom="@dimen/_16pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_16pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_facebook"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_12pxh"
+                android:textStyle="normal" tools:text="@string/lbl_facebook"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearFrameTen"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:id="@+id/txtConfirmation"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{signUpVM.signUpModel.txtConfirmation}"
+                style="@style/txtPoppinsregular12_1" tools:text="@string/msg_do_you_already_have"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLoginNow"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{signUpVM.signUpModel.txtLoginNow}"
+                style="@style/txtPoppinsmedium12" tools:text="@string/lbl_login_now"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

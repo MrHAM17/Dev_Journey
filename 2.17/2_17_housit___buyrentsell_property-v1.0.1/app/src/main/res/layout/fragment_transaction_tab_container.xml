@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="transactionTabContainerVM" type="com.housitbuyrentsellproperty.app.modules.transactiontabcontainer.data.viewmodel.TransactionTabContainerVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearPageTitle"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPageTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{transactionTabContainerVM.transactionTabContainerModel.txtPageTitle}"
+                style="@style/txtRalewaybold14" tools:text="@string/lbl_profile"/>
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                android:id="@+id/btnSearch"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_search" tools:ignore="ContentDescription"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearTransaction"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <FrameLayout android:id="@+id/framePhotosUser"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_100pxv" android:layout_width="@dimen/_100pxh">
+                <ImageView android:id="@+id/imageShape"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_100pxh"
+                    android:layout_width="@dimen/_100pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_shape_34}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_shape_34"/>
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_blue_gray_800_01_radius_15"
+                    android:id="@+id/btnEdit"
+                    android:layout_gravity="bottom|end"
+                    android:layout_height="@dimen/_30pxh"
+                    android:layout_width="@dimen/_30pxh"
+                    android:paddingHorizontal="@dimen/_9pxh"
+                    android:paddingVertical="@dimen/_9pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_edit" tools:ignore="ContentDescription"/>
+            </FrameLayout>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtJonathanAnderson"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{transactionTabContainerVM.transactionTabContainerModel.txtJonathanAnderson}"
+                style="@style/txtRalewaybold14" tools:text="@string/msg_jonathan_anderson"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtEmail"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{transactionTabContainerVM.transactionTabContainerModel.txtEmail}"
+                style="@style/txtRalewaysemibold10" tools:text="@string/msg_jonathan_email_com"/>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearInformation"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:id="@+id/linearInformationReviews"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_13pxv"
+                    android:paddingEnd="@dimen/_27pxh"
+                    android:paddingStart="@dimen/_27pxh"
+                    android:paddingTop="@dimen/_13pxv" style="@style/groupStylecornerRadius">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtText"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{transactionTabContainerVM.transactionTabContainerModel.txtText}"
+                        style="@style/txtRalewaybold14" tools:text="@string/lbl_30"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtListings"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{transactionTabContainerVM.transactionTabContainerModel.txtListings}"
+                        style="@style/txtRalewaysemibold12_1" tools:text="@string/lbl_listings2"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearInformationReviews1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_14pxv"
+                    android:paddingEnd="@dimen/_36pxh"
+                    android:paddingStart="@dimen/_36pxh"
+                    android:paddingTop="@dimen/_14pxv" style="@style/groupStylecornerRadius">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtText1"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{transactionTabContainerVM.transactionTabContainerModel.txtText1}"
+                        style="@style/txtRalewaybold14" tools:text="@string/lbl_12"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtSold"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{transactionTabContainerVM.transactionTabContainerModel.txtSold}"
+                        style="@style/txtRalewaysemibold12_1" tools:text="@string/lbl_sold"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearInformationReviews2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_14pxv"
+                    android:paddingEnd="@dimen/_26pxh"
+                    android:paddingStart="@dimen/_26pxh"
+                    android:paddingTop="@dimen/_14pxv" style="@style/groupStylecornerRadius">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtText2"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{transactionTabContainerVM.transactionTabContainerModel.txtText2}"
+                        style="@style/txtRalewaybold14" tools:text="@string/lbl_28"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtReviews"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{transactionTabContainerVM.transactionTabContainerModel.txtReviews}"
+                        style="@style/txtRalewaysemibold12_1" tools:text="@string/lbl_reviews"/>
+                </LinearLayout>
+            </LinearLayout>
+            <com.google.android.material.tabs.TabLayout
+                android:gravity="center_horizontal"
+                android:id="@+id/tabLayoutTabview"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:tabBackground="@drawable/selector_bg_name_white_a700_radius_16"
+                app:tabIndicatorColor="@android:color/transparent"
+                app:tabIndicatorHeight="0dp" app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/{&quot;name&quot;:&quot;blue_gray_800_01&quot;}"
+                app:tabTextColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;}" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}cornerRadius"/>
+            <androidx.viewpager2.widget.ViewPager2
+                android:gravity="center_horizontal"
+                android:id="@+id/viewPagerTabBarView"
+                android:layout_height="match_parent"
+                android:layout_weight="1" android:layout_width="match_parent"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="suggestedRowModel" type="com.tikpikshortvideosocialnetworking.app.modules.suggested.data.model.SuggestedRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearFollow"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <ImageView android:id="@+id/imageRayfordChenail"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_60pxh"
+            android:layout_width="@dimen/_60pxh"
+            android:scaleType="centerCrop" circular="@{true}"
+            imageRes="@{@drawable/img_ellipse_3}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_3"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearRayfordChenail"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtRayfordChenail"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{suggestedRowModel.txtRayfordChenail}"
+                style="@style/txtUrbanistromanbold18_1" tools:text="@string/lbl_rayford_chenail"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{suggestedRowModel.txtPrice}"
+                style="@style/txtUrbanistromanmedium14_2" tools:text="@string/msg_rayfordchenail"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_radius_8"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:gravity="center" android:id="@+id/btnFollow"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_32pxv"
+            android:layout_width="@dimen/_73pxh"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_7pxv"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_16pxh"
+            android:paddingTop="@dimen/_7pxv" android:singleLine="true"
+            android:text="@string/lbl_follow"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;onErrorContainer&quot;}"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_14pxh" android:textStyle="bold" tools:text="@string/lbl_follow"/>
+    </LinearLayout>
+</layout>

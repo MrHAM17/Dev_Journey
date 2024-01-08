@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="reviewSelectVoucherVM" type="com.housitbuyrentsellproperty.app.modules.reviewselectvoucher.data.viewmodel.ReviewSelectVoucherVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearReviewSelect"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/linearModal"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_24pxh"
+            android:paddingVertical="@dimen/_24pxv" style="@style/groupStylenamewhite_2">
+            <View
+                android:background="@color/{&quot;name&quot;:&quot;blue_gray_600&quot;}"
+                android:id="@+id/lineSlide"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_3pxv" android:layout_width="@dimen/_60pxh"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtAddVoucher"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{reviewSelectVoucherVM.reviewSelectVoucherModel.txtAddVoucher}"
+                style="@style/txtRalewaybold18" tools:text="@string/lbl_add_voucher"/>
+            <EditText
+                android:background="@drawable/rectangle_bg_name_gray_100_radius_12"
+                android:drawablePadding="@dimen/_10pxh"
+                android:drawableStart="@drawable/img_television_blue_gray_800_01"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway"
+                android:hint="@string/msg_type_your_voucher"
+                android:id="@+id/etTelevision" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_26pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_26pxv"
+                android:singleLine="true"
+                android:text="@={reviewSelectVoucherVM.reviewSelectVoucherModel.etTelevisionValue}"
+                android:textColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;}"
+                android:textColorHint="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;}"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="normal" tools:ignore="Autofill"/>
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtYourAvailablevouchers"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{reviewSelectVoucherVM.reviewSelectVoucherModel.txtYourAvailablevouchers}"
+                style="@style/txtRalewaybold18" tools:text="@string/msg_your_available_vouchers"/>
+            <LinearLayout android:id="@+id/linearCardCoupon"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_16pxh"
+                android:paddingVertical="@dimen/_16pxv" style="@style/groupStylecornerRadius_1">
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_green_a400_radius_17"
+                    android:id="@+id/btnTelevision"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_53pxh"
+                    android:layout_width="@dimen/_53pxh"
+                    android:paddingHorizontal="@dimen/_14pxh"
+                    android:paddingVertical="@dimen/_14pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_television_white_a700_53x53" tools:ignore="ContentDescription"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearFrame"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtHLWNForty"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{reviewSelectVoucherVM.reviewSelectVoucherModel.txtHLWNForty}"
+                        style="@style/txtRalewaybold18" tools:text="@string/lbl_hlwn40"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtClicktousethisvoucher"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{reviewSelectVoucherVM.reviewSelectVoucherModel.txtClicktousethisvoucher}"
+                        style="@style/txtRalewaymedium8" tools:text="@string/msg_click_to_use_this"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearCardCoupon1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_16pxh"
+                android:paddingVertical="@dimen/_16pxv" style="@style/groupStylecornerRadius_1">
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_green_a400_radius_17"
+                    android:id="@+id/btnTelevision1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_53pxh"
+                    android:layout_width="@dimen/_53pxh"
+                    android:paddingHorizontal="@dimen/_14pxh"
+                    android:paddingVertical="@dimen/_14pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_television_white_a700_53x53" tools:ignore="ContentDescription"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearFrame1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtHGJCTwenty"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{reviewSelectVoucherVM.reviewSelectVoucherModel.txtHGJCTwenty}"
+                        style="@style/txtRalewaybold18" tools:text="@string/lbl_hgjc20"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtClicktousethisvoucher1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{reviewSelectVoucherVM.reviewSelectVoucherModel.txtClicktousethisvoucher1}"
+                        style="@style/txtRalewaymedium8" tools:text="@string/msg_click_to_use_this"/>
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_35"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway"
+                android:gravity="center"
+                android:id="@+id/btnApplyVoucher"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_70pxv"
+                android:layout_width="@dimen/_327pxh"
+                android:paddingBottom="@dimen/_25pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_25pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_apply_voucher"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_apply_voucher"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="categoryRowModel" type="com.housitbuyrentsellproperty.app.modules.notificationlist.data.model.CategoryRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearLayout"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_17pxv"
+        android:paddingEnd="@dimen/_24pxh"
+        android:paddingStart="@dimen/_24pxh"
+        android:paddingTop="@dimen/_17pxv" style="@style/groupStyle{&quot;name&quot;:&quot;primary&quot;}cornerRadius">
+        <ImageView android:id="@+id/imageAll"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_18pxh"
+            android:layout_width="@dimen/_15pxh"
+            android:scaleType="fitXY" android:src="@drawable/img_close"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_close"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtAll"
+            android:layout_gravity="top"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{categoryRowModel.txtAll}"
+            style="@style/txtRalewaysemibold12" tools:text="@string/lbl_all"/>
+    </LinearLayout>
+</layout>

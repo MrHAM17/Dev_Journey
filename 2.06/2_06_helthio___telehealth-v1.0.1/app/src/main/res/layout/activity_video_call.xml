@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="videoCallVM" type="com.helthiotelehealth.app.modules.videocall.data.viewmodel.VideoCallVM"/>
+    </data>
+    <LinearLayout android:gravity="end" android:id="@+id/linearSpacer"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_14pxv"
+        android:paddingEnd="@dimen/_20pxh"
+        android:paddingStart="@dimen/_20pxh"
+        android:paddingTop="@dimen/_14pxv" style="@style/groupStylenamewhite_7">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearThree"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical" style="@style/groupStyle_1">
+            <ImageView android:id="@+id/imageImage"
+                android:layout_gravity="end"
+                android:layout_height="@dimen/_112pxh"
+                android:layout_width="@dimen/_75pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_15pxh}"
+                imageRes="@{@drawable/img_image}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_image"/>
+            <FrameLayout android:id="@+id/frameSpacer"
+                android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDrMarcusHorizon"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{videoCallVM.videoCallModel.txtDrMarcusHorizon}"
+                style="@style/txtRalewaysemibold16" tools:text="@string/msg_dr_marcus_horizon"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtTime"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{videoCallVM.videoCallModel.txtTime}"
+                style="@style/txtRalewaymedium14_4" tools:text="@string/lbl_00_05_24"/>
+            <LinearLayout android:id="@+id/linearCallActions"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_red_700_radius_26"
+                    android:id="@+id/btnUpload"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_52pxh"
+                    android:layout_width="@dimen/_52pxh"
+                    android:paddingHorizontal="@dimen/_14pxh"
+                    android:paddingVertical="@dimen/_14pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_upload" tools:ignore="ContentDescription"/>
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_gray_500_radius_26"
+                    android:id="@+id/btnCall"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_52pxh"
+                    android:layout_width="@dimen/_52pxh"
+                    android:paddingHorizontal="@dimen/_14pxh"
+                    android:paddingVertical="@dimen/_14pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_call" tools:ignore="ContentDescription"/>
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_gray_500_radius_26"
+                    android:id="@+id/btnMenu"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_52pxh"
+                    android:layout_width="@dimen/_52pxh"
+                    android:paddingHorizontal="@dimen/_14pxh"
+                    android:paddingVertical="@dimen/_14pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_menu" tools:ignore="ContentDescription"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearSwipeBakToMenu"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/_35pxh" android:paddingStart="@dimen/_35pxh">
+            <ImageView android:id="@+id/imageArrowUp"
+                android:layout_height="@dimen/_20pxh"
+                android:layout_width="@dimen/_20pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_up"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_up"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSwipeBackToMenu"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{videoCallVM.videoCallModel.txtSwipeBackToMenu}"
+                style="@style/txtRalewaymedium14_4" tools:text="@string/msg_swipe_back_to_menu"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

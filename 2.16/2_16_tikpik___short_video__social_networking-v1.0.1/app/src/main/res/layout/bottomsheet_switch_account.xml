@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="switchAccountVM" type="com.tikpikshortvideosocialnetworking.app.modules.switchaccount.data.viewmodel.SwitchAccountVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSwitchAccount"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/linearAutoLayoutVertical"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_7pxv"
+            android:paddingEnd="@dimen/_23pxh"
+            android:paddingStart="@dimen/_23pxh"
+            android:paddingTop="@dimen/_7pxv" style="@style/groupStylenameonErrorContainercornerRadius_4">
+            <ImageView android:id="@+id/imageImage"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_3pxh"
+                android:layout_width="@dimen/_38pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_frame_gray_300"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_frame_gray_300"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSwitchAccount"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{switchAccountVM.switchAccountModel.txtSwitchAccount}"
+                style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_switch_account"/>
+            <View
+                android:background="@color/{&quot;name&quot;:&quot;gray_200&quot;}"
+                android:id="@+id/lineLine"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_380pxh"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerSwitchAccount"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_24pxh}" tools:itemCount="4" tools:listitem="@layout/row_switchaccount"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

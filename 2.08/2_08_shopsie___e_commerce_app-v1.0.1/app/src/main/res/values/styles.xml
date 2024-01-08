@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="txtMontserratmedium48">
+        <item name="android:textSize">@dimen/_48pxh</item>
+        <item name="android:textColor">@color/{"name":"gray_200"}</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtLatoregular12_1">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"gray_600"}</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtLatomedium24">
+        <item name="android:textSize">@dimen/_24pxh</item>
+        <item name="android:textColor">@color/{"name":"onPrimary"}</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtLatomedium22">
+        <item name="android:textSize">@dimen/_22pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtPlayfairDisplayromanmedium65">
+        <item name="android:textSize">@dimen/_65pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/playfair_display</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;gray_50&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_gray_50_radius_4</item>
+    </style>
+    <style name="txtLatobold16">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/{"name":"onPrimary"}</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtLatobold14">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_400"}</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtLatosemibold14_1">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"onPrimary"}</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtLatosemibold14">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtLatoregular18_1">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/{"name":"gray_400_01"}</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtLatoregular16">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/{"name":"onPrimary"}</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;black_900&quot;}">
+        <item name="android:background">@drawable/rectangle_bg_name_black_900</item>
+    </style>
+    <style name="txtLatoregular18">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/{"name":"onPrimary"}</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtLatomedium14_2">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtPlayfairDisplayromanbold16">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/playfair_display</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtLatomedium14_1">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_400"}</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtLatoregular14_1">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"onPrimary"}</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtLatoregular12_3">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"onPrimary"}</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtPlayfairDisplayromanbold36">
+        <item name="android:textSize">@dimen/_36pxh</item>
+        <item name="android:textColor">@color/{"name":"indigo_100"}</item>
+        <item name="android:fontFamily">@font/playfair_display</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtLatoregular12_2">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"gray_300"}</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtLatoregular14_3">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtLatoregular14_2">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_400"}</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtLatobold24">
+        <item name="android:textSize">@dimen/_24pxh</item>
+        <item name="android:textColor">@color/{"name":"onPrimary"}</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtLatoregular12">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_400"}</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtLatomedium12">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"onPrimary"}</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtLatoregular14">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"gray_600"}</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtPlayfairDisplayromanregular35">
+        <item name="android:textSize">@dimen/_35pxh</item>
+        <item name="android:textColor">@color/{"name":"gray_400_01"}</item>
+        <item name="android:fontFamily">@font/playfair_display</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtLatomedium14">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"onPrimary"}</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtLatomedium18">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/{"name":"onPrimary"}</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}">
+        <item name="android:background">@drawable/rectangle_bg_name_onprimary</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;primaryContainer&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_primarycontainer_border_name_gray_300_radius_8</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;indigo_50&quot;}">
+        <item name="android:background">@drawable/rectangle_bg_name_indigo_50</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;primaryContainer&quot;}">
+        <item name="android:background">@drawable/rectangle_bg_name_primarycontainer</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;black_900_01&quot;,&quot;opacity&quot;:0.3}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_black_900_01_opacity_0_3_radius_tl_200_tr_200</item>
+    </style>
+    <style name="groupStyle">
+        <item name="android:background">@drawable/rectangle_border_name_gray_300</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;gray_300&quot;}">
+        <item name="android:background">@drawable/rectangle_bg_name_gray_300</item>
+    </style>
+    <style name="searchViewsearch" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColorPrimary">@color/{"name":"onPrimary"}</item>
+        <item name="android:textColorHint">@color/{"name":"onPrimary"}</item>
+    </style>
+</resources>

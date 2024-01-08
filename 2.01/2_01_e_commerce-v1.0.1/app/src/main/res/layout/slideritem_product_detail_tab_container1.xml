@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="imageSliderWidgetModel" type="com.ecommerce.app.modules.productdetailtabcontainer.data.model.ImageSliderWidgetModel"/>
+    </data>
+    <ImageView android:id="@+id/imageProductImage"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:scaleType="fitXY"
+        imageUrl="@{imageSliderWidgetModel.imageProductImage}"
+        placeHolder="@{@drawable/image_not_found}"
+        tools:ignore="ContentDescription" tools:src="@drawable/img_product_image_238x375"/>
+</layout>

@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="groupStylecornerRadius">
+        <item name="android:background">@drawable/rectangle_gradient_s_name_gray_800_00_c_name_blue_gray_900_59_e_name_gray_900_opacity_0_59_radius_bl_36_br_36</item>
+    </style>
+    <style name="txtUrbanistromanbold18">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;cyan_900&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_cyan_900_radius_16</item>
+    </style>
+    <style name="txtUrbanistromanbold24">
+        <item name="android:textSize">@dimen/_24pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;blue_gray_900&quot;}">
+        <item name="android:background">@drawable/rectangle_bg_name_blue_gray_900</item>
+    </style>
+    <style name="txtUrbanistromanbold20">
+        <item name="android:textSize">@dimen/_20pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtSourceSansProsemibold18">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtUrbanistromanbold22">
+        <item name="android:textSize">@dimen/_22pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtUrbanistregular14">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"gray_400"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="groupStylecornerRadius_2">
+        <item name="android:background">@drawable/rectangle_border_name_primary_radius_19</item>
+    </style>
+    <style name="txtUrbanistregular12">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"gray_400"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtUrbanistregular10">
+        <item name="android:textSize">@dimen/_10pxh</item>
+        <item name="android:textColor">@color/{"name":"gray_400"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="groupStylecornerRadius_1">
+        <item name="android:background">@drawable/rectangle_border_name_primary_radius_10</item>
+    </style>
+    <style name="txtUrbanistsemibold18_2">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/{"name":"gray_50"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtUrbanistsemibold18_1">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/{"name":"red_400"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtUrbanistsemibold16_2">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/{"name":"onPrimaryContainer"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;gray_700&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_gray_700_radius_40</item>
+    </style>
+    <style name="txtUrbanistsemibold16_1">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtUrbanistregular18">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtUrbanistsemibold14_1">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtUrbanistregular16">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtUrbanistromanbold16">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtUrbanistromanbold10">
+        <item name="android:textSize">@dimen/_10pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="groupStyle">
+        <item name="android:background">@drawable/rectangle_gradient_s_name_gray_800_00_c_name_blue_gray_900_59_e_name_gray_900_opacity_0_59</item>
+    </style>
+    <style name="txtUrbanistromanbold18_1">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="groupStylenameblue_gray_1">
+        <item name="android:background">@drawable/rectangle_bg_name_blue_gray_900_border_name_gray_700_radius_16</item>
+    </style>
+    <style name="txtUrbanistromanbold16_1">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="groupStylenameblue_gray_2">
+        <item name="android:background">@drawable/rectangle_bg_name_blue_gray_900_radius_12</item>
+    </style>
+    <style name="groupStylenameblue_gray_3">
+        <item name="android:background">@drawable/rectangle_bg_name_blue_gray_900_border_name_primary_radius_20</item>
+    </style>
+    <style name="groupStylenameblue_gray_4">
+        <item name="android:background">@drawable/rectangle_bg_name_blue_gray_900_border_name_gray_700_radius_20</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;primary&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_primary_radius_19</item>
+    </style>
+    <style name="txtUrbanistromanbold24_1">
+        <item name="android:textSize">@dimen/_24pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="groupStylenameblue_gray_5">
+        <item name="android:background">@drawable/rectangle_bg_name_blue_gray_900_radius_20</item>
+    </style>
+    <style name="groupStyle_1">
+        <item name="android:background">@drawable/rectangle_gradient_s_name_gray_800_00_e_name_gray_900</item>
+    </style>
+    <style name="groupStylenameblue_gray_6">
+        <item name="android:background">@drawable/rectangle_bg_name_blue_gray_900_radius_16</item>
+    </style>
+    <style name="groupStylenameblue_gray_7">
+        <item name="android:background">@drawable/rectangle_bg_name_blue_gray_900_radius_17</item>
+    </style>
+    <style name="groupStyle_2">
+        <item name="android:background">@drawable/rectangle_dhi_0</item>
+    </style>
+    <style name="txtUrbanistromanbold20_1">
+        <item name="android:textSize">@dimen/_20pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtUrbanistsemibold22">
+        <item name="android:textSize">@dimen/_22pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtUrbanistromanblack64">
+        <item name="android:textSize">@dimen/_64pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">900</item>
+    </style>
+    <style name="txtUrbanistromanmedium18">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/{"name":"gray_400_01"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;green_600_19&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_green_600_19_radius_10</item>
+    </style>
+    <style name="txtUrbanistromanmedium14">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"gray_400"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;black_900&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_black_900_radius_tl_16_tr_16</item>
+    </style>
+    <style name="txtUrbanistromanbold48">
+        <item name="android:textSize">@dimen/_48pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtUrbanistromanmedium10">
+        <item name="android:textSize">@dimen/_10pxh</item>
+        <item name="android:textColor">@color/{"name":"cyan_200"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtUrbanistromanmedium12">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"gray_50"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtUrbanistsemibold16">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="txtUrbanistsemibold18">
+        <item name="android:textSize">@dimen/_18pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;blue_gray_900&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_blue_gray_900_radius_16</item>
+    </style>
+    <style name="txtUrbanistsemibold14">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">600</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;red_400_19&quot;}cornerRadius">
+        <item name="android:background">@drawable/rectangle_bg_name_red_400_19_radius_10</item>
+    </style>
+    <style name="groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}">
+        <item name="android:background">@drawable/rectangle_bg_name_onprimary</item>
+    </style>
+    <style name="txtUrbanistromanmedium14_1">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"gray_400_01"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtUrbanistregular14_1">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"gray_50"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtUrbanistregular14_2">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtUrbanistromanmedium12_1">
+        <item name="android:textSize">@dimen/_12pxh</item>
+        <item name="android:textColor">@color/{"name":"gray_400_01"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtUrbanistromanmedium10_3">
+        <item name="android:textSize">@dimen/_10pxh</item>
+        <item name="android:textColor">@color/{"name":"red_400"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtUrbanistregular14_3">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColor">@color/{"name":"gray_400_01"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtUrbanistregular16_1">
+        <item name="android:textSize">@dimen/_16pxh</item>
+        <item name="android:textColor">@color/{"name":"gray_400_01"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">400</item>
+    </style>
+    <style name="txtUrbanistromanmedium10_2">
+        <item name="android:textSize">@dimen/_10pxh</item>
+        <item name="android:textColor">@color/{"name":"blue_gray_100"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtUrbanistromanmedium10_1">
+        <item name="android:textSize">@dimen/_10pxh</item>
+        <item name="android:textColor">@color/{"name":"gray_400"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">500</item>
+    </style>
+    <style name="txtUrbanistromanbold32">
+        <item name="android:textSize">@dimen/_32pxh</item>
+        <item name="android:textColor">@color/{"name":"white_A700"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="txtUrbanistromanbold32_1">
+        <item name="android:textSize">@dimen/_32pxh</item>
+        <item name="android:textColor">@color/{"name":"primary"}</item>
+        <item name="android:fontFamily">@font/urbanist</item>
+        <item name="android:textFontWeight" tools:targetApi="p">700</item>
+    </style>
+    <style name="searchViewsearch" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColorPrimary">@color/{"name":"gray_500"}</item>
+        <item name="android:textColorHint">@color/{"name":"gray_500"}</item>
+    </style>
+    <style name="searchViewsearch" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColorPrimary">@color/{"name":"gray_500"}</item>
+        <item name="android:textColorHint">@color/{"name":"gray_500"}</item>
+    </style>
+    <style name="searchViewsearch" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">@dimen/_14pxh</item>
+        <item name="android:textColorPrimary">@color/{"name":"white_A700"}</item>
+        <item name="android:textColorHint">@color/{"name":"white_A700"}</item>
+    </style>
+</resources>

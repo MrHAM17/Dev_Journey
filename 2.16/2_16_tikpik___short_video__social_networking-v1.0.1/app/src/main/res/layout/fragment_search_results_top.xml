@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="searchResultsTopVM" type="com.tikpikshortvideosocialnetworking.app.modules.searchresultstop.data.viewmodel.SearchResultsTopVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearFollow"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onErrorContainer&quot;}">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearFollow1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <TextView android:ellipsize="end" android:id="@+id/txtUsers"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{searchResultsTopVM.searchResultsTopModel.txtUsers}"
+                style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_users"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerFollow"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_24pxh}" tools:itemCount="2" tools:listitem="@layout/row_follow"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtVideos"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{searchResultsTopVM.searchResultsTopModel.txtVideos}"
+                style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_videos"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerAutoLayoutHorizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_8pxh}" tools:itemCount="3" tools:listitem="@layout/row_autolayouthorizontal"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

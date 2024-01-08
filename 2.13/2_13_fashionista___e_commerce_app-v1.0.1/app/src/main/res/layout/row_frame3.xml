@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="frame3RowModel" type="com.fashionistaecommerceapp.app.modules.home.data.model.Frame3RowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearCard"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:orientation="vertical">
+        <FrameLayout android:id="@+id/frameFrame"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_235pxv" android:layout_width="@dimen/_164pxh">
+            <ImageView android:id="@+id/imageBlackJacket"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_235pxh"
+                android:layout_width="@dimen/_164pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_15pxh}"
+                imageRes="@{@drawable/img_unsplash_emlkhdeydhg_2}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_unsplash_emlkhdeydhg_2"/>
+            <ImageView android:id="@+id/imageClock"
+                android:layout_gravity="top|end"
+                android:layout_height="@dimen/_24pxh"
+                android:layout_width="@dimen/_24pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_clock"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_clock"/>
+        </FrameLayout>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtCasualJeansShoes"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{frame3RowModel.txtCasualJeansShoes}"
+            style="@style/txtPoppinsregular14" tools:text="@string/lbl_black_jacket"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{frame3RowModel.txtPrice}"
+            style="@style/txtPoppinssemibold16" tools:text="@string/lbl_246_00"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="postsTemplatesVM" type="com.tikpikshortvideosocialnetworking.app.modules.poststemplates.data.viewmodel.PostsTemplatesVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearPostsTemplates"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;primaryContainer&quot;,&quot;opacity&quot;:1}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageVector"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_vector_onerrorcontainer_11x11"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_vector_onerrorcontainer_11x11"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearUploadPhotos"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtOilPainting"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{postsTemplatesVM.postsTemplatesModel.txtOilPainting}"
+                style="@style/txtUrbanistromanbold32" tools:text="@string/lbl_oil_painting"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPleaseUploadOne"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{postsTemplatesVM.postsTemplatesModel.txtPleaseUploadOne}"
+                style="@style/txtUrbanistromanmedium16" tools:text="@string/msg_please_upload_1"/>
+            <ImageView android:id="@+id/imageImage"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_500pxh"
+                android:layout_width="@dimen/_330pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_24pxh}"
+                imageRes="@{@drawable/img_image_500x330}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_image_500x330"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtOneThousandOneHundredSixtyEigh"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{postsTemplatesVM.postsTemplatesModel.txtOneThousandOneHundredSixtyEigh}"
+                style="@style/txtUrbanistsemibold14_2" tools:text="@string/lbl_1_168"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_16"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:gravity="center"
+                android:id="@+id/btnUploadPhotos"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_58pxv"
+                android:layout_width="@dimen/_330pxh"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_19pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_19pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_upload_photos"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;onErrorContainer&quot;}"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_upload_photos"/>
+            <LinearLayout android:id="@+id/linearAutoLayoutHorizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_17pxv"
+                android:paddingEnd="@dimen/_28pxh"
+                android:paddingStart="@dimen/_28pxh" android:paddingTop="@dimen/_17pxv">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCamera"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{postsTemplatesVM.postsTemplatesModel.txtCamera}"
+                    style="@style/txtUrbanistromanbold16_3" tools:text="@string/lbl_camera"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtQuick"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{postsTemplatesVM.postsTemplatesModel.txtQuick}"
+                    style="@style/txtUrbanistromanbold16_3" tools:text="@string/lbl_quick"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTemplates"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{postsTemplatesVM.postsTemplatesModel.txtTemplates}"
+                    style="@style/txtUrbanistromanbold16_4" tools:text="@string/lbl_templates"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="postsUploadMediaVM" type="com.tikpikshortvideosocialnetworking.app.modules.postsuploadmedia.data.viewmodel.PostsUploadMediaVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearCheckmark"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onErrorContainer&quot;}">
+        <androidx.recyclerview.widget.RecyclerView
+            android:gravity="top|center"
+            android:id="@+id/recyclerAutoLayoutVertical"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3" itemSpace="@{@dimen/_8pxh}"
+            tools:itemCount="7" tools:listitem="@layout/row_autolayoutvertical6"/>
+    </LinearLayout>
+</layout>

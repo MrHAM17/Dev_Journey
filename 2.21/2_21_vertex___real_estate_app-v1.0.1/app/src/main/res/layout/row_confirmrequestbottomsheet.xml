@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="confirmrequestbottomsheetRowModel" type="com.vertexrealestateapp.app.modules.confirmrequestbottomsheet.data.model.ConfirmrequestbottomsheetRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearHome"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_11pxv"
+        android:paddingEnd="@dimen/_12pxh"
+        android:paddingStart="@dimen/_12pxh"
+        android:paddingTop="@dimen/_11pxv" style="@style/groupStylecornerRadius_1">
+        <ImageButton
+            android:background="@drawable/rectangle_bg_name_gray_300_radius_20"
+            android:id="@+id/btnHome"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_40pxh"
+            android:layout_width="@dimen/_40pxh"
+            android:paddingHorizontal="@dimen/_9pxh"
+            android:paddingVertical="@dimen/_9pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_home_primary" tools:ignore="ContentDescription"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearText"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtHomeClosed"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.02" android:singleLine="true"
+                android:text="@{confirmrequestbottomsheetRowModel.txtHomeClosed}"
+                style="@style/txtManropemedium12_1" tools:text="@string/lbl_home_closed"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTwentyFive"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{confirmrequestbottomsheetRowModel.txtTwentyFive}"
+                style="@style/txtManropeextrabold14_2" tools:text="@string/lbl_25"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

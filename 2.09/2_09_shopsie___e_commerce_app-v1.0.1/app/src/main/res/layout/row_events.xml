@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="eventsRowModel" type="com.shopsieecommerceapp.app.modules.events.data.model.EventsRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start" android:id="@+id/linearCard"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_18pxv"
+        android:paddingEnd="@dimen/_17pxh"
+        android:paddingStart="@dimen/_17pxh"
+        android:paddingTop="@dimen/_18pxv" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}cornerRadius">
+        <ImageView android:id="@+id/imageFashionMeetup"
+            android:layout_height="@dimen/_180pxh"
+            android:layout_width="@dimen/_283pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_8pxh}"
+            imageRes="@{@drawable/img_image_180x283}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_image_180x283"/>
+        <LinearLayout android:id="@+id/linearNinetyThree"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_border_name_blue_gray_400_radius_12"
+                android:ellipsize="end" android:fontFamily="@font/inter"
+                android:gravity="center" android:id="@+id/btnOne"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_38pxh"
+                android:layout_width="@dimen/_38pxh"
+                android:lineSpacingExtra="@dimen/_4pxh"
+                android:paddingBottom="@dimen/_9pxv"
+                android:paddingEnd="@dimen/_15pxh"
+                android:paddingStart="@dimen/_15pxh"
+                android:paddingTop="@dimen/_9pxv"
+                android:singleLine="true" android:text="@string/lbl_1"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;onPrimary&quot;}"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_1"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearInfo"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMonday"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_3pxh"
+                    android:singleLine="true"
+                    android:text="@{eventsRowModel.txtMonday}"
+                    style="@style/txtIntermedium14" tools:text="@string/lbl_monday"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDecemberCounter"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_3pxh"
+                    android:singleLine="true"
+                    android:text="@{eventsRowModel.txtDecemberCounter}"
+                    style="@style/txtInterregular12" tools:text="@string/lbl_december_2019"/>
+            </LinearLayout>
+            <FrameLayout android:id="@+id/frameSpacer"
+                android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            <ImageView android:id="@+id/imageMonday"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_18pxh"
+                android:layout_width="@dimen/_18pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_icon_options_gray_500"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_icon_options_gray_500"/>
+        </LinearLayout>
+        <TextView android:ellipsize="end" android:id="@+id/txtTitle"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_4pxh"
+            android:singleLine="true"
+            android:text="@{eventsRowModel.txtTitle}"
+            style="@style/txtInterbold16" tools:text="@string/lbl_fashion_meetup"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtTime"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_3pxh"
+            android:singleLine="true"
+            android:text="@{eventsRowModel.txtTime}"
+            style="@style/txtIntermedium14_1" tools:text="@string/msg_starts_at_9_00am"/>
+        <LinearLayout android:id="@+id/linearNinety"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_green_600_radius_4"
+                android:ellipsize="end" android:fontFamily="@font/inter"
+                android:gravity="center" android:id="@+id/btnInterested"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_28pxv"
+                android:layout_width="@dimen/_87pxh"
+                android:lineSpacingExtra="@dimen/_3pxh"
+                android:paddingBottom="@dimen/_5pxv"
+                android:paddingEnd="@dimen/_9pxh"
+                android:paddingStart="@dimen/_9pxh"
+                android:paddingTop="@dimen/_5pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_interested"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:text="@string/lbl_interested"/>
+            <FrameLayout android:id="@+id/frameFriends"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_28pxv" android:layout_width="@dimen/_74pxh">
+                <ImageView android:id="@+id/imageImage1"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_28pxh"
+                    android:layout_width="@dimen/_28pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_play"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_play"/>
+                <ImageView android:id="@+id/imageImage2"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_28pxh"
+                    android:layout_width="@dimen/_28pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_play"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_play"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAvatarInitials"
+                    android:layout_gravity="end"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_3pxh"
+                    android:paddingBottom="@dimen/_5pxv"
+                    android:paddingEnd="@dimen/_4pxh"
+                    android:paddingStart="@dimen/_4pxh"
+                    android:paddingTop="@dimen/_5pxv"
+                    android:singleLine="true"
+                    android:text="@{eventsRowModel.txtAvatarInitials}"
+                    style="@style/txtSolidRounded" tools:text="@string/lbl_9"/>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

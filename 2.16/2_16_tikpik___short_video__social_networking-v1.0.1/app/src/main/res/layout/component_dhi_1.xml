@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="dhi1Model" type="com.tikpikshortvideosocialnetworking.app.modules.dhi1.data.model.Dhi1Model"/>
+    </data>
+    <FrameLayout
+        android:background="@drawable/rectangle_bg_name_onerrorcontainer_border_name_gray_400_radius_12"
+        android:id="@+id/frameInput"
+        android:layout_height="wrap_content" android:layout_width="match_parent">
+        <FrameLayout android:id="@+id/frameFrameFour"
+            android:layout_height="wrap_content" android:layout_width="wrap_content">
+            <ImageView android:id="@+id/imageFlag"
+                android:layout_height="@dimen/_18pxh"
+                android:layout_width="@dimen/_24pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_flag"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_flag"/>
+            <ImageView android:id="@+id/imageArrowDown"
+                android:layout_height="@dimen/_16pxh"
+                android:layout_width="@dimen/_16pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_down_gray_500"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down_gray_500"/>
+        </FrameLayout>
+        <EditText android:background="@android:color/transparent"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:hint="@string/lbl_phone_number"
+            android:id="@+id/etPhoneNumber" android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01" android:singleLine="true"
+            android:text="@={dhi1Model.etPhoneNumberValue}"
+            android:textColor="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+            android:textColorHint="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_14pxh" android:textStyle="normal" tools:ignore="Autofill"/>
+    </FrameLayout>
+</layout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="twentytwoRowModel" type="com.banksydigitalbanking.app.modules.sendmoney.data.model.TwentytwoRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearBelgeman"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <ImageView android:id="@+id/imageBelgeman1"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_48pxh"
+            android:layout_width="@dimen/_48pxh"
+            android:scaleType="centerCrop" circular="@{true}"
+            imageRes="@{@drawable/img_oval_1}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_oval_1"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearFrame"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtJenningsChamplin1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{twentytwoRowModel.txtJenningsChamplin1}"
+                style="@style/txtOverpassbold16" tools:text="@string/lbl_belgeman"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtJenningsChamplin2"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{twentytwoRowModel.txtJenningsChamplin2}"
+                style="@style/txtOverpassregular12_1" tools:text="@string/msg_ac_159_107_1396"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <ImageView android:id="@+id/imageBelgeman2"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_24pxh"
+            android:layout_width="@dimen/_24pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_checkmark_gray_400"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark_gray_400"/>
+    </LinearLayout>
+</layout>

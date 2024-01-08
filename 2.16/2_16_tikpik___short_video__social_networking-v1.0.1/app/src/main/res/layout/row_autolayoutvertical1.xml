@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="autolayoutvertical1RowModel" type="com.tikpikshortvideosocialnetworking.app.modules.profile.data.model.Autolayoutvertical1RowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearK"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <FrameLayout android:id="@+id/frameMask1"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_200pxv" android:layout_width="@dimen/_121pxh">
+            <ImageView android:id="@+id/imageK2"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_200pxh"
+                android:layout_width="@dimen/_121pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_12pxh}"
+                imageRes="@{@drawable/img_image_5}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_image_5"/>
+            <LinearLayout android:id="@+id/linearAutoLayoutHorizontal1"
+                android:layout_gravity="bottom|start"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal" style="@style/groupStylecornerRadius">
+                <ImageView android:id="@+id/imageK3"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_16pxh"
+                    android:layout_width="@dimen/_16pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_overflowmenu_primary}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_overflowmenu_primary"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="bottom" android:id="@+id/txtK1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{autolayoutvertical1RowModel.txtK1}"
+                    style="@style/txtUrbanistsemibold10" tools:text="@string/lbl_367_5k"/>
+            </LinearLayout>
+        </FrameLayout>
+        <FrameLayout android:id="@+id/frameMask2"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_200pxv" android:layout_width="@dimen/_121pxh">
+            <ImageView android:id="@+id/imageK"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_200pxh"
+                android:layout_width="@dimen/_121pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_12pxh}"
+                imageRes="@{@drawable/img_image_6}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_image_6"/>
+            <LinearLayout android:id="@+id/linearAutoLayoutHorizontal2"
+                android:layout_gravity="bottom|start"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal" style="@style/groupStylecornerRadius">
+                <ImageButton
+                    android:background="@drawable/rectangle_radius_8"
+                    android:id="@+id/btnOverflowMenu"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_16pxh"
+                    android:layout_width="@dimen/_16pxh"
+                    android:paddingHorizontal="@dimen/_1pxh"
+                    android:paddingVertical="@dimen/_1pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_overflow_menu_primary_16x16" tools:ignore="ContentDescription"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="bottom" android:id="@+id/txtK2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{autolayoutvertical1RowModel.txtK2}"
+                    style="@style/txtUrbanistsemibold10" tools:text="@string/lbl_837_9k"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

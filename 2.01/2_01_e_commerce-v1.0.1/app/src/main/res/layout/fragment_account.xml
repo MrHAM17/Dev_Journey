@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="accountVM" type="com.ecommerce.app.modules.account.data.viewmodel.AccountVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearAccount"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtAccount"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.0" android:singleLine="true"
+                android:text="@{accountVM.accountModel.txtAccount}"
+                style="@style/txtPoppinsbold16" tools:text="@string/lbl_account"/>
+            <ImageView android:id="@+id/imageNotificationIcon"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_notification_icon"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_notification_icon"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearAccount1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_11pxv" android:paddingTop="@dimen/_11pxv">
+            <LinearLayout android:id="@+id/linearAccountOption"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_16pxh"
+                android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                <ImageView android:id="@+id/imageLock"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_lock_primary"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_lock_primary"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtProfile"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{accountVM.accountModel.txtProfile}"
+                    style="@style/txtPoppinsbold12" tools:text="@string/lbl_profile"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearAccountOption1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_16pxh"
+                android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                <ImageView android:id="@+id/imageBagIcon"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_bag_icon"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_bag_icon"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtOrder"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{accountVM.accountModel.txtOrder}"
+                    style="@style/txtPoppinsbold12" tools:text="@string/lbl_order"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearAccountOption2"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_16pxh"
+                android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                <ImageView android:id="@+id/imageLinkedin"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_linkedin"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_linkedin"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAddress"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{accountVM.accountModel.txtAddress}"
+                    style="@style/txtPoppinsbold12" tools:text="@string/lbl_address"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearAccountOption3"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_16pxh"
+                android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                <ImageView android:id="@+id/imageCreditCardIcon"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_credit_card_icon"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_credit_card_icon"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPayment"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{accountVM.accountModel.txtPayment}"
+                    style="@style/txtPoppinsbold12" tools:text="@string/lbl_payment"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

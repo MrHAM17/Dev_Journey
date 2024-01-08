@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="imageSliderImageAndDetailsModel" type="com.vertexrealestateapp.app.modules.productdetails.data.model.ImageSliderImageAndDetailsModel"/>
+    </data>
+    <FrameLayout android:id="@+id/frameArrowLeft"
+        android:layout_height="match_parent" android:layout_width="match_parent">
+        <ImageView android:id="@+id/imageImage"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_343pxh"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_20pxh}"
+            imageUrl="@{imageSliderImageAndDetailsModel.imageImage}"
+            placeHolder="@{@drawable/image_not_found}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_image_343x343"/>
+        <LinearLayout android:id="@+id/linearArrowLeft"
+            android:layout_gravity="top|center"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <LinearLayout android:id="@+id/linearIcon"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_white_a700_border_name_blue_100_radius_20"
+                    android:id="@+id/btnArrowLeft"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_40pxh"
+                    android:layout_width="@dimen/_40pxh"
+                    android:paddingHorizontal="@dimen/_14pxh"
+                    android:paddingVertical="@dimen/_14pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_arrow_left_primarycontainer_40x40" tools:ignore="ContentDescription"/>
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_white_a700_border_name_blue_100_radius_20"
+                    android:id="@+id/btnTelevision"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_40pxh"
+                    android:layout_width="@dimen/_40pxh"
+                    android:paddingHorizontal="@dimen/_8pxh"
+                    android:paddingVertical="@dimen/_8pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_television_primarycontainer" tools:ignore="ContentDescription"/>
+            </LinearLayout>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtOceanAvenue"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{imageSliderImageAndDetailsModel.txtOceanAvenue}"
+                style="@style/txtManropemedium14_1" tools:text="@string/msg_701_ocean_avenue"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

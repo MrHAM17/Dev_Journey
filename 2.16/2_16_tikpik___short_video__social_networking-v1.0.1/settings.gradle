@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "2_16_tikpik___short_video__social_networking"

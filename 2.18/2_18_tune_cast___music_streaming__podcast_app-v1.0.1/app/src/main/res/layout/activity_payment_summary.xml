@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="paymentSummaryVM" type="com.tunecastmusicstreamingpodcastapp.app.modules.paymentsummary.data.viewmodel.PaymentSummaryVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearContinue"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowDown"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_down"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFillYourProfile"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{paymentSummaryVM.paymentSummaryModel.txtFillYourProfile}"
+                style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_review_summary"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearPaymentSummary"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_27pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_27pxv">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearAutoLayoutVertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_24pxh"
+                android:paddingVertical="@dimen/_24pxv" style="@style/groupStylecornerRadius_8">
+                <ImageView android:id="@+id/imageUser"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_44pxh"
+                    android:layout_width="@dimen/_50pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_user_white_a700"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_user_white_a700"/>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearAutoLayoutHorizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:id="@+id/txtPrice"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{paymentSummaryVM.paymentSummaryModel.txtPrice}"
+                        style="@style/txtUrbanistromanbold32_2" tools:text="@string/lbl_9_99"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtMonth"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@{paymentSummaryVM.paymentSummaryModel.txtMonth}"
+                        style="@style/txtUrbanistromanmedium18_4" tools:text="@string/lbl_month"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;blue_gray_100&quot;}"
+                    android:id="@+id/lineLine"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_332pxh"/>
+                <LinearLayout
+                    android:id="@+id/linearAutoLayoutHorizontal1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageCategoriesCheck"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_32pxh"
+                        android:layout_width="@dimen/_32pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_categories_check"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_categories_check"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="bottom"
+                        android:id="@+id/txtListeningWithBetter"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@{paymentSummaryVM.paymentSummaryModel.txtListeningWithBetter}"
+                        style="@style/txtUrbanistromanmedium16_2" tools:text="@string/msg_listening_with_better"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearAutoLayoutHorizontal2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageCategoriesCheck1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_32pxh"
+                        android:layout_width="@dimen/_32pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_categories_check"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_categories_check"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="bottom"
+                        android:id="@+id/txtListeningWithout"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@{paymentSummaryVM.paymentSummaryModel.txtListeningWithout}"
+                        style="@style/txtUrbanistromanmedium16_2" tools:text="@string/msg_listening_without"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearAutoLayoutHorizontal3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageCategoriesCheck2"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_32pxh"
+                        android:layout_width="@dimen/_32pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_categories_check"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_categories_check"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="bottom"
+                        android:id="@+id/txtShufflePlayDownload"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@{paymentSummaryVM.paymentSummaryModel.txtShufflePlayDownload}"
+                        style="@style/txtUrbanistromanmedium16_2" tools:text="@string/msg_shuffle_play_download"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearAutoLayoutVertical1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_24pxh"
+                android:paddingVertical="@dimen/_24pxv" style="@style/groupStylenamewhite_6">
+                <LinearLayout
+                    android:id="@+id/linearAutoLayoutHorizontal4"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtAmount"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@{paymentSummaryVM.paymentSummaryModel.txtAmount}"
+                        style="@style/txtUrbanistromanmedium14_1" tools:text="@string/lbl_amount"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPrice1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@{paymentSummaryVM.paymentSummaryModel.txtPrice1}"
+                        style="@style/txtUrbanistsemibold16_3" tools:text="@string/lbl_9_99"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearAutoLayoutHorizontal5"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTax"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@{paymentSummaryVM.paymentSummaryModel.txtTax}"
+                        style="@style/txtUrbanistromanmedium14_1" tools:text="@string/lbl_tax"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPrice2"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@{paymentSummaryVM.paymentSummaryModel.txtPrice2}"
+                        style="@style/txtUrbanistsemibold16_3" tools:text="@string/lbl_1_99"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;blue_gray_100&quot;}"
+                    android:id="@+id/lineLine1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_332pxh"/>
+                <LinearLayout
+                    android:id="@+id/linearAutoLayoutHorizontal6"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTotal"
+                        android:layout_gravity="top"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@{paymentSummaryVM.paymentSummaryModel.txtTotal}"
+                        style="@style/txtUrbanistromanmedium14_1" tools:text="@string/lbl_total"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPrice3"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@{paymentSummaryVM.paymentSummaryModel.txtPrice3}"
+                        style="@style/txtUrbanistsemibold16_3" tools:text="@string/lbl_11_99"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearTypeCreditCard"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_23pxv"
+                android:paddingEnd="@dimen/_24pxh"
+                android:paddingStart="@dimen/_24pxh"
+                android:paddingTop="@dimen/_23pxv" style="@style/groupStylenamewhite_6">
+                <ImageView android:id="@+id/imageUser1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_34pxh"
+                    android:layout_width="@dimen/_44pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_user_yellow_800"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_user_yellow_800"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtText"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{paymentSummaryVM.paymentSummaryModel.txtText}"
+                    style="@style/txtUrbanistromanbold18" tools:text="@string/msg2"/>
+                <FrameLayout android:id="@+id/frameSpacer"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtChange"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{paymentSummaryVM.paymentSummaryModel.txtChange}"
+                    style="@style/txtUrbanistromanbold16" tools:text="@string/lbl_change"/>
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_radius_29"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:gravity="center" android:id="@+id/btnContinue"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_58pxv"
+            android:layout_width="@dimen/_380pxh"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_19pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_19pxv" android:singleLine="true"
+            android:text="@string/lbl_continue"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_continue"/>
+    </LinearLayout>
+</layout>

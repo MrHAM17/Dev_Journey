@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="minePageContainerVM" type="com.safebankmobilebankingapp.app.modules.minepagecontainer.data.viewmodel.MinePageContainerVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearTransfer"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <FrameLayout android:id="@+id/fragmentContainer"
+            android:layout_height="match_parent"
+            android:layout_weight="1" android:layout_width="match_parent"/>
+        <FrameLayout android:gravity="center_horizontal"
+            android:id="@+id/frameTabBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" style="@style/groupStyle_1">
+            <ImageView android:id="@+id/imageUser"
+                android:layout_height="@dimen/_20pxh"
+                android:layout_width="@dimen/_19pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_user_indigo_50"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_user_indigo_50"/>
+            <ImageView android:id="@+id/imageStatistics"
+                android:layout_height="@dimen/_20pxh"
+                android:layout_width="@dimen/_19pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_statistics"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_statistics"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:backgroundTint="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                android:id="@+id/floatingBtnFloatingActionButton"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                app:fabCustomSize="@dimen/_50pxh"
+                app:srcCompat="@drawable/img_thumbs_up_white_a700" app:tint="@color/{&quot;name&quot;:&quot;white_A700&quot;}"/>
+            <ImageView android:id="@+id/imageUser1"
+                android:layout_height="@dimen/_17pxh"
+                android:layout_width="@dimen/_19pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_user_secondarycontainer"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_user_secondarycontainer"/>
+            <ImageView android:id="@+id/imageSearch"
+                android:layout_height="@dimen/_18pxh"
+                android:layout_width="@dimen/_14pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_search_secondarycontainer"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_search_secondarycontainer"/>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

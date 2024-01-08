@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="onboardingThreeVM" type="com.hiredjobsearch.app.modules.onboardingthree.data.viewmodel.OnboardingThreeVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameOnboardingThree"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/_29pxv"
+        android:paddingEnd="@dimen/_24pxh"
+        android:paddingStart="@dimen/_24pxh"
+        android:paddingTop="@dimen/_29pxv" style="@style/groupStyle">
+        <FrameLayout android:id="@+id/frameThree"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content" android:layout_width="wrap_content">
+            <LinearLayout android:id="@+id/linearTwo"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <FrameLayout android:id="@+id/frameGetStarted"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_699pxv" android:layout_width="@dimen/_327pxh">
+                    <ImageView android:id="@+id/imageImage"
+                        android:layout_gravity="top|center"
+                        android:layout_height="@dimen/_422pxh"
+                        android:layout_width="@dimen/_313pxh"
+                        android:scaleType="fitXY"
+                        imageRes="@{@drawable/img_image}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_image"/>
+                    <FrameLayout android:id="@+id/frameGetStarted1"
+                        android:layout_gravity="bottom|center"
+                        android:layout_height="@dimen/_367pxv" android:layout_width="@dimen/_327pxh">
+                        <LinearLayout android:id="@+id/linearContent"
+                            android:layout_gravity="center"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/_32pxv"
+                            android:paddingEnd="@dimen/_41pxh"
+                            android:paddingStart="@dimen/_41pxh"
+                            android:paddingTop="@dimen/_32pxv" style="@style/groupStylenameonPrimaryContaineropacity1cornerRadius_2">
+                            <TextView
+                                android:gravity="center_horizontal"
+                                android:id="@+id/txtApplicationSurely"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.01"
+                                android:lineSpacingExtra="@dimen/_8pxh"
+                                android:text="@{onboardingThreeVM.onboardingThreeModel.txtApplicationSurely}"
+                                style="@style/txtPlusJakartaSansbold24" tools:text="@string/msg_application_surely"/>
+                            <TextView
+                                android:gravity="center_horizontal"
+                                android:id="@+id/txtSemperInCursus"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.0"
+                                android:lineSpacingExtra="@dimen/_8pxh"
+                                android:text="@{onboardingThreeVM.onboardingThreeModel.txtSemperInCursus}"
+                                style="@style/txtPlusJakartaSanssemibold14" tools:text="@string/msg_semper_in_cursus"/>
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:background="@drawable/rectangle_bg_name_primary_radius_24"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/plus_jakarta_sans"
+                                android:gravity="center"
+                                android:id="@+id/btnGetStarted"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="@dimen/_56pxv"
+                                android:layout_width="@dimen/_156pxh"
+                                android:letterSpacing="0.0"
+                                android:lineSpacingExtra="@dimen/_5pxh"
+                                android:paddingBottom="@dimen/_17pxv"
+                                android:paddingEnd="@dimen/_30pxh"
+                                android:paddingStart="@dimen/_30pxh"
+                                android:paddingTop="@dimen/_17pxv"
+                                android:singleLine="true"
+                                android:text="@string/lbl_get_started"
+                                android:textAllCaps="false"
+                                android:textColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}"
+                                android:textFontWeight="600"
+                                android:textSize="@dimen/_16pxh"
+                                android:textStyle="bold" tools:text="@string/lbl_get_started"/>
+                        </LinearLayout>
+                    </FrameLayout>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearZero"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <FrameLayout android:gravity="center_horizontal"
+                    android:id="@+id/frameNext"
+                    android:layout_height="@dimen/_718pxv"
+                    android:layout_width="match_parent"
+                    android:paddingEnd="@dimen/_24pxh" android:paddingStart="@dimen/_24pxh">
+                    <ImageView android:id="@+id/imageImage1"
+                        android:layout_gravity="top|center"
+                        android:layout_height="@dimen/_361pxh"
+                        android:layout_width="@dimen/_283pxh"
+                        android:scaleType="fitXY"
+                        imageRes="@{@drawable/img_image_361x283}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_image_361x283"/>
+                    <FrameLayout android:id="@+id/frameNext1"
+                        android:layout_gravity="bottom|center"
+                        android:layout_height="@dimen/_335pxv" android:layout_width="@dimen/_327pxh">
+                        <LinearLayout android:id="@+id/linearContent1"
+                            android:layout_gravity="center"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/_32pxv"
+                            android:paddingEnd="@dimen/_39pxh"
+                            android:paddingStart="@dimen/_39pxh"
+                            android:paddingTop="@dimen/_32pxv" style="@style/groupStylenameonPrimaryContaineropacity1cornerRadius_2">
+                            <TextView
+                                android:gravity="center_horizontal"
+                                android:id="@+id/txtTheBestAppFor"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.01"
+                                android:lineSpacingExtra="@dimen/_8pxh"
+                                android:text="@{onboardingThreeVM.onboardingThreeModel.txtTheBestAppFor}"
+                                style="@style/txtPlusJakartaSansbold24" tools:text="@string/msg_the_best_app_for"/>
+                            <TextView
+                                android:gravity="center_horizontal"
+                                android:id="@+id/txtSemperInCursus1"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.0"
+                                android:lineSpacingExtra="@dimen/_8pxh"
+                                android:text="@{onboardingThreeVM.onboardingThreeModel.txtSemperInCursus1}"
+                                style="@style/txtPlusJakartaSanssemibold14" tools:text="@string/msg_semper_in_cursus"/>
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:background="@drawable/rectangle_bg_name_primary_radius_24"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/plus_jakarta_sans"
+                                android:gravity="center"
+                                android:id="@+id/btnNext"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="@dimen/_56pxv"
+                                android:layout_width="@dimen/_101pxh"
+                                android:letterSpacing="0.0"
+                                android:lineSpacingExtra="@dimen/_5pxh"
+                                android:paddingBottom="@dimen/_17pxv"
+                                android:paddingEnd="@dimen/_30pxh"
+                                android:paddingStart="@dimen/_30pxh"
+                                android:paddingTop="@dimen/_17pxv"
+                                android:singleLine="true"
+                                android:text="@string/lbl_next"
+                                android:textAllCaps="false"
+                                android:textColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}"
+                                android:textFontWeight="600"
+                                android:textSize="@dimen/_16pxh"
+                                android:textStyle="bold" tools:text="@string/lbl_next"/>
+                        </LinearLayout>
+                    </FrameLayout>
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <FrameLayout android:gravity="center_horizontal"
+                    android:id="@+id/frameNext2"
+                    android:layout_height="@dimen/_713pxv"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_1pxv"
+                    android:paddingEnd="@dimen/_24pxh"
+                    android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_1pxv">
+                    <ImageView android:id="@+id/imageImage2"
+                        android:layout_gravity="top|center"
+                        android:layout_height="@dimen/_369pxh"
+                        android:layout_width="@dimen/_306pxh"
+                        android:scaleType="fitXY"
+                        imageRes="@{@drawable/img_image_369x306}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_image_369x306"/>
+                    <FrameLayout android:id="@+id/frameNext3"
+                        android:layout_gravity="bottom|center"
+                        android:layout_height="@dimen/_335pxv" android:layout_width="@dimen/_327pxh">
+                        <LinearLayout android:id="@+id/linearContent2"
+                            android:layout_gravity="center"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/_32pxv"
+                            android:paddingEnd="@dimen/_24pxh"
+                            android:paddingStart="@dimen/_24pxh"
+                            android:paddingTop="@dimen/_32pxv" style="@style/groupStylenameonPrimaryContaineropacity1cornerRadius_2">
+                            <TextView
+                                android:gravity="center_horizontal"
+                                android:id="@+id/txtBetterFutureIs"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.01"
+                                android:lineSpacingExtra="@dimen/_8pxh"
+                                android:text="@{onboardingThreeVM.onboardingThreeModel.txtBetterFutureIs}"
+                                style="@style/txtPlusJakartaSansbold24" tools:text="@string/msg_better_future_is"/>
+                            <TextView
+                                android:gravity="center_horizontal"
+                                android:id="@+id/txtSemperInCursus2"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.0"
+                                android:lineSpacingExtra="@dimen/_8pxh"
+                                android:text="@{onboardingThreeVM.onboardingThreeModel.txtSemperInCursus2}"
+                                style="@style/txtPlusJakartaSanssemibold14" tools:text="@string/msg_semper_in_cursus"/>
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:background="@drawable/rectangle_bg_name_primary_radius_24"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/plus_jakarta_sans"
+                                android:gravity="center"
+                                android:id="@+id/btnNext1"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="@dimen/_56pxv"
+                                android:layout_width="@dimen/_101pxh"
+                                android:letterSpacing="0.0"
+                                android:lineSpacingExtra="@dimen/_5pxh"
+                                android:paddingBottom="@dimen/_17pxv"
+                                android:paddingEnd="@dimen/_30pxh"
+                                android:paddingStart="@dimen/_30pxh"
+                                android:paddingTop="@dimen/_17pxv"
+                                android:singleLine="true"
+                                android:text="@string/lbl_next"
+                                android:textAllCaps="false"
+                                android:textColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}"
+                                android:textFontWeight="600"
+                                android:textSize="@dimen/_16pxh"
+                                android:textStyle="bold" tools:text="@string/lbl_next"/>
+                        </LinearLayout>
+                    </FrameLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <com.asksira.loopingviewpager.indicator.CustomShapePagerIndicator
+            android:id="@+id/indicatorSettings"
+            android:layout_gravity="bottom|center"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:drawable_normal="@drawable/indicator_unselected_bg_name_primary_opacity_0_41_radius_8"
+            app:drawable_selected="@drawable/indicator_selected_bg_name_primary_radius_8"
+            app:indicator_size="@dimen/_10pxh" app:indicator_spacing="@dimen/_12pxh"/>
+    </FrameLayout>
+</layout>

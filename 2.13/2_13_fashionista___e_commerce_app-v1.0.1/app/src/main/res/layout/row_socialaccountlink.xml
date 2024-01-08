@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="socialaccountlinkRowModel" type="com.fashionistaecommerceapp.app.modules.socialaccountlink.data.model.SocialaccountlinkRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearFrame1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_16pxh"
+        android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}cornerRadius">
+        <ImageView android:id="@+id/imageFacebook1"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_40pxh"
+            android:layout_width="@dimen/_40pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_logos_facebook"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_logos_facebook"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearFrame2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFacebook"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{socialaccountlinkRowModel.txtFacebook}"
+                style="@style/txtPoppinsregular16" tools:text="@string/lbl_facebook"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtWelcomeToFacebook"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{socialaccountlinkRowModel.txtWelcomeToFacebook}"
+                style="@style/txtPoppinsregular12_1" tools:text="@string/msg_welcome_to_facebook"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <ImageView android:id="@+id/imageFacebook2"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_24pxh"
+            android:layout_width="@dimen/_24pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_group_1198"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_group_1198"/>
+    </LinearLayout>
+</layout>

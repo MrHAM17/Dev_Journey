@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="transferAmountVM" type="com.safebankmobilebankingapp.app.modules.transferamount.data.viewmodel.TransferAmountVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSendMoney"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@drawable/rectangle_border_name_gray_300_radius_17"
+                android:id="@+id/btnArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_left_black_900" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTransfer"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{transferAmountVM.transferAmountModel.txtTransfer}"
+                style="@style/txtPoppinssemibold18" tools:text="@string/lbl_transfer_amount"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearFiftyThree"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_26pxv"
+            android:paddingEnd="@dimen/_20pxh"
+            android:paddingStart="@dimen/_20pxh"
+            android:paddingTop="@dimen/_26pxv" style="@style/groupStylenamewhite_2">
+            <LinearLayout android:id="@+id/linearFortyNine"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTo"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{transferAmountVM.transferAmountModel.txtTo}"
+                    style="@style/txtPoppinsmedium12_1" tools:text="@string/lbl_to"/>
+                <ImageView android:id="@+id/imageCircleImage"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_40pxh"
+                    android:layout_width="@dimen/_40pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_ellipse_311_40x40}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_311_40x40"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearFortyEight"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtMarleeRice"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{transferAmountVM.transferAmountModel.txtMarleeRice}"
+                        style="@style/txtPoppinsmedium14" tools:text="@string/lbl_marlee_rice"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtIDCounter"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{transferAmountVM.transferAmountModel.txtIDCounter}"
+                        style="@style/txtPoppinsmedium10" tools:text="@string/lbl_id_14345112075"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:background="@color/{&quot;name&quot;:&quot;gray_200&quot;}"
+                android:id="@+id/lineLineFourteen"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_285pxh"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtAmount"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{transferAmountVM.transferAmountModel.txtAmount}"
+                style="@style/txtPoppinsmedium12_1" tools:text="@string/lbl_amount"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{transferAmountVM.transferAmountModel.txtPrice}"
+                style="@style/txtPoppinsmedium32" tools:text="@string/lbl_02"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPrice1"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{transferAmountVM.transferAmountModel.txtPrice1}"
+                style="@style/txtPoppinsmedium10_4" tools:text="@string/msg_available_balance"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="match_parent"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_radius_12"
+            android:ellipsize="end" android:fontFamily="@font/poppins"
+            android:gravity="center" android:id="@+id/btnSendMoney"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_50pxv"
+            android:layout_width="@dimen/_327pxh"
+            android:paddingBottom="@dimen/_13pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_13pxv" android:singleLine="true"
+            android:text="@string/lbl_send_money"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_send_money"/>
+    </LinearLayout>
+</layout>

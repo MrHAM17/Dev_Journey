@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="trendingHashtagVM" type="com.tikpikshortvideosocialnetworking.app.modules.trendinghashtag.data.viewmodel.TrendingHashtagVM"/>
+    </data>
+    <androidx.core.widget.NestedScrollView android:clipToPadding="false"
+        android:fillViewport="true"
+        android:id="@+id/scrollViewScrollView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStyle{&quot;name&quot;:&quot;onErrorContainer&quot;}">
+        <LinearLayout android:id="@+id/linearCategoriesHashtag"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:id="@+id/linearCategoriesHashtag1"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearCategoriesHashtag2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <ImageButton
+                        android:background="@drawable/rectangle_bg_name_red_a200_14_radius_28"
+                        android:id="@+id/btnCategoriesHashtag"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_56pxh"
+                        android:layout_width="@dimen/_56pxh"
+                        android:paddingHorizontal="@dimen/_16pxh"
+                        android:paddingVertical="@dimen/_16pxv"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_categories_hashtag" tools:ignore="ContentDescription"/>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearAmazingfood"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtAmazingfood"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{trendingHashtagVM.trendingHashtagModel.txtAmazingfood}"
+                            style="@style/txtUrbanistromanbold18_1" tools:text="@string/lbl_amazingfood"/>
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/txtTrendingHashtag"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@{trendingHashtagVM.trendingHashtagModel.txtTrendingHashtag}"
+                            style="@style/txtUrbanistromanmedium14_2" tools:text="@string/msg_trending_hashtag"/>
+                    </LinearLayout>
+                    <FrameLayout android:id="@+id/frameSpacer"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDistance"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@{trendingHashtagVM.trendingHashtagModel.txtDistance}"
+                        style="@style/txtUrbanistsemibold14_1" tools:text="@string/lbl_827_5m"/>
+                    <ImageView android:id="@+id/imageArrowRight"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow_right"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:gravity="center_horizontal"
+                    android:id="@+id/recyclerAutoLayoutHorizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_8pxh}" tools:itemCount="3" tools:listitem="@layout/row_autolayouthorizontal3"/>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearCategoriesHashtag3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <ImageButton
+                        android:background="@drawable/rectangle_bg_name_red_a200_14_radius_28"
+                        android:id="@+id/btnCategoriesHashtag1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_56pxh"
+                        android:layout_width="@dimen/_56pxh"
+                        android:paddingHorizontal="@dimen/_16pxh"
+                        android:paddingVertical="@dimen/_16pxv"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_categories_hashtag" tools:ignore="ContentDescription"/>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearBeautiful"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtBeautiful"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{trendingHashtagVM.trendingHashtagModel.txtBeautiful}"
+                            style="@style/txtUrbanistromanbold18_1" tools:text="@string/lbl_beautiful"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtTrendingHashtag1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@{trendingHashtagVM.trendingHashtagModel.txtTrendingHashtag1}"
+                            style="@style/txtUrbanistromanmedium14_2" tools:text="@string/msg_trending_hashtag"/>
+                    </LinearLayout>
+                    <FrameLayout android:id="@+id/frameSpacer1"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDistance1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@{trendingHashtagVM.trendingHashtagModel.txtDistance1}"
+                        style="@style/txtUrbanistsemibold14_1" tools:text="@string/lbl_827_5m"/>
+                    <ImageView android:id="@+id/imageArrowRight1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow_right"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:gravity="center_horizontal"
+                    android:id="@+id/recyclerAutoLayoutHorizontal1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_8pxh}" tools:itemCount="3" tools:listitem="@layout/row_autolayouthorizontal4"/>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearCategoriesHashtag4"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <ImageButton
+                        android:background="@drawable/rectangle_bg_name_red_a200_14_radius_28"
+                        android:id="@+id/btnCategoriesHashtag2"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_56pxh"
+                        android:layout_width="@dimen/_56pxh"
+                        android:paddingHorizontal="@dimen/_16pxh"
+                        android:paddingVertical="@dimen/_16pxv"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_categories_hashtag" tools:ignore="ContentDescription"/>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearSongforyou"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSongforyou"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{trendingHashtagVM.trendingHashtagModel.txtSongforyou}"
+                            style="@style/txtUrbanistromanbold18_1" tools:text="@string/lbl_songforyou"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtTrendingHashtag2"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@{trendingHashtagVM.trendingHashtagModel.txtTrendingHashtag2}"
+                            style="@style/txtUrbanistromanmedium14_2" tools:text="@string/msg_trending_hashtag"/>
+                    </LinearLayout>
+                    <FrameLayout android:id="@+id/frameSpacer2"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDistance2"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@{trendingHashtagVM.trendingHashtagModel.txtDistance2}"
+                        style="@style/txtUrbanistsemibold14_1" tools:text="@string/lbl_827_5m"/>
+                    <ImageView android:id="@+id/imageArrowRight2"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow_right"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="notificationsRowModel" type="com.hiredjobsearch.app.modules.notifications.data.model.NotificationsRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearNewPost"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <TextView android:ellipsize="end" android:id="@+id/txtNewPost"
+            android:layout_gravity="top"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.01" android:singleLine="true"
+            android:text="@{notificationsRowModel.txtNewPost}"
+            style="@style/txtPlusJakartaSansplusjakartasansregular16" tools:text="@string/lbl_new_post"/>
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchMaterialToggle"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+    </LinearLayout>
+</layout>

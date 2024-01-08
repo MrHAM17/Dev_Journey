@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="homeVM" type="com.helthiotelehealth.app.modules.home.data.viewmodel.HomeVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearLearnMore"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <TextView android:id="@+id/txtFindYourDesire"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{homeVM.homeModel.txtFindYourDesire}"
+                style="@style/txtRalewaysemibold22" tools:text="@string/msg_find_your_desire"/>
+            <ImageView android:id="@+id/imageUser"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_user"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_user"/>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearHome"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <androidx.appcompat.widget.SearchView
+                    android:background="@drawable/rectangle_bg_name_white_a700_border_name_gray_300_radius_6"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/searchViewSearch"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:theme="@style/searchViewsearch"
+                    app:iconifiedByDefault="false"
+                    app:queryBackground="@android:color/transparent"
+                    app:queryHint="@string/msg_search_doctor_drugs" app:searchIcon="@drawable/img_rewind"/>
+                <LinearLayout android:id="@+id/linearLearnMore1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:gravity="center_horizontal"
+                        android:id="@+id/recyclerCategories"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        itemSpace="@{@dimen/_19pxh}" tools:itemCount="4" tools:listitem="@layout/row_categories"/>
+                    <LinearLayout android:id="@+id/linearOfferBanner"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingEnd="@dimen/_3pxh"
+                        android:paddingStart="@dimen/_3pxh" style="@style/groupStylecornerRadius">
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearLearnMore2"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/txtEarlyProtection"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:text="@{homeVM.homeModel.txtEarlyProtection}"
+                                style="@style/txtRalewaysemibold16" tools:text="@string/msg_early_protection"/>
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:background="@drawable/rectangle_bg_name_white_a700_radius_8"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/raleway"
+                                android:gravity="center"
+                                android:id="@+id/btnLearnMore"
+                                android:layout_height="@dimen/_30pxv"
+                                android:layout_width="@dimen/_98pxh"
+                                android:paddingBottom="@dimen/_7pxv"
+                                android:paddingEnd="@dimen/_16pxh"
+                                android:paddingStart="@dimen/_16pxh"
+                                android:paddingTop="@dimen/_7pxv"
+                                android:singleLine="true"
+                                android:text="@string/lbl_learn_more"
+                                android:textAllCaps="false"
+                                android:textColor="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                                android:textFontWeight="600"
+                                android:textSize="@dimen/_12pxh"
+                                android:textStyle="bold" tools:text="@string/lbl_learn_more"/>
+                        </LinearLayout>
+                        <FrameLayout android:id="@+id/frameImage"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_130pxv" android:layout_width="@dimen/_113pxh">
+                            <View
+                                android:background="@drawable/rectangle_border_name_white_a700_opacity_0_53_radius_56"
+                                android:id="@+id/viewView"
+                                android:layout_gravity="bottom|center"
+                                android:layout_height="@dimen/_113pxh" android:layout_width="@dimen/_113pxh"/>
+                            <ImageView android:id="@+id/imageXmSix"
+                                android:layout_gravity="center"
+                                android:layout_height="@dimen/_130pxh"
+                                android:layout_width="@dimen/_91pxh"
+                                android:scaleType="fitXY"
+                                cornerRadius="@{@dimen/_10pxh}"
+                                imageRes="@{@drawable/img_7xm_6}"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_7xm_6"/>
+                        </FrameLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearTopDoctors"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <LinearLayout android:id="@+id/linearNinety"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtTopDoctor"
+                            android:layout_gravity="bottom"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{homeVM.homeModel.txtTopDoctor}"
+                            style="@style/txtRalewaysemibold16_1" tools:text="@string/lbl_top_doctor"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSeeAll"
+                            android:layout_gravity="top"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{homeVM.homeModel.txtSeeAll}"
+                            style="@style/txtRalewaymedium14_1" tools:text="@string/lbl_see_all"/>
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:gravity="center_horizontal"
+                        android:id="@+id/recyclerHome"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="2" itemSpace="@{@dimen/_17pxh}"
+                        tools:itemCount="4" tools:listitem="@layout/row_home"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

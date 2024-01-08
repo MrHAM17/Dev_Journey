@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="offerScreenVM" type="com.ecommerce.app.modules.offerscreen.data.viewmodel.OfferScreenVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearOffer"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <TextView android:ellipsize="end" android:id="@+id/txtOffer"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.0" android:singleLine="true"
+                android:text="@{offerScreenVM.offerScreenModel.txtOffer}"
+                style="@style/txtPoppinsbold16" tools:text="@string/lbl_offer"/>
+            <ImageView android:id="@+id/imageNotificationIcon"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_notification_icon"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_notification_icon"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearOfferScreen"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_28pxv"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_16pxh" android:paddingTop="@dimen/_28pxv">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearCuponPromotion"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_14pxv"
+                android:paddingEnd="@dimen/_16pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_14pxv" style="@style/groupStyle{&quot;name&quot;:&quot;primary&quot;,&quot;opacity&quot;:1}cornerRadius">
+                <TextView android:id="@+id/txtOffer1"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.03"
+                    android:text="@{offerScreenVM.offerScreenModel.txtOffer1}"
+                    style="@style/txtPoppinsbold16_1" tools:text="@string/msg_use_megsl_cupon"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerOfferScreen"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_16pxh}" tools:itemCount="2" tools:listitem="@layout/row_offerscreen"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

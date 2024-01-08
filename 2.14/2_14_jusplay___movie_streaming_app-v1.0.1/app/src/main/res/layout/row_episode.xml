@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="episodeRowModel" type="com.jusplaymoviestreamingapp.app.modules.episode.data.model.EpisodeRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearFrame2"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_10pxv"
+        android:paddingTop="@dimen/_10pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_900&quot;}cornerRadius">
+        <FrameLayout android:id="@+id/frameFrame"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_131pxv" android:layout_width="@dimen/_131pxh">
+            <ImageView android:id="@+id/imageTrailer1"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_131pxh"
+                android:layout_width="@dimen/_131pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_15pxh}"
+                imageRes="@{@drawable/img_rectangle_12046}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle_12046"/>
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_20"
+                android:id="@+id/btnContrast"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_40pxh"
+                android:layout_width="@dimen/_40pxh"
+                android:paddingHorizontal="@dimen/_11pxh"
+                android:paddingVertical="@dimen/_11pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_contrast" tools:ignore="ContentDescription"/>
+        </FrameLayout>
+        <LinearLayout android:id="@+id/linearFrame3"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <LinearLayout android:id="@+id/linearFrame"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTrailer"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{episodeRowModel.txtTrailer}"
+                    style="@style/txtPoppinsmedium14_1" tools:text="@string/lbl_trailer"/>
+                <ImageView android:id="@+id/imageTrailer2"
+                    android:layout_gravity="bottom"
+                    android:layout_height="@dimen/_16pxh"
+                    android:layout_width="@dimen/_16pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_download"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_download"/>
+            </LinearLayout>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtAladdinAStreet"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{episodeRowModel.txtAladdinAStreet}"
+                style="@style/txtPoppinsregular12_1" tools:text="@string/msg_aladdin_a_street"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

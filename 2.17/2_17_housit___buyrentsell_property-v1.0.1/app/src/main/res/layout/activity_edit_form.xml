@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="editFormVM" type="com.housitbuyrentsellproperty.app.modules.editform.data.viewmodel.EditFormVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearHouse"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_21pxv"
+        android:paddingTop="@dimen/_21pxv" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                android:id="@+id/btnArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_left" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPageTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{editFormVM.editFormModel.txtPageTitle}"
+                style="@style/txtRalewaybold14" tools:text="@string/lbl_edit_listing"/>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearEditForm"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout android:id="@+id/linearEstatesCardWide"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_8pxh"
+                    android:paddingVertical="@dimen/_8pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}cornerRadius">
+                    <FrameLayout android:id="@+id/frameShape"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_104pxv" android:layout_width="@dimen/_168pxh">
+                        <ImageView android:id="@+id/imageShape"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_104pxh"
+                            android:layout_width="@dimen/_168pxh"
+                            android:scaleType="fitXY"
+                            cornerRadius="@{@dimen/_15pxh}"
+                            imageRes="@{@drawable/img_shape_36}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_shape_36"/>
+                        <LinearLayout android:id="@+id/linearHouse1"
+                            android:layout_gravity="start"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <ImageButton
+                                android:background="@drawable/rectangle_bg_name_white_a700_opacity_0_78_radius_12"
+                                android:id="@+id/btnFavorite"
+                                android:layout_height="@dimen/_25pxh"
+                                android:layout_width="@dimen/_25pxh"
+                                android:paddingHorizontal="@dimen/_6pxh"
+                                android:paddingVertical="@dimen/_6pxv"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/img_favorite_red_a200" tools:ignore="ContentDescription"/>
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:background="@drawable/rectangle_bg_name_blue_gray_700_af_radius_8"
+                                android:drawablePadding="@dimen/_6pxh"
+                                android:drawableStart="@drawable/drawable_img_close"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/raleway"
+                                android:gravity="center"
+                                android:id="@+id/btnHouse"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:paddingBottom="@dimen/_7pxv"
+                                android:paddingEnd="@dimen/_7pxh"
+                                android:paddingStart="@dimen/_7pxh"
+                                android:paddingTop="@dimen/_7pxv"
+                                android:singleLine="true"
+                                android:text="@string/lbl_house"
+                                android:textAllCaps="false"
+                                android:textColor="@color/{&quot;name&quot;:&quot;gray_100&quot;}"
+                                android:textFontWeight="500"
+                                android:textSize="@dimen/_8pxh"
+                                android:textStyle="bold" tools:text="@string/lbl_house"/>
+                        </LinearLayout>
+                    </FrameLayout>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearLayout"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:id="@+id/txtSchoolviewHouse"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="@{editFormVM.editFormModel.txtSchoolviewHouse}"
+                            style="@style/txtRalewaybold12" tools:text="@string/msg_schoolview_house"/>
+                        <LinearLayout android:id="@+id/linearLayout1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="horizontal">
+                            <ImageView android:id="@+id/imageSignal"
+                                android:layout_gravity="top"
+                                android:layout_height="@dimen/_9pxh"
+                                android:layout_width="@dimen/_9pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_signal_orange_300"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_signal_orange_300"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtText"
+                                android:layout_gravity="bottom"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:singleLine="true"
+                                android:text="@{editFormVM.editFormModel.txtText}"
+                                style="@style/txtRalewaybold8" tools:text="@string/lbl_4_2"/>
+                        </LinearLayout>
+                        <LinearLayout android:id="@+id/linearLayout2"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="horizontal">
+                            <ImageView android:id="@+id/imageLinkedin"
+                                android:layout_gravity="top"
+                                android:layout_height="@dimen/_9pxh"
+                                android:layout_width="@dimen/_9pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_linkedin"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_linkedin"/>
+                            <TextView android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:id="@+id/txtJakartaIndonesia"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{editFormVM.editFormModel.txtJakartaIndonesia}"
+                                style="@style/txtRalewaymedium8" tools:text="@string/msg_jakarta_indonesia"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearListingTitle"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/_1pxh" android:paddingStart="@dimen/_1pxh">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtListingTitle"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{editFormVM.editFormModel.txtListingTitle}"
+                        style="@style/txtRalewaysemibold18" tools:text="@string/lbl_listing_title"/>
+                    <EditText
+                        android:background="@drawable/rectangle_bg_name_gray_100_radius_12"
+                        android:drawableEnd="@drawable/drawable_img_home_blue_gray_800_01"
+                        android:drawablePadding="@dimen/_30pxh"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/raleway"
+                        android:hint="@string/msg_schoolview_house"
+                        android:id="@+id/etFormPassword"
+                        android:inputType="text"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_27pxv"
+                        android:paddingEnd="@dimen/_16pxh"
+                        android:paddingStart="@dimen/_16pxh"
+                        android:paddingTop="@dimen/_27pxv"
+                        android:singleLine="true"
+                        android:text="@={editFormVM.editFormModel.etFormPasswordValue}"
+                        android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_800_01&quot;}"
+                        android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_800_01&quot;}"
+                        android:textFontWeight="700"
+                        android:textSize="@dimen/_12pxh"
+                        android:textStyle="bold" tools:ignore="Autofill"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearListingType"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtListingtype"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{editFormVM.editFormModel.txtListingtype}"
+                        style="@style/txtRalewaysemibold18" tools:text="@string/lbl_listing_type"/>
+                    <FrameLayout android:id="@+id/frameLayout"
+                        android:layout_height="wrap_content" android:layout_width="match_parent">
+                        <FrameLayout
+                            android:background="@drawable/rectangle_bg_name_primary_radius_25"
+                            android:id="@+id/frameButtonCategory"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingBottom="@dimen/_19pxv"
+                            android:paddingEnd="@dimen/_25pxh" android:paddingTop="@dimen/_19pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_bg_name_primary_radius_25"
+                            android:id="@+id/frameButtonCategory1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingBottom="@dimen/_19pxv"
+                            android:paddingEnd="@dimen/_25pxh" android:paddingTop="@dimen/_19pxv"/>
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearPropertyCategory"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/_1pxh" android:paddingStart="@dimen/_1pxh">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPropertycategory"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{editFormVM.editFormModel.txtPropertycategory}"
+                        style="@style/txtRalewaysemibold18" tools:text="@string/msg_property_category"/>
+                    <FrameLayout android:id="@+id/frameLayout1"
+                        android:layout_height="wrap_content" android:layout_width="match_parent">
+                        <FrameLayout
+                            android:background="@drawable/rectangle_bg_name_primary_radius_25"
+                            android:id="@+id/frameButtonCategory2"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingBottom="@dimen/_19pxv"
+                            android:paddingEnd="@dimen/_25pxh" android:paddingTop="@dimen/_19pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                            android:id="@+id/frameButtonCategory3"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingBottom="@dimen/_19pxv"
+                            android:paddingEnd="@dimen/_26pxh" android:paddingTop="@dimen/_19pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                            android:id="@+id/frameButtonCategory4"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingBottom="@dimen/_19pxv"
+                            android:paddingEnd="@dimen/_25pxh" android:paddingTop="@dimen/_19pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                            android:id="@+id/frameButtonCategory5"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingBottom="@dimen/_19pxv"
+                            android:paddingEnd="@dimen/_25pxh" android:paddingTop="@dimen/_19pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                            android:id="@+id/frameButtonCategory6"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingBottom="@dimen/_19pxv"
+                            android:paddingEnd="@dimen/_26pxh" android:paddingTop="@dimen/_19pxv"/>
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearLocation"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/_1pxh" android:paddingStart="@dimen/_1pxh">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLocation"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{editFormVM.editFormModel.txtLocation}"
+                        style="@style/txtRalewaysemibold18" tools:text="@string/lbl_location"/>
+                    <LinearLayout android:id="@+id/linearLinkedin"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <ImageButton
+                            android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                            android:id="@+id/btnLinkedin"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_50pxh"
+                            android:layout_width="@dimen/_50pxh"
+                            android:paddingHorizontal="@dimen/_15pxh"
+                            android:paddingVertical="@dimen/_15pxv"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/img_linkedin_blue_gray_600_50x50" tools:ignore="ContentDescription"/>
+                        <TextView android:gravity="center_vertical"
+                            android:id="@+id/txtJlGerungsari"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:text="@{editFormVM.editFormModel.txtJlGerungsari}"
+                            style="@style/txtRalewayregular12" tools:text="@string/msg_jl_gerungsari"/>
+                    </LinearLayout>
+                    <FrameLayout android:id="@+id/frameLayout2"
+                        android:layout_height="@dimen/_200pxv"
+                        android:layout_width="@dimen/_327pxh" style="@style/groupStylecornerRadius_4">
+                        <fragment android:id="@+id/mapMap"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_200pxv"
+                            android:layout_width="match_parent" android:name="com.google.android.gms.maps.SupportMapFragment"/>
+                        <LinearLayout
+                            android:id="@+id/linearSelectOnTheMap"
+                            android:layout_gravity="bottom|center"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/_16pxv"
+                            android:paddingEnd="@dimen/_112pxh"
+                            android:paddingStart="@dimen/_112pxh"
+                            android:paddingTop="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;,&quot;opacity&quot;:0.5}">
+                            <TextView android:ellipsize="end"
+                                android:gravity="center_horizontal"
+                                android:id="@+id/txtSelectOnTheMap"
+                                android:layout_height="match_parent"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{editFormVM.editFormModel.txtSelectOnTheMap}"
+                                style="@style/txtRalewayregular12_1" tools:text="@string/msg_select_on_the_map"/>
+                        </LinearLayout>
+                        <ImageView android:id="@+id/imagePinRealEstate"
+                            android:layout_gravity="top|end"
+                            android:layout_height="@dimen/_51pxh"
+                            android:layout_width="@dimen/_34pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_pin_real_estate"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_pin_real_estate"/>
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearGallery"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/_1pxh" android:paddingStart="@dimen/_1pxh">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtListingPhotos"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{editFormVM.editFormModel.txtListingPhotos}"
+                        style="@style/txtRalewaysemibold18" tools:text="@string/lbl_listing_photos"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerShape"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="2" itemSpace="@{@dimen/_9pxh}"
+                        tools:itemCount="4" tools:listitem="@layout/row_shape"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearSellPrice"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/_1pxh" android:paddingStart="@dimen/_1pxh">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtSellPrice"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{editFormVM.editFormModel.txtSellPrice}"
+                        style="@style/txtRalewaysemibold18" tools:text="@string/lbl_sell_price"/>
+                    <LinearLayout android:id="@+id/linearFormTextFill"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/_25pxv"
+                        android:paddingEnd="@dimen/_16pxh"
+                        android:paddingStart="@dimen/_16pxh"
+                        android:paddingTop="@dimen/_25pxv" style="@style/groupStylenamegray_3">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtPrice"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{editFormVM.editFormModel.txtPrice}"
+                            style="@style/txtRalewaysemibold14_1" tools:text="@string/lbl_150_000"/>
+                        <ImageView android:id="@+id/imageIconoirMail"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_20pxh"
+                            android:layout_width="@dimen/_20pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_iconoirmail"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_iconoirmail"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearRentPrice"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/_1pxh" android:paddingStart="@dimen/_1pxh">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtRentPrice"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{editFormVM.editFormModel.txtRentPrice}"
+                        style="@style/txtRalewaysemibold18" tools:text="@string/lbl_rent_price"/>
+                    <LinearLayout android:id="@+id/linearShape"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/_23pxv"
+                        android:paddingEnd="@dimen/_16pxh"
+                        android:paddingStart="@dimen/_16pxh"
+                        android:paddingTop="@dimen/_23pxv" style="@style/groupStylenamegray_3">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtPrice1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{editFormVM.editFormModel.txtPrice1}"
+                            style="@style/txtRalewaysemibold14_1" tools:text="@string/lbl_320"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtMonth"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{editFormVM.editFormModel.txtMonth}"
+                            style="@style/txtRalewaysemibold10_1" tools:text="@string/lbl_month"/>
+                        <FrameLayout android:id="@+id/frameSpacer"
+                            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                        <ImageView android:id="@+id/imageIconDollar"
+                            android:layout_height="@dimen/_20pxh"
+                            android:layout_width="@dimen/_20pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_iconoirmail"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_iconoirmail"/>
+                    </LinearLayout>
+                    <FrameLayout android:id="@+id/frameLayout3"
+                        android:layout_height="wrap_content" android:layout_width="match_parent">
+                        <FrameLayout
+                            android:background="@drawable/rectangle_bg_name_primary_radius_25"
+                            android:id="@+id/frameButtonCategory7"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingBottom="@dimen/_19pxv"
+                            android:paddingEnd="@dimen/_26pxh" android:paddingTop="@dimen/_19pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                            android:id="@+id/frameButtonCategory8"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingBottom="@dimen/_19pxv"
+                            android:paddingEnd="@dimen/_26pxh" android:paddingTop="@dimen/_19pxv"/>
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearPropertyFeatures"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/_1pxh" android:paddingStart="@dimen/_1pxh">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPropertyFeatures"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{editFormVM.editFormModel.txtPropertyFeatures}"
+                        style="@style/txtRalewaysemibold18" tools:text="@string/msg_property_features"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerLayout"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        itemSpace="@{@dimen/_15pxh}" tools:itemCount="3" tools:listitem="@layout/row_layout5"/>
+                </LinearLayout>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTotalRooms"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{editFormVM.editFormModel.txtTotalRooms}"
+                    style="@style/txtRalewaybold18" tools:text="@string/lbl_total_rooms"/>
+                <HorizontalScrollView android:fillViewport="true"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/horizontalScrollWidget"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:scrollbars="none">
+                    <FrameLayout android:id="@+id/frameLayout4"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content">
+                        <FrameLayout
+                            android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                            android:id="@+id/frameButtonCategory9"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingBottom="@dimen/_19pxv"
+                            android:paddingEnd="@dimen/_24pxh" android:paddingTop="@dimen/_19pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                            android:id="@+id/frameButtonCategory10"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingBottom="@dimen/_19pxv"
+                            android:paddingEnd="@dimen/_24pxh" android:paddingTop="@dimen/_19pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_bg_name_primary_radius_25"
+                            android:id="@+id/frameButtonCategory11"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingBottom="@dimen/_19pxv"
+                            android:paddingEnd="@dimen/_24pxh"
+                            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_19pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                            android:id="@+id/frameButtonCategory12"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingBottom="@dimen/_18pxv"
+                            android:paddingEnd="@dimen/_25pxh" android:paddingTop="@dimen/_18pxv"/>
+                    </FrameLayout>
+                </HorizontalScrollView>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearEnvironment"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/_1pxh" android:paddingStart="@dimen/_1pxh">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtEnvironmentFacilities"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{editFormVM.editFormModel.txtEnvironmentFacilities}"
+                        style="@style/txtRalewaybold18" tools:text="@string/msg_environment_facilities"/>
+                    <FrameLayout android:id="@+id/frameSeventy"
+                        android:layout_height="wrap_content" android:layout_width="match_parent">
+                        <FrameLayout
+                            android:background="@drawable/rectangle_bg_name_primary_radius_25"
+                            android:id="@+id/frameButtonCategory13"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingBottom="@dimen/_19pxv"
+                            android:paddingEnd="@dimen/_27pxh" android:paddingTop="@dimen/_19pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_bg_name_primary_radius_25"
+                            android:id="@+id/frameButtonCategory14"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingBottom="@dimen/_19pxv"
+                            android:paddingEnd="@dimen/_27pxh" android:paddingTop="@dimen/_19pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_bg_name_primary_radius_25"
+                            android:id="@+id/frameButtonCategory15"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingBottom="@dimen/_19pxv"
+                            android:paddingEnd="@dimen/_25pxh" android:paddingTop="@dimen/_19pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                            android:id="@+id/frameButtonCategory16"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingBottom="@dimen/_19pxv"
+                            android:paddingEnd="@dimen/_25pxh" android:paddingTop="@dimen/_19pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                            android:id="@+id/frameButtonCategory17"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingBottom="@dimen/_19pxv"
+                            android:paddingEnd="@dimen/_25pxh" android:paddingTop="@dimen/_19pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                            android:id="@+id/frameButtonCategory18"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingBottom="@dimen/_19pxv"
+                            android:paddingEnd="@dimen/_28pxh" android:paddingTop="@dimen/_19pxv"/>
+                        <FrameLayout
+                            android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                            android:id="@+id/frameButtonCategory19"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:paddingBottom="@dimen/_19pxv"
+                            android:paddingEnd="@dimen/_27pxh" android:paddingTop="@dimen/_19pxv"/>
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_radius_35"
+            android:ellipsize="end" android:fontFamily="@font/raleway"
+            android:gravity="center" android:id="@+id/btnUpdate"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_70pxv"
+            android:layout_width="@dimen/_327pxh"
+            android:paddingBottom="@dimen/_25pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_25pxv" android:singleLine="true"
+            android:text="@string/lbl_update"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_update"/>
+    </LinearLayout>
+</layout>

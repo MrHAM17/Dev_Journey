@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="privacyPolicyVM" type="com.blogapp.app.modules.privacypolicy.data.viewmodel.PrivacyPolicyVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSixtyTwo"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_gray_300_radius_18"
+                android:id="@+id/btnClose"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_close" tools:ignore="ContentDescription"/>
+        </androidx.appcompat.widget.Toolbar>
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearPrivacyPolicy"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTitle"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{privacyPolicyVM.privacyPolicyModel.txtTitle}"
+                    style="@style/txtPoppinssemibold18" tools:text="@string/lbl_privacy_policy2"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMonth"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{privacyPolicyVM.privacyPolicyModel.txtMonth}"
+                    style="@style/txtPoppinsregular14_3" tools:text="@string/msg_effective_september"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtYouCanSeeOur"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{privacyPolicyVM.privacyPolicyModel.txtYouCanSeeOur}"
+                    style="@style/txtPoppinsregular12" tools:text="@string/msg_you_can_see_our"/>
+                <TextView android:alpha="0.87"
+                    android:id="@+id/txtDescription"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@{privacyPolicyVM.privacyPolicyModel.txtDescription}"
+                    style="@style/txtPoppinsregular14_4" tools:text="@string/msg_lorem_ipsum_dolor5"/>
+                <TextView android:alpha="0.87"
+                    android:id="@+id/txtDescription1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@{privacyPolicyVM.privacyPolicyModel.txtDescription1}"
+                    style="@style/txtPoppinsregular14_4" tools:text="@string/msg_lorem_ipsum_dolor4"/>
+                <TextView android:alpha="0.87"
+                    android:id="@+id/txtDescription2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@{privacyPolicyVM.privacyPolicyModel.txtDescription2}"
+                    style="@style/txtPoppinsregular14_4" tools:text="@string/msg_lorem_ipsum_dolor4"/>
+                <TextView android:alpha="0.87"
+                    android:id="@+id/txtDescription3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@{privacyPolicyVM.privacyPolicyModel.txtDescription3}"
+                    style="@style/txtPoppinsregular14_4" tools:text="@string/msg_lorem_ipsum_dolor5"/>
+                <ImageView android:id="@+id/imageImage"
+                    android:layout_height="@dimen/_3pxh"
+                    android:layout_width="@dimen/_3pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_group_14"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_group_14"/>
+                <ImageView android:id="@+id/imageImage1"
+                    android:layout_height="@dimen/_3pxh"
+                    android:layout_width="@dimen/_3pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_group_14"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_group_14"/>
+                <ImageView android:id="@+id/imageImage2"
+                    android:layout_height="@dimen/_3pxh"
+                    android:layout_width="@dimen/_3pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_group_14"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_group_14"/>
+                <ImageView android:id="@+id/imageImage3"
+                    android:layout_height="@dimen/_3pxh"
+                    android:layout_width="@dimen/_3pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_group_14"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_group_14"/>
+                <ImageView android:id="@+id/imageImage4"
+                    android:layout_height="@dimen/_3pxh"
+                    android:layout_width="@dimen/_3pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_group_14"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_group_14"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

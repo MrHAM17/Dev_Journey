@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="savedRowModel" type="com.jusplaymoviestreamingapp.app.modules.saved.data.model.SavedRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearFrame3"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_10pxv"
+        android:paddingTop="@dimen/_10pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_900&quot;}cornerRadius">
+        <ImageView android:id="@+id/imageImage1"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_112pxh"
+            android:layout_width="@dimen/_112pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_15pxh}"
+            imageRes="@{@drawable/img_rectangle_12103_1}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle_12103_1"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearFrame4"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <LinearLayout android:id="@+id/linearFrame"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearFrame1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:id="@+id/txtTheIceAgeAdventures"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@{savedRowModel.txtTheIceAgeAdventures}"
+                        style="@style/txtPoppinsmedium12" tools:text="@string/msg_the_ice_age_adventures"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtActionAdventure"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{savedRowModel.txtActionAdventure}"
+                        style="@style/txtPoppinsregular12_1" tools:text="@string/msg_action_adventure"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageImage2"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_notification"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_notification"/>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_15"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins"
+                android:gravity="center" android:id="@+id/btnWatchNow"
+                android:layout_height="@dimen/_30pxv"
+                android:layout_width="@dimen/_120pxh"
+                android:paddingBottom="@dimen/_6pxv"
+                android:paddingEnd="@dimen/_25pxh"
+                android:paddingStart="@dimen/_25pxh"
+                android:paddingTop="@dimen/_6pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_watch_now"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_12pxh"
+                android:textStyle="normal" tools:text="@string/lbl_watch_now"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

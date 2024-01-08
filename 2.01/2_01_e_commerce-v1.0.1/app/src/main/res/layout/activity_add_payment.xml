@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="addPaymentVM" type="com.ecommerce.app.modules.addpayment.data.viewmodel.AddPaymentVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearAddPayment"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_left"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_left"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPayment"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{addPaymentVM.addPaymentModel.txtPayment}"
+                style="@style/txtPoppinsbold16" tools:text="@string/lbl_payment"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearCreditCardIcon"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_10pxv" android:paddingTop="@dimen/_10pxv">
+            <LinearLayout android:id="@+id/linearPaymentOption"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_16pxh"
+                android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;blue_50&quot;}">
+                <ImageView android:id="@+id/imageCreditCardIcon"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_credit_card_icon"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_credit_card_icon"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCreditCardOrDebit"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{addPaymentVM.addPaymentModel.txtCreditCardOrDebit}"
+                    style="@style/txtPoppinsbold12" tools:text="@string/msg_credit_card_or_debit"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearPaymentOption1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_16pxh"
+                android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                <ImageView android:id="@+id/imagePaypalIcon"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_paypal_icon"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_paypal_icon"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPaypal"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{addPaymentVM.addPaymentModel.txtPaypal}"
+                    style="@style/txtPoppinsbold12" tools:text="@string/lbl_paypal"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearPaymentOption2"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_16pxh"
+                android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+                <ImageView android:id="@+id/imageBankIcon"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_bank_icon"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_bank_icon"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtBankTransfer"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{addPaymentVM.addPaymentModel.txtBankTransfer}"
+                    style="@style/txtPoppinsbold12" tools:text="@string/lbl_bank_transfer"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

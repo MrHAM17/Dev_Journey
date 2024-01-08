@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest package="com.hiredjobsearch.app" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <application android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:largeHeap="true"
+        android:name="com.hiredjobsearch.app.appcomponents.di.MyApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
+        <activity android:exported="true"
+            android:name="com.hiredjobsearch.app.modules.newposition.ui.NewPositionActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.hiredjobsearch.app.modules.search.ui.SearchActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hiredjobsearch.app.modules.selectacountry.ui.SelectACountryActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hiredjobsearch.app.modules.messageaction.ui.MessageActionActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hiredjobsearch.app.modules.language.ui.LanguageActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hiredjobsearch.app.modules.signupcompleteaccount.ui.SignUpCompleteAccountActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hiredjobsearch.app.modules.applyjob.ui.ApplyJobActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hiredjobsearch.app.modules.personalinfo.ui.PersonalInfoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hiredjobsearch.app.modules.splashscreen.ui.SplashScreenActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hiredjobsearch.app.modules.speciallization.ui.SpeciallizationActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hiredjobsearch.app.modules.notifications.ui.NotificationsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hiredjobsearch.app.modules.notificationsmyproposalstabcontainer.ui.NotificationsMyProposalsTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hiredjobsearch.app.modules.settings.ui.SettingsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hiredjobsearch.app.modules.privacy.ui.PrivacyActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hiredjobsearch.app.modules.enterotptabcontainer.ui.EnterOtpTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hiredjobsearch.app.modules.chat.ui.ChatActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hiredjobsearch.app.modules.signupcreateacount.ui.SignUpCreateAcountActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hiredjobsearch.app.modules.homecontainer.ui.HomeContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hiredjobsearch.app.modules.jobdetailstabcontainer.ui.JobDetailsTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hiredjobsearch.app.modules.login.ui.LoginActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hiredjobsearch.app.modules.onboardingthree.ui.OnboardingThreeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hiredjobsearch.app.modules.jobtype.ui.JobTypeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hiredjobsearch.app.modules.experiencesetting.ui.ExperienceSettingActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.hiredjobsearch.app.modules.addneweducation.ui.AddNewEducationActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

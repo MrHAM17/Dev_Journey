@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest package="com.ecommerce.app" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <application android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:largeHeap="true"
+        android:name="com.ecommerce.app.appcomponents.di.MyApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
+        <activity
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" android:name="com.facebook.FacebookActivity"/>
+        <activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="@string/fb_login_protocol_scheme"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ecommerce.app.modules.addaddress.ui.AddAddressActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.search.ui.SearchActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.notification.ui.NotificationActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.searchresult.ui.SearchResultActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.searchresultnodatafound.ui.SearchResultNoDataFoundActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.notificationactivity.ui.NotificationActivityActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.creditcardanddebit.ui.CreditCardAndDebitActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.reviewproduct.ui.ReviewProductActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.paymentmethod.ui.PaymentMethodActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.sortby.ui.SortByActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.choosecreditordebitcard.ui.ChooseCreditOrDebitCardActivity" android:screenOrientation="portrait"/>
+        <activity android:exported="true"
+            android:name="com.ecommerce.app.modules.splashscreen.ui.SplashScreenActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ecommerce.app.modules.addpayment.ui.AddPaymentActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.dashboardcontainer.ui.DashboardContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.notificationoffer.ui.NotificationOfferActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.orderdetails.ui.OrderDetailsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.productdetailtabcontainer.ui.ProductDetailTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.superflashsale.ui.SuperFlashSaleActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.address.ui.AddressActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.addcard.ui.AddCardActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.register.ui.RegisterActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.changepassword.ui.ChangePasswordActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.profile.ui.ProfileActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.lailyfafebrinacard.ui.LailyfaFebrinaCardActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.successscreen.ui.SuccessScreenActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.shipto.ui.ShipToActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.filtertabcontainer.ui.FilterTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.favoriteproduct.ui.FavoriteProductActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.listcategory.ui.ListCategoryActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.notificationfeed.ui.NotificationFeedActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.login.ui.LoginActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.writereviewfill.ui.WriteReviewFillActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.ecommerce.app.modules.order.ui.OrderActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

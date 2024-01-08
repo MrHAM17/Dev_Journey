@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="selectvirtualappRowModel" type="com.vertexrealestateapp.app.modules.selectvirtualapp.data.model.SelectvirtualappRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearWhatsApp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_15pxv"
+        android:paddingEnd="@dimen/_19pxh"
+        android:paddingStart="@dimen/_19pxh"
+        android:paddingTop="@dimen/_15pxv" style="@style/groupStylecornerRadius">
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearWhatsapp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_gray_50_radius_24"
+                android:id="@+id/btnWhatsapp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_48pxh"
+                android:layout_width="@dimen/_48pxh"
+                android:paddingHorizontal="@dimen/_11pxh"
+                android:paddingVertical="@dimen/_11pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_whatsapp" tools:ignore="ContentDescription"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearText"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtWhatsapp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{selectvirtualappRowModel.txtWhatsapp}"
+                    style="@style/txtManropeextrabold16_1" tools:text="@string/lbl_whatsapp"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtRecommend"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.02"
+                    android:singleLine="true"
+                    android:text="@{selectvirtualappRowModel.txtRecommend}"
+                    style="@style/txtManropemedium12_1" tools:text="@string/lbl_recommend"/>
+            </LinearLayout>
+            <FrameLayout android:id="@+id/frameSpacer"
+                android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_12"
+                android:id="@+id/btnCheck"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_24pxh"
+                android:layout_width="@dimen/_24pxh"
+                android:paddingHorizontal="@dimen/_5pxh"
+                android:paddingVertical="@dimen/_5pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_check" tools:ignore="ContentDescription"/>
+        </LinearLayout>
+        <EditText
+            android:background="@drawable/rectangle_bg_name_gray_300_radius_10"
+            android:ellipsize="end" android:fontFamily="@font/manrope"
+            android:hint="@string/lbl_email" android:id="@+id/etEmail"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_14pxv"
+            android:paddingEnd="@dimen/_20pxh"
+            android:paddingStart="@dimen/_20pxh"
+            android:paddingTop="@dimen/_14pxv" android:singleLine="true"
+            android:text="@={selectvirtualappRowModel.etEmailValue}"
+            android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+            android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_14pxh" android:textStyle="bold" tools:ignore="Autofill"/>
+    </LinearLayout>
+</layout>

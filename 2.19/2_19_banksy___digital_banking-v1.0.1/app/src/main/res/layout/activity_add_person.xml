@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="addPersonVM" type="com.banksydigitalbanking.app.modules.addperson.data.viewmodel.AddPersonVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearAddPerson"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                android:id="@+id/btnFavorite"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_favorite_onprimary" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtWelcomeBack"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{addPersonVM.addPersonModel.txtWelcomeBack}"
+                style="@style/txtOverpassbold20" tools:text="@string/lbl_new_contact"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearName"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_34pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_34pxv">
+            <FrameLayout android:id="@+id/frameView"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_100pxv" android:layout_width="@dimen/_100pxh">
+                <View
+                    android:background="@drawable/rectangle_bg_name_gray_300_radius_50"
+                    android:id="@+id/viewView"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_100pxh" android:layout_width="@dimen/_100pxh"/>
+                <ImageButton android:id="@+id/btnIconButton"
+                    android:layout_gravity="bottom|end"
+                    android:layout_height="@dimen/_30pxh"
+                    android:layout_width="@dimen/_30pxh"
+                    android:paddingHorizontal="@dimen/_9pxh"
+                    android:paddingVertical="@dimen/_9pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_group_18117" tools:ignore="ContentDescription"/>
+                <ImageView android:id="@+id/imageAvatar"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_32pxh"
+                    android:layout_width="@dimen/_32pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_1_avatar"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_1_avatar"/>
+            </FrameLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearInputField"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLabel"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{addPersonVM.addPersonModel.txtLabel}"
+                    style="@style/txtOverpassregular16_3" tools:text="@string/lbl_name"/>
+                <EditText
+                    android:background="@drawable/rectangle_border_name_gray_500"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/overpass"
+                    android:hint="@string/lbl_user_name"
+                    android:id="@+id/etName" android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_20pxv"
+                    android:paddingEnd="@dimen/_24pxh"
+                    android:paddingStart="@dimen/_24pxh"
+                    android:paddingTop="@dimen/_20pxv"
+                    android:singleLine="true"
+                    android:text="@={addPersonVM.addPersonModel.etNameValue}"
+                    android:textColor="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_18pxh"
+                    android:textStyle="normal" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearInputField1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLabel1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{addPersonVM.addPersonModel.txtLabel1}"
+                    style="@style/txtOverpassregular16_3" tools:text="@string/lbl_card_number"/>
+                <EditText
+                    android:background="@drawable/rectangle_border_name_gray_500"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/overpass"
+                    android:hint="@string/lbl_card_number2"
+                    android:id="@+id/etCardNumber"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_20pxv"
+                    android:paddingEnd="@dimen/_24pxh"
+                    android:paddingStart="@dimen/_24pxh"
+                    android:paddingTop="@dimen/_20pxv"
+                    android:singleLine="true"
+                    android:text="@={addPersonVM.addPersonModel.etCardNumberValue}"
+                    android:textColor="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_18pxh"
+                    android:textStyle="normal" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:drawablePadding="@dimen/_10pxh"
+                android:drawableStart="@drawable/img_icon"
+                android:ellipsize="end"
+                android:fontFamily="@font/overpass"
+                android:id="@+id/checkBoxSaveOnList"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/lbl_save_on_list"
+                android:textColor="@color/{&quot;name&quot;:&quot;gray_700&quot;}"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="normal" tools:text="@string/lbl_save_on_list"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                android:ellipsize="end"
+                android:fontFamily="@font/overpass"
+                android:gravity="center" android:id="@+id/btnSave"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_58pxv"
+                android:layout_width="@dimen/_366pxh"
+                android:paddingBottom="@dimen/_16pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_16pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_save"
+                android:textAllCaps="true"
+                android:textColor="@color/{&quot;name&quot;:&quot;onPrimary&quot;}"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_20pxh"
+                android:textStyle="bold" tools:text="@string/lbl_save"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

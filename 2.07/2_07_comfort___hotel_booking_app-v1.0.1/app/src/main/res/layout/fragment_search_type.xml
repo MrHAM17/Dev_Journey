@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="searchTypeVM" type="com.comforthotelbookingapp.app.modules.searchtype.data.viewmodel.SearchTypeVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRecent"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}">
+        <LinearLayout android:id="@+id/linearRecentSerches"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtRecent"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{searchTypeVM.searchTypeModel.txtRecent}"
+                style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_recent"/>
+            <LinearLayout android:id="@+id/linearSeventyFive"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:gravity="bottom"
+                    android:id="@+id/txtAmsterdamNetherlands"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{searchTypeVM.searchTypeModel.txtAmsterdamNetherlands}"
+                    style="@style/txtUrbanistromanmedium18" tools:text="@string/msg_amsterdam_netherlands"/>
+                <ImageButton android:id="@+id/btnIconlyCurvedClose"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_28pxh"
+                    android:layout_width="@dimen/_28pxh"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_iconly_curved_close" tools:ignore="ContentDescription"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearSeventyThree"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPalazzoHotel"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{searchTypeVM.searchTypeModel.txtPalazzoHotel}"
+                    style="@style/txtUrbanistromanmedium18" tools:text="@string/lbl_palazzo_hotel"/>
+                <ImageButton android:id="@+id/btnIconlyCurvedClose1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_28pxh"
+                    android:layout_width="@dimen/_28pxh"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_iconly_curved_close" tools:ignore="ContentDescription"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearSeventyFour"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtBulgariHotel"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{searchTypeVM.searchTypeModel.txtBulgariHotel}"
+                    style="@style/txtUrbanistromanmedium18" tools:text="@string/lbl_bulgari_hotel"/>
+                <ImageButton android:id="@+id/btnIconlyCurvedClose2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_28pxh"
+                    android:layout_width="@dimen/_28pxh"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_iconly_curved_close" tools:ignore="ContentDescription"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearSeventySix"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMartinezCannes"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{searchTypeVM.searchTypeModel.txtMartinezCannes}"
+                    style="@style/txtUrbanistromanmedium18" tools:text="@string/msg_martinez_cannes"/>
+                <ImageButton android:id="@+id/btnIconlyCurvedClose3"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_28pxh"
+                    android:layout_width="@dimen/_28pxh"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_iconly_curved_close" tools:ignore="ContentDescription"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearSeventySeven"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:gravity="bottom"
+                    android:id="@+id/txtLondonUnitedKingdom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{searchTypeVM.searchTypeModel.txtLondonUnitedKingdom}"
+                    style="@style/txtUrbanistromanmedium18" tools:text="@string/msg_london_united_kingdom"/>
+                <ImageButton android:id="@+id/btnIconlyCurvedClose4"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_28pxh"
+                    android:layout_width="@dimen/_28pxh"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_iconly_curved_close" tools:ignore="ContentDescription"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearSeventyEight"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPalmsCasinoHotel"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{searchTypeVM.searchTypeModel.txtPalmsCasinoHotel}"
+                    style="@style/txtUrbanistromanmedium18" tools:text="@string/msg_palms_casino_hotel"/>
+                <ImageButton android:id="@+id/btnIconlyCurvedClose5"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_28pxh"
+                    android:layout_width="@dimen/_28pxh"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_iconly_curved_close" tools:ignore="ContentDescription"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

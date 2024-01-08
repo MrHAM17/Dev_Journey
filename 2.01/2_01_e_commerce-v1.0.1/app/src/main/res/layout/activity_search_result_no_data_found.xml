@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="searchResultNoDataFoundVM" type="com.ecommerce.app.modules.searchresultnodatafound.data.viewmodel.SearchResultNoDataFoundVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSearchResultNo"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linearGroup42"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout android:id="@+id/linearGroup43"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <androidx.appcompat.widget.SearchView
+                        android:background="@drawable/rectangle_border_name_blue_50_radius_5"
+                        android:gravity="center_vertical"
+                        android:id="@+id/searchViewSearch"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:theme="@style/searchViewsearch"
+                        app:iconifiedByDefault="false"
+                        app:queryBackground="@android:color/transparent"
+                        app:queryHint="@string/lbl_search_product" app:searchIcon="@drawable/img_rewind"/>
+                    <ImageView android:id="@+id/imageShortIcon"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_short_icon"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_short_icon"/>
+                    <ImageView android:id="@+id/imageFilterIcon"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_filter"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_filter"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;blue_50&quot;}"
+                    android:id="@+id/lineLineThirtyNine"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_375pxh"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearBackToHome"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_15pxv"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_16pxh" android:paddingTop="@dimen/_15pxv">
+            <LinearLayout android:id="@+id/linearResultCounter"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:alpha="0.5" android:ellipsize="end"
+                    android:id="@+id/txtResultCounter"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{searchResultNoDataFoundVM.searchResultNoDataFoundModel.txtResultCounter}"
+                    style="@style/txtPoppinsbold12_3" tools:text="@string/lbl_0_result"/>
+                <Spinner android:id="@+id/spinnerBottomicon"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" tools:listitem="@layout/spinner_item"/>
+            </LinearLayout>
+            <FrameLayout android:id="@+id/frameSpacer"
+                android:layout_height="wrap_content" android:layout_width="match_parent"/>
+            <LinearLayout android:id="@+id/linearNoData"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/_53pxh" android:paddingStart="@dimen/_53pxh">
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_primary_opacity_1_radius_36"
+                    android:id="@+id/btnClose"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_72pxh"
+                    android:layout_width="@dimen/_72pxh"
+                    android:paddingHorizontal="@dimen/_28pxh"
+                    android:paddingVertical="@dimen/_28pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_close_onprimarycontainer" tools:ignore="ContentDescription"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtProductNotFound"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{searchResultNoDataFoundVM.searchResultNoDataFoundModel.txtProductNotFound}"
+                    style="@style/txtPoppinsbold24_1" tools:text="@string/msg_product_not_found"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtThankYouForShopping"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{searchResultNoDataFoundVM.searchResultNoDataFoundModel.txtThankYouForShopping}"
+                    style="@style/txtPoppinsregular12" tools:text="@string/msg_thank_you_for_shopping"/>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_opacity_1_radius_5"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins"
+                android:gravity="center" android:id="@+id/btnBackToHome"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_back_to_home"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:text="@string/lbl_back_to_home"/>
+            <FrameLayout android:id="@+id/frameSpacer1"
+                android:layout_height="wrap_content" android:layout_width="match_parent"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

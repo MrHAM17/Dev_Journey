@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="shiptoRowModel" type="com.ecommerce.app.modules.shipto.data.model.ShiptoRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearAddressItem"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_21pxv"
+        android:paddingEnd="@dimen/_23pxh"
+        android:paddingStart="@dimen/_23pxh"
+        android:paddingTop="@dimen/_21pxv" style="@style/groupStylenameonPrimaryContaineropacity1cornerRadius_1">
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtPriscekila"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.03" android:singleLine="true"
+            android:text="@{shiptoRowModel.txtPriscekila}"
+            style="@style/txtPoppinsbold14_1" tools:text="@string/lbl_priscekila"/>
+        <TextView android:id="@+id/txtAddress"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.03"
+            android:text="@{shiptoRowModel.txtAddress}"
+            style="@style/txtPoppinsregular12" tools:text="@string/msg_3711_spring_hill"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtMobileNo"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.03" android:singleLine="true"
+            android:text="@{shiptoRowModel.txtMobileNo}"
+            style="@style/txtPoppinsregular12" tools:text="@string/lbl_99_1234567890"/>
+        <LinearLayout android:id="@+id/linearActions"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <TextView android:ellipsize="end" android:id="@+id/txtEdit"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{shiptoRowModel.txtEdit}"
+                style="@style/txtPoppinsbold14_2" tools:text="@string/lbl_edit"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDelete"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{shiptoRowModel.txtDelete}"
+                style="@style/txtPoppinsbold14_4" tools:text="@string/lbl_delete"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="completeVM" type="com.fashionistaecommerceapp.app.modules.complete.data.viewmodel.CompleteVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearComplete"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/_16pxh"
+        android:paddingStart="@dimen/_16pxh" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <ImageView android:id="@+id/imageCheckmark"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_97pxh"
+            android:layout_width="@dimen/_87pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_checkmark"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark"/>
+        <TextView android:gravity="center_horizontal"
+            android:id="@+id/txtOrderCompleted"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@{completeVM.completeModel.txtOrderCompleted}"
+            style="@style/txtPoppinsregular18_1" tools:text="@string/msg_order_completed"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_radius_10"
+            android:ellipsize="end" android:fontFamily="@font/poppins"
+            android:gravity="center" android:id="@+id/btnMyOrder"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_14pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_14pxv" android:singleLine="true"
+            android:text="@string/lbl_my_order"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_my_order"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest package="com.vertexrealestateapp.app" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <application android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:largeHeap="true"
+        android:name="com.vertexrealestateapp.app.appcomponents.di.MyApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
+        <activity
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" android:name="com.facebook.FacebookActivity"/>
+        <activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="@string/fb_login_protocol_scheme"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true"
+            android:name="com.vertexrealestateapp.app.modules.homelisting.ui.HomeListingActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/str_maps_api_key"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.pickdate.ui.PickDateActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.notification.ui.NotificationActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.homelistingdraw.ui.HomeListingDrawActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.addnewpropertydecsription.ui.AddNewPropertyDecsriptionActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.editprofile.ui.EditProfileActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.selectappalarm.ui.SelectAppAlarmActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.selectvirtualapp.ui.SelectVirtualAppActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.faqsgethelp.ui.FaqsGetHelpActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.homelistingsatelite.ui.HomeListingSateliteActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.notificationemptystates.ui.NotificationEmptyStatesActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.addnewpropertyaddress.ui.AddNewPropertyAddressActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.addnewpropertytimetosell.ui.AddNewPropertyTimeToSellActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.signin.ui.SignInActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.recentlyviews.ui.RecentlyViewsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.addnewpropertyreasonsellinghome.ui.AddNewPropertyReasonSellingHomeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.favorite.ui.FavoriteActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.addnewpropertycontact.ui.AddNewPropertyContactActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.addnewpropertyhomefacts.ui.AddNewPropertyHomeFactsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.settings.ui.SettingsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.addnewpropertyselectamenities.ui.AddNewPropertySelectAmenitiesActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.signup.ui.SignUpActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.homealarmcontainer.ui.HomeAlarmContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.verifyphonenumber.ui.VerifyPhoneNumberActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.myhomeempty.ui.MyHomeEmptyActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.confirmrequest.ui.ConfirmRequestActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.filtertabcontainer.ui.FilterTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.addnewpropertydetails.ui.AddNewPropertyDetailsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.home.ui.HomeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.pasttours.ui.PastToursActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.addnewpropertymeetwithaagent.ui.AddNewPropertyMeetWithAAgentActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.productdetails.ui.ProductDetailsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.splash.ui.SplashActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.messagechat.ui.MessageChatActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.vertexrealestateapp.app.modules.onboarding.ui.OnboardingActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

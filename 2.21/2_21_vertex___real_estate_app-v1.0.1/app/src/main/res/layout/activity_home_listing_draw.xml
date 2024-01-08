@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="homeListingDrawVM" type="com.vertexrealestateapp.app.modules.homelistingdraw.data.viewmodel.HomeListingDrawVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearMap"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+        <fragment android:gravity="center_horizontal"
+            android:id="@+id/mapMap"
+            android:layout_height="@dimen/_693pxv"
+            android:layout_width="match_parent" android:name="com.google.android.gms.maps.SupportMapFragment"/>
+        <FrameLayout android:gravity="center_horizontal"
+            android:id="@+id/frameBottomBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+            <LinearLayout android:id="@+id/linearHome"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <ImageView android:id="@+id/imageHome"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_nav_home_blue_gray_500"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_nav_home_blue_gray_500"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtHome"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.02"
+                    android:singleLine="true"
+                    android:text="@{homeListingDrawVM.homeListingDrawModel.txtHome}"
+                    style="@style/txtManropemedium10" tools:text="@string/lbl_home"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearMessage"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <ImageView android:id="@+id/imageMessage"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_nav_message"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_nav_message"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtMessage"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.02"
+                    android:singleLine="true"
+                    android:text="@{homeListingDrawVM.homeListingDrawModel.txtMessage}"
+                    style="@style/txtManropemedium10" tools:text="@string/lbl_message"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearDiscover"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <ImageView android:id="@+id/imageDiscover"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_nav_discover_primary"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_nav_discover_primary"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtDiscover"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.02"
+                    android:singleLine="true"
+                    android:text="@{homeListingDrawVM.homeListingDrawModel.txtDiscover}"
+                    style="@style/txtManropemedium10_1" tools:text="@string/lbl_discover"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearMyHome"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <ImageView android:id="@+id/imageMyHome"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_nav_my_home"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_nav_my_home"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtMyHome"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.02"
+                    android:singleLine="true"
+                    android:text="@{homeListingDrawVM.homeListingDrawModel.txtMyHome}"
+                    style="@style/txtManropemedium10" tools:text="@string/lbl_my_home"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearProfile"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <ImageView android:id="@+id/imageProfile"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_nav_profile"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_nav_profile"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtProfile"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.02"
+                    android:singleLine="true"
+                    android:text="@{homeListingDrawVM.homeListingDrawModel.txtProfile}"
+                    style="@style/txtManropemedium10" tools:text="@string/lbl_profile"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

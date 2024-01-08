@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="pharmacyVM" type="com.helthiotelehealth.app.modules.pharmacy.data.viewmodel.PharmacyVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearPharmacy"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageIconChevronLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_icon_chevron_left"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_icon_chevron_left"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPharmacy"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{pharmacyVM.pharmacyModel.txtPharmacy}"
+                style="@style/txtRalewaysemibold18_1" tools:text="@string/lbl_pharmacy"/>
+            <ImageView android:id="@+id/imageCart"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_cart"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_cart"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearSearch"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_21pxv" android:paddingTop="@dimen/_21pxv">
+            <androidx.appcompat.widget.SearchView
+                android:background="@drawable/rectangle_bg_name_white_a700_border_name_gray_300_radius_6"
+                android:gravity="center_horizontal"
+                android:id="@+id/searchViewSearch"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:theme="@style/searchViewsearch"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="@string/msg_search_drugs_category" app:searchIcon="@drawable/img_rewind"/>
+            <WebView android:gravity="center_horizontal"
+                android:id="@+id/webViewCTA"
+                android:layout_height="@dimen/_135pxv"
+                android:layout_width="match_parent" tools:ignore="WebViewLayout"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearPopularProduct"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout android:id="@+id/linearPopularProduct1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPopularProduct"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{pharmacyVM.pharmacyModel.txtPopularProduct}"
+                        style="@style/txtRalewaysemibold16_1" tools:text="@string/lbl_popular_product"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtSeeAll"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{pharmacyVM.pharmacyModel.txtSeeAll}"
+                        style="@style/txtRalewaymedium12_1" tools:text="@string/lbl_see_all"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerPopularProduct"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_21pxh}" tools:itemCount="3" tools:listitem="@layout/row_popularproduct"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearProductOnSale"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout android:id="@+id/linearHeader"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtProductOnSale"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{pharmacyVM.pharmacyModel.txtProductOnSale}"
+                        style="@style/txtRalewaysemibold16_1" tools:text="@string/lbl_product_on_sale"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtSeeAll1"
+                        android:layout_gravity="top"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{pharmacyVM.pharmacyModel.txtSeeAll1}"
+                        style="@style/txtRalewaymedium12_1" tools:text="@string/lbl_see_all"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerProductOnSale"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_17pxh}" tools:itemCount="3" tools:listitem="@layout/row_productonsale"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

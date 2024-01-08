@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="homePageVM" type="com.musicplayer.app.modules.homepage.data.viewmodel.HomePageVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearTrialVersion"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;black_900&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTransfer"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{homePageVM.homePageModel.txtTransfer}"
+                style="@style/txtRobotomedium20" tools:text="@string/lbl_dashboard"/>
+            <ImageView android:id="@+id/imageMegaphone"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_megaphone"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_megaphone"/>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearHomePage"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:gravity="center_horizontal"
+                    android:id="@+id/txtListenToMusic"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@{homePageVM.homePageModel.txtListenToMusic}"
+                    style="@style/txtRobotomedium28" tools:text="@string/msg_listen_to_music_without"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:background="@drawable/rectangle_bg_name_onprimarycontainer_opacity_1_radius_20"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:id="@+id/btnTrialVersion"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_40pxv"
+                    android:layout_width="@dimen/_236pxh"
+                    android:paddingBottom="@dimen/_10pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_10pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_trial_version"
+                    android:textAllCaps="false"
+                    android:textColor="@color/{&quot;name&quot;:&quot;black_900&quot;}"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_16pxh"
+                    android:textStyle="normal" tools:text="@string/lbl_trial_version"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtPrice"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{homePageVM.homePageModel.txtPrice}"
+                    style="@style/txtRobotoregular14" tools:text="@string/msg_free_for_3_months"/>
+                <LinearLayout android:id="@+id/linearNewReleases"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <LinearLayout
+                        android:id="@+id/linearNewReleasesView"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtNewReleases"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{homePageVM.homePageModel.txtNewReleases}"
+                            style="@style/txtRobotobold24" tools:text="@string/lbl_new_releases"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtViewAll"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{homePageVM.homePageModel.txtViewAll}"
+                            style="@style/txtRobotoregular14" tools:text="@string/lbl_view_all"/>
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:gravity="center_horizontal"
+                        android:id="@+id/recyclerNewReleasesList"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        itemSpace="@{@dimen/_24pxh}" tools:itemCount="2" tools:listitem="@layout/row_newreleaseslist"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

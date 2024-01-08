@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="frame3RowModel" type="com.jusplaymoviestreamingapp.app.modules.search.data.model.Frame3RowModel"/>
+    </data>
+    <ImageView android:id="@+id/imageRectangle"
+        android:layout_height="@dimen/_135pxv"
+        android:layout_width="@dimen/_98pxh" android:scaleType="fitXY"
+        cornerRadius="@{@dimen/_10pxh}"
+        imageRes="@{@drawable/img_rectangle_12082}"
+        tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle_12082"/>
+</layout>

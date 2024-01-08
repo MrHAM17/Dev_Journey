@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="eightythreeRowModel" type="com.socialsocialnetworking.app.modules.friends.data.model.EightythreeRowModel"/>
+    </data>
+    <ImageView android:id="@+id/imageTrash"
+        android:layout_height="@dimen/_50pxv"
+        android:layout_width="@dimen/_50pxh" android:scaleType="fitXY"
+        android:src="@drawable/img_trash_blue_500"
+        tools:ignore="ContentDescription" tools:src="@drawable/img_trash_blue_500"/>
+</layout>

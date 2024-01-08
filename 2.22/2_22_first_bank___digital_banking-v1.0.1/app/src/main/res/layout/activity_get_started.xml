@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="getStartedVM" type="com.firstbankdigitalbanking.app.modules.getstarted.data.viewmodel.GetStartedVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearGetStarted"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/_16pxh"
+        android:paddingStart="@dimen/_16pxh"
+        android:paddingTop="@dimen/_123pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100_01&quot;}">
+        <TextView android:ellipsize="end" android:gravity="start"
+            android:id="@+id/txtLetsGetStarted"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{getStartedVM.getStartedModel.txtLetsGetStarted}"
+            style="@style/txtIntersemibold28" tools:text="@string/msg_lets_get_started"/>
+        <TextView android:gravity="start"
+            android:id="@+id/txtFindTheRightAnd"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@{getStartedVM.getStartedModel.txtFindTheRightAnd}"
+            style="@style/txtIntermedium14" tools:text="@string/msg_find_the_right_and"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_indigo_50_radius_15"
+            android:ellipsize="end" android:fontFamily="@font/inter"
+            android:gravity="center" android:id="@+id/btnLogin"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_15pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_15pxv" android:singleLine="true"
+            android:text="@string/lbl_login" android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;primary&quot;}"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_login"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_indigo_50_radius_15"
+            android:ellipsize="end" android:fontFamily="@font/inter"
+            android:gravity="center" android:id="@+id/btnRegister"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_15pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_15pxv" android:singleLine="true"
+            android:text="@string/lbl_register"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;primary&quot;}"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_register"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtOrUseInstantSign"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{getStartedVM.getStartedModel.txtOrUseInstantSign}"
+            style="@style/txtInterbold12" tools:text="@string/msg_or_use_instant_sign"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_border_name_blue_gray_400_01_radius_15"
+            android:drawablePadding="@dimen/_12pxh"
+            android:drawableStart="@drawable/img_google"
+            android:ellipsize="end" android:fontFamily="@font/inter"
+            android:gravity="center" android:id="@+id/btnSignWithGoogle"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_15pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_15pxv" android:singleLine="true"
+            android:text="@string/msg_sign_with_google"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_400_01&quot;}"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/msg_sign_with_google"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_border_name_blue_gray_400_01_radius_15"
+            android:drawablePadding="@dimen/_12pxh"
+            android:drawableStart="@drawable/img_user"
+            android:ellipsize="end" android:fontFamily="@font/inter"
+            android:gravity="center" android:id="@+id/btnSignWithApple"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_15pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_15pxv" android:singleLine="true"
+            android:text="@string/lbl_sign_with_apple"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_400_01&quot;}"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_sign_with_apple"/>
+    </LinearLayout>
+</layout>

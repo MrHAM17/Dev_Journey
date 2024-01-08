@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="locationChooseLocationVM" type="com.housitbuyrentsellproperty.app.modules.locationchooselocation.data.viewmodel.LocationChooseLocationVM"/>
+    </data>
+    <fragment android:id="@+id/mapLocationChoose"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:name="com.google.android.gms.maps.SupportMapFragment"/>
+</layout>

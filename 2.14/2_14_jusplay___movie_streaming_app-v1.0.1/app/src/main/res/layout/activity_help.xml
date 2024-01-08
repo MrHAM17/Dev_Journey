@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="helpVM" type="com.jusplaymoviestreamingapp.app.modules.help.data.viewmodel.HelpVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearHelp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;black_900&quot;}">
+        <FrameLayout android:gravity="center_horizontal"
+            android:id="@+id/frameArrowLeft"
+            android:layout_height="@dimen/_128pxv" android:layout_width="match_parent">
+            <ImageView android:id="@+id/imageImage"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_128pxh"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                imageRes="@{@drawable/img_group_427318996}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_group_427318996"/>
+            <LinearLayout android:id="@+id/linearArrowLeft"
+                android:layout_gravity="top|center"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <androidx.appcompat.widget.Toolbar
+                    android:gravity="center_horizontal"
+                    android:id="@+id/toolbarAppBar"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" app:contentInsetStart="0dp">
+                    <ImageButton
+                        android:background="@drawable/rectangle_bg_name_gray_900_radius_17"
+                        android:id="@+id/btnArrowLeft"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_arrow_left" tools:ignore="ContentDescription"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtComedy"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{helpVM.helpModel.txtComedy}"
+                        style="@style/txtPoppinsmedium18" tools:text="@string/lbl_help"/>
+                </androidx.appcompat.widget.Toolbar>
+                <androidx.appcompat.widget.SearchView
+                    android:background="@drawable/rectangle_bg_name_blue_gray_800_radius_23"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/searchViewSearch"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:theme="@style/searchViewsearch"
+                    app:iconifiedByDefault="false"
+                    app:queryBackground="@android:color/transparent"
+                    app:queryHint="@string/lbl_get_help" app:searchIcon="@drawable/img_rewind"/>
+            </LinearLayout>
+        </FrameLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearTopAnswer"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_26pxv"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_16pxh" android:paddingTop="@dimen/_26pxv">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTopAnswers"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{helpVM.helpModel.txtTopAnswers}"
+                style="@style/txtPoppinssemibold16" tools:text="@string/lbl_top_answers"/>
+            <LinearLayout
+                android:id="@+id/linearHowtocontactcustomersupportmov"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_27pxv"
+                android:paddingEnd="@dimen/_20pxh"
+                android:paddingStart="@dimen/_20pxh"
+                android:paddingTop="@dimen/_27pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_900&quot;}cornerRadius">
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearFortyThree"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/txtHowtocontactcustomersupportmov"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:text="@{helpVM.helpModel.txtHowtocontactcustomersupportmov}"
+                        style="@style/txtPoppinsmedium12" tools:text="@string/msg_how_to_contact_customer"/>
+                    <ImageView android:id="@+id/imageArrowRight"
+                        android:layout_height="@dimen/_16pxh"
+                        android:layout_width="@dimen/_16pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow_right"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;blue_gray_800&quot;}"
+                    android:id="@+id/lineVector"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_303pxh"/>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearHowToUnsubscribe"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:id="@+id/txtHowToUnsubscribe"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{helpVM.helpModel.txtHowToUnsubscribe}"
+                        style="@style/txtPoppinsmedium12" tools:text="@string/msg_how_to_unsubscribe"/>
+                    <ImageView android:id="@+id/imageArrowRight1"
+                        android:layout_gravity="bottom"
+                        android:layout_height="@dimen/_16pxh"
+                        android:layout_width="@dimen/_16pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow_right"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;blue_gray_800&quot;}"
+                    android:id="@+id/lineVector1"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_303pxh"/>
+                <LinearLayout android:id="@+id/linearHowToSubscribe"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:id="@+id/txtHowToSubscribe"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{helpVM.helpModel.txtHowToSubscribe}"
+                        style="@style/txtPoppinsmedium12" tools:text="@string/msg_how_to_subscribe"/>
+                    <ImageView android:id="@+id/imageArrowRight2"
+                        android:layout_gravity="bottom"
+                        android:layout_height="@dimen/_16pxh"
+                        android:layout_width="@dimen/_16pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow_right"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;blue_gray_800&quot;}"
+                    android:id="@+id/lineVector2"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_303pxh"/>
+                <LinearLayout android:id="@+id/linearCantwatchmovistart"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtCantwatchmovistart"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{helpVM.helpModel.txtCantwatchmovistart}"
+                        style="@style/txtPoppinsmedium12" tools:text="@string/msg_can_t_watch_movistart"/>
+                    <ImageView android:id="@+id/imageArrowRight3"
+                        android:layout_gravity="bottom"
+                        android:layout_height="@dimen/_16pxh"
+                        android:layout_width="@dimen/_16pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow_right"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;blue_gray_800&quot;}"
+                    android:id="@+id/lineVector3"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_303pxh"/>
+                <LinearLayout android:id="@+id/linearWhatismovistart"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtWhatismovistart"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{helpVM.helpModel.txtWhatismovistart}"
+                        style="@style/txtPoppinsmedium12" tools:text="@string/msg_what_is_movistart"/>
+                    <ImageView android:id="@+id/imageArrowRight4"
+                        android:layout_gravity="bottom"
+                        android:layout_height="@dimen/_16pxh"
+                        android:layout_width="@dimen/_16pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow_right"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;blue_gray_800&quot;}"
+                    android:id="@+id/lineVector4"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_303pxh"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

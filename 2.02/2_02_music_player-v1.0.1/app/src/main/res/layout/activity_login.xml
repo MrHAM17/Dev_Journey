@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="loginVM" type="com.musicplayer.app.modules.login.data.viewmodel.LoginVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearEightySeven"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onError&quot;}">
+        <LinearLayout android:id="@+id/linearLogin"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_152pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_152pxv">
+            <FrameLayout android:id="@+id/frameSpacer"
+                android:layout_height="wrap_content" android:layout_width="match_parent"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSignIn"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{loginVM.loginModel.txtSignIn}"
+                style="@style/txtRobotomedium28" tools:text="@string/lbl_sign_in"/>
+            <EditText
+                android:background="@drawable/rectangle_bg_name_onprimary_radius_9"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto"
+                android:hint="@string/lbl_email"
+                android:id="@+id/etEmail" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_14pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_14pxv"
+                android:singleLine="true"
+                android:text="@={loginVM.loginModel.etEmailValue}"
+                android:textColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}"
+                android:textColorHint="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="normal" tools:ignore="Autofill"/>
+            <EditText
+                android:background="@drawable/rectangle_bg_name_onprimary_radius_9"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto"
+                android:hint="@string/lbl_password"
+                android:id="@+id/etPassword" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_14pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_14pxv"
+                android:singleLine="true"
+                android:text="@={loginVM.loginModel.etPasswordValue}"
+                android:textColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}"
+                android:textColorHint="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="normal" tools:ignore="Autofill"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_onprimarycontainer_opacity_1_radius_6"
+                android:ellipsize="end"
+                android:fontFamily="@font/roboto"
+                android:gravity="center" android:id="@+id/btnSignIn"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_48pxv"
+                android:layout_width="@dimen/_342pxh"
+                android:paddingBottom="@dimen/_14pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_14pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_sign_in2"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;black_900&quot;}"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="normal" tools:text="@string/lbl_sign_in2"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtForgotYourLogin"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{loginVM.loginModel.txtForgotYourLogin}"
+                style="@style/txtRobotoregular14" tools:text="@string/msg_forgot_your_login"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_border_name_onprimarycontainer_opacity_1_radius_6"
+            android:ellipsize="end" android:fontFamily="@font/roboto"
+            android:gravity="center" android:id="@+id/btnCreateAccount"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_48pxv"
+            android:layout_width="@dimen/_342pxh"
+            android:paddingBottom="@dimen/_14pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_14pxv" android:singleLine="true"
+            android:text="@string/lbl_create_account"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_create_account"/>
+    </LinearLayout>
+</layout>

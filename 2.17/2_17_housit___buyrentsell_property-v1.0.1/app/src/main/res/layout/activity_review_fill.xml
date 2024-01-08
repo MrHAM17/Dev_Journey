@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="reviewFillVM" type="com.housitbuyrentsellproperty.app.modules.reviewfill.data.viewmodel.ReviewFillVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearApartment"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_21pxv"
+        android:paddingTop="@dimen/_21pxv" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                android:id="@+id/btnArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_left" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPageTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{reviewFillVM.reviewFillModel.txtPageTitle}"
+                style="@style/txtRalewaybold14" tools:text="@string/msg_transaction_review"/>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearReviewFill"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/linearEstatesCardTransaction"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_8pxh"
+                    android:paddingVertical="@dimen/_8pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}cornerRadius">
+                    <FrameLayout android:id="@+id/frameShape"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_140pxv" android:layout_width="@dimen/_168pxh">
+                        <ImageView android:id="@+id/imageShape"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_140pxh"
+                            android:layout_width="@dimen/_168pxh"
+                            android:scaleType="fitXY"
+                            cornerRadius="@{@dimen/_18pxh}"
+                            imageRes="@{@drawable/img_shape_20}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_shape_20"/>
+                        <LinearLayout android:id="@+id/linearApartment1"
+                            android:layout_gravity="start"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <ImageButton
+                                android:background="@drawable/rectangle_bg_name_white_a700_opacity_0_78_radius_12"
+                                android:id="@+id/btnFavorite"
+                                android:layout_height="@dimen/_25pxh"
+                                android:layout_width="@dimen/_25pxh"
+                                android:paddingHorizontal="@dimen/_6pxh"
+                                android:paddingVertical="@dimen/_6pxv"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/img_favorite_red_a200" tools:ignore="ContentDescription"/>
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:background="@drawable/rectangle_bg_name_blue_gray_700_af_radius_8"
+                                android:drawablePadding="@dimen/_6pxh"
+                                android:drawableStart="@drawable/drawable_img_close"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/raleway"
+                                android:gravity="center"
+                                android:id="@+id/btnApartment"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:paddingBottom="@dimen/_7pxv"
+                                android:paddingEnd="@dimen/_7pxh"
+                                android:paddingStart="@dimen/_7pxh"
+                                android:paddingTop="@dimen/_7pxv"
+                                android:singleLine="true"
+                                android:text="@string/lbl_apartment"
+                                android:textAllCaps="false"
+                                android:textColor="@color/{&quot;name&quot;:&quot;gray_100&quot;}"
+                                android:textFontWeight="500"
+                                android:textSize="@dimen/_8pxh"
+                                android:textStyle="bold" tools:text="@string/lbl_apartment"/>
+                        </LinearLayout>
+                    </FrameLayout>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearRent"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/txtSkyDandelionsApartment"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="@{reviewFillVM.reviewFillModel.txtSkyDandelionsApartment}"
+                            style="@style/txtRalewaybold12" tools:text="@string/msg_sky_dandelions_apartment"/>
+                        <LinearLayout android:id="@+id/linearLayout"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="horizontal">
+                            <ImageView android:id="@+id/imageLinkedin"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="@dimen/_12pxh"
+                                android:layout_width="@dimen/_12pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_linkedin"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_linkedin"/>
+                            <TextView android:ellipsize="end"
+                                android:gravity="bottom"
+                                android:id="@+id/txtJakartaIndonesia"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{reviewFillVM.reviewFillModel.txtJakartaIndonesia}"
+                                style="@style/txtRalewaymedium8" tools:text="@string/msg_jakarta_indonesia"/>
+                        </LinearLayout>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:background="@drawable/rectangle_bg_name_white_a700_radius_25"
+                            android:drawablePadding="@dimen/_8pxh"
+                            android:drawableStart="@drawable/drawable_img_close1"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/raleway"
+                            android:gravity="center"
+                            android:id="@+id/btnRent"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:paddingBottom="@dimen/_19pxv"
+                            android:paddingEnd="@dimen/_25pxh"
+                            android:paddingStart="@dimen/_24pxh"
+                            android:paddingTop="@dimen/_19pxv"
+                            android:singleLine="true"
+                            android:text="@string/lbl_rent"
+                            android:textAllCaps="false"
+                            android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_800_01&quot;}"
+                            android:textFontWeight="500"
+                            android:textSize="@dimen/_10pxh"
+                            android:textStyle="bold" tools:text="@string/lbl_rent"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearPeriod"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPeriod"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{reviewFillVM.reviewFillModel.txtPeriod}"
+                        style="@style/txtRalewaysemibold18" tools:text="@string/lbl_period"/>
+                    <LinearLayout android:id="@+id/linearFormDateFill"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <EditText
+                            android:background="@drawable/rectangle_bg_name_gray_100_radius_12"
+                            android:drawableEnd="@drawable/img_calendar"
+                            android:drawablePadding="@dimen/_30pxh"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/raleway"
+                            android:hint="@string/lbl_11_28_2021"
+                            android:id="@+id/etFormDateFill"
+                            android:inputType="text"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:paddingBottom="@dimen/_27pxv"
+                            android:paddingEnd="@dimen/_16pxh"
+                            android:paddingStart="@dimen/_16pxh"
+                            android:paddingTop="@dimen/_27pxv"
+                            android:singleLine="true"
+                            android:text="@={reviewFillVM.reviewFillModel.etFormDateFillValue}"
+                            android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_800_01&quot;}"
+                            android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_800_01&quot;}"
+                            android:textFontWeight="600"
+                            android:textSize="@dimen/_12pxh"
+                            android:textStyle="bold" tools:ignore="Autofill"/>
+                        <EditText
+                            android:background="@drawable/rectangle_bg_name_gray_100_radius_12"
+                            android:drawableEnd="@drawable/img_calendar"
+                            android:drawablePadding="@dimen/_30pxh"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/raleway"
+                            android:hint="@string/lbl_01_28_2022"
+                            android:id="@+id/etFormDateFill1"
+                            android:inputType="text"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:paddingBottom="@dimen/_27pxv"
+                            android:paddingEnd="@dimen/_16pxh"
+                            android:paddingStart="@dimen/_16pxh"
+                            android:paddingTop="@dimen/_27pxv"
+                            android:singleLine="true"
+                            android:text="@={reviewFillVM.reviewFillModel.etFormDateFill1Value}"
+                            android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_800_01&quot;}"
+                            android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_800_01&quot;}"
+                            android:textFontWeight="600"
+                            android:textSize="@dimen/_12pxh"
+                            android:textStyle="bold" tools:ignore="Autofill"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearNote"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtNoteforOwner"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{reviewFillVM.reviewFillModel.txtNoteforOwner}"
+                        style="@style/txtRalewaysemibold18" tools:text="@string/lbl_note_for_owner"/>
+                    <EditText
+                        android:background="@drawable/rectangle_bg_name_gray_100_radius_12"
+                        android:drawableEnd="@drawable/img_television"
+                        android:drawablePadding="@dimen/_30pxh"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/raleway"
+                        android:hint="@string/msg_please_clean_before"
+                        android:id="@+id/etTelevision"
+                        android:inputType="text"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_26pxv"
+                        android:paddingEnd="@dimen/_16pxh"
+                        android:paddingStart="@dimen/_16pxh"
+                        android:paddingTop="@dimen/_26pxv"
+                        android:singleLine="true"
+                        android:text="@={reviewFillVM.reviewFillModel.etTelevisionValue}"
+                        android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_800_01&quot;}"
+                        android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_800_01&quot;}"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/_14pxh"
+                        android:textStyle="bold" tools:ignore="Autofill"/>
+                </LinearLayout>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPaymentMethod"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{reviewFillVM.reviewFillModel.txtPaymentMethod}"
+                    style="@style/txtRalewaysemibold18" tools:text="@string/lbl_payment_method"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:gravity="center_horizontal"
+                    android:id="@+id/recyclerLayout"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_10pxh}" tools:itemCount="3" tools:listitem="@layout/row_layout1"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearVoucher"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <LinearLayout android:id="@+id/linearItemHeader"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtHaveavoucher"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{reviewFillVM.reviewFillModel.txtHaveavoucher}"
+                            style="@style/txtRalewaysemibold18" tools:text="@string/lbl_have_a_voucher"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtChangevoucher"
+                            android:layout_gravity="bottom"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{reviewFillVM.reviewFillModel.txtChangevoucher}"
+                            style="@style/txtRalewaysemibold12_5" tools:text="@string/lbl_change_voucher"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearCardCoupon"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/_16pxh"
+                        android:paddingVertical="@dimen/_16pxv" style="@style/groupStylecornerRadius_1">
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:background="@drawable/rectangle_bg_name_green_a400_radius_17"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/montserrat"
+                            android:gravity="center"
+                            android:id="@+id/btnHLWN40"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_52pxv"
+                            android:layout_width="@dimen/_128pxh"
+                            android:letterSpacing="0.03"
+                            android:paddingBottom="@dimen/_15pxv"
+                            android:paddingEnd="@dimen/_20pxh"
+                            android:paddingStart="@dimen/_20pxh"
+                            android:paddingTop="@dimen/_15pxv"
+                            android:singleLine="true"
+                            android:text="@string/lbl_hlwn40"
+                            android:textAllCaps="false"
+                            android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                            android:textFontWeight="700"
+                            android:textSize="@dimen/_18pxh"
+                            android:textStyle="bold" tools:text="@string/lbl_hlwn40"/>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearLayout1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtHalloweenSale"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{reviewFillVM.reviewFillModel.txtHalloweenSale}"
+                                style="@style/txtRalewaybold12" tools:text="@string/lbl_halloween_sale"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtOffer"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{reviewFillVM.reviewFillModel.txtOffer}"
+                                style="@style/txtRalewaymedium8" tools:text="@string/msg_get_40_off_on_all"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageProgressBarGradient"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_1pxh"
+                    android:layout_width="@dimen/_100pxh"
+                    android:scaleType="fitXY" tools:ignore="ContentDescription"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_radius_35"
+            android:ellipsize="end" android:fontFamily="@font/raleway"
+            android:gravity="center" android:id="@+id/btnNext"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_70pxv"
+            android:layout_width="@dimen/_327pxh"
+            android:paddingBottom="@dimen/_25pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_25pxv" android:singleLine="true"
+            android:text="@string/lbl_next" android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_next"/>
+    </LinearLayout>
+</layout>

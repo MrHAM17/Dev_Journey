@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="messageVM" type="com.hiredjobsearch.app.modules.message.data.viewmodel.MessageVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearNewChat"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700_01&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageImage"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_component_1"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_component_1"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtJobDetails"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:singleLine="true"
+                android:text="@{messageVM.messageModel.txtJobDetails}"
+                style="@style/txtPlusJakartaSansbold18" tools:text="@string/lbl_message"/>
+            <ImageView android:id="@+id/imageImage1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_component_3"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_component_3"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearMessage"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_24pxh" android:paddingVertical="@dimen/_24pxv">
+            <androidx.appcompat.widget.SearchView
+                android:background="@drawable/rectangle_bg_name_onprimarycontainer_opacity_1_border_name_gray_300_radius_25"
+                android:gravity="center_horizontal"
+                android:id="@+id/searchViewSearch"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:theme="@style/searchViewsearch"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="@string/lbl_search_message" app:searchIcon="@drawable/img_filter"/>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearDot"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <FrameLayout android:id="@+id/frameProfile"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_56pxv" android:layout_width="@dimen/_56pxh">
+                    <ImageView android:id="@+id/imageImage2"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_56pxh"
+                        android:layout_width="@dimen/_56pxh"
+                        android:scaleType="centerCrop"
+                        circular="@{true}"
+                        imageRes="@{@drawable/img_image_56x56}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_image_56x56"/>
+                    <View
+                        android:background="@drawable/rectangle_bg_name_green_600_border_name_onprimarycontainer_opacity_1_radius_8"
+                        android:id="@+id/viewDot"
+                        android:layout_gravity="bottom|end"
+                        android:layout_height="@dimen/_16pxh" android:layout_width="@dimen/_16pxh"/>
+                </FrameLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearNameDescription"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtEstherHoward"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.0"
+                        android:lineSpacingExtra="@dimen/_5pxh"
+                        android:singleLine="true"
+                        android:text="@{messageVM.messageModel.txtEstherHoward}"
+                        style="@style/txtPlusJakartaSansbold18" tools:text="@string/lbl_esther_howard"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLoremIpsumDolor"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.0"
+                        android:lineSpacingExtra="@dimen/_4pxh"
+                        android:singleLine="true"
+                        android:text="@{messageVM.messageModel.txtLoremIpsumDolor}"
+                        style="@style/txtPlusJakartaSansmedium14" tools:text="@string/msg_lorem_ipsum_dolor4"/>
+                </LinearLayout>
+                <FrameLayout android:id="@+id/frameSpacer"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <LinearLayout android:id="@+id/linearTime"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/txtTime"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.0"
+                        android:lineSpacingExtra="@dimen/_4pxh"
+                        android:singleLine="true"
+                        android:text="@{messageVM.messageModel.txtTime}"
+                        style="@style/txtPlusJakartaSanssemibold12_2" tools:text="@string/lbl_10_20"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="end"
+                        android:id="@+id/txtWidget"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.0"
+                        android:lineSpacingExtra="@dimen/_3pxh"
+                        android:paddingBottom="@dimen/_5pxv"
+                        android:paddingEnd="@dimen/_8pxh"
+                        android:paddingStart="@dimen/_8pxh"
+                        android:paddingTop="@dimen/_5pxv"
+                        android:singleLine="true"
+                        android:text="@{messageVM.messageModel.txtWidget}"
+                        style="@style/txtSolidRounded" tools:text="@string/lbl_2"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:background="@color/{&quot;name&quot;:&quot;gray_300&quot;}"
+                android:id="@+id/lineLine"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_327pxh"/>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearAvatar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageAvatar"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_56pxh"
+                    android:layout_width="@dimen/_56pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_avatar}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_avatar"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearNameDescription1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtWadeWarren"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.0"
+                        android:lineSpacingExtra="@dimen/_5pxh"
+                        android:singleLine="true"
+                        android:text="@{messageVM.messageModel.txtWadeWarren}"
+                        style="@style/txtPlusJakartaSansbold18" tools:text="@string/lbl_wade_warren"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLoremIpsumDolor1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.0"
+                        android:lineSpacingExtra="@dimen/_4pxh"
+                        android:singleLine="true"
+                        android:text="@{messageVM.messageModel.txtLoremIpsumDolor1}"
+                        style="@style/txtPlusJakartaSansmedium14" tools:text="@string/msg_lorem_ipsum_dolor4"/>
+                </LinearLayout>
+                <FrameLayout android:id="@+id/frameSpacer1"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <LinearLayout android:id="@+id/linearTime1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/txtTime1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.0"
+                        android:lineSpacingExtra="@dimen/_4pxh"
+                        android:singleLine="true"
+                        android:text="@{messageVM.messageModel.txtTime1}"
+                        style="@style/txtPlusJakartaSanssemibold12_2" tools:text="@string/lbl_10_20"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="end"
+                        android:id="@+id/txtWidget1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.0"
+                        android:lineSpacingExtra="@dimen/_3pxh"
+                        android:paddingBottom="@dimen/_5pxv"
+                        android:paddingEnd="@dimen/_8pxh"
+                        android:paddingStart="@dimen/_8pxh"
+                        android:paddingTop="@dimen/_5pxv"
+                        android:singleLine="true"
+                        android:text="@{messageVM.messageModel.txtWidget1}"
+                        style="@style/txtSolidRounded" tools:text="@string/lbl_2"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:background="@color/{&quot;name&quot;:&quot;gray_300&quot;}"
+                android:id="@+id/lineLine1"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_327pxh"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerMessage"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_15pxh}" tools:itemCount="2" tools:listitem="@layout/row_message"/>
+            <FrameLayout android:id="@+id/frameSpacer2"
+                android:layout_height="wrap_content" android:layout_width="match_parent"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_20"
+                android:drawablePadding="@dimen/_4pxh"
+                android:drawableStart="@drawable/img_plus_onprimarycontainer"
+                android:ellipsize="end"
+                android:fontFamily="@font/plus_jakarta_sans"
+                android:gravity="center" android:id="@+id/btnNewChat"
+                android:layout_gravity="end"
+                android:layout_height="@dimen/_46pxv"
+                android:layout_width="@dimen/_137pxh"
+                android:letterSpacing="0.0"
+                android:lineSpacingExtra="@dimen/_4pxh"
+                android:paddingBottom="@dimen/_14pxv"
+                android:paddingEnd="@dimen/_24pxh"
+                android:paddingStart="@dimen/_24pxh"
+                android:paddingTop="@dimen/_14pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_new_chat"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:text="@string/lbl_new_chat"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

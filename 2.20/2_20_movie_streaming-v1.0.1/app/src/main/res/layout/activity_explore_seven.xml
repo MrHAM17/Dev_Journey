@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="exploreSevenVM" type="com.moviestreaming.app.modules.exploreseven.data.viewmodel.ExploreSevenVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearNons"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_900&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <TextView android:ellipsize="end" android:id="@+id/txtNons"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{exploreSevenVM.exploreSevenModel.txtNons}"
+                style="@style/txtRobotosemibold16" tools:text="@string/lbl_explore"/>
+            <LinearLayout android:id="@+id/linearGroup32"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageIcon"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_icon_onprimarycontainer"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_icon_onprimarycontainer"/>
+                <ImageView android:id="@+id/imageIcon1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_icon_onprimarycontainer_24x24"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_icon_onprimarycontainer_24x24"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearExploreSeven"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCategoriesYouLike"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{exploreSevenVM.exploreSevenModel.txtCategoriesYouLike}"
+                    style="@style/txtRobotobold14" tools:text="@string/msg_categories_you_like"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerSpecials"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_16pxh}" tools:itemCount="4" tools:listitem="@layout/row_specials7"/>
+                <LinearLayout android:id="@+id/linearFrameSixty"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtAction"
+                        android:layout_gravity="top"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{exploreSevenVM.exploreSevenModel.txtAction}"
+                        style="@style/txtRobotobold14" tools:text="@string/lbl_drama"/>
+                    <FrameLayout android:id="@+id/frameSpacer"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtMore"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{exploreSevenVM.exploreSevenModel.txtMore}"
+                        style="@style/txtRobotoregular12" tools:text="@string/lbl_more"/>
+                    <ImageView android:id="@+id/imageIcon2"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_18pxh"
+                        android:layout_width="@dimen/_18pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_icon_primary"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_icon_primary"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerIO"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="3" itemSpace="@{@dimen/_16pxh}"
+                    tools:itemCount="6" tools:listitem="@layout/row_io"/>
+                <LinearLayout android:id="@+id/linearFrameSixty1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtAction1"
+                        android:layout_gravity="top"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{exploreSevenVM.exploreSevenModel.txtAction1}"
+                        style="@style/txtRobotobold14" tools:text="@string/lbl_action"/>
+                    <FrameLayout android:id="@+id/frameSpacer1"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtMore1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{exploreSevenVM.exploreSevenModel.txtMore1}"
+                        style="@style/txtRobotoregular12" tools:text="@string/lbl_more"/>
+                    <ImageView android:id="@+id/imageIcon3"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_18pxh"
+                        android:layout_width="@dimen/_18pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_icon_primary"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_icon_primary"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerTurnerHooch"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="3" itemSpace="@{@dimen/_16pxh}"
+                    tools:itemCount="6" tools:listitem="@layout/row_turnerhooch"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

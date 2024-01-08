@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="layout3RowModel" type="com.housitbuyrentsellproperty.app.modules.extrainformation.data.model.Layout3RowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearFormSpinner"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_20pxv"
+        android:paddingEnd="@dimen/_15pxh"
+        android:paddingStart="@dimen/_15pxh"
+        android:paddingTop="@dimen/_20pxv" style="@style/groupStylenamegray_3">
+        <TextView android:ellipsize="end" android:id="@+id/txtBedroom"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{layout3RowModel.txtBedroom}"
+            style="@style/txtRalewaysemibold12_2" tools:text="@string/lbl_bedroom"/>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <ImageButton android:id="@+id/btnClose1"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_30pxh"
+            android:layout_width="@dimen/_30pxh"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_close_onprimarycontainer" tools:ignore="ContentDescription"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtText"
+            android:layout_gravity="bottom"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{layout3RowModel.txtText}"
+            style="@style/txtRalewaysemibold16" tools:text="@string/lbl_3"/>
+        <ImageButton android:id="@+id/btnClose2"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_30pxh"
+            android:layout_width="@dimen/_30pxh"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_close_onprimarycontainer" tools:ignore="ContentDescription"/>
+    </LinearLayout>
+</layout>

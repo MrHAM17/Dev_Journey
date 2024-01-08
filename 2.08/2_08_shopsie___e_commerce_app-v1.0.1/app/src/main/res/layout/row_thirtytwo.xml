@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="thirtytwoRowModel" type="com.shopsieecommerceapp.app.modules.mainlanding.data.model.ThirtytwoRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearOuterwear"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <ImageView android:id="@+id/imageOuterwear"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_386pxh"
+            android:layout_width="@dimen/_358pxh"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_rectangle_7}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle_7"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtOuterwear"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{thirtytwoRowModel.txtOuterwear}"
+            style="@style/txtLatobold16" tools:text="@string/lbl_outerwear"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtRaincoatsSweaters"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{thirtytwoRowModel.txtRaincoatsSweaters}"
+            style="@style/txtLatoregular12" tools:text="@string/msg_raincoats_sweaters"/>
+    </LinearLayout>
+</layout>

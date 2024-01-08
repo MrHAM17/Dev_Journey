@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="tickets2RowModel" type="com.comforthotelbookingapp.app.modules.bookingcancelled.data.model.Tickets2RowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearTicketsItem"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_20pxh"
+        android:paddingVertical="@dimen/_20pxv" style="@style/groupStyle{&quot;name&quot;:&quot;blue_gray_900&quot;}cornerRadius">
+        <LinearLayout android:id="@+id/linearHotelInfo"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageView android:id="@+id/imagePalmsCasinoResort"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_100pxh"
+                android:layout_width="@dimen/_100pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_16pxh}"
+                imageRes="@{@drawable/img_rectangle}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearAutoLayoutVertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPalmsCasinoResort"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{tickets2RowModel.txtPalmsCasinoResort}"
+                    style="@style/txtUrbanistromanbold20_1" tools:text="@string/msg_palms_casino_resort"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLondonUnitedKingdom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{tickets2RowModel.txtLondonUnitedKingdom}"
+                    style="@style/txtUrbanistregular14" tools:text="@string/msg_london_united_kingdom"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:background="@drawable/rectangle_bg_name_red_400_19_radius_6"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/urbanist"
+                    android:gravity="center" android:id="@+id/btnPaid"
+                    android:layout_height="@dimen/_24pxv"
+                    android:layout_width="@dimen/_60pxh"
+                    android:paddingBottom="@dimen/_5pxv"
+                    android:paddingEnd="@dimen/_20pxh"
+                    android:paddingStart="@dimen/_20pxh"
+                    android:paddingTop="@dimen/_5pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_paid"
+                    android:textAllCaps="false"
+                    android:textColor="@color/{&quot;name&quot;:&quot;red_400&quot;}"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_10pxh"
+                    android:textStyle="bold" tools:text="@string/lbl_paid"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearBookingStatus"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_8pxv"
+            android:paddingEnd="@dimen/_12pxh"
+            android:paddingStart="@dimen/_12pxh"
+            android:paddingTop="@dimen/_8pxv" style="@style/groupStyle{&quot;name&quot;:&quot;red_400_19&quot;}cornerRadius">
+            <ImageView android:id="@+id/imageImage"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_18pxh"
+                android:layout_width="@dimen/_18pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_video_camera"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_video_camera"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtYouCanceledThis"
+                android:layout_gravity="bottom"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{tickets2RowModel.txtYouCanceledThis}"
+                style="@style/txtUrbanistromanmedium10_3" tools:text="@string/msg_you_canceled_this"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

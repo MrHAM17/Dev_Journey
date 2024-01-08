@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="arRowModel" type="com.firstbankdigitalbanking.app.modules.transactions.data.model.ArRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearArrow"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_5pxv" android:paddingTop="@dimen/_5pxv">
+        <ImageButton
+            android:background="@drawable/rectangle_border_name_green_600_radius_17"
+            android:id="@+id/btnArrow"
+            android:layout_height="@dimen/_35pxh"
+            android:layout_width="@dimen/_35pxh"
+            android:paddingHorizontal="@dimen/_10pxh"
+            android:paddingVertical="@dimen/_10pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_arrow_green_600" tools:ignore="ContentDescription"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearFreepikSales"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFreepikSales"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{arRowModel.txtFreepikSales}"
+                style="@style/txtIntermedium14_2" tools:text="@string/lbl_freepik_sales"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtTime"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{arRowModel.txtTime}"
+                style="@style/txtInterregular12" tools:text="@string/msg_25_jan_10_40_pm"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{arRowModel.txtPrice}"
+            style="@style/txtIntermedium14_4" tools:text="@string/lbl_750"/>
+    </LinearLayout>
+</layout>

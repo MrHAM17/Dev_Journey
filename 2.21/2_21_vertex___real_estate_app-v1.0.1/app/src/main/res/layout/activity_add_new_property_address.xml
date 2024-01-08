@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="addNewPropertyAddressVM" type="com.vertexrealestateapp.app.modules.addnewpropertyaddress.data.viewmodel.AddNewPropertyAddressVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linear0108"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:contentInsetStart="0dp" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_white_a700_border_name_gray_300_radius_20"
+                android:id="@+id/btnArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_left_primarycontainer" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtNotification"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{addNewPropertyAddressVM.addNewPropertyAddressModel.txtNotification}"
+                style="@style/txtManropeextrabold18" tools:text="@string/msg_add_new_property"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearAddNewPropertyAddress"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_24pxh" android:paddingVertical="@dimen/_24pxv">
+            <LinearLayout android:id="@+id/linearAddressAndProgress"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAddress"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{addNewPropertyAddressVM.addNewPropertyAddressModel.txtAddress}"
+                    style="@style/txtManropesemibold14" tools:text="@string/lbl_address"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:background="@drawable/rectangle_bg_name_primary_radius_16"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/manrope"
+                    android:gravity="center"
+                    android:id="@+id/btnOneHundredEight"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_33pxv"
+                    android:layout_width="@dimen/_76pxh"
+                    android:paddingBottom="@dimen/_6pxv"
+                    android:paddingEnd="@dimen/_16pxh"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_6pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_01_08"
+                    android:textAllCaps="false"
+                    android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold" tools:text="@string/lbl_01_08"/>
+            </LinearLayout>
+            <ProgressBar android:gravity="center_horizontal"
+                android:id="@+id/progressBarProgressBar"
+                android:indeterminate="false"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:max="100"
+                android:minHeight="@dimen/_6pxv" android:progress="12"
+                android:progressDrawable="@drawable/layer_list_bg_name_gray_300_radius_3" style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPropertyAddress"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{addNewPropertyAddressVM.addNewPropertyAddressModel.txtPropertyAddress}"
+                style="@style/txtManropebold18" tools:text="@string/msg_property_address"/>
+            <EditText
+                android:background="@drawable/rectangle_bg_name_gray_300_radius_10"
+                android:ellipsize="end"
+                android:fontFamily="@font/manrope"
+                android:hint="@string/lbl_street_address"
+                android:id="@+id/etAddress" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingHorizontal="@dimen/_14pxh"
+                android:paddingVertical="@dimen/_14pxv"
+                android:singleLine="true"
+                android:text="@={addNewPropertyAddressVM.addNewPropertyAddressModel.etAddressValue}"
+                android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+                android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:ignore="Autofill"/>
+            <EditText
+                android:background="@drawable/rectangle_bg_name_gray_300_radius_10"
+                android:ellipsize="end"
+                android:fontFamily="@font/manrope"
+                android:hint="@string/lbl_unit_number"
+                android:id="@+id/etInputFields" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingHorizontal="@dimen/_14pxh"
+                android:paddingVertical="@dimen/_14pxv"
+                android:singleLine="true"
+                android:text="@={addNewPropertyAddressVM.addNewPropertyAddressModel.etInputFieldsValue}"
+                android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+                android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:ignore="Autofill"/>
+            <EditText
+                android:background="@drawable/rectangle_bg_name_gray_300_radius_10"
+                android:ellipsize="end"
+                android:fontFamily="@font/manrope"
+                android:hint="@string/lbl_city_name"
+                android:id="@+id/etName" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingHorizontal="@dimen/_14pxh"
+                android:paddingVertical="@dimen/_14pxv"
+                android:singleLine="true"
+                android:text="@={addNewPropertyAddressVM.addNewPropertyAddressModel.etNameValue}"
+                android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+                android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:ignore="Autofill"/>
+            <Spinner
+                android:background="@drawable/layer_list_bg_name_gray_300_radius_10"
+                android:gravity="center_horizontal"
+                android:id="@+id/spinnerInputFields"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" tools:listitem="@layout/spinner_item"/>
+            <EditText
+                android:background="@drawable/rectangle_bg_name_gray_300_radius_10"
+                android:ellipsize="end"
+                android:fontFamily="@font/manrope"
+                android:hint="@string/lbl_zip_code"
+                android:id="@+id/etZipcode" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingHorizontal="@dimen/_14pxh"
+                android:paddingVertical="@dimen/_14pxv"
+                android:singleLine="true"
+                android:text="@={addNewPropertyAddressVM.addNewPropertyAddressModel.etZipcodeValue}"
+                android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+                android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_500&quot;}"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:ignore="Autofill"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearBTN"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical" style="@style/groupStyle">
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_10"
+                android:ellipsize="end"
+                android:fontFamily="@font/manrope"
+                android:gravity="center" android:id="@+id/btnNext"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_17pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_17pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_next"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;gray_50&quot;}"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_next"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

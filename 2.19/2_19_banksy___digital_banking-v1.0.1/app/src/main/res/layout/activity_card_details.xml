@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="cardDetailsVM" type="com.banksydigitalbanking.app.modules.carddetails.data.viewmodel.CardDetailsVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearNinetyTwo"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}">
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearCardDetails"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout android:id="@+id/linearHeader"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageButton
+                        android:background="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                        android:id="@+id/btnGrid"
+                        android:layout_height="@dimen/_44pxh"
+                        android:layout_width="@dimen/_44pxh"
+                        android:paddingHorizontal="@dimen/_10pxh"
+                        android:paddingVertical="@dimen/_10pxv"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_grid" tools:ignore="ContentDescription"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtWelcomeBack"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{cardDetailsVM.cardDetailsModel.txtWelcomeBack}"
+                        style="@style/txtOverpassbold20" tools:text="@string/lbl_your_cards"/>
+                </LinearLayout>
+                <FrameLayout android:id="@+id/frameJonathanAnderson"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_180pxv" android:layout_width="@dimen/_390pxh">
+                    <LinearLayout android:id="@+id/linearCard"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/_23pxv"
+                        android:paddingEnd="@dimen/_24pxh"
+                        android:paddingStart="@dimen/_24pxh"
+                        android:paddingTop="@dimen/_23pxv" style="@style/groupStyle">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtJonathanAnderson"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{cardDetailsVM.cardDetailsModel.txtJonathanAnderson}"
+                            style="@style/txtOverpassbold12" tools:text="@string/msg_jonathan_anderson"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtText"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{cardDetailsVM.cardDetailsModel.txtText}"
+                            style="@style/txtOverpassbold18" tools:text="@string/msg_1222_3443_9881_1222"/>
+                        <LinearLayout android:id="@+id/linearNinetyOne"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent" android:orientation="horizontal">
+                            <LinearLayout android:gravity="start"
+                                android:id="@+id/linearBalance"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content" android:orientation="vertical">
+                                <TextView android:ellipsize="end"
+                                    android:id="@+id/txtBalance"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:singleLine="true"
+                                    android:text="@{cardDetailsVM.cardDetailsModel.txtBalance}"
+                                    style="@style/txtOverpasssemibold8" tools:text="@string/lbl_balance"/>
+                                <TextView android:ellipsize="end"
+                                    android:id="@+id/txtPrice"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:singleLine="true"
+                                    android:text="@{cardDetailsVM.cardDetailsModel.txtPrice}"
+                                    style="@style/txtOverpassbold12" tools:text="@string/lbl_31_250"/>
+                            </LinearLayout>
+                            <ImageView android:id="@+id/imageUser"
+                                android:layout_height="@dimen/_20pxh"
+                                android:layout_width="@dimen/_20pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_user"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_user"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <ImageButton
+                        android:background="@drawable/rectangle_bg_name_onprimary_radius_15"
+                        android:id="@+id/btnOverflowMenu"
+                        android:layout_gravity="end"
+                        android:layout_height="@dimen/_30pxh"
+                        android:layout_width="@dimen/_30pxh"
+                        android:paddingHorizontal="@dimen/_10pxh"
+                        android:paddingVertical="@dimen/_10pxv"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_overflow_menu" tools:ignore="ContentDescription"/>
+                    <ImageButton
+                        android:background="@drawable/rectangle_bg_name_onprimary_radius_15"
+                        android:id="@+id/btnRefresh"
+                        android:layout_gravity="start"
+                        android:layout_height="@dimen/_30pxh"
+                        android:layout_width="@dimen/_30pxh"
+                        android:paddingHorizontal="@dimen/_10pxh"
+                        android:paddingVertical="@dimen/_10pxv"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_refresh" tools:ignore="ContentDescription"/>
+                </FrameLayout>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearDate"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtToday"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{cardDetailsVM.cardDetailsModel.txtToday}"
+                        style="@style/txtOverpassextrabold24" tools:text="@string/lbl_today"/>
+                    <FrameLayout android:id="@+id/frameSpacer"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtJanCounter"
+                        android:layout_gravity="top"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{cardDetailsVM.cardDetailsModel.txtJanCounter}"
+                        style="@style/txtOverpasssemibold12" tools:text="@string/lbl_25_jan"/>
+                    <ImageView android:id="@+id/imageFavorite"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_12pxh"
+                        android:layout_width="@dimen/_12pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_favorite_gray_500"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_favorite_gray_500"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:gravity="center_horizontal"
+                    android:id="@+id/recyclerCardDetails"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_20pxh}" tools:itemCount="5" tools:listitem="@layout/row_carddetails"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

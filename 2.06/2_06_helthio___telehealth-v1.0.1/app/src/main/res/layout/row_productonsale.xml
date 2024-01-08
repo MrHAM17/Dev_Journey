@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="productonsaleRowModel" type="com.helthiotelehealth.app.modules.pharmacy.data.model.ProductonsaleRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearDrugsItem"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_7pxv"
+        android:paddingEnd="@dimen/_6pxh"
+        android:paddingStart="@dimen/_6pxh"
+        android:paddingTop="@dimen/_7pxv" style="@style/groupStylenamewhite_4">
+        <ImageView android:id="@+id/imageOBHCombi"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_68pxh"
+            android:layout_width="@dimen/_66pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_34pxh}"
+            imageRes="@{@drawable/img_calcium_l_lysin}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_calcium_l_lysin"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtOBHCombi"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{productonsaleRowModel.txtOBHCombi}"
+            style="@style/txtRalewaysemibold14_3" tools:text="@string/lbl_obh_combi"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtMeasurement"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{productonsaleRowModel.txtMeasurement}"
+            style="@style/txtRalewaymedium12" tools:text="@string/lbl_75ml"/>
+        <LinearLayout android:id="@+id/linearPrice1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <FrameLayout android:id="@+id/framePrice"
+                android:layout_gravity="top"
+                android:layout_height="@dimen/_17pxv" android:layout_width="@dimen/_74pxh">
+                <LinearLayout android:id="@+id/linearPrice2"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:id="@+id/txtPrice1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{productonsaleRowModel.txtPrice1}"
+                        style="@style/txtRalewaysemibold14_4" tools:text="@string/lbl_9_99"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPrice2"
+                        android:layout_gravity="bottom"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{productonsaleRowModel.txtPrice2}"
+                        style="@style/txtRalewaysemibold8" tools:text="@string/lbl_10_99"/>
+                </LinearLayout>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;gray_600&quot;}"
+                    android:id="@+id/viewView"
+                    android:layout_gravity="bottom|end"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_29pxh"/>
+            </FrameLayout>
+            <ImageButton android:id="@+id/btnClose"
+                android:layout_gravity="bottom"
+                android:layout_height="@dimen/_18pxh"
+                android:layout_width="@dimen/_18pxh"
+                android:paddingHorizontal="@dimen/_5pxh"
+                android:paddingVertical="@dimen/_5pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_close_white_a700" tools:ignore="ContentDescription"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

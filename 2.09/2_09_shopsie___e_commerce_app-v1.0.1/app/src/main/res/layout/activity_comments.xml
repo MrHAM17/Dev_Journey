@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="commentsVM" type="com.shopsieecommerceapp.app.modules.comments.data.viewmodel.CommentsVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearComments"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton android:id="@+id/btnButtonIcon"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_button_icon_white_a700" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtScreenTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_4pxh"
+                android:singleLine="true"
+                android:text="@{commentsVM.commentsModel.txtScreenTitle}"
+                style="@style/txtInterbold16_1" tools:text="@string/lbl_title"/>
+            <ImageView android:id="@+id/imageRightButton"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_right_button"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_right_button"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearComments1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_21pxv"
+            android:paddingEnd="@dimen/_28pxh"
+            android:paddingStart="@dimen/_28pxh" android:paddingTop="@dimen/_21pxv">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtComments"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_4pxh"
+                android:singleLine="true"
+                android:text="@{commentsVM.commentsModel.txtComments}"
+                style="@style/txtInterbold16_1" tools:text="@string/lbl_comments_148"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerComments"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_24pxh}" tools:itemCount="4" tools:listitem="@layout/row_comments"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

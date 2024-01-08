@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="myorderRowModel" type="com.streetstyleecommerceapp.app.modules.myorder.data.model.MyorderRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearX"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <ImageView android:id="@+id/imageX"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_203pxh"
+            android:layout_width="@dimen/_150pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_30pxh}"
+            imageRes="@{@drawable/img_rectangle_9_237x175}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle_9_237x175"/>
+        <FrameLayout android:id="@+id/frameSpacer1"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearTwentySix"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:id="@+id/txtVERTLUNEBoyfriend"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_4pxh"
+                android:text="@{myorderRowModel.txtVERTLUNEBoyfriend}"
+                style="@style/txtPlayfairDisplayplayfairdisplaymedium16_1" tools:text="@string/msg_vertlune_boyfriend"/>
+            <TextView android:id="@+id/txtYellowSizeCounter"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_6pxh"
+                android:text="@{myorderRowModel.txtYellowSizeCounter}"
+                style="@style/txtPlayfairDisplayromanbold12" tools:text="@string/lbl_yellow_size_8"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{myorderRowModel.txtPrice}"
+                style="@style/txtPlayfairDisplayplayfairdisplaymedium28" tools:text="@string/lbl_58"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameSpacer2"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtX"
+            android:layout_gravity="bottom"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{myorderRowModel.txtX}"
+            style="@style/txtPlayfairDisplayplayfairdisplaymedium36_1" tools:text="@string/lbl_1x"/>
+    </LinearLayout>
+</layout>

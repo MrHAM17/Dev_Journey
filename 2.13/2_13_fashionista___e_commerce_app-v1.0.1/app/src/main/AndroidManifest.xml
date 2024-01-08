@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest package="com.fashionistaecommerceapp.app" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:largeHeap="true"
+        android:name="com.fashionistaecommerceapp.app.appcomponents.di.MyApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
+        <activity android:exported="true"
+            android:name="com.fashionistaecommerceapp.app.modules.resetpassword.ui.ResetPasswordActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fashionistaecommerceapp.app.modules.notification.ui.NotificationActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.fashionistaecommerceapp.app.modules.socialaccountlink.ui.SocialAccountLinkActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.fashionistaecommerceapp.app.modules.onbordingtwo.ui.OnbordingTwoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.fashionistaecommerceapp.app.modules.onbordingone.ui.OnbordingOneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.fashionistaecommerceapp.app.modules.reviewstabcontainer.ui.ReviewsTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.fashionistaecommerceapp.app.modules.information.ui.InformationActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.fashionistaecommerceapp.app.modules.splashscreen.ui.SplashScreenActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.fashionistaecommerceapp.app.modules.complete.ui.CompleteActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.fashionistaecommerceapp.app.modules.signupsignin.ui.SignUpSignInActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.fashionistaecommerceapp.app.modules.signin.ui.SignInActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.fashionistaecommerceapp.app.modules.writeareview.ui.WriteAReviewActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.fashionistaecommerceapp.app.modules.popularitems.ui.PopularItemsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.fashionistaecommerceapp.app.modules.settings.ui.SettingsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.fashionistaecommerceapp.app.modules.checkout.ui.CheckoutActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.fashionistaecommerceapp.app.modules.signup.ui.SignUpActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.fashionistaecommerceapp.app.modules.chat.ui.ChatActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.fashionistaecommerceapp.app.modules.trackingorder.ui.TrackingOrderActivity" android:screenOrientation="portrait"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/str_maps_api_key"/>
+        <activity
+            android:name="com.fashionistaecommerceapp.app.modules.exploreshop.ui.ExploreShopActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.fashionistaecommerceapp.app.modules.discountitems.ui.DiscountItemsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.fashionistaecommerceapp.app.modules.verificationcode.ui.VerificationCodeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.fashionistaecommerceapp.app.modules.homecontainer.ui.HomeContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.fashionistaecommerceapp.app.modules.forgotpassword.ui.ForgotPasswordActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.fashionistaecommerceapp.app.modules.onbordingthree.ui.OnbordingThreeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.fashionistaecommerceapp.app.modules.orderstatus.ui.OrderStatusActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.fashionistaecommerceapp.app.modules.productview.ui.ProductViewActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

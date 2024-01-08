@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="layout11RowModel" type="com.housitbuyrentsellproperty.app.modules.home.data.model.Layout11RowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearPhotosUser"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:orientation="vertical">
+        <ImageView android:id="@+id/imageAmanda"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_70pxh"
+            android:layout_width="@dimen/_70pxh"
+            android:scaleType="centerCrop" circular="@{true}"
+            imageRes="@{@drawable/img_shape_70x70}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_shape_70x70"/>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtAmanda"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{layout11RowModel.txtAmanda}"
+            style="@style/txtRalewaymedium12" tools:text="@string/lbl_amanda"/>
+    </LinearLayout>
+</layout>

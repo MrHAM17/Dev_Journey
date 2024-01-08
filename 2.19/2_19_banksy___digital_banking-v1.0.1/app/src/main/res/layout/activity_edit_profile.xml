@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="editProfileVM" type="com.banksydigitalbanking.app.modules.editprofile.data.viewmodel.EditProfileVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearEditProfile"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                android:id="@+id/btnFavorite"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_favorite_onprimary" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtWelcomeBack"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{editProfileVM.editProfileModel.txtWelcomeBack}"
+                style="@style/txtOverpassbold20" tools:text="@string/lbl_edit_profile"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearName"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_18pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_18pxv">
+            <FrameLayout android:id="@+id/frameProfile"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_139pxv" android:layout_width="@dimen/_139pxh">
+                <ImageView android:id="@+id/imageCircleImage"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_139pxh"
+                    android:layout_width="@dimen/_139pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_ellipse_107}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_107"/>
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_primary_border_name_gray_100_01_radius_15"
+                    android:id="@+id/btnThumbsUp"
+                    android:layout_gravity="bottom|end"
+                    android:layout_height="@dimen/_30pxh"
+                    android:layout_width="@dimen/_30pxh"
+                    android:paddingHorizontal="@dimen/_9pxh"
+                    android:paddingVertical="@dimen/_9pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_thumbs_up_onprimary" tools:ignore="ContentDescription"/>
+            </FrameLayout>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtSuzaneJobs"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{editProfileVM.editProfileModel.txtSuzaneJobs}"
+                style="@style/txtOverpassextrabold36_1" tools:text="@string/lbl_suzane_jobs"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtEmail"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{editProfileVM.editProfileModel.txtEmail}"
+                style="@style/txtOverpassmedium14" tools:text="@string/lbl_user_gmail_com"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearInputField"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLabel"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{editProfileVM.editProfileModel.txtLabel}"
+                    style="@style/txtOverpassregular16_3" tools:text="@string/lbl_name"/>
+                <EditText
+                    android:background="@drawable/rectangle_border_name_gray_500"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/overpass"
+                    android:hint="@string/lbl_suzane_jobs"
+                    android:id="@+id/etName" android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_20pxv"
+                    android:paddingEnd="@dimen/_24pxh"
+                    android:paddingStart="@dimen/_24pxh"
+                    android:paddingTop="@dimen/_20pxv"
+                    android:singleLine="true"
+                    android:text="@={editProfileVM.editProfileModel.etNameValue}"
+                    android:textColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;}"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_18pxh"
+                    android:textStyle="bold" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearInputField1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLabel1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{editProfileVM.editProfileModel.txtLabel1}"
+                    style="@style/txtOverpassregular16_3" tools:text="@string/lbl_email"/>
+                <EditText
+                    android:background="@drawable/rectangle_border_name_gray_500"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/overpass"
+                    android:hint="@string/lbl_abc_gmail_com"
+                    android:id="@+id/etEmail" android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_20pxv"
+                    android:paddingEnd="@dimen/_24pxh"
+                    android:paddingStart="@dimen/_24pxh"
+                    android:paddingTop="@dimen/_20pxv"
+                    android:singleLine="true"
+                    android:text="@={editProfileVM.editProfileModel.etEmailValue}"
+                    android:textColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;}"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_18pxh"
+                    android:textStyle="bold" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearInputField2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLabel2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{editProfileVM.editProfileModel.txtLabel2}"
+                    style="@style/txtOverpassregular16_3" tools:text="@string/lbl_phone"/>
+                <EditText
+                    android:background="@drawable/rectangle_border_name_gray_500"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/overpass"
+                    android:hint="@string/lbl_91_123456890"
+                    android:id="@+id/etPhone" android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_20pxv"
+                    android:paddingEnd="@dimen/_24pxh"
+                    android:paddingStart="@dimen/_24pxh"
+                    android:paddingTop="@dimen/_20pxv"
+                    android:singleLine="true"
+                    android:text="@={editProfileVM.editProfileModel.etPhoneValue}"
+                    android:textColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;}"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_18pxh"
+                    android:textStyle="bold" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                android:ellipsize="end"
+                android:fontFamily="@font/overpass"
+                android:gravity="center" android:id="@+id/btnSave"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_58pxv"
+                android:layout_width="@dimen/_366pxh"
+                android:paddingBottom="@dimen/_16pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_16pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_save"
+                android:textAllCaps="true"
+                android:textColor="@color/{&quot;name&quot;:&quot;onPrimary&quot;}"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_20pxh"
+                android:textStyle="bold" tools:text="@string/lbl_save"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

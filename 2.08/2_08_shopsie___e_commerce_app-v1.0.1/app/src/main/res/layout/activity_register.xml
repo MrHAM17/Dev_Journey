@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="registerVM" type="com.shopsieecommerceapp.app.modules.register.data.viewmodel.RegisterVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRegister"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/_16pxh"
+        android:paddingStart="@dimen/_16pxh"
+        android:paddingTop="@dimen/_98pxv" style="@style/groupStyle{&quot;name&quot;:&quot;primaryContainer&quot;}">
+        <TextView android:ellipsize="end" android:gravity="start"
+            android:id="@+id/txtHelloRegister"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{registerVM.registerModel.txtHelloRegister}"
+            style="@style/txtLatobold24" tools:text="@string/msg_hello_register"/>
+        <EditText
+            android:background="@drawable/rectangle_bg_name_gray_50_radius_8"
+            android:ellipsize="end" android:fontFamily="@font/lato"
+            android:hint="@string/lbl_first_name"
+            android:id="@+id/etFirstName" android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_15pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh"
+            android:paddingTop="@dimen/_15pxv" android:singleLine="true"
+            android:text="@={registerVM.registerModel.etFirstNameValue}"
+            android:textColor="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+            android:textColorHint="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_14pxh" android:textStyle="normal" tools:ignore="Autofill"/>
+        <EditText
+            android:background="@drawable/rectangle_bg_name_gray_50_radius_8"
+            android:ellipsize="end" android:fontFamily="@font/lato"
+            android:hint="@string/lbl_last_name"
+            android:id="@+id/etLastName" android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_15pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh"
+            android:paddingTop="@dimen/_15pxv" android:singleLine="true"
+            android:text="@={registerVM.registerModel.etLastNameValue}"
+            android:textColor="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+            android:textColorHint="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_14pxh" android:textStyle="normal" tools:ignore="Autofill"/>
+        <EditText
+            android:background="@drawable/rectangle_bg_name_gray_50_radius_8"
+            android:ellipsize="end" android:fontFamily="@font/lato"
+            android:hint="@string/lbl_email" android:id="@+id/etEmail"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_15pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh"
+            android:paddingTop="@dimen/_15pxv" android:singleLine="true"
+            android:text="@={registerVM.registerModel.etEmailValue}"
+            android:textColor="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+            android:textColorHint="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_14pxh" android:textStyle="normal" tools:ignore="Autofill"/>
+        <EditText
+            android:background="@drawable/rectangle_bg_name_gray_50_radius_8"
+            android:ellipsize="end" android:fontFamily="@font/lato"
+            android:hint="@string/lbl_password"
+            android:id="@+id/etPassword" android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_15pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh"
+            android:paddingTop="@dimen/_15pxv" android:singleLine="true"
+            android:text="@={registerVM.registerModel.etPasswordValue}"
+            android:textColor="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+            android:textColorHint="@color/{&quot;name&quot;:&quot;gray_500&quot;}"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_14pxh" android:textStyle="normal" tools:ignore="Autofill"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_radius_8"
+            android:ellipsize="end" android:fontFamily="@font/lato"
+            android:gravity="center" android:id="@+id/btnRegister"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_14pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_14pxv" android:singleLine="true"
+            android:text="@string/lbl_register"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_register"/>
+        <LinearLayout android:id="@+id/linearOrLoginWithDivider"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <View
+                android:background="@color/{&quot;name&quot;:&quot;gray_300&quot;}"
+                android:id="@+id/lineLineOne"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_112pxh"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtOrLoginWith"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{registerVM.registerModel.txtOrLoginWith}"
+                style="@style/txtLatoregular14" tools:text="@string/lbl_or_login_with"/>
+            <View
+                android:background="@color/{&quot;name&quot;:&quot;gray_300&quot;}"
+                android:id="@+id/lineLineTwo"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_111pxh"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearEight"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <FrameLayout android:id="@+id/frameSocialAuth"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_56pxv"
+                android:layout_width="@dimen/_168pxh"
+                android:paddingBottom="@dimen/_14pxv"
+                android:paddingTop="@dimen/_14pxv" style="@style/groupStyle{&quot;name&quot;:&quot;primaryContainer&quot;}cornerRadius">
+                <ImageView android:id="@+id/imageSocialFacebookIc"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_26pxh"
+                    android:layout_width="@dimen/_26pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_social_facebook_ic"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_social_facebook_ic"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/frameSocialAuth1"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_56pxv"
+                android:layout_width="@dimen/_168pxh"
+                android:paddingBottom="@dimen/_14pxv"
+                android:paddingTop="@dimen/_14pxv" style="@style/groupStyle{&quot;name&quot;:&quot;primaryContainer&quot;}cornerRadius">
+                <ImageView android:id="@+id/imageSocialGoogleIc"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_26pxh"
+                    android:layout_width="@dimen/_26pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_social_google_ic"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_social_google_ic"/>
+            </FrameLayout>
+        </LinearLayout>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtConfirmation"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{registerVM.registerModel.txtConfirmation}"
+            style="@style/txtLatoregular14_1" tools:text="@string/msg_already_have_an"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="imageSliderUnsplashVFrcRtEQKLEightModel" type="com.fashionistaecommerceapp.app.modules.orderstatus.data.model.ImageSliderUnsplashVFrcRtEQKLEightModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearNinetyThree"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <ImageView android:gravity="center_horizontal"
+            android:id="@+id/imageUnsplashVFrcRtEQKLEight"
+            android:layout_height="@dimen/_227pxv"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_12pxh}"
+            imageUrl="@{imageSliderUnsplashVFrcRtEQKLEightModel.imageUnsplashVFrcRtEQKLEight}"
+            placeHolder="@{@drawable/image_not_found}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_unsplash_vfrcrteqkl8"/>
+        <LinearLayout android:id="@+id/linearDelivered"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_9pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_9pxv" style="@style/groupStylenameprimarycornerRadius_1">
+            <ImageView android:id="@+id/imageCheckmark"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_30pxh"
+                android:layout_width="@dimen/_30pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_checkmark_lime_900"
+                imageUrl="@{imageSliderUnsplashVFrcRtEQKLEightModel.imageCheckmark}"
+                placeHolder="@{@drawable/img_checkmark_lime_900}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark_lime_900"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearFrame"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDelivered"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{imageSliderUnsplashVFrcRtEQKLEightModel.txtDelivered}"
+                    style="@style/txtPoppinsmedium16" tools:text="@string/lbl_delivered"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDrinksJuneSeven"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{imageSliderUnsplashVFrcRtEQKLEightModel.txtDrinksJuneSeven}"
+                    style="@style/txtPoppinsregular12" tools:text="@string/msg_drinks_june_07"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="successScreenVM" type="com.ecommerce.app.modules.successscreen.data.viewmodel.SuccessScreenVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSuccessScreen"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/_16pxh"
+        android:paddingStart="@dimen/_16pxh" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+        <LinearLayout android:id="@+id/linearSuccess"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/_55pxh" android:paddingStart="@dimen/_55pxh">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_primary_opacity_1_radius_36"
+                android:id="@+id/btnCheckmark"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_72pxh"
+                android:layout_width="@dimen/_72pxh"
+                android:paddingHorizontal="@dimen/_24pxh"
+                android:paddingVertical="@dimen/_24pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_checkmark" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSuccess"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{successScreenVM.successScreenModel.txtSuccess}"
+                style="@style/txtPoppinsbold24_1" tools:text="@string/lbl_success"/>
+            <TextView android:alpha="0.5" android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtThankYouForShopping"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{successScreenVM.successScreenModel.txtThankYouForShopping}"
+                style="@style/txtPoppinsregular12_1" tools:text="@string/msg_thank_you_for_shopping"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_opacity_1_radius_5"
+            android:ellipsize="end" android:fontFamily="@font/poppins"
+            android:gravity="center" android:id="@+id/btnBackToOrder"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.03"
+            android:paddingBottom="@dimen/_18pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_18pxv" android:singleLine="true"
+            android:text="@string/lbl_back_to_order"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_14pxh" android:textStyle="bold" tools:text="@string/lbl_back_to_order"/>
+    </LinearLayout>
+</layout>

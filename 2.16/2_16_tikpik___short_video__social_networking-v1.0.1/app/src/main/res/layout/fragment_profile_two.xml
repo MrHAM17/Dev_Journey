@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="profileTwoVM" type="com.tikpikshortvideosocialnetworking.app.modules.profiletwo.data.viewmodel.ProfileTwoVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearEditProfile"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onErrorContainer&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageUser"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_user_gray_900"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_user_gray_900"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtAllSounds"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{profileTwoVM.profileTwoModel.txtAllSounds}"
+                style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_profile"/>
+            <ImageView android:id="@+id/imageIconlyCurvedSetting"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_iconly_curved_setting_gray_900"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_iconly_curved_setting_gray_900"/>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearProfileTwo"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <FrameLayout android:id="@+id/frameTypeEditAvatar"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_120pxv" android:layout_width="@dimen/_120pxh">
+                    <ImageView android:id="@+id/imageCircleImage"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_120pxh"
+                        android:layout_width="@dimen/_120pxh"
+                        android:scaleType="centerCrop"
+                        circular="@{true}"
+                        imageRes="@{@drawable/img_ellipse_29}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_29"/>
+                    <ImageButton android:id="@+id/btnEdit"
+                        android:layout_gravity="bottom|end"
+                        android:layout_height="@dimen/_30pxh"
+                        android:layout_width="@dimen/_30pxh"
+                        android:paddingHorizontal="@dimen/_2pxh"
+                        android:paddingVertical="@dimen/_2pxv"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_edit" tools:ignore="ContentDescription"/>
+                </FrameLayout>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAndrewAisnley"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{profileTwoVM.profileTwoModel.txtAndrewAisnley}"
+                    style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_andrew_aisnley"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDesignerVideographer"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{profileTwoVM.profileTwoModel.txtDesignerVideographer}"
+                    style="@style/txtUrbanistromanmedium14_3" tools:text="@string/msg_designer_videographer"/>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearAutoLayoutHorizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <LinearLayout
+                        android:id="@+id/linearAutoLayoutVertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/txtTwoHundredFortySeven"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{profileTwoVM.profileTwoModel.txtTwoHundredFortySeven}"
+                            style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_247"/>
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/txtPosts"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@{profileTwoVM.profileTwoModel.txtPosts}"
+                            style="@style/txtUrbanistromanmedium14_4" tools:text="@string/lbl_posts"/>
+                    </LinearLayout>
+                    <FrameLayout android:id="@+id/frameSpacer"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <LinearLayout
+                        android:id="@+id/linearAutoLayoutVertical1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/txtK"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{profileTwoVM.profileTwoModel.txtK}"
+                            style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_368k"/>
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/txtFollowers"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@{profileTwoVM.profileTwoModel.txtFollowers}"
+                            style="@style/txtUrbanistromanmedium14_4" tools:text="@string/lbl_followers"/>
+                    </LinearLayout>
+                    <FrameLayout android:id="@+id/frameSpacer1"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <LinearLayout
+                        android:id="@+id/linearAutoLayoutVertical2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/txtThreeHundredSeventyFour"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{profileTwoVM.profileTwoModel.txtThreeHundredSeventyFour}"
+                            style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_374"/>
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/txtFollowing"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@{profileTwoVM.profileTwoModel.txtFollowing}"
+                            style="@style/txtUrbanistromanmedium14_4" tools:text="@string/lbl_following"/>
+                    </LinearLayout>
+                    <FrameLayout android:id="@+id/frameSpacer2"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <LinearLayout
+                        android:id="@+id/linearAutoLayoutVertical3"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/txtDistance"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{profileTwoVM.profileTwoModel.txtDistance}"
+                            style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_3_7m"/>
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/txtLikes"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@{profileTwoVM.profileTwoModel.txtLikes}"
+                            style="@style/txtUrbanistromanmedium14_4" tools:text="@string/lbl_likes"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:background="@drawable/rectangle_border_name_primary_radius_16"
+                    android:drawablePadding="@dimen/_9pxh"
+                    android:drawableStart="@drawable/img_user_primary"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/urbanist"
+                    android:gravity="center"
+                    android:id="@+id/btnEditProfile"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:paddingBottom="@dimen/_11pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_11pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_edit_profile"
+                    android:textAllCaps="false"
+                    android:textColor="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                    android:textFontWeight="700"
+                    android:textSize="@dimen/_18pxh"
+                    android:textStyle="bold" tools:text="@string/lbl_edit_profile"/>
+                <LinearLayout
+                    android:id="@+id/linearAutoLayoutHorizontal1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <LinearLayout
+                        android:id="@+id/linearStateActiveStyleIcon"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <ImageView android:id="@+id/imageGrid"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="@dimen/_24pxh"
+                            android:layout_width="@dimen/_24pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_grid"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_grid"/>
+                        <View
+                            android:background="@drawable/rectangle_bg_name_primary_radius_2"
+                            android:id="@+id/lineLine"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="@dimen/_4pxv" android:layout_width="@dimen/_95pxh"/>
+                    </LinearLayout>
+                    <FrameLayout android:id="@+id/frameSpacer3"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <ImageView android:id="@+id/imageLocation"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_location"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_location"/>
+                    <FrameLayout android:id="@+id/frameSpacer4"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <ImageView android:id="@+id/imageBookmark"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_bookmark_gray_500"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_bookmark_gray_500"/>
+                    <FrameLayout android:id="@+id/frameSpacer5"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <ImageView android:id="@+id/imageFavorite"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_favorite_gray_500"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_favorite_gray_500"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:gravity="center_horizontal"
+                    android:id="@+id/recyclerAutoLayoutVertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2" itemSpace="@{@dimen/_8pxh}"
+                    tools:itemCount="5" tools:listitem="@layout/row_autolayoutvertical"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

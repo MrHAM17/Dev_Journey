@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="searchTypeKeywordVM" type="com.tunecastmusicstreamingpodcastapp.app.modules.searchtypekeyword.data.viewmodel.SearchTypeKeywordVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSearchTypeKeyword"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_24pxh"
+        android:paddingVertical="@dimen/_24pxv" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.SearchView
+            android:background="@drawable/rectangle_bg_name_gray_50_01_border_name_onprimarycontainer_radius_16"
+            android:gravity="center_horizontal"
+            android:id="@+id/searchViewSearch"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:theme="@style/searchViewsearch"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@android:color/transparent"
+            app:queryHint="@string/lbl_abcdefghijklm" app:searchIcon="@drawable/img_contrast"/>
+        <LinearLayout android:id="@+id/linearAutoLayoutHorizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtRecentSearches"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{searchTypeKeywordVM.searchTypeKeywordModel.txtRecentSearches}"
+                style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_recent_searches"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtClearAll"
+                android:layout_gravity="top"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{searchTypeKeywordVM.searchTypeKeywordModel.txtClearAll}"
+                style="@style/txtUrbanistromanbold16" tools:text="@string/lbl_clear_all"/>
+        </LinearLayout>
+        <View
+            android:background="@color/{&quot;name&quot;:&quot;blue_gray_100&quot;}"
+            android:id="@+id/lineLine"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_380pxh"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:gravity="center_horizontal"
+            android:id="@+id/recyclerSearchTypeKeyword"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            itemSpace="@{@dimen/_25pxh}" tools:itemCount="8" tools:listitem="@layout/row_searchtypekeyword"/>
+    </LinearLayout>
+</layout>

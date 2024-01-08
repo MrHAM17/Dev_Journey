@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="onboardingThreeVM" type="com.comforthotelbookingapp.app.modules.onboardingthree.data.viewmodel.OnboardingThreeVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearOnboardingThree"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}">
+        <ImageView android:gravity="center_horizontal"
+            android:id="@+id/imageImage"
+            android:layout_height="@dimen/_420pxv"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_rectangle_1_2}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle_1_2"/>
+        <LinearLayout android:id="@+id/linearInfo"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/_43pxh" android:paddingStart="@dimen/_43pxh">
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtLetSDiscoverThe"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{onboardingThreeVM.onboardingThreeModel.txtLetSDiscoverThe}"
+                style="@style/txtUrbanistromanbold32" tools:text="@string/msg_let_s_discover_the"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtDescription"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{onboardingThreeVM.onboardingThreeModel.txtDescription}"
+                style="@style/txtUrbanistregular18" tools:text="@string/msg_lorem_ipsum_dolor"/>
+        </LinearLayout>
+
+        <com.asksira.loopingviewpager.indicator.CustomShapePagerIndicator
+            android:id="@+id/indicatorTelevision"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:drawable_normal="@drawable/indicator_unselected_bg_name_gray_700_radius_8"
+            app:drawable_selected="@drawable/indicator_selected_bg_name_primary_radius_8"
+            app:indicator_size="@dimen/_8pxh" app:indicator_spacing="@dimen/_6pxh"/>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearTwentyOne"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_blue_gray_900_radius_27"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:gravity="center" android:id="@+id/btnSkip"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_54pxv"
+                android:layout_width="@dimen/_180pxh"
+                android:paddingBottom="@dimen/_15pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_15pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_skip"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_skip"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_27"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:gravity="center" android:id="@+id/btnNext"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_54pxv"
+                android:layout_width="@dimen/_180pxh"
+                android:paddingBottom="@dimen/_15pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_15pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_next"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_next"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="searchPageVM" type="com.comforthotelbookingapp.app.modules.searchpage.data.viewmodel.SearchPageVM"/>
+    </data>
+    <androidx.core.widget.NestedScrollView android:clipToPadding="false"
+        android:fillViewport="true"
+        android:id="@+id/scrollViewScrollView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}">
+        <LinearLayout android:id="@+id/linearRecommended"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:id="@+id/linearRecommended1"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearSeventyTwo"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:id="@+id/txtRecommended"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{searchPageVM.searchPageModel.txtRecommended}"
+                        style="@style/txtUrbanistromanbold18" tools:text="@string/msg_recommended_586_379"/>
+                    <FrameLayout android:id="@+id/frameSpacer"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <ImageButton android:id="@+id/btnUser"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_28pxh"
+                        android:layout_width="@dimen/_28pxh"
+                        android:paddingHorizontal="@dimen/_2pxh"
+                        android:paddingVertical="@dimen/_2pxv"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_user_primary_28x28" tools:ignore="ContentDescription"/>
+                    <ImageView android:id="@+id/imageGrid"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_28pxh"
+                        android:layout_width="@dimen/_28pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_grid"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_grid"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:gravity="center_horizontal"
+                    android:id="@+id/recyclerSearchPage"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_24pxh}" tools:itemCount="5" tools:listitem="@layout/row_searchpage"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

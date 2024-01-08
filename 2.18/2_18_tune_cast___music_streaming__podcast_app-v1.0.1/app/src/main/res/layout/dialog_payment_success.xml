@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="paymentSuccessVM" type="com.tunecastmusicstreamingpodcastapp.app.modules.paymentsuccess.data.viewmodel.PaymentSuccessVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearPaymentSuccess"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/linearThemeLightModal"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_32pxh"
+            android:paddingVertical="@dimen/_32pxv" style="@style/groupStylenamewhite_7">
+            <LinearLayout android:id="@+id/linearUser"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/_11pxh" android:paddingStart="@dimen/_11pxh">
+                <FrameLayout android:id="@+id/frameUser"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_180pxv" android:layout_width="@dimen/_185pxh">
+                    <FrameLayout android:id="@+id/frameUser1"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_141pxv"
+                        android:layout_width="@dimen/_141pxh"
+                        android:paddingBottom="@dimen/_48pxv"
+                        android:paddingEnd="@dimen/_45pxh"
+                        android:paddingStart="@dimen/_45pxh"
+                        android:paddingTop="@dimen/_48pxv" style="@style/groupStyle{&quot;name&quot;:&quot;green_500&quot;}cornerRadius">
+                        <ImageView android:id="@+id/imageUser"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_43pxh"
+                            android:layout_width="@dimen/_49pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_user_white_a700"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_user_white_a700"/>
+                    </FrameLayout>
+                    <ImageView android:id="@+id/imageVector"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_180pxh"
+                        android:layout_width="@dimen/_185pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_vector_green_300"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_vector_green_300"/>
+                </FrameLayout>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtCongratulations"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{paymentSuccessVM.paymentSuccessModel.txtCongratulations}"
+                    style="@style/txtUrbanistromanbold24_3" tools:text="@string/msg_congratulations"/>
+                <TextView android:gravity="center_horizontal"
+                    android:id="@+id/txtDuration"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:text="@{paymentSuccessVM.paymentSuccessModel.txtDuration}"
+                    style="@style/txtUrbanistregular16_1" tools:text="@string/msg_you_have_successfully"/>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_29"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:gravity="center" android:id="@+id/btnOK"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_58pxv"
+                android:layout_width="@dimen/_276pxh"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_19pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_19pxv"
+                android:singleLine="true" android:text="@string/lbl_ok"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_ok"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

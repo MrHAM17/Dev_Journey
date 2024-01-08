@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="settingPreferenceVM" type="com.firstbankdigitalbanking.app.modules.settingpreference.data.viewmodel.SettingPreferenceVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearClassic"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100_01&quot;}">
+        <LinearLayout android:id="@+id/linearClassic1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearInputField7"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCardType"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{settingPreferenceVM.settingPreferenceModel.txtCardType}"
+                    style="@style/txtInterregular12" tools:text="@string/lbl_currency"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_name_onprimary_opacity_1_border_name_teal_50_radius_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/inter"
+                    android:hint="@string/lbl_usd"
+                    android:id="@+id/etClassic" android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_12pxv"
+                    android:paddingEnd="@dimen/_15pxh"
+                    android:paddingStart="@dimen/_15pxh"
+                    android:paddingTop="@dimen/_12pxv"
+                    android:singleLine="true"
+                    android:text="@={settingPreferenceVM.settingPreferenceModel.etClassicValue}"
+                    android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_900&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_900&quot;}"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_12pxh"
+                    android:textStyle="normal" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearInputField8"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCardType1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{settingPreferenceVM.settingPreferenceModel.txtCardType1}"
+                    style="@style/txtInterregular12" tools:text="@string/lbl_time_zone"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_name_onprimary_opacity_1_border_name_teal_50_radius_10"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/inter"
+                    android:hint="@string/msg_gmt_12_00_international"
+                    android:id="@+id/etTime" android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_12pxv"
+                    android:paddingEnd="@dimen/_15pxh"
+                    android:paddingStart="@dimen/_15pxh"
+                    android:paddingTop="@dimen/_12pxv"
+                    android:singleLine="true"
+                    android:text="@={settingPreferenceVM.settingPreferenceModel.etTimeValue}"
+                    android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_900&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_900&quot;}"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_12pxh"
+                    android:textStyle="normal" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearNotification"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtNotification"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{settingPreferenceVM.settingPreferenceModel.txtNotification}"
+                    style="@style/txtIntermedium14_2" tools:text="@string/lbl_notification"/>
+                <LinearLayout android:id="@+id/linearISendOrReceive"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchMaterialSwitch"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="bottom"
+                        android:id="@+id/txtISendOrReceive"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{settingPreferenceVM.settingPreferenceModel.txtISendOrReceive}"
+                        style="@style/txtInterregular12" tools:text="@string/msg_i_send_or_receive"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearIReceiveMerchant"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchMaterialSwitch1"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtIReceiveMerchant"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{settingPreferenceVM.settingPreferenceModel.txtIReceiveMerchant}"
+                        style="@style/txtInterregular12" tools:text="@string/msg_i_receive_merchant"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearTherearerecommendationformyacc"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchMaterialSwitch2"
+                        android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                    <TextView
+                        android:id="@+id/txtTherearerecommendationformyacc"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:text="@{settingPreferenceVM.settingPreferenceModel.txtTherearerecommendationformyacc}"
+                        style="@style/txtInterregular12" tools:text="@string/msg_there_are_recommendation"/>
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_20"
+                android:ellipsize="end" android:fontFamily="@font/inter"
+                android:gravity="center" android:id="@+id/btnSave"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_10pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_10pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_save"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;onPrimary&quot;,&quot;opacity&quot;:1}"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_save"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

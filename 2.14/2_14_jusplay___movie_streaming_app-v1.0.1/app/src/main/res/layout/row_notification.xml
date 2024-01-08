@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="notificationRowModel" type="com.jusplaymoviestreamingapp.app.modules.notification.data.model.NotificationRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearFrame1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_10pxv"
+        android:paddingEnd="@dimen/_16pxh"
+        android:paddingStart="@dimen/_16pxh"
+        android:paddingTop="@dimen/_10pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_900&quot;}cornerRadius">
+        <ImageView android:id="@+id/imageImage"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_30pxh"
+            android:layout_width="@dimen/_30pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_search_blue_gray_800"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_search_blue_gray_800"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearFrame2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDuration1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{notificationRowModel.txtDuration1}"
+                style="@style/txtPoppinsregular12" tools:text="@string/msg_let_s_get_100_cashback"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDuration2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{notificationRowModel.txtDuration2}"
+                style="@style/txtPoppinslight10" tools:text="@string/lbl_10_minutes_ago"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

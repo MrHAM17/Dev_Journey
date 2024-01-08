@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="discountitemsRowModel" type="com.fashionistaecommerceapp.app.modules.discountitems.data.model.DiscountitemsRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearFrame1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_8pxh"
+        android:paddingVertical="@dimen/_8pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}cornerRadius">
+        <ImageView android:id="@+id/imagePremiumWatch1"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_58pxh"
+            android:layout_width="@dimen/_58pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_10pxh}"
+            imageRes="@{@drawable/img_unsplash_jj0tls2rod4}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_unsplash_jj0tls2rod4"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearFrame2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPremiumWatch"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{discountitemsRowModel.txtPremiumWatch}"
+                style="@style/txtPoppinsregular16" tools:text="@string/lbl_premium_watch"/>
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/ratingBarRatingBar"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:numStars="5"
+                android:progressBackgroundTint="@color/{&quot;name&quot;:&quot;amber_400&quot;}"
+                android:progressTint="@color/{&quot;name&quot;:&quot;amber_400&quot;}"
+                android:rating="5" style="@style/Widget.AppCompat.RatingBar.Small"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <ImageView android:id="@+id/imagePremiumWatch2"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_16pxh"
+            android:layout_width="@dimen/_16pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_arrow_right"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_right"/>
+    </LinearLayout>
+</layout>

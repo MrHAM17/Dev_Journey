@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="dataRowModel" type="com.housitbuyrentsellproperty.app.modules.toplocations.data.model.DataRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearEstatesCardLocation"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_8pxh"
+        android:paddingVertical="@dimen/_8pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}cornerRadius">
+        <FrameLayout android:id="@+id/frameOne"
+            android:layout_height="@dimen/_174pxv" android:layout_width="@dimen/_144pxh">
+            <ImageView android:id="@+id/imageBali"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_174pxh"
+                android:layout_width="@dimen/_144pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_15pxh}"
+                imageRes="@{@drawable/img_shape_174x144}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_shape_174x144"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_orange_300_radius_8"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway"
+                android:gravity="center" android:id="@+id/btnOne"
+                android:layout_gravity="top|start"
+                android:layout_height="@dimen/_25pxh"
+                android:layout_width="@dimen/_22pxh"
+                android:paddingBottom="@dimen/_5pxv"
+                android:paddingEnd="@dimen/_8pxh"
+                android:paddingStart="@dimen/_8pxh"
+                android:paddingTop="@dimen/_5pxv"
+                android:singleLine="true" android:text="@string/lbl_1"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_12pxh"
+                android:textStyle="bold" tools:text="@string/lbl_1"/>
+        </FrameLayout>
+        <TextView android:ellipsize="end" android:id="@+id/txtBali"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{dataRowModel.txtBali}"
+            style="@style/txtRalewaysemibold14_1" tools:text="@string/lbl_bali"/>
+    </LinearLayout>
+</layout>

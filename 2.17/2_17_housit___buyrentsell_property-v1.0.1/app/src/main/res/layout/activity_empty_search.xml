@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="emptySearchVM" type="com.housitbuyrentsellproperty.app.modules.emptysearch.data.viewmodel.EmptySearchVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearEmptySearch"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                android:id="@+id/btnArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_left" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPageTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{emptySearchVM.emptySearchModel.txtPageTitle}"
+                style="@style/txtRalewaybold14" tools:text="@string/lbl_search_results"/>
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_white_a700_opacity_0_8_radius_25"
+                android:id="@+id/btnIconSetting"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_icon_setting" tools:ignore="ContentDescription"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearSearch"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_17pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_17pxv">
+            <androidx.appcompat.widget.SearchView
+                android:background="@drawable/rectangle_bg_name_gray_100_radius_12"
+                android:gravity="center_horizontal"
+                android:id="@+id/searchViewSearch"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:theme="@style/searchViewsearch"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="@string/lbl_minix" app:searchIcon="@drawable/img_rewind"/>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearItemHeader"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFound"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{emptySearchVM.emptySearchModel.txtFound}"
+                    style="@style/txtRalewaymedium18" tools:text="@string/lbl_found"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtText"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{emptySearchVM.emptySearchModel.txtText}"
+                    style="@style/txtRalewaybold18_1" tools:text="@string/lbl_0"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtEstates"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{emptySearchVM.emptySearchModel.txtEstates}"
+                    style="@style/txtRalewaymedium18" tools:text="@string/lbl_estates"/>
+                <FrameLayout android:id="@+id/frameSpacer"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <LinearLayout android:id="@+id/linearButtonShow"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/_8pxv"
+                    android:paddingTop="@dimen/_8pxv" style="@style/groupStylenamegray_1">
+                    <FrameLayout android:id="@+id/frameButtonShow"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_24pxv"
+                        android:layout_width="@dimen/_36pxh"
+                        android:paddingBottom="@dimen/_6pxv"
+                        android:paddingEnd="@dimen/_12pxh"
+                        android:paddingStart="@dimen/_12pxh"
+                        android:paddingTop="@dimen/_6pxv" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}cornerRadius">
+                        <ImageView android:id="@+id/imageGrid"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_12pxh"
+                            android:layout_width="@dimen/_12pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_grid_onprimarycontainer"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_grid_onprimarycontainer"/>
+                    </FrameLayout>
+                    <FrameLayout android:id="@+id/frameButtonShow1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_24pxv"
+                        android:layout_width="@dimen/_36pxh"
+                        android:paddingBottom="@dimen/_6pxv"
+                        android:paddingEnd="@dimen/_12pxh"
+                        android:paddingStart="@dimen/_12pxh"
+                        android:paddingTop="@dimen/_6pxv" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}cornerRadius">
+                        <ImageView android:id="@+id/imageIconHorizontal"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_12pxh"
+                            android:layout_width="@dimen/_12pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_icon_horizontal_blue_gray_800_01_12x12"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_icon_horizontal_blue_gray_800_01_12x12"/>
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <FrameLayout android:id="@+id/frameSpacer1"
+                android:layout_height="wrap_content" android:layout_width="match_parent"/>
+            <LinearLayout android:id="@+id/linearItemAlertDanger"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_16pxh"
+                android:paddingVertical="@dimen/_16pxv" style="@style/groupStyle{&quot;name&quot;:&quot;red_A200&quot;}cornerRadius">
+                <LinearLayout android:id="@+id/linearSix"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_20pxh"
+                    android:paddingVertical="@dimen/_20pxv" style="@style/groupStylecornerRadius_3">
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearFive"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/_19pxv"
+                        android:paddingEnd="@dimen/_31pxh"
+                        android:paddingStart="@dimen/_31pxh"
+                        android:paddingTop="@dimen/_19pxv" style="@style/groupStylecornerRadius_5">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtText1"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.04"
+                            android:singleLine="true"
+                            android:text="@{emptySearchVM.emptySearchModel.txtText1}"
+                            style="@style/txtMontserratsemibold25" tools:text="@string/lbl2"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtTitleToStayIn"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{emptySearchVM.emptySearchModel.txtTitleToStayIn}"
+                style="@style/txtRalewaysemibold24" tools:text="@string/msg_search_not_found"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtDescription"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{emptySearchVM.emptySearchModel.txtDescription}"
+                style="@style/txtRalewayregular14" tools:text="@string/msg_sorry_we_can_t"/>
+            <FrameLayout android:id="@+id/frameSpacer2"
+                android:layout_height="wrap_content" android:layout_width="match_parent"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><font-family xmlns:app="http://schemas.android.com/apk/res-auto">
+    <font app:font="@font/ManropeExtraBold" app:fontWeight="800"/>
+    <font app:font="@font/ManropeMedium" app:fontWeight="500"/>
+    <font app:font="@font/ManropeBold" app:fontWeight="700"/>
+    <font app:font="@font/Manrope" app:fontWeight="400"/>
+    <font app:font="@font/ManropeSemiBold" app:fontWeight="600"/>
+    <font app:font="@font/ManropeRegular" app:fontWeight="400"/>
+</font-family>

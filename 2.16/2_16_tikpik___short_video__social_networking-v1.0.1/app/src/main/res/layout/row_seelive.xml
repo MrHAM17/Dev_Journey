@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="seeliveRowModel" type="com.tikpikshortvideosocialnetworking.app.modules.seelive.data.model.SeeliveRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearAutoLayoutHorizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <ImageView android:id="@+id/imageDarylNehls"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_40pxh"
+            android:layout_width="@dimen/_40pxh"
+            android:scaleType="fitXY" android:src="@drawable/img_play"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_play"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearAutoLayoutVertical"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDarylNehls"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{seeliveRowModel.txtDarylNehls}"
+                style="@style/txtUrbanistromanbold14" tools:text="@string/lbl_daryl_nehls"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtWoohoooo"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{seeliveRowModel.txtWoohoooo}"
+                style="@style/txtUrbanistromanmedium12_3" tools:text="@string/lbl_woohoooo"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

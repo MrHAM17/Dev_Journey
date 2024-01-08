@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="newPostVM" type="com.shopsieecommerceapp.app.modules.newpost.data.viewmodel.NewPostVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSpacer"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="match_parent"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearTwentyFour"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_22pxv"
+            android:paddingEnd="@dimen/_28pxh"
+            android:paddingStart="@dimen/_28pxh"
+            android:paddingTop="@dimen/_22pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}cornerRadius">
+            <ImageView android:id="@+id/imageIndicatorOnLight"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_5pxh"
+                android:layout_width="@dimen/_38pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_indicator_on_light"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_indicator_on_light"/>
+            <LinearLayout android:id="@+id/linearAddPhoto"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_onprimary_radius_12"
+                    android:id="@+id/btnCamera"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_38pxh"
+                    android:layout_width="@dimen/_38pxh"
+                    android:paddingHorizontal="@dimen/_10pxh"
+                    android:paddingVertical="@dimen/_10pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_camera_white_a700_38x38" tools:ignore="ContentDescription"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:id="@+id/txtAddPhoto"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_3pxh"
+                    android:singleLine="true"
+                    android:text="@{newPostVM.newPostModel.txtAddPhoto}"
+                    style="@style/txtInterbold14_2" tools:text="@string/lbl_add_photo"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearAddVideo"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_onprimary_radius_12"
+                    android:id="@+id/btnUpload"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_38pxh"
+                    android:layout_width="@dimen/_38pxh"
+                    android:paddingHorizontal="@dimen/_10pxh"
+                    android:paddingVertical="@dimen/_10pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_upload" tools:ignore="ContentDescription"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:id="@+id/txtAddVideo"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_3pxh"
+                    android:singleLine="true"
+                    android:text="@{newPostVM.newPostModel.txtAddVideo}"
+                    style="@style/txtInterbold14_2" tools:text="@string/lbl_add_video"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearTagAFriend"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_onprimary_radius_12"
+                    android:id="@+id/btnSettings"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_38pxh"
+                    android:layout_width="@dimen/_38pxh"
+                    android:paddingHorizontal="@dimen/_10pxh"
+                    android:paddingVertical="@dimen/_10pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_settings_white_a700_38x38" tools:ignore="ContentDescription"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="bottom"
+                    android:id="@+id/txtTagAFriend"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_3pxh"
+                    android:singleLine="true"
+                    android:text="@{newPostVM.newPostModel.txtTagAFriend}"
+                    style="@style/txtInterbold14_2" tools:text="@string/lbl_tag_a_friend"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearWriteAnArticle"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageButton
+                    android:background="@drawable/rectangle_bg_name_onprimary_radius_12"
+                    android:id="@+id/btnMegaphone"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_38pxh"
+                    android:layout_width="@dimen/_38pxh"
+                    android:paddingHorizontal="@dimen/_10pxh"
+                    android:paddingVertical="@dimen/_10pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_megaphone" tools:ignore="ContentDescription"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:id="@+id/txtWriteAnArticle"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_3pxh"
+                    android:singleLine="true"
+                    android:text="@{newPostVM.newPostModel.txtWriteAnArticle}"
+                    style="@style/txtInterbold14_2" tools:text="@string/msg_write_an_article"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearMoreOptions"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageButton
+                    android:background="@drawable/rectangle_border_name_gray_500_01_radius_12"
+                    android:id="@+id/btnNotification"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_38pxh"
+                    android:layout_width="@dimen/_38pxh"
+                    android:paddingHorizontal="@dimen/_10pxh"
+                    android:paddingVertical="@dimen/_10pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_notification" tools:ignore="ContentDescription"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="bottom"
+                    android:id="@+id/txtMoreOptions"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_3pxh"
+                    android:singleLine="true"
+                    android:text="@{newPostVM.newPostModel.txtMoreOptions}"
+                    style="@style/txtInterbold14_2" tools:text="@string/lbl_more_options"/>
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout android:gravity="center_horizontal"
+            android:id="@+id/frameBottomBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" style="@style/groupStyle{&quot;name&quot;:&quot;primary&quot;}cornerRadius">
+            <ImageView android:id="@+id/imageHome"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_38pxh"
+                android:layout_width="@dimen/_38pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_home"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_home"/>
+            <ImageView android:id="@+id/imageCalendar"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_38pxh"
+                android:layout_width="@dimen/_38pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_calendar"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_calendar"/>
+            <ImageView android:id="@+id/imageFloatingIcon"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_38pxh"
+                android:layout_width="@dimen/_38pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_floating_icon"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_floating_icon"/>
+            <ImageView android:id="@+id/imageMessage"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_38pxh"
+                android:layout_width="@dimen/_38pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_message"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_message"/>
+            <ImageView android:id="@+id/imageProfile"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_38pxh"
+                android:layout_width="@dimen/_38pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_profile"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_profile"/>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

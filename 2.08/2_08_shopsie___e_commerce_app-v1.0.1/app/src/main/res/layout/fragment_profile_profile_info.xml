@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="profileProfileInfoVM" type="com.shopsieecommerceapp.app.modules.profileprofileinfo.data.viewmodel.ProfileProfileInfoVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearFortyFive"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;primaryContainer&quot;}">
+        <LinearLayout android:id="@+id/linearThirtyOne"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearFirstName"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFirstName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{profileProfileInfoVM.profileProfileInfoModel.txtFirstName}"
+                    style="@style/txtLatomedium14_1" tools:text="@string/lbl_first_name"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_name_gray_50_radius_6"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/lato"
+                    android:hint="@string/lbl_archie"
+                    android:id="@+id/etFirstName"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_15pxv"
+                    android:paddingEnd="@dimen/_16pxh"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_15pxv"
+                    android:singleLine="true"
+                    android:text="@={profileProfileInfoVM.profileProfileInfoModel.etFirstNameValue}"
+                    android:textColor="@color/{&quot;name&quot;:&quot;onPrimary&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;onPrimary&quot;}"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="normal" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearLastName"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLastName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{profileProfileInfoVM.profileProfileInfoModel.txtLastName}"
+                    style="@style/txtLatomedium14_1" tools:text="@string/lbl_last_name"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_name_gray_50_radius_6"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/lato"
+                    android:hint="@string/lbl_copeland"
+                    android:id="@+id/etLastName"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_15pxv"
+                    android:paddingEnd="@dimen/_16pxh"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_15pxv"
+                    android:singleLine="true"
+                    android:text="@={profileProfileInfoVM.profileProfileInfoModel.etLastNameValue}"
+                    android:textColor="@color/{&quot;name&quot;:&quot;onPrimary&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;onPrimary&quot;}"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="normal" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearEmailAddress"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtEmailAddress"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{profileProfileInfoVM.profileProfileInfoModel.txtEmailAddress}"
+                    style="@style/txtLatomedium14_1" tools:text="@string/lbl_email_address"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_name_gray_50_radius_6"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/lato"
+                    android:hint="@string/msg_archiecopeland_gmail_com"
+                    android:id="@+id/etEmail" android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_15pxv"
+                    android:paddingEnd="@dimen/_16pxh"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_15pxv"
+                    android:singleLine="true"
+                    android:text="@={profileProfileInfoVM.profileProfileInfoModel.etEmailValue}"
+                    android:textColor="@color/{&quot;name&quot;:&quot;onPrimary&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;onPrimary&quot;}"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="normal" tools:ignore="Autofill"/>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_8"
+                android:ellipsize="end" android:fontFamily="@font/lato"
+                android:gravity="center" android:id="@+id/btnSaveEdit"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_14pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_14pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_save_edit"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_save_edit"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

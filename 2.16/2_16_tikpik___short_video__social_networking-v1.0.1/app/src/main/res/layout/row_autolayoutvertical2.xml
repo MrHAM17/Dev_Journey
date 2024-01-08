@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="autolayoutvertical2RowModel" type="com.tikpikshortvideosocialnetworking.app.modules.searchtypekeyword.data.model.Autolayoutvertical2RowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearAutoLayoutHorizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtTheresaWebb"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.01" android:singleLine="true"
+            android:text="@{autolayoutvertical2RowModel.txtTheresaWebb}"
+            style="@style/txtUrbanistromanmedium18_2" tools:text="@string/lbl_theresa_webb"/>
+        <ImageView android:id="@+id/imageTheresaWebb"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_28pxh"
+            android:layout_width="@dimen/_28pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_categories_x_close"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_categories_x_close"/>
+    </LinearLayout>
+</layout>

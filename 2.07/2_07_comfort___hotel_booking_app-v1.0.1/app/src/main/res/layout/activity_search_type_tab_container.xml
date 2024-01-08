@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="searchTypeTabContainerVM" type="com.comforthotelbookingapp.app.modules.searchtypetabcontainer.data.viewmodel.SearchTypeTabContainerVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSearch"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}">
+        <androidx.appcompat.widget.SearchView
+            android:background="@drawable/rectangle_bg_name_onerrorcontainer_border_name_primary_radius_12"
+            android:gravity="center_horizontal"
+            android:id="@+id/searchViewSearch"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:theme="@style/searchViewsearch"
+            app:iconifiedByDefault="false"
+            app:queryBackground="@android:color/transparent"
+            app:queryHint="@string/lbl_hotel" app:searchIcon="@drawable/img_contrast"/>
+        <com.google.android.material.tabs.TabLayout
+            android:gravity="center_horizontal"
+            android:id="@+id/tabLayoutTabview"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:tabBackground="@drawable/selector_bg_name_primary_radius_19"
+            app:tabIndicatorColor="@android:color/transparent"
+            app:tabIndicatorHeight="0dp" app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}" app:tabTextColor="@color/{&quot;name&quot;:&quot;primary&quot;}"/>
+        <androidx.viewpager2.widget.ViewPager2
+            android:gravity="center_horizontal"
+            android:id="@+id/viewPagerTabBarView"
+            android:layout_height="match_parent"
+            android:layout_weight="1" android:layout_width="match_parent"/>
+    </LinearLayout>
+</layout>

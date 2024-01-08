@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="favoriteproductRowModel" type="com.ecommerce.app.modules.favoriteproduct.data.model.FavoriteproductRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearProductItem"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_15pxh"
+        android:paddingVertical="@dimen/_15pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}cornerRadius">
+        <ImageView android:id="@+id/imageImage1"
+            android:layout_height="@dimen/_133pxh"
+            android:layout_width="@dimen/_133pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_5pxh}"
+            imageRes="@{@drawable/img_product_image_2}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_product_image_2"/>
+        <TextView android:id="@+id/txtNikeAirMaxReact"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.03"
+            android:text="@{favoriteproductRowModel.txtNikeAirMaxReact}"
+            style="@style/txtPoppinsbold12" tools:text="@string/msg_nike_air_max_270"/>
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/ratingBarRatingBar"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:numStars="5"
+            android:progressBackgroundTint="@color/{&quot;name&quot;:&quot;blue_50&quot;}"
+            android:progressTint="@color/{&quot;name&quot;:&quot;yellow_700&quot;}"
+            android:rating="4" style="@style/Widget.AppCompat.RatingBar.Small"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtPrice1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.03" android:singleLine="true"
+            android:text="@{favoriteproductRowModel.txtPrice1}"
+            style="@style/txtPoppinsbold12_1" tools:text="@string/lbl_299_43"/>
+        <LinearLayout android:id="@+id/linearPrice"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPrice2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{favoriteproductRowModel.txtPrice2}"
+                style="@style/txtPoppinsregular10" tools:text="@string/lbl_534_33"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtOffer"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{favoriteproductRowModel.txtOffer}"
+                style="@style/txtPoppinsbold10" tools:text="@string/lbl_24_off"/>
+            <ImageView android:id="@+id/imageImage2"
+                android:layout_height="@dimen/_24pxh"
+                android:layout_width="@dimen/_24pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_trash_icon"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_trash_icon"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

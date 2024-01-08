@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest package="com.moviestreaming.app" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <application android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:largeHeap="true"
+        android:name="com.moviestreaming.app.appcomponents.di.MyApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
+        <activity android:exported="true"
+            android:name="com.moviestreaming.app.modules.searchsix.ui.SearchSixActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.moviestreaming.app.modules.searchnine.ui.SearchNineActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.moviestreaming.app.modules.splashscreen.ui.SplashScreenActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.moviestreaming.app.modules.searchseven.ui.SearchSevenActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.moviestreaming.app.modules.dashboardcontainer.ui.DashboardContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.moviestreaming.app.modules.exploreten.ui.ExploreTenActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.moviestreaming.app.modules.seemorefive.ui.SeeMoreFiveActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.moviestreaming.app.modules.exploresix.ui.ExploreSixActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.moviestreaming.app.modules.channelfour.ui.ChannelFourActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.moviestreaming.app.modules.searcheight.ui.SearchEightActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.moviestreaming.app.modules.searchten.ui.SearchTenActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.moviestreaming.app.modules.detailpageten.ui.DetailPageTenActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.moviestreaming.app.modules.detailpageeight.ui.DetailPageEightActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.moviestreaming.app.modules.exploreseven.ui.ExploreSevenActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.moviestreaming.app.modules.channelfive.ui.ChannelFiveActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.moviestreaming.app.modules.explorenine.ui.ExploreNineActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.moviestreaming.app.modules.seemoreseven.ui.SeeMoreSevenActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.moviestreaming.app.modules.detailpagenine.ui.DetailPageNineActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.moviestreaming.app.modules.login.ui.LoginActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.moviestreaming.app.modules.detailpageseven.ui.DetailPageSevenActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.moviestreaming.app.modules.seemoresix.ui.SeeMoreSixActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.moviestreaming.app.modules.detailpageeleven.ui.DetailPageElevenActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.moviestreaming.app.modules.detailpagetwelve.ui.DetailPageTwelveActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

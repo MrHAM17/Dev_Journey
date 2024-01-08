@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="notFoundVM" type="com.jusplaymoviestreamingapp.app.modules.notfound.data.viewmodel.NotFoundVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSearch"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;black_900&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <androidx.appcompat.widget.SearchView
+                android:background="@drawable/rectangle_bg_name_blue_gray_800_radius_24"
+                android:id="@+id/searchViewSearch"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:theme="@style/searchViewsearch"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="@string/msg_search_by_title" app:searchIcon="@drawable/img_rewind"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearOpsss"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <ImageView android:id="@+id/imageImage"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_184pxh"
+                android:layout_width="@dimen/_184pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_mask_group"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_mask_group"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtOpsss"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{notFoundVM.notFoundModel.txtOpsss}"
+                style="@style/txtPoppinsbold16" tools:text="@string/lbl_opsss"/>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtWhatYouAreLooking"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{notFoundVM.notFoundModel.txtWhatYouAreLooking}"
+                style="@style/txtPoppinsregular12_1" tools:text="@string/msg_what_you_are_looking"/>
+        </LinearLayout>
+        <FrameLayout android:gravity="center_horizontal"
+            android:id="@+id/frameBottomBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" style="@style/groupStyle{&quot;name&quot;:&quot;gray_900&quot;}">
+            <LinearLayout android:id="@+id/linearHome"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <ImageView android:id="@+id/imageHome"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_nav_home_primarycontainer"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_nav_home_primarycontainer"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtHome"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{notFoundVM.notFoundModel.txtHome}"
+                    style="@style/txtPoppinsmedium10" tools:text="@string/lbl_home"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearSearch1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <ImageView android:id="@+id/imageSearch"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_rewind"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_rewind"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtSearch"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{notFoundVM.notFoundModel.txtSearch}"
+                    style="@style/txtPoppinsmedium10_1" tools:text="@string/lbl_search"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearSaved"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <ImageView android:id="@+id/imageSaved"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_nav_saved"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_nav_saved"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtSaved"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{notFoundVM.notFoundModel.txtSaved}"
+                    style="@style/txtPoppinsmedium10" tools:text="@string/lbl_saved"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearDownloads"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <ImageView android:id="@+id/imageDownloads"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_nav_downloads"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_nav_downloads"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtDownloads"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{notFoundVM.notFoundModel.txtDownloads}"
+                    style="@style/txtPoppinsmedium10" tools:text="@string/lbl_downloads"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearMe"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <ImageView android:id="@+id/imageMe"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_nav_me"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_nav_me"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtMe"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{notFoundVM.notFoundModel.txtMe}"
+                    style="@style/txtPoppinsmedium10" tools:text="@string/lbl_me"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

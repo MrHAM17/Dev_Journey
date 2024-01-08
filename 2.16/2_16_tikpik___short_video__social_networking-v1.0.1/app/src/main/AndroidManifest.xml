@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest package="com.tikpikshortvideosocialnetworking.app" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:largeHeap="true"
+        android:name="com.tikpikshortvideosocialnetworking.app.appcomponents.di.MyApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
+        <activity
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" android:name="com.facebook.FacebookActivity"/>
+        <activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="@string/fb_login_protocol_scheme"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true"
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.searchtypekeyword.ui.SearchTypeKeywordActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.whenisyourbirthday.ui.WhenIsYourBirthdayActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.weeklyrankingtabcontainer.ui.WeeklyRankingTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.language.ui.LanguageActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.postsaddsoundstabcontainer.ui.PostsAddSoundsTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.postseditpage.ui.PostsEditPageActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.walkthroughone.ui.WalkthroughOneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.editprofile.ui.EditProfileActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.forgotpasswordfilledotp.ui.ForgotPasswordFilledOtpActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.signinblankform.ui.SignInBlankFormActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.splashscreen.ui.SplashScreenActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.postsquickvideo.ui.PostsQuickVideoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.addoption.ui.AddOptionActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.trendingsoundsdetails.ui.TrendingSoundsDetailsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.sendmessage.ui.SendMessageActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.fillyourprofileblankform.ui.FillYourProfileBlankFormActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.followerstabcontainer.ui.FollowersTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.trendinghashtagdetails.ui.TrendingHashtagDetailsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.tellusaboutyourself.ui.TellUsAboutYourselfActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.postsquickphoto.ui.PostsQuickPhotoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.messagesbox.ui.MessagesBoxActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.seelive.ui.SeeLiveActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.settings.ui.SettingsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.privacy.ui.PrivacyActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.walkthroughtwo.ui.WalkthroughTwoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.call.ui.CallActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.privacypolicy.ui.PrivacyPolicyActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.createnewpintabcontainer.ui.CreateNewPinTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.messages.ui.MessagesActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.report.ui.ReportActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.homeswipeupinstructions.ui.HomeSwipeUpInstructionsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.manageaccounts.ui.ManageAccountsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.forgotpasswordtypeotp.ui.ForgotPasswordTypeOtpActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.searchresultsuserstabcontainer.ui.SearchResultsUsersTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.walkthroughthree.ui.WalkthroughThreeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.profiletabcontainer.ui.ProfileTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.findfriends.ui.FindFriendsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.soundused.ui.SoundUsedActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.qrcode.ui.QrCodeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.setyourfingerprint.ui.SetYourFingerprintActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.letsin.ui.LetsInActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.allactivitydropdown.ui.AllActivityDropdownActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.signupblankform.ui.SignUpBlankFormActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.homecontainer.ui.HomeContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.typemessage.ui.TypeMessageActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.poststemplates.ui.PostsTemplatesActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.security.ui.SecurityActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.postsaddeffectstabcontainer.ui.PostsAddEffectsTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.golive.ui.GoLiveActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.chooseyourinterest.ui.ChooseYourInterestActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.createnewpassword.ui.CreateNewPasswordActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.postsuploadmediatabcontainer.ui.PostsUploadMediaTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.forgotpasswordmethods.ui.ForgotPasswordMethodsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tikpikshortvideosocialnetworking.app.modules.postscamera.ui.PostsCameraActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

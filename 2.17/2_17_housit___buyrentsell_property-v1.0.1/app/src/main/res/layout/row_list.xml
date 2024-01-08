@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listRowModel" type="com.housitbuyrentsellproperty.app.modules.notificationlist.data.model.ListRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearCardNotification"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_10pxh"
+        android:paddingVertical="@dimen/_10pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}cornerRadius">
+        <ImageView android:id="@+id/imageEmmettPerry"
+            android:layout_height="@dimen/_50pxh"
+            android:layout_width="@dimen/_50pxh"
+            android:scaleType="centerCrop" circular="@{true}"
+            imageRes="@{@drawable/img_shape_50x50}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_shape_50x50"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearLayout"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtEmmettPerry"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{listRowModel.txtEmmettPerry}"
+                style="@style/txtRalewaysemibold14_1" tools:text="@string/lbl_emmett_perry"/>
+            <TextView android:id="@+id/txtJustmessagedyouCheck"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{listRowModel.txtJustmessagedyouCheck}"
+                style="@style/txtRalewaymedium12_1" tools:text="@string/msg_just_messaged_you"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtTime"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{listRowModel.txtTime}"
+                style="@style/txtRalewaymedium10" tools:text="@string/lbl_10_mins_ago"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

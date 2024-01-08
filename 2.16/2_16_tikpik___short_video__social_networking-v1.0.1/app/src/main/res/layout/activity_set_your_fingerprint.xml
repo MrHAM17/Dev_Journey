@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="setYourFingerprintVM" type="com.tikpikshortvideosocialnetworking.app.modules.setyourfingerprint.data.viewmodel.SetYourFingerprintVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSetyourfingerprint"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onErrorContainer&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowDown"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_down"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTitleSection"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{setYourFingerprintVM.setYourFingerprintModel.txtTitleSection}"
+                style="@style/txtUrbanistromanbold24" tools:text="@string/msg_set_your_fingerprint"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearSkip"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_48pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh" android:paddingTop="@dimen/_48pxv">
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtAddAFingerprint"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:text="@{setYourFingerprintVM.setYourFingerprintModel.txtAddAFingerprint}"
+                style="@style/txtUrbanistregular18" tools:text="@string/msg_add_a_fingerprint"/>
+            <FrameLayout android:id="@+id/frameSpacer"
+                android:layout_height="wrap_content" android:layout_width="match_parent"/>
+            <FrameLayout android:id="@+id/frameVector"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_193pxv" android:layout_width="@dimen/_163pxh">
+                <FrameLayout android:id="@+id/frameCircleProgressBar"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <ImageView android:id="@+id/imageVector"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_161pxh"
+                    android:layout_width="@dimen/_136pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_vector_primary"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_vector_primary"/>
+                <ImageView android:id="@+id/imageVector1"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_132pxh"
+                    android:layout_width="@dimen/_111pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_vector_primary_132x111"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_vector_primary_132x111"/>
+                <ImageView android:id="@+id/imageVector2"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_99pxh"
+                    android:layout_width="@dimen/_84pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_vector_primary_99x84"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_vector_primary_99x84"/>
+                <ImageView android:id="@+id/imageVector3"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_71pxh"
+                    android:layout_width="@dimen/_60pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_vector_primary_71x60"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_vector_primary_71x60"/>
+                <ImageView android:id="@+id/imageVector4"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_37pxh"
+                    android:layout_width="@dimen/_32pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_vector_primary_37x32"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_vector_primary_37x32"/>
+            </FrameLayout>
+            <FrameLayout android:id="@+id/frameSpacer1"
+                android:layout_height="wrap_content" android:layout_width="match_parent"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtPleasePutYour"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:text="@{setYourFingerprintVM.setYourFingerprintModel.txtPleasePutYour}"
+                style="@style/txtUrbanistregular18" tools:text="@string/msg_please_put_your"/>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearAutoLayoutHorizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:background="@drawable/rectangle_bg_name_deep_orange_50_radius_16"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/urbanist"
+                    android:gravity="center" android:id="@+id/btnSkip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_58pxv"
+                    android:layout_width="@dimen/_184pxh"
+                    android:letterSpacing="0.01"
+                    android:paddingBottom="@dimen/_19pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_19pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_skip"
+                    android:textAllCaps="false"
+                    android:textColor="@color/{&quot;name&quot;:&quot;primary&quot;}"
+                    android:textFontWeight="700"
+                    android:textSize="@dimen/_16pxh"
+                    android:textStyle="bold" tools:text="@string/lbl_skip"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:background="@drawable/rectangle_bg_name_primary_radius_16"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/urbanist"
+                    android:gravity="center"
+                    android:id="@+id/btnContinue"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_58pxv"
+                    android:layout_width="@dimen/_184pxh"
+                    android:letterSpacing="0.01"
+                    android:paddingBottom="@dimen/_19pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_19pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_continue"
+                    android:textAllCaps="false"
+                    android:textColor="@color/{&quot;name&quot;:&quot;onErrorContainer&quot;}"
+                    android:textFontWeight="700"
+                    android:textSize="@dimen/_16pxh"
+                    android:textStyle="bold" tools:text="@string/lbl_continue"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

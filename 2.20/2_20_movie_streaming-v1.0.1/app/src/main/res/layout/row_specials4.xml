@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="specials4RowModel" type="com.moviestreaming.app.modules.dashboard.data.model.Specials4RowModel"/>
+    </data>
+    <FrameLayout android:id="@+id/frameFrame"
+        android:layout_height="wrap_content" android:layout_width="@dimen/_90pxh">
+        <ImageView android:id="@+id/imageDrama"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_60pxh"
+            android:layout_width="@dimen/_90pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_2pxh}"
+            imageRes="@{@drawable/img_thumbnail_image_60x90}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_thumbnail_image_60x90"/>
+        <TextView android:alpha="0.87" android:ellipsize="end"
+            android:id="@+id/txtDrama" android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{specials4RowModel.txtDrama}"
+            style="@style/txtRobotoregular14" tools:text="@string/lbl_drama"/>
+    </FrameLayout>
+</layout>

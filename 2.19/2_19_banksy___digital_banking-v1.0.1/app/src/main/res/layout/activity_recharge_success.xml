@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="rechargeSuccessVM" type="com.banksydigitalbanking.app.modules.rechargesuccess.data.viewmodel.RechargeSuccessVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRechargeSuccess"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}">
+        <FrameLayout android:id="@+id/frameIcon"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_80pxv"
+            android:layout_width="@dimen/_80pxh"
+            android:paddingBottom="@dimen/_31pxv"
+            android:paddingEnd="@dimen/_29pxh"
+            android:paddingStart="@dimen/_29pxh"
+            android:paddingTop="@dimen/_31pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}cornerRadius">
+            <ImageView android:id="@+id/imageCheckmark"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_16pxh"
+                android:layout_width="@dimen/_22pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_checkmark_gray_500"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark_gray_500"/>
+        </FrameLayout>
+        <TextView android:id="@+id/txtCongratsOrder"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@{rechargeSuccessVM.rechargeSuccessModel.txtCongratsOrder}"
+            style="@style/txtOverpassbold24" tools:text="@string/msg_recharge_done_successfully"/>
+    </LinearLayout>
+</layout>

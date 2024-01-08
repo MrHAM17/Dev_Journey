@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="artists1RowModel" type="com.tunecastmusicstreamingpodcastapp.app.modules.artists.data.model.Artists1RowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSinger"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:id="@+id/linearTheWeeknd"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageTheWeeknd1"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_80pxh"
+                android:layout_width="@dimen/_80pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_image_66}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_image_66"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearAutoLayoutVertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtArtistName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{artists1RowModel.txtArtistName}"
+                    style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_the_weeknd"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSongsCounter"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{artists1RowModel.txtSongsCounter}"
+                    style="@style/txtUrbanistromanmedium12" tools:text="@string/lbl_20_songs"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@+id/imageTheWeeknd2"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_20pxh"
+            android:layout_width="@dimen/_20pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_categories_more"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_categories_more"/>
+    </LinearLayout>
+</layout>

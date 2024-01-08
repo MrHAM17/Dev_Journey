@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="frameRowModel" type="com.shopsieecommerceapp.app.modules.mainlanding.data.model.FrameRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearOliveplaindress"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:orientation="vertical">
+        <ImageView android:id="@+id/imageOliveplaindress"
+            android:layout_height="@dimen/_236pxh"
+            android:layout_width="@dimen/_171pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_8pxh}"
+            imageRes="@{@drawable/img_image}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_image"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtWomenBlueSkinny"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{frameRowModel.txtWomenBlueSkinny}"
+            style="@style/txtLatoregular14_1" tools:text="@string/msg_olive_plain_dress"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{frameRowModel.txtPrice}"
+            style="@style/txtLatosemibold14" tools:text="@string/lbl_13_99"/>
+    </LinearLayout>
+</layout>

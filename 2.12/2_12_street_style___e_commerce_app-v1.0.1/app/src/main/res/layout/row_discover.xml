@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="discoverRowModel" type="com.streetstyleecommerceapp.app.modules.discover.data.model.DiscoverRowModel"/>
+    </data>
+    <LinearLayout android:gravity="end" android:id="@+id/linearSection"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStyle{&quot;name&quot;:&quot;light_green_50&quot;}cornerRadius">
+        <TextView android:id="@+id/txtShirtSleeve"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_12pxh"
+            android:text="@{discoverRowModel.txtShirtSleeve}"
+            style="@style/txtPlayfairDisplayplayfairdisplaymedium16" tools:text="@string/lbl_shirt_sleeve"/>
+        <ImageView android:id="@+id/imageShirtSleeve"
+            android:layout_height="@dimen/_181pxh"
+            android:layout_width="@dimen/_116pxh"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_image_2}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_image_2"/>
+    </LinearLayout>
+</layout>

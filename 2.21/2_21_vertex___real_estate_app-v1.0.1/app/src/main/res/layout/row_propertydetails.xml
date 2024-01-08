@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="propertydetailsRowModel" type="com.vertexrealestateapp.app.modules.productdetails.data.model.PropertydetailsRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearBathroom"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:orientation="horizontal">
+        <ImageButton
+            android:background="@drawable/rectangle_bg_name_primary_radius_5"
+            android:id="@+id/btnIcon"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_34pxh"
+            android:layout_width="@dimen/_34pxh"
+            android:paddingHorizontal="@dimen/_7pxh"
+            android:paddingVertical="@dimen/_7pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_icon_gray_300" tools:ignore="ContentDescription"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearDetails"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtBathroom"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.02" android:singleLine="true"
+                android:text="@{propertydetailsRowModel.txtBathroom}"
+                style="@style/txtManrope10" tools:text="@string/lbl_bathroom"/>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtRoomsCounter"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.02" android:singleLine="true"
+                android:text="@{propertydetailsRowModel.txtRoomsCounter}"
+                style="@style/txtManropebold12_1" tools:text="@string/lbl_2_rooms"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

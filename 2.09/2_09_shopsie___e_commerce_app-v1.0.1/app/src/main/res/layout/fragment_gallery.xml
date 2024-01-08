@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="galleryVM" type="com.shopsieecommerceapp.app.modules.gallery.data.viewmodel.GalleryVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearWidget"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+        <androidx.recyclerview.widget.RecyclerView
+            android:gravity="bottom|center"
+            android:id="@+id/recyclerGallery"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="1" itemSpace="@{@dimen/_1pxh}"
+            tools:itemCount="4" tools:listitem="@layout/row_gallery"/>
+    </LinearLayout>
+</layout>

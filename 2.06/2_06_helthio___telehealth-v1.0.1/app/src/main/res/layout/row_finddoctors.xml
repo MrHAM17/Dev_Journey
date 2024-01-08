@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="finddoctorsRowModel" type="com.helthiotelehealth.app.modules.finddoctors.data.model.FinddoctorsRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearGeneral"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <FrameLayout android:id="@+id/frameCategory"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_56pxv"
+            android:layout_width="@dimen/_64pxh"
+            android:paddingBottom="@dimen/_12pxv"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_16pxh"
+            android:paddingTop="@dimen/_12pxv" style="@style/groupStylenameonErrorContainercornerRadius_1">
+            <ImageView android:id="@+id/imageGeneral"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_32pxh"
+                android:layout_width="@dimen/_32pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_icon_doctor"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_icon_doctor"/>
+        </FrameLayout>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtGeneral"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{finddoctorsRowModel.txtGeneral}"
+            style="@style/txtRalewayregular14_2" tools:text="@string/lbl_general"/>
+    </LinearLayout>
+</layout>

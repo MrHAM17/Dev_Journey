@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="pickDateVM" type="com.vertexrealestateapp.app.modules.pickdate.data.viewmodel.PickDateVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearScheduleTour"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_white_a700_border_name_gray_300_radius_20"
+                android:id="@+id/btnArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_left_primarycontainer" tools:ignore="ContentDescription"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearPickDate"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_26pxv" android:paddingTop="@dimen/_26pxv">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtRequestAHomeTour"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{pickDateVM.pickDateModel.txtRequestAHomeTour}"
+                style="@style/txtManropebold18" tools:text="@string/msg_request_a_home_tour"/>
+            <LinearLayout android:id="@+id/linearTabs"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_4pxh"
+                android:paddingVertical="@dimen/_4pxv" style="@style/groupStylenamegray_3">
+                <LinearLayout android:id="@+id/linearForSaleTab"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/_9pxv"
+                    android:paddingEnd="@dimen/_31pxh"
+                    android:paddingStart="@dimen/_31pxh"
+                    android:paddingTop="@dimen/_9pxv" style="@style/groupStylecornerRadius_2">
+                    <ImageView android:id="@+id/imageHome"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_20pxh"
+                        android:layout_width="@dimen/_20pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_home"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_home"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtInPerson"
+                        android:layout_gravity="bottom"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@{pickDateVM.pickDateModel.txtInPerson}"
+                        style="@style/txtManropebold14" tools:text="@string/lbl_in_person"/>
+                </LinearLayout>
+                <FrameLayout android:id="@+id/frameSpacer"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <ImageView android:id="@+id/imageCamera"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_20pxh"
+                    android:layout_width="@dimen/_20pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_camera"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_camera"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtVirtual"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{pickDateVM.pickDateModel.txtVirtual}"
+                    style="@style/txtManropesemibold14_1" tools:text="@string/lbl_virtual"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtJanuary"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{pickDateVM.pickDateModel.txtJanuary}"
+                    style="@style/txtManropebold18" tools:text="@string/lbl_january"/>
+                <FrameLayout android:id="@+id/frameSpacer1"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <ImageButton
+                    android:background="@drawable/rectangle_border_name_gray_300_radius_5"
+                    android:id="@+id/btnIcons"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_32pxh"
+                    android:layout_width="@dimen/_32pxh"
+                    android:paddingHorizontal="@dimen/_8pxh"
+                    android:paddingVertical="@dimen/_8pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_arrow_left_primarycontainer" tools:ignore="ContentDescription"/>
+                <ImageButton
+                    android:background="@drawable/rectangle_border_name_gray_300_radius_5"
+                    android:id="@+id/btnIcons1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_32pxh"
+                    android:layout_width="@dimen/_32pxh"
+                    android:paddingHorizontal="@dimen/_8pxh"
+                    android:paddingVertical="@dimen/_8pxv"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_icons" tools:ignore="ContentDescription"/>
+            </LinearLayout>
+
+            <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                android:gravity="end" android:id="@+id/calendarDates"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" app:mcv_selectionMode="single"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPickATime"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{pickDateVM.pickDateModel.txtPickATime}"
+                style="@style/txtManropebold18" tools:text="@string/lbl_pick_a_time"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="end" android:id="@+id/recyclerTime"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_10pxh}" tools:itemCount="4" tools:listitem="@layout/row_time1"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearBTN"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical" style="@style/groupStyle">
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_10"
+                android:ellipsize="end"
+                android:fontFamily="@font/manrope"
+                android:gravity="center"
+                android:id="@+id/btnScheduleTour"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_17pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_17pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_schedule_tour"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;gray_50&quot;}"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_schedule_tour"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

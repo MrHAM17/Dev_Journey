@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="addnewpropertyreasonsellinghomRowModel" type="com.vertexrealestateapp.app.modules.addnewpropertyreasonsellinghome.data.model.AddnewpropertyreasonsellinghomRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearStreetAddress"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_13pxv"
+        android:paddingEnd="@dimen/_15pxh"
+        android:paddingStart="@dimen/_15pxh"
+        android:paddingTop="@dimen/_13pxv" style="@style/groupStylecornerRadius_1">
+        <View
+            android:background="@drawable/rectangle_border_name_blue_gray_500_radius_4"
+            android:id="@+id/viewCheckBox"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_20pxh" android:layout_width="@dimen/_20pxh"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtUpgradingMyHome"
+            android:layout_gravity="bottom"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{addnewpropertyreasonsellinghomRowModel.txtUpgradingMyHome}"
+            style="@style/txtManropesemibold14" tools:text="@string/msg_upgrading_my_home"/>
+    </LinearLayout>
+</layout>

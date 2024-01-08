@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="addNewPropertySelectAmenitiesVM" type="com.vertexrealestateapp.app.modules.addnewpropertyselectamenities.data.viewmodel.AddNewPropertySelectAmenitiesVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linear0808"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:contentInsetStart="0dp" style="@style/groupStyle{&quot;name&quot;:&quot;gray_50&quot;}">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_white_a700_border_name_gray_300_radius_20"
+                android:id="@+id/btnArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_left_primarycontainer" tools:ignore="ContentDescription"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtNotification"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{addNewPropertySelectAmenitiesVM.addNewPropertySelectAmenitiesModel.txtNotification}"
+                style="@style/txtManropeextrabold18" tools:text="@string/msg_add_new_property"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearAddNewPropertySelect"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_24pxh" android:paddingVertical="@dimen/_24pxv">
+            <LinearLayout android:id="@+id/linearAddressAndProgress"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSelectAmenities"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{addNewPropertySelectAmenitiesVM.addNewPropertySelectAmenitiesModel.txtSelectAmenities}"
+                    style="@style/txtManropesemibold14" tools:text="@string/msg_select_amenities"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:background="@drawable/rectangle_bg_name_primary_radius_16"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/manrope"
+                    android:gravity="center"
+                    android:id="@+id/btnEightHundredEight"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_33pxv"
+                    android:layout_width="@dimen/_79pxh"
+                    android:paddingBottom="@dimen/_6pxv"
+                    android:paddingEnd="@dimen/_16pxh"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_6pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_08_08"
+                    android:textAllCaps="false"
+                    android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold" tools:text="@string/lbl_08_08"/>
+            </LinearLayout>
+            <FrameLayout android:id="@+id/frameProgressBar"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_6pxv" android:layout_width="@dimen/_327pxh">
+                <View
+                    android:background="@drawable/rectangle_bg_name_gray_300_radius_3"
+                    android:id="@+id/lineLine"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_6pxv" android:layout_width="@dimen/_327pxh"/>
+                <View
+                    android:background="@drawable/rectangle_bg_name_primary_radius_3"
+                    android:id="@+id/lineLine1"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_6pxv" android:layout_width="@dimen/_327pxh"/>
+            </FrameLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearSelectAmenitites"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSelectAmenities1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{addNewPropertySelectAmenitiesVM.addNewPropertySelectAmenitiesModel.txtSelectAmenities1}"
+                    style="@style/txtManropebold18" tools:text="@string/msg_select_amenities"/>
+                <FrameLayout android:id="@+id/frameOptions"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content">
+                    <FrameLayout
+                        android:background="@drawable/rectangle_border_name_blue_gray_500_radius_18"
+                        android:id="@+id/frameFreeWiFi"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="@dimen/_8pxv"
+                        android:paddingEnd="@dimen/_20pxh"
+                        android:paddingStart="@dimen/_20pxh" android:paddingTop="@dimen/_8pxv"/>
+                    <FrameLayout
+                        android:background="@drawable/rectangle_border_name_blue_gray_500_radius_18"
+                        android:id="@+id/framePool"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="@dimen/_8pxv"
+                        android:paddingEnd="@dimen/_20pxh"
+                        android:paddingStart="@dimen/_20pxh" android:paddingTop="@dimen/_8pxv"/>
+                    <FrameLayout
+                        android:background="@drawable/rectangle_border_name_blue_gray_500_radius_18"
+                        android:id="@+id/framePool1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="@dimen/_8pxv"
+                        android:paddingEnd="@dimen/_20pxh"
+                        android:paddingStart="@dimen/_20pxh" android:paddingTop="@dimen/_8pxv"/>
+                    <FrameLayout
+                        android:background="@drawable/rectangle_border_name_blue_gray_500_radius_18"
+                        android:id="@+id/frameAirConditioning"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="@dimen/_8pxv"
+                        android:paddingEnd="@dimen/_20pxh"
+                        android:paddingStart="@dimen/_20pxh" android:paddingTop="@dimen/_8pxv"/>
+                    <FrameLayout
+                        android:background="@drawable/rectangle_border_name_blue_gray_500_radius_18"
+                        android:id="@+id/frameSpa"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="@dimen/_8pxv"
+                        android:paddingEnd="@dimen/_20pxh"
+                        android:paddingStart="@dimen/_20pxh" android:paddingTop="@dimen/_8pxv"/>
+                    <FrameLayout
+                        android:background="@drawable/rectangle_border_name_blue_gray_500_radius_18"
+                        android:id="@+id/frameView"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="@dimen/_8pxv"
+                        android:paddingEnd="@dimen/_20pxh"
+                        android:paddingStart="@dimen/_20pxh" android:paddingTop="@dimen/_8pxv"/>
+                    <FrameLayout
+                        android:background="@drawable/rectangle_border_name_blue_gray_500_radius_18"
+                        android:id="@+id/frameElevator"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="@dimen/_8pxv"
+                        android:paddingEnd="@dimen/_20pxh"
+                        android:paddingStart="@dimen/_20pxh" android:paddingTop="@dimen/_8pxv"/>
+                    <FrameLayout
+                        android:background="@drawable/rectangle_border_name_blue_gray_500_radius_18"
+                        android:id="@+id/frameGarageSpots"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingBottom="@dimen/_8pxv"
+                        android:paddingEnd="@dimen/_20pxh"
+                        android:paddingStart="@dimen/_20pxh" android:paddingTop="@dimen/_8pxv"/>
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearBTN"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical" style="@style/groupStyle">
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_10"
+                android:ellipsize="end"
+                android:fontFamily="@font/manrope"
+                android:gravity="center" android:id="@+id/btnNext"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_17pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_17pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_next"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;gray_50&quot;}"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_next"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

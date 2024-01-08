@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="transactionVM" type="com.housitbuyrentsellproperty.app.modules.transaction.data.viewmodel.TransactionVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRent"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <LinearLayout android:id="@+id/linearRent1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearComponentSeventy"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTwo"
+                    android:layout_gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{transactionVM.transactionModel.txtTwo}"
+                    style="@style/txtRalewaybold18" tools:text="@string/lbl_2"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTransactions"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{transactionVM.transactionModel.txtTransactions}"
+                    style="@style/txtRalewaymedium18" tools:text="@string/lbl_transactions"/>
+                <FrameLayout android:id="@+id/frameSpacer"
+                    android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                <LinearLayout android:gravity="spaceAround"
+                    android:id="@+id/linearButtonShow"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/_8pxv"
+                    android:paddingTop="@dimen/_8pxv" style="@style/groupStylenamegray_1">
+                    <FrameLayout android:id="@+id/frameButtonShow"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_24pxv"
+                        android:layout_width="@dimen/_36pxh"
+                        android:paddingBottom="@dimen/_6pxv"
+                        android:paddingEnd="@dimen/_12pxh"
+                        android:paddingStart="@dimen/_12pxh"
+                        android:paddingTop="@dimen/_6pxv" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}cornerRadius">
+                        <ImageView android:id="@+id/imageGrid"
+                            android:layout_gravity="center"
+                            android:layout_height="@dimen/_12pxh"
+                            android:layout_width="@dimen/_12pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_grid_blue_gray_800_01"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_grid_blue_gray_800_01"/>
+                    </FrameLayout>
+                    <ImageView android:id="@+id/imageIconHorizontal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_12pxh"
+                        android:layout_width="@dimen/_12pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_icon_horizontal_onprimarycontainer"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_icon_horizontal_onprimarycontainer"/>
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerTransaction"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_7pxh}" tools:itemCount="2" tools:listitem="@layout/row_transaction"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

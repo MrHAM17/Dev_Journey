@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="walkthroughVM" type="com.tunecastmusicstreamingpodcastapp.app.modules.walkthrough.data.viewmodel.WalkthroughVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearWalkthrough"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylenamewhite_1">
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="match_parent"/>
+        <LinearLayout android:id="@+id/linearAutoLayoutVertical"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_46pxv"
+            android:paddingEnd="@dimen/_24pxh"
+            android:paddingStart="@dimen/_24pxh"
+            android:paddingTop="@dimen/_46pxv" style="@style/groupStylecornerRadius_6">
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtListenToTheBest"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{walkthroughVM.walkthroughModel.txtListenToTheBest}"
+                style="@style/txtUrbanistromanbold40" tools:text="@string/msg_listen_to_the_best"/>
+
+            <com.asksira.loopingviewpager.indicator.CustomShapePagerIndicator
+                android:id="@+id/indicatorSettings"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                app:drawable_normal="@drawable/indicator_unselected_bg_name_primarycontainer_radius_8"
+                app:drawable_selected="@drawable/indicator_selected_bg_name_onprimarycontainer_radius_8"
+                app:indicator_size="@dimen/_8pxh" app:indicator_spacing="@dimen/_6pxh"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_29"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:gravity="center" android:id="@+id/btnGetStarted"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_58pxv"
+                android:layout_width="@dimen/_380pxh"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_19pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_19pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_get_started"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_get_started"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

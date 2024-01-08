@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="hotelDetailsVM" type="com.comforthotelbookingapp.app.modules.hoteldetails.data.viewmodel.HotelDetailsVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearFive"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimary&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowDown"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_down_white_a700"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down_white_a700"/>
+            <LinearLayout android:id="@+id/linearGroup36"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageBookmark"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_28pxh"
+                    android:layout_width="@dimen/_28pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_bookmark"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_bookmark"/>
+                <ImageButton android:id="@+id/btnSettings"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_28pxh"
+                    android:layout_width="@dimen/_28pxh"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/img_settings_white_a700" tools:ignore="ContentDescription"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearHotelDetails"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <FrameLayout android:gravity="center_horizontal"
+                    android:id="@+id/frameEightySeven"
+                    android:layout_height="@dimen/_206pxv" android:layout_width="match_parent">
+                    <ImageView android:id="@+id/imageImage"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_206pxh"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitXY"
+                        imageRes="@{@drawable/img_rectangle_6}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle_6"/>
+                    <LinearLayout android:id="@+id/linearThree"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/_12pxv"
+                        android:paddingEnd="@dimen/_164pxh"
+                        android:paddingStart="@dimen/_164pxh"
+                        android:paddingTop="@dimen/_12pxv" style="@style/groupStyle">
+
+                        <com.asksira.loopingviewpager.indicator.CustomShapePagerIndicator
+                            android:id="@+id/indicatorSettings"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            app:drawable_normal="@drawable/indicator_unselected_bg_name_gray_700_radius_8"
+                            app:drawable_selected="@drawable/indicator_selected_bg_name_primary_radius_8"
+                            app:indicator_size="@dimen/_6pxh" app:indicator_spacing="@dimen/_11pxh"/>
+                    </LinearLayout>
+                </FrameLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearHotelDetails1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/_24pxh" android:paddingStart="@dimen/_24pxh">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtRoyalePresident"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{hotelDetailsVM.hotelDetailsModel.txtRoyalePresident}"
+                        style="@style/txtUrbanistromanbold32" tools:text="@string/msg_royale_president"/>
+                    <LinearLayout
+                        android:id="@+id/linearHotelDescription"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <ImageView android:id="@+id/imageLinkedin"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_20pxh"
+                            android:layout_width="@dimen/_20pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_linkedin"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_linkedin"/>
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:id="@+id/txtFrance"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{hotelDetailsVM.hotelDetailsModel.txtFrance}"
+                            style="@style/txtUrbanistregular14_1" tools:text="@string/lbl_france"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearGalleryPhotos"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <LinearLayout android:id="@+id/linearSeeAll"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtGalleryPhotos"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{hotelDetailsVM.hotelDetailsModel.txtGalleryPhotos}"
+                            style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_gallery_photos"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSeeAll"
+                            android:layout_gravity="top"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{hotelDetailsVM.hotelDetailsModel.txtSeeAll}"
+                            style="@style/txtUrbanistromanbold16_1" tools:text="@string/lbl_see_all"/>
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:gravity="end"
+                        android:id="@+id/recyclerPhotos"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        itemSpace="@{@dimen/_12pxh}" tools:itemCount="3" tools:listitem="@layout/row_photos"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearDetails"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/_24pxh" android:paddingStart="@dimen/_24pxh">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDetails"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{hotelDetailsVM.hotelDetailsModel.txtDetails}"
+                        style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_details"/>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearNinetyTwo"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <LinearLayout
+                            android:id="@+id/linearAutoLayoutVertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <ImageView android:id="@+id/imageImage1"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="@dimen/_32pxh"
+                                android:layout_width="@dimen/_32pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_frame_primary"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_frame_primary"/>
+                            <TextView android:ellipsize="end"
+                                android:gravity="center_horizontal"
+                                android:id="@+id/txtHotels"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{hotelDetailsVM.hotelDetailsModel.txtHotels}"
+                                style="@style/txtUrbanistromanmedium12" tools:text="@string/lbl_hotels"/>
+                        </LinearLayout>
+                        <FrameLayout android:id="@+id/frameSpacer"
+                            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                        <LinearLayout
+                            android:id="@+id/linearAutoLayoutVertical1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <ImageView android:id="@+id/imageImage2"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="@dimen/_32pxh"
+                                android:layout_width="@dimen/_32pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_frame_primary_32x32"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_frame_primary_32x32"/>
+                            <TextView android:ellipsize="end"
+                                android:gravity="center_horizontal"
+                                android:id="@+id/txtBedroomsCounter"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{hotelDetailsVM.hotelDetailsModel.txtBedroomsCounter}"
+                                style="@style/txtUrbanistromanmedium12" tools:text="@string/lbl_4_bedrooms"/>
+                        </LinearLayout>
+                        <FrameLayout android:id="@+id/frameSpacer1"
+                            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                        <LinearLayout
+                            android:id="@+id/linearAutoLayoutVertical2"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <ImageView android:id="@+id/imageImage3"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="@dimen/_32pxh"
+                                android:layout_width="@dimen/_32pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_frame_32x32"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_frame_32x32"/>
+                            <TextView android:ellipsize="end"
+                                android:gravity="center_horizontal"
+                                android:id="@+id/txtBathroomsCounter"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{hotelDetailsVM.hotelDetailsModel.txtBathroomsCounter}"
+                                style="@style/txtUrbanistromanmedium12" tools:text="@string/lbl_2_bathrooms"/>
+                        </LinearLayout>
+                        <FrameLayout android:id="@+id/frameSpacer2"
+                            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                        <LinearLayout
+                            android:id="@+id/linearAutoLayoutVertical3"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <ImageView android:id="@+id/imageImage4"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_height="@dimen/_32pxh"
+                                android:layout_width="@dimen/_32pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_frame_1"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_frame_1"/>
+                            <TextView android:ellipsize="end"
+                                android:gravity="center_horizontal"
+                                android:id="@+id/txtSqftCounter"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{hotelDetailsVM.hotelDetailsModel.txtSqftCounter}"
+                                style="@style/txtUrbanistromanmedium12" tools:text="@string/lbl_4000_sqft"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearDescription"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/_24pxh" android:paddingStart="@dimen/_24pxh">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtDescription"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{hotelDetailsVM.hotelDetailsModel.txtDescription}"
+                        style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_description"/>
+                    <FrameLayout android:id="@+id/frameLoremIpsumDolor"
+                        android:layout_height="wrap_content" android:layout_width="match_parent"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearFacilites"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/_24pxh" android:paddingStart="@dimen/_24pxh">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtFacilites"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{hotelDetailsVM.hotelDetailsModel.txtFacilites}"
+                        style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_facilites"/>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearNinetySix"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <LinearLayout android:id="@+id/linearNinetyFive"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="horizontal">
+                            <LinearLayout
+                                android:id="@+id/linearAutoLayoutVertical4"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content" android:orientation="vertical">
+                                <ImageView
+                                    android:id="@+id/imageSettings"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_height="@dimen/_24pxh"
+                                    android:layout_width="@dimen/_26pxh"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/img_settings"
+                                    tools:ignore="ContentDescription" tools:src="@drawable/img_settings"/>
+                                <TextView android:ellipsize="end"
+                                    android:gravity="center_horizontal"
+                                    android:id="@+id/txtSwimmingPool"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:singleLine="true"
+                                    android:text="@{hotelDetailsVM.hotelDetailsModel.txtSwimmingPool}"
+                                    style="@style/txtUrbanistromanmedium12" tools:text="@string/lbl_swimming_pool"/>
+                            </LinearLayout>
+                            <FrameLayout android:id="@+id/frameSpacer3"
+                                android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                            <LinearLayout
+                                android:id="@+id/linearAutoLayoutVertical5"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content" android:orientation="vertical">
+                                <ImageView
+                                    android:id="@+id/imageSettings1"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_height="@dimen/_18pxh"
+                                    android:layout_width="@dimen/_26pxh"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/img_settings_primary"
+                                    tools:ignore="ContentDescription" tools:src="@drawable/img_settings_primary"/>
+                                <TextView android:ellipsize="end"
+                                    android:gravity="center_horizontal"
+                                    android:id="@+id/txtWiFi"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:singleLine="true"
+                                    android:text="@{hotelDetailsVM.hotelDetailsModel.txtWiFi}"
+                                    style="@style/txtUrbanistromanmedium12" tools:text="@string/lbl_wifi"/>
+                            </LinearLayout>
+                            <FrameLayout android:id="@+id/frameSpacer4"
+                                android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                            <LinearLayout
+                                android:id="@+id/linearAutoLayoutVertical6"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content" android:orientation="vertical">
+                                <ImageView android:id="@+id/imageCut"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_height="@dimen/_23pxh"
+                                    android:layout_width="@dimen/_25pxh"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/img_cut"
+                                    tools:ignore="ContentDescription" tools:src="@drawable/img_cut"/>
+                                <TextView android:ellipsize="end"
+                                    android:gravity="center_horizontal"
+                                    android:id="@+id/txtRestaurant"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:singleLine="true"
+                                    android:text="@{hotelDetailsVM.hotelDetailsModel.txtRestaurant}"
+                                    style="@style/txtUrbanistromanmedium12" tools:text="@string/lbl_restaurant"/>
+                            </LinearLayout>
+                            <FrameLayout android:id="@+id/frameSpacer5"
+                                android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                            <LinearLayout
+                                android:id="@+id/linearAutoLayoutVertical7"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content" android:orientation="vertical">
+                                <ImageView
+                                    android:id="@+id/imageWarning"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_height="@dimen/_24pxh"
+                                    android:layout_width="@dimen/_32pxh"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/img_warning"
+                                    tools:ignore="ContentDescription" tools:src="@drawable/img_warning"/>
+                                <TextView android:ellipsize="end"
+                                    android:gravity="center_horizontal"
+                                    android:id="@+id/txtParking"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:singleLine="true"
+                                    android:text="@{hotelDetailsVM.hotelDetailsModel.txtParking}"
+                                    style="@style/txtUrbanistromanmedium12" tools:text="@string/lbl_parking"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/linearAutoLayoutHorizontal"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="horizontal">
+                            <LinearLayout
+                                android:id="@+id/linearAutoLayoutVertical8"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content" android:orientation="vertical">
+                                <ImageView android:id="@+id/imageUser"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_height="@dimen/_26pxh"
+                                    android:layout_width="@dimen/_21pxh"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/img_user_primary"
+                                    tools:ignore="ContentDescription" tools:src="@drawable/img_user_primary"/>
+                                <TextView android:ellipsize="end"
+                                    android:gravity="center_horizontal"
+                                    android:id="@+id/txtMeetingRoom"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:singleLine="true"
+                                    android:text="@{hotelDetailsVM.hotelDetailsModel.txtMeetingRoom}"
+                                    style="@style/txtUrbanistromanmedium12" tools:text="@string/lbl_meeting_room"/>
+                            </LinearLayout>
+                            <FrameLayout android:id="@+id/frameSpacer6"
+                                android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                            <LinearLayout
+                                android:id="@+id/linearAutoLayoutVertical9"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content" android:orientation="vertical">
+                                <ImageView android:id="@+id/imageVector"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_height="@dimen/_24pxh"
+                                    android:layout_width="@dimen/_24pxh"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/img_vector"
+                                    tools:ignore="ContentDescription" tools:src="@drawable/img_vector"/>
+                                <TextView android:ellipsize="end"
+                                    android:gravity="center_horizontal"
+                                    android:id="@+id/txtElevator"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:singleLine="true"
+                                    android:text="@{hotelDetailsVM.hotelDetailsModel.txtElevator}"
+                                    style="@style/txtUrbanistromanmedium12" tools:text="@string/lbl_elevator"/>
+                            </LinearLayout>
+                            <FrameLayout android:id="@+id/frameSpacer7"
+                                android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                            <LinearLayout
+                                android:id="@+id/linearAutoLayoutVertical10"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content" android:orientation="vertical">
+                                <ImageView
+                                    android:id="@+id/imageSettings2"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_height="@dimen/_26pxh"
+                                    android:layout_width="@dimen/_26pxh"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/img_settings_primary_26x26"
+                                    tools:ignore="ContentDescription" tools:src="@drawable/img_settings_primary_26x26"/>
+                                <TextView android:ellipsize="end"
+                                    android:gravity="center_horizontal"
+                                    android:id="@+id/txtFitnessCenter"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:singleLine="true"
+                                    android:text="@{hotelDetailsVM.hotelDetailsModel.txtFitnessCenter}"
+                                    style="@style/txtUrbanistromanmedium12" tools:text="@string/lbl_fitness_center"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/linearAutoLayoutVertical11"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content" android:orientation="vertical">
+                                <ImageView
+                                    android:id="@+id/imageSettings3"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_height="@dimen/_26pxh"
+                                    android:layout_width="@dimen/_26pxh"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/img_settings_26x26"
+                                    tools:ignore="ContentDescription" tools:src="@drawable/img_settings_26x26"/>
+                                <TextView android:ellipsize="end"
+                                    android:gravity="center_horizontal"
+                                    android:id="@+id/txtHoursOpen"
+                                    android:layout_height="wrap_content"
+                                    android:layout_width="match_parent"
+                                    android:singleLine="true"
+                                    android:text="@{hotelDetailsVM.hotelDetailsModel.txtHoursOpen}"
+                                    style="@style/txtUrbanistromanmedium12" tools:text="@string/lbl_24_hours_open"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearLocation"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/_24pxh" android:paddingStart="@dimen/_24pxh">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtLocation"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{hotelDetailsVM.hotelDetailsModel.txtLocation}"
+                        style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_location"/>
+                    <fragment android:id="@+id/mapMap"
+                        android:layout_height="@dimen/_180pxv"
+                        android:layout_width="match_parent" android:name="com.google.android.gms.maps.SupportMapFragment"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearReview"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/_24pxh" android:paddingStart="@dimen/_24pxh">
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearReview1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtReview"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{hotelDetailsVM.hotelDetailsModel.txtReview}"
+                            style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_review"/>
+                        <LinearLayout android:gravity="center_vertical"
+                            android:id="@+id/linearAutoLayoutHorizontal1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="horizontal">
+                            <ImageView android:id="@+id/imageSignal"
+                                android:layout_gravity="top"
+                                android:layout_height="@dimen/_16pxh"
+                                android:layout_width="@dimen/_16pxh"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/img_signal_yellow_a700"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_signal_yellow_a700"/>
+                            <TextView android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:id="@+id/txtFortyEight"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{hotelDetailsVM.hotelDetailsModel.txtFortyEight}"
+                                style="@style/txtUrbanistsemibold16_1" tools:text="@string/lbl_4_8"/>
+                        </LinearLayout>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtReviews"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{hotelDetailsVM.hotelDetailsModel.txtReviews}"
+                            style="@style/txtUrbanistregular12" tools:text="@string/lbl_4_981_reviews"/>
+                        <FrameLayout android:id="@+id/frameSpacer8"
+                            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSeeAll1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{hotelDetailsVM.hotelDetailsModel.txtSeeAll1}"
+                            style="@style/txtUrbanistromanbold16_1" tools:text="@string/lbl_see_all"/>
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:gravity="center_horizontal"
+                        android:id="@+id/recyclerFrameNineteen"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        itemSpace="@{@dimen/_20pxh}" tools:itemCount="3" tools:listitem="@layout/row_framenineteen"/>
+                    <Spinner
+                        android:background="@drawable/layer_list_bg_name_gray_700_radius_26"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/spinnerTypeButtonType"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" tools:listitem="@layout/spinner_item"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearPrice"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPrice"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{hotelDetailsVM.hotelDetailsModel.txtPrice}"
+                        style="@style/txtUrbanistromanbold32_1" tools:text="@string/lbl_29"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtNight"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{hotelDetailsVM.hotelDetailsModel.txtNight}"
+                        style="@style/txtUrbanistregular14_3" tools:text="@string/lbl_night"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:background="@drawable/rectangle_bg_name_primary_radius_29"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/urbanist"
+                        android:gravity="center"
+                        android:id="@+id/btnBookNow"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_58pxv"
+                        android:layout_width="@dimen/_263pxh"
+                        android:paddingBottom="@dimen/_17pxv"
+                        android:paddingEnd="@dimen/_30pxh"
+                        android:paddingStart="@dimen/_30pxh"
+                        android:paddingTop="@dimen/_17pxv"
+                        android:singleLine="true"
+                        android:text="@string/lbl_book_now"
+                        android:textAllCaps="false"
+                        android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                        android:textFontWeight="700"
+                        android:textSize="@dimen/_16pxh"
+                        android:textStyle="bold" tools:text="@string/lbl_book_now"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

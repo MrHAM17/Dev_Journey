@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="promotionVM" type="com.housitbuyrentsellproperty.app.modules.promotion.data.viewmodel.PromotionVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearStartExplore"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                android:id="@+id/btnArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_left" tools:ignore="ContentDescription"/>
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_gray_100_radius_bl_25_br_25"
+                android:id="@+id/btnTwitter"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_twitter" tools:ignore="ContentDescription"/>
+        </androidx.appcompat.widget.Toolbar>
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearPromotion"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <FrameLayout android:id="@+id/frameItemPromotion"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_200pxv"
+                    android:layout_width="@dimen/_327pxh"
+                    android:paddingBottom="@dimen/_1pxv"
+                    android:paddingTop="@dimen/_1pxv" style="@style/groupStyle{&quot;name&quot;:&quot;primary&quot;}cornerRadius">
+                    <LinearLayout android:id="@+id/linearHalloweenSale"
+                        android:layout_gravity="top|start"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:id="@+id/txtHalloweenSale"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="@{promotionVM.promotionModel.txtHalloweenSale}"
+                            style="@style/txtRalewaysemibold18_1" tools:text="@string/msg_halloween_sale"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtOffer"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{promotionVM.promotionModel.txtOffer}"
+                            style="@style/txtRalewayregular12_3" tools:text="@string/msg_all_discount_up"/>
+                    </LinearLayout>
+                    <ImageView android:id="@+id/imageSubtract"
+                        android:layout_gravity="bottom|end"
+                        android:layout_height="@dimen/_164pxh"
+                        android:layout_width="@dimen/_207pxh"
+                        android:scaleType="fitXY"
+                        imageRes="@{@drawable/img_subtract_145x207}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_subtract_145x207"/>
+                </FrameLayout>
+                <TextView android:gravity="center_horizontal"
+                    android:id="@+id/txtTitle"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@{promotionVM.promotionModel.txtTitle}"
+                    style="@style/txtRalewaysemibold24" tools:text="@string/msg_limited_time_halloween"/>
+                <LinearLayout android:id="@+id/linearFrameEightyFour"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageCalendar"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_16pxh"
+                        android:layout_width="@dimen/_16pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_calendar_green_a400"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_calendar_green_a400"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:id="@+id/txtMonth"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{promotionVM.promotionModel.txtMonth}"
+                        style="@style/txtRalewayregular12" tools:text="@string/msg_october_27_2022"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearCardCoupon"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_16pxh"
+                    android:paddingVertical="@dimen/_16pxv" style="@style/groupStylecornerRadius_1">
+                    <ImageButton
+                        android:background="@drawable/rectangle_bg_name_green_a400_radius_17"
+                        android:id="@+id/btnTelevision"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="@dimen/_53pxh"
+                        android:layout_width="@dimen/_53pxh"
+                        android:paddingHorizontal="@dimen/_14pxh"
+                        android:paddingVertical="@dimen/_14pxv"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_television_white_a700_53x53" tools:ignore="ContentDescription"/>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearFrame"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtHLWNForty"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{promotionVM.promotionModel.txtHLWNForty}"
+                            style="@style/txtRalewaybold18" tools:text="@string/lbl_hlwn40"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtOffer1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{promotionVM.promotionModel.txtOffer1}"
+                            style="@style/txtRalewaymedium8" tools:text="@string/msg_use_this_coupon"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <FrameLayout android:gravity="center_horizontal"
+                    android:id="@+id/frameStartExplore"
+                    android:layout_height="@dimen/_250pxv" android:layout_width="match_parent">
+                    <TextView android:gravity="top|start"
+                        android:id="@+id/txtDescription"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:text="@{promotionVM.promotionModel.txtDescription}"
+                        style="@style/txtRalewayregular14" tools:text="@string/msg_lorem_ipsum_dolor8"/>
+                    <LinearLayout android:id="@+id/linearExplore"
+                        android:layout_gravity="bottom|center"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="@dimen/_24pxh"
+                        android:paddingVertical="@dimen/_24pxv" style="@style/groupStyle_1">
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:background="@drawable/rectangle_bg_name_primary_radius_35"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/raleway"
+                            android:gravity="center"
+                            android:id="@+id/btnStartExplore"
+                            android:layout_height="match_parent"
+                            android:layout_width="match_parent"
+                            android:paddingBottom="@dimen/_25pxv"
+                            android:paddingEnd="@dimen/_30pxh"
+                            android:paddingStart="@dimen/_30pxh"
+                            android:paddingTop="@dimen/_25pxv"
+                            android:singleLine="true"
+                            android:text="@string/lbl_start_explore"
+                            android:textAllCaps="false"
+                            android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                            android:textFontWeight="600"
+                            android:textSize="@dimen/_16pxh"
+                            android:textStyle="bold" tools:text="@string/lbl_start_explore"/>
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

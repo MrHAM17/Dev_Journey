@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="searchresultplaylistRowModel" type="com.tunecastmusicstreamingpodcastapp.app.modules.searchresultplaylist.data.model.SearchresultplaylistRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearPositions"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearCardBig1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <ImageView android:id="@+id/imageImage1"
+                android:layout_height="@dimen/_184pxh"
+                android:layout_width="@dimen/_184pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_28pxh}"
+                imageRes="@{@drawable/img_image_74}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_image_74"/>
+            <TextView android:id="@+id/txtPositions1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:text="@{searchresultplaylistRowModel.txtPositions1}"
+                style="@style/txtUrbanistromanbold18" tools:text="@string/msg_ariana_grande"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearCardBig2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <ImageView android:id="@+id/imageImage2"
+                android:layout_height="@dimen/_184pxh"
+                android:layout_width="@dimen/_184pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_28pxh}"
+                imageRes="@{@drawable/img_image_75}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_image_75"/>
+            <TextView android:id="@+id/txtPositions2"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:text="@{searchresultplaylistRowModel.txtPositions2}"
+                style="@style/txtUrbanistromanbold18" tools:text="@string/msg_ariana_grande2"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="checkoutRowModel" type="com.fashionistaecommerceapp.app.modules.checkout.data.model.CheckoutRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearFrame1"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_12pxv"
+        android:paddingEnd="@dimen/_24pxh"
+        android:paddingStart="@dimen/_24pxh"
+        android:paddingTop="@dimen/_12pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}cornerRadius">
+        <LinearLayout android:id="@+id/linearFrame2"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_10pxv"
+            android:paddingTop="@dimen/_10pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_100&quot;}">
+            <ImageView android:id="@+id/imageCreditCard1"
+                android:layout_gravity="center_vertical"
+                android:layout_height="@dimen/_30pxh"
+                android:layout_width="@dimen/_30pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_user"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_user"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCreditCard"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{checkoutRowModel.txtCreditCard}"
+                style="@style/txtPoppinsregular16" tools:text="@string/lbl_credit_card"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/imageCreditCard2"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_24pxh"
+            android:layout_width="@dimen/_24pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_contrast"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_contrast"/>
+    </LinearLayout>
+</layout>

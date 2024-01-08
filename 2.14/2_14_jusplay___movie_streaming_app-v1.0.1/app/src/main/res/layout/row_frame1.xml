@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="frame1RowModel" type="com.jusplaymoviestreamingapp.app.modules.homerecentlywatched.data.model.Frame1RowModel"/>
+    </data>
+    <ImageView android:id="@+id/imageAladdin"
+        android:layout_height="@dimen/_178pxv"
+        android:layout_width="@dimen/_124pxh" android:scaleType="fitXY"
+        cornerRadius="@{@dimen/_10pxh}"
+        imageRes="@{@drawable/img_aladdin}"
+        tools:ignore="ContentDescription" tools:src="@drawable/img_aladdin"/>
+</layout>

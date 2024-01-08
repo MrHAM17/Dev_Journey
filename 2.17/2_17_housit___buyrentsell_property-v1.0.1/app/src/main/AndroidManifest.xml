@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest package="com.housitbuyrentsellproperty.app" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <application android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:largeHeap="true"
+        android:name="com.housitbuyrentsellproperty.app.appcomponents.di.MyApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
+        <activity
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" android:name="com.facebook.FacebookActivity"/>
+        <activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="@string/fb_login_protocol_scheme"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true"
+            android:name="com.housitbuyrentsellproperty.app.modules.formempty.ui.FormEmptyActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.resultfilter.ui.ResultFilterActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.historydetail.ui.HistoryDetailActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.promotion.ui.PromotionActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.userempty.ui.UserEmptyActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.formotp.ui.FormOtpActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.emptymap.ui.EmptyMapActivity" android:screenOrientation="portrait"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/str_maps_api_key"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.toplocationslocationdetail.ui.TopLocationsLocationDetailActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.favouriteempty.ui.FavouriteEmptyActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.searchresult.ui.SearchResultActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.reviewempty.ui.ReviewEmptyActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.messageslist.ui.MessagesListActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.producttourthree.ui.ProductTourThreeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.allreviewstabcontainer.ui.AllReviewsTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.topagents.ui.TopAgentsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.reviewstabcontainer.ui.ReviewsTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.editprofile.ui.EditProfileActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.splashscreen.ui.SplashScreenActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.formdetail.ui.FormDetailActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.reviewsgallery.ui.ReviewsGalleryActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.addreviewfill.ui.AddReviewFillActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.view.ui.ViewActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.editform.ui.EditFormActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.locationempty.ui.LocationEmptyActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.locationfill.ui.LocationFillActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.addlocation.ui.AddLocationActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.featuredestates.ui.FeaturedEstatesActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.registerformempty.ui.RegisterFormEmptyActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.notificationlisttabcontainer.ui.NotificationListTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.paymentemptytabcontainer.ui.PaymentEmptyTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.producttourone.ui.ProductTourOneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.chat.ui.ChatActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.viewonmap.ui.ViewOnMapActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.call.ui.CallActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.toplocations.ui.TopLocationsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.propertydetails.ui.PropertyDetailsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.locationchooselocation.ui.LocationChooseLocationActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.horizontal.ui.HorizontalActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.filterchooselocation.ui.FilterChooseLocationActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.emptysearch.ui.EmptySearchActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.homecontainer.ui.HomeContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.summary.ui.SummaryActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.login.ui.LoginActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.reviewfill.ui.ReviewFillActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.producttourtwo.ui.ProductTourTwoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.addreviewempty.ui.AddReviewEmptyActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.addphotos.ui.AddPhotosActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.realestateslistbycategory.ui.RealEstatesListByCategoryActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.preferable.ui.PreferableActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.topagentsprofiledetailtabcontainer.ui.TopAgentsProfileDetailTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.preferableselected.ui.PreferableSelectedActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.housitbuyrentsellproperty.app.modules.extrainformation.ui.ExtraInformationActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

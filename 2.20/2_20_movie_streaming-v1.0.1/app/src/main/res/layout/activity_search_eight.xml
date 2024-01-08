@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="searchEightVM" type="com.moviestreaming.app.modules.searcheight.data.viewmodel.SearchEightVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearNons"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_900&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <TextView android:ellipsize="end" android:id="@+id/txtNons"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{searchEightVM.searchEightModel.txtNons}"
+                style="@style/txtRobotosemibold16" tools:text="@string/lbl_search"/>
+            <LinearLayout android:id="@+id/linearGroup58"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageIcon"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_icon_onprimarycontainer"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_icon_onprimarycontainer"/>
+                <ImageView android:id="@+id/imageIcon1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_icon_onprimarycontainer_24x24"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_icon_onprimarycontainer_24x24"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <ScrollView android:clipToPadding="false"
+            android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearSearchEight"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <androidx.appcompat.widget.SearchView
+                    android:background="@color/{&quot;name&quot;:&quot;secondaryContainer&quot;}"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/searchViewSearch"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:theme="@style/searchViewsearch"
+                    app:iconifiedByDefault="false"
+                    app:queryBackground="@android:color/transparent"
+                    app:queryHint="@string/msg_search_for_movies" app:searchIcon="@drawable/img_search"/>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;onSecondaryContainer&quot;}"
+                    android:id="@+id/lineDividerOne"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_360pxh"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTrendingSearch"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{searchEightVM.searchEightModel.txtTrendingSearch}"
+                    style="@style/txtRobotomedium24" tools:text="@string/lbl_trending_search"/>
+                <View
+                    android:background="@color/{&quot;name&quot;:&quot;onSecondaryContainer&quot;}"
+                    android:id="@+id/lineDividerTwo"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_360pxh"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTreasureIsland"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{searchEightVM.searchEightModel.txtTreasureIsland}"
+                    style="@style/txtRobotoregular14_1" tools:text="@string/lbl_treasure_island"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLoveInTrouble"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{searchEightVM.searchEightModel.txtLoveInTrouble}"
+                    style="@style/txtRobotoregular14_1" tools:text="@string/lbl_love_in_trouble"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtHotelDeLuna"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{searchEightVM.searchEightModel.txtHotelDeLuna}"
+                    style="@style/txtRobotoregular14_1" tools:text="@string/lbl_hotel_de_luna"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTheHeirs"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{searchEightVM.searchEightModel.txtTheHeirs}"
+                    style="@style/txtRobotoregular14_1" tools:text="@string/lbl_the_heirs"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtWhatSWrongWith"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{searchEightVM.searchEightModel.txtWhatSWrongWith}"
+                    style="@style/txtRobotoregular14_1" tools:text="@string/msg_what_s_wrong_with"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMobyDick"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{searchEightVM.searchEightModel.txtMobyDick}"
+                    style="@style/txtRobotoregular14_1" tools:text="@string/lbl_moby_dick"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtBulletBoy"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{searchEightVM.searchEightModel.txtBulletBoy}"
+                    style="@style/txtRobotoregular14_1" tools:text="@string/lbl_bullet_boy"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="playbackRowModel" type="com.tunecastmusicstreamingpodcastapp.app.modules.playback.data.model.PlaybackRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearAutoLayoutHorizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearAutoLayoutVertical"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtAutomix"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{playbackRowModel.txtAutomix}"
+                style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_automix"/>
+            <TextView android:id="@+id/txtAllowsSeamless"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:text="@{playbackRowModel.txtAllowsSeamless}"
+                style="@style/txtUrbanistromanmedium14_2" tools:text="@string/msg_allows_seamless"/>
+        </LinearLayout>
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchMaterialSwitch"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+    </LinearLayout>
+</layout>

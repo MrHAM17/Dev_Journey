@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="menuVM" type="com.streetstyleecommerceapp.app.modules.menu.data.viewmodel.MenuVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearMenu"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;gray_300_01&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageCircleImage"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_rectangle}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_rectangle"/>
+            <LinearLayout android:id="@+id/linearGroup4"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMildredBennett"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{menuVM.menuModel.txtMildredBennett}"
+                    style="@style/txtPlayfairDisplayplayfairdisplaybold16" tools:text="@string/lbl_mildred_bennett"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtEmail"
+                    android:layout_gravity="start"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_4pxh"
+                    android:singleLine="true"
+                    android:text="@{menuVM.menuModel.txtEmail}"
+                    style="@style/txtPlayfairDisplayitalicregular12" tools:text="@string/lbl_user_gmail_com"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/imageClose"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_close"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_close"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearFiftyOne"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_20pxv"
+            android:paddingEnd="@dimen/_37pxh"
+            android:paddingStart="@dimen/_37pxh" android:paddingTop="@dimen/_20pxv">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDiscover"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{menuVM.menuModel.txtDiscover}"
+                style="@style/txtPlayfairDisplayitalicregular22" tools:text="@string/lbl_discover"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtShop"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{menuVM.menuModel.txtShop}"
+                style="@style/txtPlayfairDisplayitalicregular22" tools:text="@string/lbl_shop"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFavorites"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{menuVM.menuModel.txtFavorites}"
+                style="@style/txtPlayfairDisplayitalicregular22_1" tools:text="@string/lbl_favorites"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtInbox"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{menuVM.menuModel.txtInbox}"
+                style="@style/txtPlayfairDisplayitalicregular22" tools:text="@string/lbl_inbox"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtAskAnExpert"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{menuVM.menuModel.txtAskAnExpert}"
+                style="@style/txtPlayfairDisplayitalicregular22" tools:text="@string/lbl_ask_an_expert"/>
+            <View
+                android:background="@color/{&quot;name&quot;:&quot;gray_700&quot;}"
+                android:id="@+id/lineLineThree"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_137pxh"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSettings"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{menuVM.menuModel.txtSettings}"
+                style="@style/txtPlayfairDisplayitalicregular22" tools:text="@string/lbl_settings"/>
+            <FrameLayout android:id="@+id/frameSpacer"
+                android:layout_height="wrap_content" android:layout_width="match_parent"/>
+            <FrameLayout android:id="@+id/frameThirty"
+                android:layout_height="@dimen/_43pxv" android:layout_width="@dimen/_70pxh">
+                <ImageButton android:id="@+id/btnIconButton"
+                    android:layout_gravity="end"
+                    android:layout_height="@dimen/_43pxh"
+                    android:layout_width="@dimen/_43pxh"
+                    android:scaleType="fitCenter" tools:ignore="ContentDescription"/>
+                <ImageView android:id="@+id/imageShape"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_23pxh"
+                    android:layout_width="@dimen/_55pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_shape"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_shape"/>
+            </FrameLayout>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLogOut"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{menuVM.menuModel.txtLogOut}"
+                style="@style/txtPlayfairDisplayitalicregular22_1" tools:text="@string/lbl_log_out"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

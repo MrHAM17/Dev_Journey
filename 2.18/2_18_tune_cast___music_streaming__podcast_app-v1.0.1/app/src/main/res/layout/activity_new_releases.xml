@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="newReleasesVM" type="com.tunecastmusicstreamingpodcastapp.app.modules.newreleases.data.viewmodel.NewReleasesVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearArrowDown"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowDown"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_down"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_down"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFillYourProfile"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{newReleasesVM.newReleasesModel.txtFillYourProfile}"
+                style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_new_releases"/>
+            <ImageView android:id="@+id/imageRewind"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_rewind"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_rewind"/>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollView"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearNewReleases"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:gravity="start"
+                    android:id="@+id/txtTheBestNewReleases"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{newReleasesVM.newReleasesModel.txtTheBestNewReleases}"
+                    style="@style/txtUrbanistromanbold24" tools:text="@string/msg_the_best_new_releases"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:gravity="center_horizontal"
+                    android:id="@+id/recyclerNewReleases"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_12pxh}" tools:itemCount="2" tools:listitem="@layout/row_newreleases"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearFortyNine"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtNewAlbumsSingle"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{newReleasesVM.newReleasesModel.txtNewAlbumsSingle}"
+                        style="@style/txtUrbanistromanbold24" tools:text="@string/msg_new_albums_single"/>
+                    <LinearLayout android:gravity="center_vertical"
+                        android:id="@+id/linearPositions"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearCardBig"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <ImageView android:id="@+id/imageImage"
+                                android:layout_height="@dimen/_184pxh"
+                                android:layout_width="@dimen/_184pxh"
+                                android:scaleType="fitXY"
+                                cornerRadius="@{@dimen/_28pxh}"
+                                imageRes="@{@drawable/img_image_42}"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_image_42"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtPositions"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:singleLine="true"
+                                android:text="@{newReleasesVM.newReleasesModel.txtPositions}"
+                                style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_pain"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtArianaGrande"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:letterSpacing="0.01"
+                                android:singleLine="true"
+                                android:text="@{newReleasesVM.newReleasesModel.txtArianaGrande}"
+                                style="@style/txtUrbanistsemibold14_2" tools:text="@string/lbl_ryan_jones"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearCardBig1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <ImageView android:id="@+id/imageImage1"
+                                android:layout_height="@dimen/_184pxh"
+                                android:layout_width="@dimen/_184pxh"
+                                android:scaleType="fitXY"
+                                cornerRadius="@{@dimen/_28pxh}"
+                                imageRes="@{@drawable/img_image_43}"
+                                tools:ignore="ContentDescription" tools:src="@drawable/img_image_43"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtPositions1"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{newReleasesVM.newReleasesModel.txtPositions1}"
+                                style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_shades_of_love"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtArianaGrande1"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.01"
+                                android:singleLine="true"
+                                android:text="@{newReleasesVM.newReleasesModel.txtArianaGrande1}"
+                                style="@style/txtUrbanistsemibold14_2" tools:text="@string/lbl_ania_szarmach"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearPositions1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearCardBig2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <ImageView android:id="@+id/imageImage2"
+                            android:layout_height="@dimen/_184pxh"
+                            android:layout_width="@dimen/_184pxh"
+                            android:scaleType="fitXY"
+                            cornerRadius="@{@dimen/_28pxh}"
+                            imageRes="@{@drawable/img_image_44}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_image_44"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtPositions2"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{newReleasesVM.newReleasesModel.txtPositions2}"
+                            style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_pain"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtArianaGrande2"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@{newReleasesVM.newReleasesModel.txtArianaGrande2}"
+                            style="@style/txtUrbanistsemibold14_2" tools:text="@string/lbl_ryan_jones"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearCardBig3"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <ImageView android:id="@+id/imageImage3"
+                            android:layout_height="@dimen/_184pxh"
+                            android:layout_width="@dimen/_184pxh"
+                            android:scaleType="fitXY"
+                            cornerRadius="@{@dimen/_28pxh}"
+                            imageRes="@{@drawable/img_image_45}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_image_45"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtPositions3"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{newReleasesVM.newReleasesModel.txtPositions3}"
+                            style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_shades_of_love"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtArianaGrande3"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@{newReleasesVM.newReleasesModel.txtArianaGrande3}"
+                            style="@style/txtUrbanistsemibold14_2" tools:text="@string/lbl_ania_szarmach"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

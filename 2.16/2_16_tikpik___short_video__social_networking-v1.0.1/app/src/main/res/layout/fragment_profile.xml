@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="profileVM" type="com.tikpikshortvideosocialnetworking.app.modules.profile.data.viewmodel.ProfileVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearK"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;onErrorContainer&quot;}">
+        <androidx.recyclerview.widget.RecyclerView
+            android:gravity="top|center"
+            android:id="@+id/recyclerAutoLayoutVertical"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2" itemSpace="@{@dimen/_8pxh}"
+            tools:itemCount="5" tools:listitem="@layout/row_autolayoutvertical1"/>
+    </LinearLayout>
+</layout>

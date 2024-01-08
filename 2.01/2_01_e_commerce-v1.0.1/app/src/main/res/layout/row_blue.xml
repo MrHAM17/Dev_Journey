@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="blueRowModel" type="com.ecommerce.app.modules.productdetail.data.model.BlueRowModel"/>
+    </data>
+    <ImageView android:id="@+id/imageGroup"
+        android:layout_height="@dimen/_48pxv"
+        android:layout_width="@dimen/_48pxh" android:scaleType="fitXY"
+        android:src="@drawable/img_group_475"
+        tools:ignore="ContentDescription" tools:src="@drawable/img_group_475"/>
+</layout>

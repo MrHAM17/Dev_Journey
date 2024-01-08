@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="songPlayOverScreenVM" type="com.tunecastmusicstreamingpodcastapp.app.modules.songplayoverscreen.data.viewmodel.SongPlayOverScreenVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSongTitle"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <LinearLayout android:id="@+id/linearFrame"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerSongPlayOverScreen"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_16pxh}" tools:itemCount="6" tools:listitem="@layout/row_songplayoverscreen"/>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearAutoLayoutVertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_23pxh"
+                android:paddingVertical="@dimen/_23pxv" style="@style/groupStyle{&quot;name&quot;:&quot;red_A200&quot;,&quot;opacity&quot;:0.08}cornerRadius">
+                <ImageView android:id="@+id/imageSettings"
+                    android:layout_height="@dimen/_48pxh"
+                    android:layout_width="@dimen/_48pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_settings_48x48"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_settings_48x48"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSongPodcastTitle"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{songPlayOverScreenVM.songPlayOverScreenModel.txtSongPodcastTitle}"
+                    style="@style/txtUrbanistsemibold16_2" tools:text="@string/msg_starboy_the_weeknd"/>
+                <ImageView android:id="@+id/imageCategoriesPause"
+                    android:layout_height="@dimen/_20pxh"
+                    android:layout_width="@dimen/_20pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_iconly_bold_play_onprimarycontainer"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_iconly_bold_play_onprimarycontainer"/>
+                <ImageView android:id="@+id/imageCategoriesNext"
+                    android:layout_height="@dimen/_20pxh"
+                    android:layout_width="@dimen/_20pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_categories_next"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_categories_next"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

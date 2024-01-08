@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="transfertabcontainerRowModel" type="com.safebankmobilebankingapp.app.modules.transfertabcontainer.data.model.TransfertabcontainerRowModel"/>
+    </data>
+    <ImageView android:id="@+id/imageEllipse"
+        android:layout_height="@dimen/_50pxv"
+        android:layout_width="@dimen/_50pxh"
+        android:scaleType="centerCrop" circular="@{true}"
+        imageRes="@{@drawable/img_ellipse_309}"
+        tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_309"/>
+</layout>

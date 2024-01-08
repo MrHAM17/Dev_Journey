@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest package="com.tunecastmusicstreamingpodcastapp.app" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <application android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:largeHeap="true"
+        android:name="com.tunecastmusicstreamingpodcastapp.app.appcomponents.di.MyApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
+        <activity
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" android:name="com.facebook.FacebookActivity"/>
+        <activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="@string/fb_login_protocol_scheme"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true"
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.searchtypekeyword.ui.SearchTypeKeywordActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.charts.ui.ChartsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.selectpaymentmethod.ui.SelectPaymentMethodActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.podcasts.ui.PodcastsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.albums.ui.AlbumsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.letsyouin.ui.LetsYouInActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.searchresultssongstabcontainer.ui.SearchResultsSongsTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.language.ui.LanguageActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.searchresultprofiletabcontainer.ui.SearchResultProfileTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.artistdetails.ui.ArtistDetailsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.editprofile.ui.EditProfileActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.paymentmethod.ui.PaymentMethodActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.searchnotfoundtabcontainer.ui.SearchNotFoundTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.playlistdetailsone.ui.PlaylistDetailsOneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.setfingerprint.ui.SetFingerprintActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.followersdetailstabcontainer.ui.FollowersDetailsTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.albumdetails.ui.AlbumDetailsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.walkthrough.ui.WalkthroughActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.paymentsummary.ui.PaymentSummaryActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.playlistdetails.ui.PlaylistDetailsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.profiledetailsone.ui.ProfileDetailsOneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.playback.ui.PlaybackActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.trendingnow.ui.TrendingNowActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.podcastepisodedetails.ui.PodcastEpisodeDetailsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.downloads.ui.DownloadsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.signin.ui.SignInActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.artiststabcontainer.ui.ArtistsTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.audiovideo.ui.AudioVideoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.subscribe.ui.SubscribeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.newreleases.ui.NewReleasesActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.popularartists.ui.PopularArtistsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.addnewcard.ui.AddNewCardActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.signup.ui.SignUpActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.lyrics.ui.LyricsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.topalbumsglobal.ui.TopAlbumsGlobalActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.filledotp.ui.FilledOtpActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.songplay.ui.SongPlayActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.podcastdetails.ui.PodcastDetailsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.profile.ui.ProfileActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.createnewpin.ui.CreateNewPinActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.songdetails.ui.SongDetailsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.followartists.ui.FollowArtistsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.historypodcasttabcontainer.ui.HistoryPodcastTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.homecontainer.ui.HomeContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.notificationsettings.ui.NotificationSettingsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.security.ui.SecurityActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.forgotpassword.ui.ForgotPasswordActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.podcastsnotificationstabcontainer.ui.PodcastsNotificationsTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.splash.ui.SplashActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.songs.ui.SongsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.profiledetails.ui.ProfileDetailsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.createnewpassword.ui.CreateNewPasswordActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.yourlikestabcontainer.ui.YourLikesTabContainerActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.playlists.ui.PlaylistsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.tunecastmusicstreamingpodcastapp.app.modules.datasaverstorage.ui.DataSaverStorageActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

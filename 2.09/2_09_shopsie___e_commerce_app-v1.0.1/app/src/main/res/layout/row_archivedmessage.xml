@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="archivedmessageRowModel" type="com.shopsieecommerceapp.app.modules.archivedmessage.data.model.ArchivedmessageRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearMessage"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <FrameLayout android:id="@+id/frameMore"
+            android:layout_height="@dimen/_51pxv" android:layout_width="@dimen/_51pxh">
+            <ImageView android:id="@+id/imageImage1"
+                android:layout_gravity="top|start"
+                android:layout_height="@dimen/_28pxh"
+                android:layout_width="@dimen/_28pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_play"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_play"/>
+            <ImageView android:id="@+id/imageImage2"
+                android:layout_gravity="top|end"
+                android:layout_height="@dimen/_28pxh"
+                android:layout_width="@dimen/_28pxh"
+                android:scaleType="fitXY" cornerRadius="@{@dimen/_8pxh}"
+                imageRes="@{@drawable/img_image_28x28}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_image_28x28"/>
+            <TextView android:ellipsize="end" android:gravity="center"
+                android:id="@+id/txtMore"
+                android:layout_gravity="bottom|center"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.05"
+                android:lineSpacingExtra="@dimen/_3pxh"
+                android:paddingHorizontal="@dimen/_5pxh"
+                android:paddingVertical="@dimen/_5pxv"
+                android:singleLine="true"
+                android:text="@{archivedmessageRowModel.txtMore}"
+                android:textAllCaps="true"
+                style="@style/txtSolidRounded_4" tools:text="@string/lbl_9"/>
+        </FrameLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearFifteen"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtUsername"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_3pxh"
+                android:singleLine="true"
+                android:text="@{archivedmessageRowModel.txtUsername}"
+                style="@style/txtIntermedium14" tools:text="@string/lbl_close_friends"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtMessage"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_3pxh"
+                android:singleLine="true"
+                android:text="@{archivedmessageRowModel.txtMessage}"
+                style="@style/txtInterregular14" tools:text="@string/msg_thank_you_for_sharing"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <LinearLayout android:id="@+id/linearRight"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtTime"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_3pxh"
+                android:singleLine="true"
+                android:text="@{archivedmessageRowModel.txtTime}"
+                style="@style/txtInterregular12" tools:text="@string/lbl_3_03pm"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtNotifications"
+                android:layout_gravity="end"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_2pxh"
+                android:paddingBottom="@dimen/_2pxv"
+                android:paddingEnd="@dimen/_6pxh"
+                android:paddingStart="@dimen/_6pxh"
+                android:paddingTop="@dimen/_2pxv"
+                android:singleLine="true"
+                android:text="@{archivedmessageRowModel.txtNotifications}"
+                style="@style/txtSolidRounded_5" tools:text="@string/lbl_1"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

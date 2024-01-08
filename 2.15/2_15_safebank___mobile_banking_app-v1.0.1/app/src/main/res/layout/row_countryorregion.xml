@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="countryorregionRowModel" type="com.safebankmobilebankingapp.app.modules.countryorregion.data.model.CountryorregionRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearCountrySelection"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_14pxv"
+        android:paddingEnd="@dimen/_19pxh"
+        android:paddingStart="@dimen/_19pxh"
+        android:paddingTop="@dimen/_14pxv" style="@style/groupStylecornerRadius_1">
+        <ImageView android:id="@+id/imageUnitedKingdom"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_25pxh"
+            android:layout_width="@dimen/_25pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_component_2"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_component_2"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtUnitedKingdom"
+            android:layout_gravity="bottom"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{countryorregionRowModel.txtUnitedKingdom}"
+            style="@style/txtPoppinsregular16" tools:text="@string/lbl_united_kingdom"/>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <View
+            android:background="@drawable/rectangle_border_name_black_900_radius_7"
+            android:id="@+id/viewView"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_15pxh" android:layout_width="@dimen/_15pxh"/>
+    </LinearLayout>
+</layout>

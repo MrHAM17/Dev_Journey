@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="topDoctorVM" type="com.helthiotelehealth.app.modules.topdoctor.data.viewmodel.TopDoctorVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearTopDoctor"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;white_A700&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageIconChevronLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_icon_chevron_left"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_icon_chevron_left"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtLogin"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{topDoctorVM.topDoctorModel.txtLogin}"
+                style="@style/txtRalewayromanbold18" tools:text="@string/lbl_top_doctor"/>
+            <ImageView android:id="@+id/imageIconChevronLeft1"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_icon_chevron_left_onprimary_24x24"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_icon_chevron_left_onprimary_24x24"/>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.recyclerview.widget.RecyclerView
+            android:gravity="center_horizontal"
+            android:id="@+id/recyclerTopDoctor"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            itemSpace="@{@dimen/_16pxh}" tools:itemCount="5" tools:listitem="@layout/row_topdoctor"/>
+    </LinearLayout>
+</layout>

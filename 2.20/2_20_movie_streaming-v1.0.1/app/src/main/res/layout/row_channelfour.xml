@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="channelfourRowModel" type="com.moviestreaming.app.modules.channelfour.data.model.ChannelfourRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearFrame"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <ImageView android:id="@+id/imageKTV"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_56pxh"
+            android:layout_width="@dimen/_56pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_4pxh}"
+            imageRes="@{@drawable/img_background_image}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_background_image"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtKTV"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{channelfourRowModel.txtKTV}"
+            style="@style/txtRobotomedium16" tools:text="@string/lbl_k_tv"/>
+    </LinearLayout>
+</layout>

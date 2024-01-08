@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "2_19_banksy___digital_banking"

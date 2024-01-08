@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+    <string name="app_name">2_05_blog_app</string>
+    <string name="loading">Loading?</string>
+    <string name="no_internet_connection">No internet connection!</string>
+    <!--TODO ENTER YOUR APP ID BELOW-->
+    <string name="facebook_app_id"/>
+    <!--TODO ENTER YOUR APP ID BELOW (eg: fb0123456789)-->
+    <string name="fb_login_protocol_scheme">fb</string>
+    <!--TODO ENTER YOUR Client Token BELOW-->
+    <string name="facebook_client_token"/>
+<string name="msg_lorem_ipsum_is_a">Lorem Ipsum is 
+a dummy text</string>
+  <string name="lbl_science">Science</string>
+  <string name="msg_sign_in_with_google">Sign in with Google</string>
+  <string name="lbl_next">Next</string>
+  <string name="msg_lorem_ipsum_dolor3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</string>
+  <string name="msg_what_are_you_interested">What are you interested in?</string>
+  <string name="lbl_books">Books</string>
+  <string name="msg_lorem_ipsum_dolor4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+  <string name="msg_by_signing_up_you">By signing up, you agree to our Terms of Service and
+acknowledge that our Privacy Policy applies to you.</string>
+  <string name="msg_lorem_ipsum_dolor5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+  <string name="lbl_home">Home</string>
+  <string name="msg_sign_up_with_facebook">Sign up with Facebook</string>
+  <string name="msg_duis_aute_irure">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</string>
+  <string name="msg_don_t_have_an_account">Don\u2019t have an account? </string>
+  <string name="lbl_cryptocurrency">Cryptocurrency</string>
+  <string name="msg_already_have_an">Already have an account? </string>
+  <string name="lbl_fiction">Fiction</string>
+  <string name="lbl_topics">Topics</string>
+  <string name="msg_sign_up_with_google">Sign up with Google</string>
+  <string name="lbl_bezaleel_nwabia">Bezaleel Nwabia </string>
+  <string name="msg_lorem_ipsum_dolor2">Lorem Ipsum dolor set amet</string>
+  <string name="lbl_3_min_read">3 min read</string>
+  <string name="lbl_lorem">Lorem</string>
+  <string name="lbl_applies_to_you">applies to you.</string>
+  <string name="msg_see_all_people_you">SEE ALL PEOPLE YOU FOLLOW</string>
+  <string name="msg_sign_up_with_apple">Sign up with Apple</string>
+  <string name="msg_sign_in_with_apple">Sign in with Apple</string>
+  <string name="lbl_art">Art</string>
+  <string name="lbl_follow">Follow</string>
+  <string name="lbl_sign_in">Sign in</string>
+  <string name="lbl_programming">Programming</string>
+  <string name="lbl_privacy_policy2">Privacy policy</string>
+  <string name="msg_sign_up_with_twitter">Sign up with Twitter</string>
+  <string name="lbl_humor">Humor</string>
+  <string name="lbl_29_july">29 July</string>
+  <string name="lbl_business">Business</string>
+  <string name="msg_lorem_ipsum_dolor">Lorem Ipsum Dolor</string>
+  <string name="lbl_sign_up">Sign up.</string>
+  <string name="msg_effective_september">Effective: September 1, 2020</string>
+  <string name="lbl_ipsum">Ipsum</string>
+  <string name="lbl_gaming">Gaming</string>
+  <string name="lbl_top_stories">TOP STORIES</string>
+  <string name="lbl_privacy_policy">Privacy Policy </string>
+  <string name="msg_artificial_intelligence">Artificial Intelligence</string>
+  <string name="lbl_interests">Interests</string>
+  <string name="lbl_film">Film</string>
+  <string name="msg_terms_and_conditions">Terms and Conditions</string>
+  <string name="msg_your_account_and">Your Account and Responsibilities</string>
+  <string name="lbl_feminism">Feminism</string>
+  <string name="lbl_technology">Technology</string>
+  <string name="lbl_publication">Publication</string>
+  <string name="lbl_search">Search</string>
+  <string name="lbl_nonfiction">Nonfiction</string>
+  <string name="lbl_people">People</string>
+  <string name="lbl_john_doe">John Doe</string>
+  <string name="lbl_logo">LOGO</string>
+  <string name="lbl_creativity">Creativity</string>
+  <string name="lbl_register_now">Register Now</string>
+  <string name="msg_7_things_you_need">7 things you need to know about flutter state Management </string>
+  <string name="lbl_activity">Activity</string>
+  <string name="msg_add_or_edit_topics">Add or edit topics you follow.
+Choose three or more.</string>
+  <string name="lbl_psychology">Psychology</string>
+  <string name="lbl_health">Health</string>
+  <string name="msg_image_credit_lorem">Image Credit: Lorem Ipsum</string>
+  <string name="msg_john_doe_in_lorem">John Doe in Lorem Ipsum</string>
+  <string name="msg_arts_entertainment">ARTS &amp; ENTERTAINMENT</string>
+  <string name="lbl_music">Music</string>
+  <string name="lbl_lorem_ipsum">Lorem Ipsum</string>
+  <string name="lbl_welcome">Welcome</string>
+  <string name="lbl_visual_design">Visual Design</string>
+  <string name="lbl_design">Design</string>
+  <string name="lbl_following">Following</string>
+  <string name="msg_by_signing_up_you2">By signing up, you agree to our </string>
+  <string name="lbl_5_nov">5 Nov</string>
+  <string name="lbl_welcome_back">Welcome back.</string>
+  <string name="msg_you_can_see_our">You can see our previous Terms here</string>
+  <string name="msg_sign_in_with_twitter">Sign in with Twitter</string>
+  <string name="msg_sign_in_with_facebook">Sign in with Facebook</string>
+  <string name="msg_more_people_to_follow">MORE PEOPLE TO FOLLOW</string>
+  <string name="lbl_education">Education</string>
+  <string name="lbl_clapped_for">clapped for
+</string>
+  <string name="lbl_16_days_ago">16 days ago</string>
+  <string name="lbl_explore">Explore</string>
+  <string name="msg_recommended_for">RECOMMENDED FOR YOU</string>
+  <string name="msg_bezaleel_nwabia">Bezaleel Nwabia clapped for
+7 things you need to know about flutter state Management 5 Nov</string>
+  <string name="lbl_explore_topics">Explore Topics</string>
+  <string name="msg_terms_of_service">Terms of Service</string>
+  <string name="lbl_comics">Comics</string>
+  <string name="msg_and_acknowledge"> and
+acknowledge that our </string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="topalbumsglobalRowModel" type="com.tunecastmusicstreamingpodcastapp.app.modules.charts.data.model.TopalbumsglobalRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start" android:id="@+id/linearCard"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:orientation="vertical">
+        <FrameLayout android:id="@+id/frameFrameThirtySeven"
+            android:layout_height="@dimen/_188pxv" android:layout_width="@dimen/_184pxh">
+            <ImageView android:id="@+id/imageTOPALBUMSGLOBAL"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_188pxh"
+                android:layout_width="@dimen/_184pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_24pxh}"
+                imageRes="@{@drawable/img_image_5}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_image_5"/>
+            <TextView android:gravity="top|center"
+                android:id="@+id/txtPrice"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{topalbumsglobalRowModel.txtPrice}"
+                style="@style/txtUrbanistromanbold24_1" tools:text="@string/msg_top_albums_global"/>
+        </FrameLayout>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtLoremIpsumDolor"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{topalbumsglobalRowModel.txtLoremIpsumDolor}"
+            style="@style/txtUrbanistromanbold20" tools:text="@string/msg_top_albums_global2"/>
+    </LinearLayout>
+</layout>

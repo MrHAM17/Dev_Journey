@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="drawerItemProductDiscoverDrawerModel" type="com.shopsieecommerceapp.app.modules.itemproductdiscoverdrawer.data.model.DrawerItemProductDiscoverDrawerModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearProductDiscover"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearMenu"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_34pxv"
+            android:paddingEnd="@dimen/_67pxh"
+            android:paddingStart="@dimen/_67pxh"
+            android:paddingTop="@dimen/_34pxv" style="@style/groupStyle{&quot;name&quot;:&quot;primaryContainer&quot;}">
+            <TextView android:ellipsize="end" android:id="@+id/txtCart"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{drawerItemProductDiscoverDrawerModel.txtCart}"
+                style="@style/txtLatomedium18" tools:text="@string/lbl_cart"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtProfile"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{drawerItemProductDiscoverDrawerModel.txtProfile}"
+                style="@style/txtLatomedium18" tools:text="@string/lbl_profile"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtClothing"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{drawerItemProductDiscoverDrawerModel.txtClothing}"
+                style="@style/txtLatomedium18" tools:text="@string/lbl_clothing"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtShoes"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{drawerItemProductDiscoverDrawerModel.txtShoes}"
+                style="@style/txtLatomedium18" tools:text="@string/lbl_shoes"/>
+            <FrameLayout android:id="@+id/frameSpacer"
+                android:layout_height="wrap_content" android:layout_width="match_parent"/>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearFour"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageCamera"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_26pxh"
+                    android:layout_width="@dimen/_26pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_5279112_camera"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_5279112_camera"/>
+                <ImageView android:id="@+id/imageImage"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_26pxh"
+                    android:layout_width="@dimen/_26pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_5279111_network_fb_social"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_5279111_network_fb_social"/>
+                <ImageView android:id="@+id/imageInspira"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_26pxh"
+                    android:layout_width="@dimen/_26pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_5305160_inspira"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_5305160_inspira"/>
+                <ImageView android:id="@+id/imageImage1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="@dimen/_26pxh"
+                    android:layout_width="@dimen/_26pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_5279123_tweet_twitter_twitter"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_5279123_tweet_twitter_twitter"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

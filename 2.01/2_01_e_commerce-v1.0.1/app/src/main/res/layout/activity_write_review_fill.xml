@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="writeReviewFillVM" type="com.ecommerce.app.modules.writereviewfill.data.viewmodel.WriteReviewFillVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearAddReview"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_9pxv"
+        android:paddingTop="@dimen/_9pxv" style="@style/groupStyle{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageView android:id="@+id/imageArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrow_left"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_left"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtWriteReview"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.03" android:singleLine="true"
+                android:text="@{writeReviewFillVM.writeReviewFillModel.txtWriteReview}"
+                style="@style/txtPoppinsbold16" tools:text="@string/lbl_write_review"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearWriteReviewFill"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_27pxv"
+            android:paddingEnd="@dimen/_15pxh"
+            android:paddingStart="@dimen/_15pxh" android:paddingTop="@dimen/_27pxv">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearReview"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:id="@+id/txtPleaseWriteOverall"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.03"
+                    android:text="@{writeReviewFillVM.writeReviewFillModel.txtPleaseWriteOverall}"
+                    style="@style/txtPoppinsbold14_1" tools:text="@string/msg_please_write_overall"/>
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/ratingBarRatingBar"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:numStars="5"
+                    android:progressBackgroundTint="@color/{&quot;name&quot;:&quot;blue_50&quot;}"
+                    android:progressTint="@color/{&quot;name&quot;:&quot;yellow_700&quot;}"
+                    android:rating="4" style="@style/Widget.AppCompat.RatingBar.Indicator"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearWriteReview"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtWriteYourReview"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.03"
+                    android:singleLine="true"
+                    android:text="@{writeReviewFillVM.writeReviewFillModel.txtWriteYourReview}"
+                    style="@style/txtPoppinsbold14_1" tools:text="@string/msg_write_your_review"/>
+                <EditText
+                    android:background="@drawable/rectangle_bg_name_onprimarycontainer_opacity_1_border_name_blue_50_radius_5"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/lbl_add_review"
+                    android:id="@+id/etAddReview"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.03"
+                    android:paddingBottom="@dimen/_17pxv"
+                    android:paddingEnd="@dimen/_16pxh"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_17pxv"
+                    android:singleLine="true"
+                    android:text="@={writeReviewFillVM.writeReviewFillModel.etAddReviewValue}"
+                    android:textColor="@color/{&quot;name&quot;:&quot;blue_gray_300&quot;}"
+                    android:textColorHint="@color/{&quot;name&quot;:&quot;blue_gray_300&quot;}"
+                    android:textFontWeight="700"
+                    android:textSize="@dimen/_12pxh"
+                    android:textStyle="bold" tools:ignore="Autofill"/>
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_opacity_1_radius_5"
+            android:ellipsize="end" android:fontFamily="@font/poppins"
+            android:gravity="center" android:id="@+id/btnWriteReview"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.03"
+            android:paddingBottom="@dimen/_18pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_18pxv" android:singleLine="true"
+            android:text="@string/lbl_write_review"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;onPrimaryContainer&quot;,&quot;opacity&quot;:1}"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_14pxh" android:textStyle="bold" tools:text="@string/lbl_write_review"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="paymentMethodVM" type="com.jusplaymoviestreamingapp.app.modules.paymentmethod.data.viewmodel.PaymentMethodVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearInputsFied"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyle{&quot;name&quot;:&quot;black_900&quot;}">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppBar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <ImageButton
+                android:background="@drawable/rectangle_bg_name_gray_900_radius_17"
+                android:id="@+id/btnArrowLeft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrow_left" tools:ignore="ContentDescription"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearPaymentMethod"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_27pxv"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_16pxh" android:paddingTop="@dimen/_27pxv">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearOrderSummary"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtOrderSummary"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{paymentMethodVM.paymentMethodModel.txtOrderSummary}"
+                    style="@style/txtPoppinsmedium18" tools:text="@string/lbl_order_summary"/>
+                <LinearLayout android:id="@+id/linearFrame"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_24pxh"
+                    android:paddingVertical="@dimen/_24pxv" style="@style/groupStyle{&quot;name&quot;:&quot;gray_900&quot;}cornerRadius">
+                    <LinearLayout android:id="@+id/linearFrame1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearFrame2"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtPremiunWeekly"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{paymentMethodVM.paymentMethodModel.txtPremiunWeekly}"
+                                style="@style/txtPoppinssemibold14" tools:text="@string/lbl_premiun_weekly"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtIncludingTaxAnd"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:singleLine="true"
+                                android:text="@{paymentMethodVM.paymentMethodModel.txtIncludingTaxAnd}"
+                                style="@style/txtPoppinsmedium10" tools:text="@string/msg_including_tax_and"/>
+                        </LinearLayout>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtPrice"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{paymentMethodVM.paymentMethodModel.txtPrice}"
+                            style="@style/txtPoppinsregular22" tools:text="@string/lbl_50_week"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearFrame3"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <EditText
+                            android:background="@drawable/rectangle_bg_name_blue_gray_800_radius_20"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/poppins"
+                            android:hint="@string/msg_have_a_vucher_code"
+                            android:id="@+id/etInputsFied"
+                            android:inputType="text"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:paddingBottom="@dimen/_11pxv"
+                            android:paddingEnd="@dimen/_24pxh"
+                            android:paddingStart="@dimen/_24pxh"
+                            android:paddingTop="@dimen/_11pxv"
+                            android:singleLine="true"
+                            android:text="@={paymentMethodVM.paymentMethodModel.etInputsFiedValue}"
+                            android:textColor="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+                            android:textColorHint="@color/{&quot;name&quot;:&quot;primaryContainer&quot;}"
+                            android:textFontWeight="400"
+                            android:textSize="@dimen/_12pxh"
+                            android:textStyle="normal" tools:ignore="Autofill"/>
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:background="@drawable/rectangle_bg_name_primary_radius_19"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/poppins"
+                            android:gravity="center"
+                            android:id="@+id/btnApply"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_39pxv"
+                            android:layout_width="@dimen/_80pxh"
+                            android:paddingBottom="@dimen/_9pxv"
+                            android:paddingEnd="@dimen/_18pxh"
+                            android:paddingStart="@dimen/_18pxh"
+                            android:paddingTop="@dimen/_9pxv"
+                            android:singleLine="true"
+                            android:text="@string/lbl_apply"
+                            android:textAllCaps="false"
+                            android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                            android:textFontWeight="500"
+                            android:textSize="@dimen/_14pxh"
+                            android:textStyle="bold" tools:text="@string/lbl_apply"/>
+                    </LinearLayout>
+                    <View
+                        android:background="@color/{&quot;name&quot;:&quot;white_A700&quot;,&quot;opacity&quot;:0.42}"
+                        android:id="@+id/lineVectorEightyFour"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_295pxh"/>
+                    <LinearLayout android:id="@+id/linearFrame4"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtTotal"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{paymentMethodVM.paymentMethodModel.txtTotal}"
+                            style="@style/txtPoppinsmedium16" tools:text="@string/lbl_total"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtPrice1"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:singleLine="true"
+                            android:text="@{paymentMethodVM.paymentMethodModel.txtPrice1}"
+                            style="@style/txtPoppinsbold20" tools:text="@string/lbl_50"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearPaymentMethode"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPaymentMethod"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{paymentMethodVM.paymentMethodModel.txtPaymentMethod}"
+                    style="@style/txtPoppinsmedium18" tools:text="@string/lbl_payment_method"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerPaymentMethodList"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_16pxh}" tools:itemCount="3" tools:listitem="@layout/row_paymentmethodlist"/>
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_name_primary_radius_25"
+            android:ellipsize="end" android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:id="@+id/btnContinuePayment"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_13pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_13pxv" android:singleLine="true"
+            android:text="@string/msg_continue_payment"
+            android:textAllCaps="false"
+            android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+            android:textFontWeight="500"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/msg_continue_payment"/>
+    </LinearLayout>
+</layout>

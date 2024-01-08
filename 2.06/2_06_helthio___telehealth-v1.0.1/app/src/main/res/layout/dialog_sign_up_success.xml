@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="signUpSuccessVM" type="com.helthiotelehealth.app.modules.signupsuccess.data.viewmodel.SignUpSuccessVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearSignUpSuccess"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:id="@+id/linearPopUp"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_36pxv"
+            android:paddingEnd="@dimen/_23pxh"
+            android:paddingStart="@dimen/_23pxh"
+            android:paddingTop="@dimen/_36pxv" style="@style/groupStylenamewhite_3">
+            <FrameLayout android:id="@+id/frameDone"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_102pxv"
+                android:layout_width="@dimen/_102pxh"
+                android:paddingBottom="@dimen/_34pxv"
+                android:paddingEnd="@dimen/_29pxh"
+                android:paddingStart="@dimen/_29pxh"
+                android:paddingTop="@dimen/_34pxv" style="@style/groupStyle{&quot;name&quot;:&quot;blue_50&quot;}cornerRadius">
+                <ImageView android:id="@+id/imageCheckmark"
+                    android:layout_gravity="center"
+                    android:layout_height="@dimen/_31pxh"
+                    android:layout_width="@dimen/_41pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_checkmark_primary"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark_primary"/>
+            </FrameLayout>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtYeayWelcomeBack"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{signUpSuccessVM.signUpSuccessModel.txtYeayWelcomeBack}"
+                style="@style/txtRalewaybold22" tools:text="@string/lbl_success"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtOnceAgainYouLogin"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{signUpSuccessVM.signUpSuccessModel.txtOnceAgainYouLogin}"
+                style="@style/txtRalewayregular16_1" tools:text="@string/msg_your_account_has"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_name_primary_radius_tl_8_bl_8_br_8"
+                android:ellipsize="end"
+                android:fontFamily="@font/raleway"
+                android:gravity="center" android:id="@+id/btnGoToHome"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_56pxv"
+                android:layout_width="@dimen/_279pxh"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_go_to_home"
+                android:textAllCaps="false"
+                android:textColor="@color/{&quot;name&quot;:&quot;white_A700&quot;}"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_go_to_home"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="messagesRowModel" type="com.shopsieecommerceapp.app.modules.messages.data.model.MessagesRowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_vertical"
+        android:id="@+id/linearMessage"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <FrameLayout android:id="@+id/frameProfile2"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/_48pxv" android:layout_width="@dimen/_48pxh">
+            <ImageView android:id="@+id/imageBillyGreen"
+                android:layout_gravity="center"
+                android:layout_height="@dimen/_48pxh"
+                android:layout_width="@dimen/_48pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_12pxh}"
+                imageRes="@{@drawable/img_avatar}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_avatar"/>
+            <LinearLayout android:id="@+id/linearStatus"
+                android:layout_gravity="top|end"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylenamegray_1">
+                <View
+                    android:background="@drawable/rectangle_bg_name_green_600_radius_5"
+                    android:id="@+id/viewDot"
+                    android:layout_height="@dimen/_10pxh" android:layout_width="@dimen/_10pxh"/>
+            </LinearLayout>
+        </FrameLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearEight"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtUsername"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_3pxh"
+                android:singleLine="true"
+                android:text="@{messagesRowModel.txtUsername}"
+                style="@style/txtIntermedium14" tools:text="@string/lbl_billy_green"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtMessage"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_3pxh"
+                android:singleLine="true"
+                android:text="@{messagesRowModel.txtMessage}"
+                style="@style/txtInterregular14" tools:text="@string/msg_thank_you_for_sharing"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameSpacer"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        <LinearLayout android:id="@+id/linearRight"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtTime"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_3pxh"
+                android:singleLine="true"
+                android:text="@{messagesRowModel.txtTime}"
+                style="@style/txtInterregular12" tools:text="@string/lbl_3_03pm"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtNotifications"
+                android:layout_gravity="end"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.05"
+                android:lineSpacingExtra="@dimen/_3pxh"
+                android:paddingBottom="@dimen/_1pxv"
+                android:paddingEnd="@dimen/_5pxh"
+                android:paddingStart="@dimen/_5pxh"
+                android:paddingTop="@dimen/_1pxv"
+                android:singleLine="true"
+                android:text="@{messagesRowModel.txtNotifications}"
+                android:textAllCaps="true"
+                style="@style/txtSolidRounded_2" tools:text="@string/lbl_1"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
