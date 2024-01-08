@@ -1,0 +1,115 @@
+import 'controller/forgot_password_controller.dart';
+import 'package:flutter/material.dart';
+import 'package:the_4_15_safebank___mobile_banking_app/core/app_export.dart';
+import 'package:the_4_15_safebank___mobile_banking_app/core/utils/validation_functions.dart';
+import 'package:the_4_15_safebank___mobile_banking_app/widgets/app_bar/appbar_leading_iconbutton.dart';
+import 'package:the_4_15_safebank___mobile_banking_app/widgets/app_bar/appbar_trailing_iconbutton.dart';
+import 'package:the_4_15_safebank___mobile_banking_app/widgets/app_bar/custom_app_bar.dart';
+import 'package:the_4_15_safebank___mobile_banking_app/widgets/custom_elevated_button.dart';
+import 'package:the_4_15_safebank___mobile_banking_app/widgets/custom_text_form_field.dart';
+
+// ignore_for_file: must_be_immutable
+class ForgotPasswordScreen extends GetWidget<ForgotPasswordController> {
+  ForgotPasswordScreen({Key? key}) : super(key: key);
+
+  GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+        child: Scaffold(
+            resizeToAvoidBottomInset: false,
+            appBar: _buildAppBar(),
+            body: SizedBox(
+                width: SizeUtils.width,
+                child: SingleChildScrollView(
+                    padding: EdgeInsets.only(
+                        bottom: MediaQuery.of(context).viewInsets.bottom),
+                    child: Form(
+                        key: _formKey,
+                        child: Container(
+                            width: double.maxFinite,
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 24.h, vertical: 59.v),
+                            child: Column(children: [
+                              CustomImageView(
+                                  imagePath: ImageConstant.imgGroup205,
+                                  height: 210.v,
+                                  width: 280.h),
+                              SizedBox(height: 41.v),
+                              Text("lbl_forget_password".tr,
+                                  style: CustomTextStyles.titleLargeSemiBold_1),
+                              SizedBox(height: 17.v),
+                              Container(
+                                  width: 245.h,
+                                  margin:
+                                      EdgeInsets.symmetric(horizontal: 41.h),
+                                  child: RichText(
+                                      text: TextSpan(children: [
+                                        TextSpan(
+                                            text: "msg_please_enter_your2".tr,
+                                            style: CustomTextStyles
+                                                .titleSmallGray500_1
+                                                .copyWith(height: 1.50)),
+                                        TextSpan(
+                                            text: "msg_verification_code".tr,
+                                            style: CustomTextStyles
+                                                .titleSmallPrimary)
+                                      ]),
+                                      textAlign: TextAlign.center)),
+                              SizedBox(height: 23.v),
+                              CustomTextFormField(
+                                  controller: controller.emailController,
+                                  hintText: "lbl_xyz_gmail_com".tr,
+                                  textInputAction: TextInputAction.done,
+                                  textInputType: TextInputType.emailAddress,
+                                  validator: (value) {
+                                    if (value == null ||
+                                        (!isValidEmail(value,
+                                            isRequired: true))) {
+                                      return "err_msg_please_enter_valid_email"
+                                          .tr;
+                                    }
+                                    return null;
+                                  },
+                                  borderDecoration:
+                                      TextFormFieldStyleHelper.outlineGray),
+                              SizedBox(height: 20.v),
+                              CustomElevatedButton(
+                                  text: "lbl_send_email".tr,
+                                  onPressed: () {
+                                    onTapSendEmail();
+                                  }),
+                              SizedBox(height: 5.v)
+                            ])))))));
+  }
+
+  /// Section Widget
+  PreferredSizeWidget _buildAppBar() {
+    return CustomAppBar(
+        leadingWidth: 59.h,
+        leading: AppbarLeadingIconbutton(
+            imagePath: ImageConstant.imgArrowLeftBlack900,
+            margin: EdgeInsets.only(left: 24.h, top: 8.v, bottom: 7.v),
+            onTap: () {
+              onTapArrowLeft();
+            }),
+        actions: [
+          AppbarTrailingIconbutton(
+              imagePath: ImageConstant.imgUser,
+              margin: EdgeInsets.fromLTRB(24.h, 7.v, 24.h, 8.v))
+        ]);
+  }
+
+  /// Navigates to the previous screen.
+  onTapArrowLeft() {
+    Get.back();
+  }
+
+  /// Navigates to the verifyEmailScreen when the action is triggered.
+  onTapSendEmail() {
+    Get.toNamed(
+      AppRoutes.verifyEmailScreen,
+    );
+  }
+}

@@ -1,0 +1,28 @@
+import '../home_page/widgets/home_item_widget.dart';import '../home_page/widgets/layout27_item_widget.dart';import '../home_page/widgets/layout28_item_widget.dart';import '../home_page/widgets/layout29_item_widget.dart';import '../home_page/widgets/promotionbanner_item_widget.dart';import 'controller/home_controller.dart';import 'models/home_item_model.dart';import 'models/home_model.dart';import 'models/layout27_item_model.dart';import 'models/layout28_item_model.dart';import 'models/layout29_item_model.dart';import 'models/promotionbanner_item_model.dart';import 'package:flutter/material.dart';import 'package:the_4_17_housit___buyrentsell_property/core/app_export.dart';
+// ignore_for_file: must_be_immutable
+class HomePage extends StatelessWidget {HomePage({Key? key}) : super(key: key);
+
+HomeController controller = Get.put(HomeController(HomeModel().obs));
+
+@override Widget build(BuildContext context) { return SafeArea(child: Scaffold(body: SizedBox(width: SizeUtils.width, child: SingleChildScrollView(child: Column(children: [SizedBox(height: 18.v), Align(alignment: Alignment.centerRight, child: Padding(padding: EdgeInsets.only(left: 24.h), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [_buildPromotionBanner(), SizedBox(height: 37.v), _buildItemHeader(), SizedBox(height: 16.v), _buildLayout(), SizedBox(height: 39.v), _buildItemHeader1(), SizedBox(height: 14.v), _buildLayout1(), SizedBox(height: 39.v), _buildItemHeader2(), SizedBox(height: 14.v), _buildLayout2(), SizedBox(height: 33.v), Text("msg_explore_nearby_estates".tr, style: theme.textTheme.titleMedium), SizedBox(height: 14.v), _buildHome()])))]))))); } 
+/// Section Widget
+Widget _buildPromotionBanner() { return SizedBox(height: 180.v, child: Obx(() => ListView.separated(scrollDirection: Axis.horizontal, separatorBuilder: (context, index) {return SizedBox(width: 10.h);}, itemCount: controller.homeModelObj.value.promotionbannerItemList.value.length, itemBuilder: (context, index) {PromotionbannerItemModel model = controller.homeModelObj.value.promotionbannerItemList.value[index]; return PromotionbannerItemWidget(model, onTapItemPromotion: () {onTapItemPromotion();});}))); } 
+/// Section Widget
+Widget _buildItemHeader() { return Padding(padding: EdgeInsets.only(right: 24.h), child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, crossAxisAlignment: CrossAxisAlignment.start, children: [Text("msg_featured_estates".tr, style: theme.textTheme.titleMedium), Padding(padding: EdgeInsets.symmetric(vertical: 3.v), child: Text("lbl_view_all".tr, style: CustomTextStyles.labelLargePrimary))])); } 
+/// Section Widget
+Widget _buildLayout() { return SizedBox(height: 156.v, child: Obx(() => ListView.separated(scrollDirection: Axis.horizontal, separatorBuilder: (context, index) {return SizedBox(width: 10.h);}, itemCount: controller.homeModelObj.value.layout27ItemList.value.length, itemBuilder: (context, index) {Layout27ItemModel model = controller.homeModelObj.value.layout27ItemList.value[index]; return Layout27ItemWidget(model);}))); } 
+/// Section Widget
+Widget _buildItemHeader1() { return Padding(padding: EdgeInsets.only(right: 50.h), child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, crossAxisAlignment: CrossAxisAlignment.start, children: [Text("lbl_top_locations".tr, style: theme.textTheme.titleMedium), Padding(padding: EdgeInsets.only(top: 2.v, bottom: 4.v), child: Text("lbl_explore".tr, style: CustomTextStyles.labelLargePrimary))])); } 
+/// Section Widget
+Widget _buildLayout1() { return SizedBox(height: 56.v, child: Obx(() => ListView.separated(scrollDirection: Axis.horizontal, separatorBuilder: (context, index) {return SizedBox(width: 4.h);}, itemCount: controller.homeModelObj.value.layout28ItemList.value.length, itemBuilder: (context, index) {Layout28ItemModel model = controller.homeModelObj.value.layout28ItemList.value[index]; return Layout28ItemWidget(model);}))); } 
+/// Section Widget
+Widget _buildItemHeader2() { return Padding(padding: EdgeInsets.only(right: 24.h), child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, crossAxisAlignment: CrossAxisAlignment.start, children: [Text("msg_top_estate_agent".tr, style: theme.textTheme.titleMedium), Padding(padding: EdgeInsets.only(top: 2.v, bottom: 4.v), child: Text("lbl_explore".tr, style: CustomTextStyles.labelLargePrimary))])); } 
+/// Section Widget
+Widget _buildLayout2() { return SizedBox(height: 96.v, child: Obx(() => ListView.separated(scrollDirection: Axis.horizontal, separatorBuilder: (context, index) {return SizedBox(width: 15.h);}, itemCount: controller.homeModelObj.value.layout29ItemList.value.length, itemBuilder: (context, index) {Layout29ItemModel model = controller.homeModelObj.value.layout29ItemList.value[index]; return Layout29ItemWidget(model);}))); } 
+/// Section Widget
+Widget _buildHome() { return Padding(padding: EdgeInsets.only(right: 24.h), child: Obx(() => GridView.builder(shrinkWrap: true, gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(mainAxisExtent: 232.v, crossAxisCount: 2, mainAxisSpacing: 7.h, crossAxisSpacing: 7.h), physics: NeverScrollableScrollPhysics(), itemCount: controller.homeModelObj.value.homeItemList.value.length, itemBuilder: (context, index) {HomeItemModel model = controller.homeModelObj.value.homeItemList.value[index]; return HomeItemWidget(model, onTapEstatesCardVertical: () {onTapEstatesCardVertical();});}))); } 
+/// Navigates to the promotionScreen when the action is triggered.
+onTapItemPromotion() { Get.toNamed(AppRoutes.promotionScreen); } 
+/// Navigates to the propertyDetailsScreen when the action is triggered.
+onTapEstatesCardVertical() { Get.toNamed(AppRoutes.propertyDetailsScreen); } 
+ }

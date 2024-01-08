@@ -1,0 +1,17 @@
+import '../playlists_screen/widgets/playlists_item_widget.dart';import 'controller/playlists_controller.dart';import 'models/playlists_item_model.dart';import 'package:flutter/material.dart';import 'package:the_4_18_tune_cast___music_streaming__podcast_app/core/app_export.dart';import 'package:the_4_18_tune_cast___music_streaming__podcast_app/widgets/app_bar/appbar_leading_image.dart';import 'package:the_4_18_tune_cast___music_streaming__podcast_app/widgets/app_bar/appbar_title.dart';import 'package:the_4_18_tune_cast___music_streaming__podcast_app/widgets/app_bar/appbar_trailing_iconbutton_one.dart';import 'package:the_4_18_tune_cast___music_streaming__podcast_app/widgets/app_bar/appbar_trailing_image.dart';import 'package:the_4_18_tune_cast___music_streaming__podcast_app/widgets/app_bar/custom_app_bar.dart';import 'package:the_4_18_tune_cast___music_streaming__podcast_app/presentation/new_playlist_bottomsheet/new_playlist_bottomsheet.dart';import 'package:the_4_18_tune_cast___music_streaming__podcast_app/presentation/new_playlist_bottomsheet/controller/new_playlist_controller.dart';class PlaylistsScreen extends GetWidget<PlaylistsController> {const PlaylistsScreen({Key? key}) : super(key: key);
+
+@override Widget build(BuildContext context) { return SafeArea(child: Scaffold(appBar: _buildAppBar(), body: Container(width: double.maxFinite, padding: EdgeInsets.symmetric(horizontal: 24.h, vertical: 28.v), child: Column(children: [_buildSortBy(), SizedBox(height: 22.v), Divider(), SizedBox(height: 23.v), _buildPlaylists()])))); } 
+/// Section Widget
+PreferredSizeWidget _buildAppBar() { return CustomAppBar(height: 53.v, leadingWidth: 52.h, leading: AppbarLeadingImage(imagePath: ImageConstant.imgArrowDown, margin: EdgeInsets.only(left: 24.h, top: 11.v, bottom: 14.v)), title: AppbarTitle(text: "lbl_playlists".tr, margin: EdgeInsets.only(left: 16.h)), actions: [AppbarTrailingImage(imagePath: ImageConstant.imgRewind, margin: EdgeInsets.only(left: 24.h, top: 11.v, right: 14.h)), AppbarTrailingIconbuttonOne(imagePath: ImageConstant.imgSettingsGray90001, margin: EdgeInsets.only(left: 20.h, top: 11.v, right: 38.h))]); } 
+/// Section Widget
+Widget _buildSortBy() { return Row(mainAxisAlignment: MainAxisAlignment.center, children: [Text("lbl_sort_by".tr, style: theme.textTheme.titleLarge), Spacer(), Text("lbl_recently_added".tr, style: CustomTextStyles.titleMediumOnPrimaryContainer16), CustomImageView(imagePath: ImageConstant.imgIconlyCurvedSwap, height: 20.adaptSize, width: 20.adaptSize, margin: EdgeInsets.only(left: 12.h, bottom: 4.v))]); } 
+/// Section Widget
+Widget _buildPlaylists() { return Obx(() => ListView.separated(physics: NeverScrollableScrollPhysics(), shrinkWrap: true, separatorBuilder: (context, index) {return SizedBox(height: 24.v);}, itemCount: controller.playlistsModelObj.value.playlistsItemList.value.length, itemBuilder: (context, index) {PlaylistsItemModel model = controller.playlistsModelObj.value.playlistsItemList.value[index]; return PlaylistsItemWidget(model, onTapTypeListThemeLight: () {onTapTypeListThemeLight();});})); } 
+/// Displays a scrollable bottom sheet widget using the [Get] package 
+/// and the [NewPlaylistBottomsheet] widget.
+///
+/// The bottom sheet is controlled by the [NewPlaylistController]
+/// and is displayed using the [Get.bottomSheet] method with
+/// [isScrollControlled] set to true.
+onTapTypeListThemeLight() { Get.bottomSheet(NewPlaylistBottomsheet(Get.put(NewPlaylistController())), isScrollControlled: true); } 
+ }

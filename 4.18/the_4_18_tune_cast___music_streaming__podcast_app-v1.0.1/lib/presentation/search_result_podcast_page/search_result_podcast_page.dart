@@ -1,0 +1,16 @@
+import '../search_result_podcast_page/widgets/fiftynine_item_widget.dart';import '../search_result_podcast_page/widgets/frame1_item_widget.dart';import 'controller/search_result_podcast_controller.dart';import 'models/fiftynine_item_model.dart';import 'models/frame1_item_model.dart';import 'models/search_result_podcast_model.dart';import 'package:flutter/material.dart';import 'package:the_4_18_tune_cast___music_streaming__podcast_app/core/app_export.dart';
+// ignore_for_file: must_be_immutable
+class SearchResultPodcastPage extends StatelessWidget {SearchResultPodcastPage({Key? key}) : super(key: key);
+
+SearchResultPodcastController controller = Get.put(SearchResultPodcastController(SearchResultPodcastModel().obs));
+
+@override Widget build(BuildContext context) { return SafeArea(child: Scaffold(body: Container(width: double.maxFinite, decoration: AppDecoration.fillWhiteA, child: Column(children: [SizedBox(height: 24.v), Align(alignment: Alignment.topRight, child: Padding(padding: EdgeInsets.only(left: 24.h), child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [Padding(padding: EdgeInsets.only(right: 24.h), child: _buildAutoLayoutHorizontal(episodes: "msg_podcasts_shows".tr, seeAll: "lbl_see_all".tr)), SizedBox(height: 16.v), _buildFrame(), SizedBox(height: 25.v), Padding(padding: EdgeInsets.only(right: 24.h), child: _buildAutoLayoutHorizontal(episodes: "lbl_episodes".tr, seeAll: "lbl_see_all".tr)), SizedBox(height: 21.v), _buildFiftyNine()])))])))); } 
+/// Section Widget
+Widget _buildFrame() { return SizedBox(height: 193.v, child: Obx(() => ListView.separated(scrollDirection: Axis.horizontal, separatorBuilder: (context, index) {return SizedBox(width: 12.h);}, itemCount: controller.searchResultPodcastModelObj.value.frame1ItemList.value.length, itemBuilder: (context, index) {Frame1ItemModel model = controller.searchResultPodcastModelObj.value.frame1ItemList.value[index]; return Frame1ItemWidget(model, onTapPodcastCard: () {onTapPodcastCard();});}))); } 
+/// Section Widget
+Widget _buildFiftyNine() { return Padding(padding: EdgeInsets.only(right: 24.h), child: Obx(() => ListView.separated(physics: NeverScrollableScrollPhysics(), shrinkWrap: true, separatorBuilder: (context, index) {return SizedBox(height: 24.v);}, itemCount: controller.searchResultPodcastModelObj.value.fiftynineItemList.value.length, itemBuilder: (context, index) {FiftynineItemModel model = controller.searchResultPodcastModelObj.value.fiftynineItemList.value[index]; return FiftynineItemWidget(model);}))); } 
+/// Common widget
+Widget _buildAutoLayoutHorizontal({required String episodes, required String seeAll, }) { return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, crossAxisAlignment: CrossAxisAlignment.start, children: [Padding(padding: EdgeInsets.only(top: 1.v), child: Text(episodes, style: theme.textTheme.headlineSmall!.copyWith(color: appTheme.gray90001))), Padding(padding: EdgeInsets.only(bottom: 10.v), child: Text(seeAll, style: CustomTextStyles.titleMediumOnPrimaryContainer16.copyWith(color: theme.colorScheme.onPrimaryContainer)))]); } 
+/// Navigates to the podcastDetailsScreen when the action is triggered.
+onTapPodcastCard() { Get.toNamed(AppRoutes.podcastDetailsScreen, ); } 
+ }

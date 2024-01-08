@@ -1,0 +1,5 @@
+import '../../../core/app_export.dart';import 'questionanswer_item_model.dart';/// This class defines the variables used in the [question_answer_bottomsheet],
+/// and is typically used to hold data that is passed between different parts of the application.
+class QuestionAnswerModel {Rx<List<QuestionanswerItemModel>> questionanswerItemList = Rx([QuestionanswerItemModel(bennySpanbauer:ImageConstant.imgEllipse15.obs,bennySpanbauer1: "Benny Spanbauer".obs,whatIsYourFavorite: "What is your favorite fruit?".obs,image:ImageConstant.imgIconlyBoldHeart.obs,sevenHundredThirtySix: "736".obs),QuestionanswerItemModel(bennySpanbauer:ImageConstant.imgEllipse16.obs,bennySpanbauer1: "Hannah Burress".obs,whatIsYourFavorite: "Do you have any pet peeves?".obs,image:ImageConstant.imgFavorite.obs,sevenHundredThirtySix: "662".obs),QuestionanswerItemModel(bennySpanbauer:ImageConstant.imgEllipse18.obs,bennySpanbauer1: "Rodolfo Goode".obs,whatIsYourFavorite: "Have you ever been to Asia?".obs,image:ImageConstant.imgFavorite.obs,sevenHundredThirtySix: "364".obs)]);
+
+ }

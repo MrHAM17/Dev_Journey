@@ -1,0 +1,160 @@
+import 'controller/sign_up_controller.dart';
+import 'package:flutter/material.dart';
+import 'package:the_4_05_blog_app/core/app_export.dart';
+import 'package:the_4_05_blog_app/widgets/custom_outlined_button.dart';
+import 'package:the_4_05_blog_app/domain/googleauth/google_auth_helper.dart';
+import 'package:the_4_05_blog_app/domain/facebookauth/facebook_auth_helper.dart';
+
+class SignUpScreen extends GetWidget<SignUpController> {
+  const SignUpScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+        child: Scaffold(
+            body: Container(
+                width: double.maxFinite,
+                padding: EdgeInsets.symmetric(horizontal: 24.h, vertical: 30.v),
+                child: Column(children: [
+                  CustomImageView(
+                      imagePath: ImageConstant.imgDhiwiseBlackMonogram,
+                      height: 59.adaptSize,
+                      width: 59.adaptSize),
+                  SizedBox(height: 43.v),
+                  Text("lbl_register_now".tr,
+                      style: theme.textTheme.headlineLarge),
+                  SizedBox(height: 16.v),
+                  _buildSignUpWithGoogle(),
+                  SizedBox(height: 14.v),
+                  _buildSignUpWithFacebook(),
+                  SizedBox(height: 14.v),
+                  _buildSignUpWithTwitter(),
+                  SizedBox(height: 14.v),
+                  _buildSignUpWithApple(),
+                  SizedBox(height: 41.v),
+                  Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 44.h),
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("msg_already_have_an".tr,
+                                style: theme.textTheme.bodyMedium),
+                            GestureDetector(
+                                onTap: () {
+                                  onTapTxtSignIn();
+                                },
+                                child: Padding(
+                                    padding: EdgeInsets.only(left: 6.h),
+                                    child: Text("lbl_sign_in".tr,
+                                        style: CustomTextStyles
+                                            .bodyMediumPrimary)))
+                          ])),
+                  Spacer(),
+                  SizedBox(height: 10.v),
+                  Container(
+                      width: 318.h,
+                      margin: EdgeInsets.only(left: 4.h, right: 5.h),
+                      child: RichText(
+                          text: TextSpan(children: [
+                            TextSpan(
+                                text: "msg_by_signing_up_you2".tr,
+                                style: theme.textTheme.bodySmall),
+                            TextSpan(
+                                text: "msg_terms_of_service".tr,
+                                style: CustomTextStyles.bodySmallPrimary),
+                            TextSpan(
+                                text: "msg_and_acknowledge".tr,
+                                style: theme.textTheme.bodySmall!
+                                    .copyWith(height: 1.50)),
+                            TextSpan(
+                                text: "lbl_privacy_policy".tr,
+                                style: CustomTextStyles.bodySmallPrimary),
+                            TextSpan(
+                                text: "lbl_applies_to_you".tr,
+                                style: theme.textTheme.bodySmall)
+                          ]),
+                          textAlign: TextAlign.center))
+                ]))));
+  }
+
+  /// Section Widget
+  Widget _buildSignUpWithGoogle() {
+    return CustomOutlinedButton(
+        text: "msg_sign_up_with_google".tr,
+        leftIcon: Container(
+            margin: EdgeInsets.only(right: 10.h),
+            child: CustomImageView(
+                imagePath: ImageConstant.imgGoogle1,
+                height: 20.adaptSize,
+                width: 20.adaptSize)),
+        onPressed: () {
+          onTapSignUpWithGoogle();
+        });
+  }
+
+  /// Section Widget
+  Widget _buildSignUpWithFacebook() {
+    return CustomOutlinedButton(
+        text: "msg_sign_up_with_facebook".tr,
+        leftIcon: Container(
+            margin: EdgeInsets.only(right: 10.h),
+            child: CustomImageView(
+                imagePath: ImageConstant.imgFacebook1,
+                height: 20.adaptSize,
+                width: 20.adaptSize)),
+        onPressed: () {
+          onTapSignUpWithFacebook();
+        });
+  }
+
+  /// Section Widget
+  Widget _buildSignUpWithTwitter() {
+    return CustomOutlinedButton(
+        text: "msg_sign_up_with_twitter".tr,
+        leftIcon: Container(
+            margin: EdgeInsets.only(right: 10.h),
+            child: CustomImageView(
+                imagePath: ImageConstant.imgTwitter1,
+                height: 20.adaptSize,
+                width: 20.adaptSize)));
+  }
+
+  /// Section Widget
+  Widget _buildSignUpWithApple() {
+    return CustomOutlinedButton(
+        text: "msg_sign_up_with_apple".tr,
+        leftIcon: Container(
+            margin: EdgeInsets.only(right: 10.h),
+            child: CustomImageView(
+                imagePath: ImageConstant.imgAppleblacklogo1,
+                height: 20.adaptSize,
+                width: 20.adaptSize)));
+  }
+
+  onTapSignUpWithGoogle() async {
+    await GoogleAuthHelper().googleSignInProcess().then((googleUser) {
+      if (googleUser != null) {
+        //TODO Actions to be performed after signin
+      } else {
+        Get.snackbar('Error', 'user data is empty');
+      }
+    }).catchError((onError) {
+      Get.snackbar('Error', onError.toString());
+    });
+  }
+
+  onTapSignUpWithFacebook() async {
+    await FacebookAuthHelper().facebookSignInProcess().then((facebookUser) {
+      //TODO Actions to be performed after signin
+    }).catchError((onError) {
+      Get.snackbar('Error', onError.toString());
+    });
+  }
+
+  /// Navigates to the signInScreen when the action is triggered.
+  onTapTxtSignIn() {
+    Get.toNamed(
+      AppRoutes.signInScreen,
+    );
+  }
+}
